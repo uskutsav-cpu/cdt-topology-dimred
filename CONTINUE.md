@@ -141,3 +141,26 @@ Live baseline measurement session9243:
 Runs concurrently with extension. Do not duplicate it. Final aggregate remains
 exploratory until equilibrium and sampling uncertainties are established.
 Future extension measurements reuse these indices by keeping stride4.
+
+## Latest baseline measurement / fixed comparison design
+
+Session9243 completed:32 configurations (indices0,4,...124),512 starts,256
+steps. Ds peak2.79319873; maximum relative return sampling SE0.01678961.
+No equilibrium claim. These per-start arrays are immutable and reused later.
+
+Session4647 is LIVE: `workflows/measure_exact_uv.py 4a40078dbf0e6b9a5f5c
+--total 128 --stride 4`. It computes ALL-site returns through26 on those32
+geometries, crosschecks all512 saved basis starts, and saves exact UV curves
+plus finite-population corrected sampling variance comparison. Source-hashed
+per-geometry caches; no stochastic uncertainty from start sampling remains.
+Poll session4647; do not duplicate it. Extension60619 is also still live.
+
+`configs/reproduction/baseline_design.json` fixes upcoming independent10k,
+volumes30k/60k atT64, and k0=.5,1,1.5,2,2.5 atN30000. Seven executable configs
+are prepared, NOT RUN. Fresh random streams, common saved starting geometry,
+2000 tune +20000 burn +128 stride200 measurements initially; must diagnose
+and extend appropriately, check independent-chain convergence. k3 guesses
+are explicitly heuristic, then retuned. No inherited RNG checkpoints for
+these independent chains. Do not claim the unrun design is reproduction.
+Next simulator after60619 should address any remaining same-chain problem,
+or begin independent_10000.json if diagnostics permit the comparison.

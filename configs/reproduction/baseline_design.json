@@ -1,0 +1,36 @@
+{
+  "status": "baseline design, not executed or reproduction pass",
+  "time_extent": 64,
+  "rho": 0.8,
+  "total_volume_grid": [
+    10000,
+    30000,
+    60000
+  ],
+  "coupling_grid": [
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5
+  ],
+  "coupling_scan_total_volume": 30000,
+  "fresh_rng": true,
+  "geometry_seed_source": "data/raw/4a40078dbf0e6b9a5f5c/geometry_127.dat",
+  "k3_initial_guess": "1.17778 + 0.155*(k0-1); heuristic from observed N0/N3; independently retuned",
+  "initial_schedule": "2000 tune, 20000 burn, 128 measurements at stride 200; extend only from diagnostics",
+  "diagnostic_policy": "Assess N0,N3,N31,peak_slice and profile shape; screen ESS>=50, split_z<2, n>=50*tau. A pass is necessary but not sufficient; compare independent chains. Drift calls for equilibration review, not blind thinning.",
+  "retention": "Never discard measurements post hoc to force agreement; preserve all stage lineage and manifests.",
+  "finite_size_volume": "Fit against measured condensate volume; requested total N3 differs from historical condensate N3.",
+  "coupling_convention": "Coefficients of S=-k0*N0+k3*N3 in this research driver. Historical action agrees on paper, numerical calibration remains provisional.",
+  "constraints": "One large simulator at a time on this 8GiB host; no topology-conditioned production before baseline gate.",
+  "jobs": [
+    "independent_10000.json",
+    "volume_30000.json",
+    "volume_60000.json",
+    "coupling_0p5_30000.json",
+    "coupling_1p5_30000.json",
+    "coupling_2p0_30000.json",
+    "coupling_2p5_30000.json"
+  ]
+}

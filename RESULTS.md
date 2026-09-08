@@ -50,3 +50,9 @@ the exact binary, input hashes, seeds and parameters for each chain.
 FINITE SIZE: production scaling not computed.
 COUPLING DEPENDENCE: not computed.
 TOPOLOGY, MATCHING, PERMUTATION, MECHANISM: not computed; prerequisite gates.
+
+Further baseline measurement:32 of the dedicated equilibration stage's saved
+geometries,512 starts,256 steps, give an exploratory Ds peak2.79320 and maximum
+relative return sampling SE1.679%. Autocorrelation screen remains unmet at
+128 configurations; this is not a reproduction pass. Exact all-site short-time
+measurement is running to eliminate starting-point sampling uncertainty.
