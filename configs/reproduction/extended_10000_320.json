@@ -1,0 +1,16 @@
+{
+  "name": "extended_N10000_T64",
+  "input": "data/raw/341d14fabe08e6c5b531/geometry_127.dat",
+  "seed": 20260908,
+  "k0": 1.0,
+  "k3": 1.1777799999999796,
+  "target": 10000,
+  "tune": 0,
+  "burn": 500,
+  "samples": 320,
+  "attempts": 100000,
+  "check_every_move": 0,
+  "timeout_seconds": 1800,
+  "sample_stride": 50,
+  "parent_chain": "341d14fabe08e6c5b531"
+}
