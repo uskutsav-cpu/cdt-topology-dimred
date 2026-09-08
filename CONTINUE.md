@@ -1,5 +1,12 @@
 # Operational continuation state
 
+Prepared NOT RUN `volume_60000_long.json`: inherit completef045 checkpoint,
+frozenk3=1.1737999999999928,tune0,burn0,128 snapshots separated by3200 sweeps,
+409600 new sweeps. Spacing chosen from pilot tau3108.68452; expected stage
+ESS~65.9 if that timescale persists, not guaranteed. Timeout43200 seconds.
+Prioritize this long continuation when a compute slot frees after N60000
+pilot spectra; no pilot measurements discarded or relabelled as burn.
+
 ### Next baseline convergence extension
 
 Prepared1152 and1536 sample configs for both N10000 chains. First-chain
