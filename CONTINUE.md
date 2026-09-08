@@ -10,7 +10,9 @@ measurements discarded or relabelled as burn.
 ### Next baseline convergence extension
 
 Prepared1152 and1536 sample configs for both N10000 chains. First-chain
-768→1152 extension is live89099; independent768→1152 is live8989.
+1152→1536 extension is live67775; independent768→1152 is live8989.
+First-chain89099 completed1152 validated snapshots in4476.851 seconds for
+that extension. Preserved through1152 manifest; no interim convergence test.
 The planned next matched comparison is1536vs1536, doubling the completed
 trajectory because the minimum split ESS is29.07 and peak Rhat1.01217.
 Perform two384-snapshot checkpoint extensions per chain, first1152 then1536,
@@ -36,11 +38,11 @@ through768 comparison. Do not treat intermediate1152 as a new stopping test.
   Prior session43971 finished and all128 geometries validated.
 - 70973: job1c43898e12fc22400dec, k0=.5 N30000 long continuation.
   Prior session45527 completed and all128 pilot geometries validated.
-- 89099: first-chain4a40078dbf0e6b9a5f5c extension768→1152,
-  configequilibration_10000_1152.json. Analysis58898 completed all16 k2 curves.
+- 67775: first-chain4a40078dbf0e6b9a5f5c extension1152→1536,
+  configequilibration_10000_1536.json. Prior89099 completed successfully.
   Analysis93628 completed all16 k1.5 pilot spectra.
   k2 session13068 completed; all128 geometries validated.
-  After89099 completes, extend same chain1152→1536 as already planned.
+  Compare chains only after both reach1536 completed snapshots.
 - Five simulators occupy five compute slots. No analysis is running.
   Wait for a slot before starting another heavy worker.
 
