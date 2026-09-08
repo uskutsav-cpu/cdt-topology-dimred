@@ -2,8 +2,8 @@
 
 ## Current handles — supersede older running-work entries below
 
-- 83128: jobd98f6ba3a813c6c7f098, coupling_1p5_30000.json.
-  Main10k session13823 is complete; all768 geometries validated.
+- 45227: job4f7a75be6ed25248ce1e, coupling_2p5_30000.json.
+  k1.5 session83128 completed; all128 geometries validated.
 - 97299: jobf045a528fac6359e9df4, volume_60000.json, fresh RNG pilot.
   Analysis9883 completed all64 independent baseline spectra(total768/stride12).
   Simulation90274 completed successfully; all768 geometries validated.
@@ -13,7 +13,7 @@
   Prior session45527 completed and all128 pilot geometries validated.
 - 13068: job029620366a1c017aaa4b, k0=2 N30000 baseline pilot.
   Spectral analysis33167 completed all16 k0=.5 pilot geometries.
-- Five chain drivers occupy the five compute slots (k1.5 is validating).
+- Five simulators occupy the five compute slots. No analysis is running.
   Wait for a slot before starting another heavy worker.
 
 ### Latest matched baseline comparison (768 vs768)
@@ -26,7 +26,7 @@ Full-chain peak ESS=73.00882 and117.01872; both peak split-z screens pass.
 Independent total-volume split-z=2.81397 fails, despite Rhat=1.000278 and
 ESS10114.55. Preserve all these results; do not cherry-pick passing checks.
 The independent extension took4087.098 seconds including validation.
-No new topology gate has passed. Baseline gridk2.5 remains unrun;N60000 is live.
+No new topology gate has passed. Baseline gridk2.5 andN60000 are both live.
 
 Full-length saved spectral comparison now complete:
 `independent_baseline_spectral_comparison_total768_stride12.json/csv`.
@@ -34,6 +34,13 @@ Full-length saved spectral comparison now complete:
 maxabsDs difference9..64=.00577099; maxrelativeP difference=.00337239.
 These are descriptive agreements, not replacements for failed convergence
 screens. Analysis9883 reused11 cached curves and computed53 missing ones.
+
+k1.5 pilot d98 completed in3274.853 seconds including validation.
+`d98f6ba3a813c6c7f098_through128_diagnostics.json`: peak tau1301.96691,
+ESS9.83128,split-z1.23488; peak ESS fails. N0/N3/N31 screens pass.
+Its spectral measurements and longer physical-state continuation are pending
+available compute slots. `workflows/diagnose_chain.py` now provides the same
+saved per-chain diagnostics with completed-manifest hash verification.
 
 
 The user's goal is ACTIVE and is the entire computational project in

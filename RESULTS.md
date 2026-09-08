@@ -114,6 +114,12 @@ not exactly fixed-condensate-volume data. The decrease at higher coupling
 is descriptive evidence only, pending convergence and the remaining grid.
 # Matched 768-snapshot baseline comparison
 
+The k0=1.5,N30000,T64 pilot has128 validated geometries. Its peak-slice
+autocorrelation time is1301.96691 sweeps,ESS9.83128,split-z1.23488; volume
+and vertex-number screens pass but the shape ESS fails. This pilot is not a
+production equilibrium ensemble. Source:
+`results/tables/d98f6ba3a813c6c7f098_through128_diagnostics.json`.
+
 Both N10000 chains have768 validated snapshots. The common153600 post-burn
 sweeps give peak-slice rank/folded split Rhat1.01217491 and minimum split
 ESS29.07361, still failing the declared1.01/50 comparison screens. Full-chain

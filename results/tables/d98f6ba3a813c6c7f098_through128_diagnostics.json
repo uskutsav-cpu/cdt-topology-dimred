@@ -1,0 +1,43 @@
+{
+  "job": "d98f6ba3a813c6c7f098",
+  "measurement_sweeps": 25600,
+  "input_sha256": "b278a5aea775cafe94bf6cd626c1f5a89947dc38cd58659961a32617466311ce",
+  "diagnostics": {
+    "N0": {
+      "mean": 4500.4771484375,
+      "sd": 23.760567711755517,
+      "tau_int": 9.672626348630168,
+      "effective_samples": 1323.3220780633928,
+      "half_mean_difference": -1.8430468750002547,
+      "split_z": 1.411889652215469,
+      "screen_pass": true
+    },
+    "N3": {
+      "mean": 30019.1300390625,
+      "sd": 113.15440018824992,
+      "tau_int": 6.250672716389511,
+      "effective_samples": 2047.7795880174456,
+      "half_mean_difference": -5.176796874999127,
+      "split_z": 1.0353959533650385,
+      "screen_pass": true
+    },
+    "N31": {
+      "mean": 8744.954296875,
+      "sd": 47.52113542351103,
+      "tau_int": 9.672626348630168,
+      "effective_samples": 1323.3220780633928,
+      "half_mean_difference": -3.6860937500005093,
+      "split_z": 1.411889652215469,
+      "screen_pass": true
+    },
+    "peak_slice": {
+      "mean": 762.4390625,
+      "sd": 72.08919978873888,
+      "tau_int": 1301.966909600875,
+      "effective_samples": 9.831279048346866,
+      "half_mean_difference": -52.83406249999996,
+      "split_z": 1.2348783789838016,
+      "screen_pass": false
+    }
+  }
+}
