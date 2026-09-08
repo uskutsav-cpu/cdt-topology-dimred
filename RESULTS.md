@@ -114,6 +114,11 @@ not exactly fixed-condensate-volume data. The decrease at higher coupling
 is descriptive evidence only, pending convergence and the remaining grid.
 # Matched 768-snapshot baseline comparison
 
+The N60000,k0=1,T64 pilot has128 validated geometries. Its peak-slice
+autocorrelation time is3108.68452 sweeps,ESS4.11750,split-z2.01234, failing
+sampling and drift screens. N0/N3/N31 screens pass. Pilot spectra are running.
+Source: `results/tables/f045a528fac6359e9df4_through128_diagnostics.json`.
+
 The initial five-point coupling scan is complete. Atk0=2.5,peakDs=2.91173118,
 Ds(15)=2.39052069,Ds(25)=2.49874777. Maximum relative return SE is2.0905%.
 Short-timeDs decreases across all fivek0 values; all ensembles remain pilots

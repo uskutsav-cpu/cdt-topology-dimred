@@ -20,7 +20,8 @@ through768 comparison. Do not treat intermediate1152 as a new stopping test.
   Analysis1630 completed all16 k2.5 pilot spectra.
   Simulation45227 completed successfully; all128 geometries validated.
   k1.5 session83128 completed; all128 geometries validated.
-- 97299: jobf045a528fac6359e9df4, volume_60000.json, fresh RNG pilot.
+- 52125: N60000 spectra, jobf045a528fac6359e9df4,total128/stride8.
+  Simulation97299 completed successfully; all128 geometries validated.
   Analysis9883 completed all64 independent baseline spectra(total768/stride12).
   Simulation90274 completed successfully; all768 geometries validated.
 - 28894: jobd614ea076af1a31a8018 N30000 long-spacing continuation.
@@ -32,11 +33,16 @@ through768 comparison. Do not treat intermediate1152 as a new stopping test.
   Analysis93628 completed all16 k1.5 pilot spectra.
   k2 session13068 completed; all128 geometries validated.
   After89099 completes, extend same chain1152→1536 as already planned.
-- Four simulators plus N60000 validation97299 occupy the five compute slots.
-  N60000 spectra should follow its validation.
+- Four simulators plus N60000 spectral analysis52125 occupy five compute slots.
   Wait for a slot before starting another heavy worker.
 
 ### Latest matched baseline comparison (768 vs768)
+
+N60000 pilotf045 completed in4200.310 seconds including validation.
+Saved through128 diagnostics: N0/N3/N31 screens pass; peak tau3108.68452,
+ESS4.11750,split-z2.01234, failing both shape ESS and drift screens.
+Analysis52125 is running16 pilot spectra. A longer full-state continuation
+will be required; preserve all pilot data and do not relabel as burn.
 
 All five initial coupling spectra are complete. k2.5 peakDs2.91173118,
 Ds15=2.39052069,Ds25=2.49874777,maxrelativeSE.02090510. Coupling pilot CSV/JSON
