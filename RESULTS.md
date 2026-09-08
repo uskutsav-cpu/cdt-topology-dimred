@@ -114,6 +114,14 @@ not exactly fixed-condensate-volume data. The decrease at higher coupling
 is descriptive evidence only, pending convergence and the remaining grid.
 # Matched 768-snapshot baseline comparison
 
+The three-volume pilot comparison is complete. At mean condensate volumes
+9002.375,29126.5625,59177.0625, peakDs values are2.79319873,2.94356034,3.04922218
+at sigma83,129,191. Ds(15) stays near2.52–2.53. Largest-volume maximum return
+SE is1.8054%. The PDF was rendered and visually verified. All three are
+initial pilot datasets; no equilibrium certification or asymptotic scaling
+claim is made. Sources: `results/tables/finite_size_pilot_three_volumes.*`
+and `results/figures/finite_size_pilot_three_volumes.pdf`.
+
 The N60000,k0=1,T64 pilot has128 validated geometries. Its peak-slice
 autocorrelation time is3108.68452 sweeps,ESS4.11750,split-z2.01234, failing
 sampling and drift screens. N0/N3/N31 screens pass. Pilot spectra are running.

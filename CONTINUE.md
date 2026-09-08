@@ -1,11 +1,11 @@
 # Operational continuation state
 
-Prepared NOT RUN `volume_60000_long.json`: inherit completef045 checkpoint,
+RUNNING33770, jobea92befaeacb0e7f05e1, `volume_60000_long.json`: inherit completef045 checkpoint,
 frozenk3=1.1737999999999928,tune0,burn0,128 snapshots separated by3200 sweeps,
 409600 new sweeps. Spacing chosen from pilot tau3108.68452; expected stage
 ESS~65.9 if that timescale persists, not guaranteed. Timeout43200 seconds.
-Prioritize this long continuation when a compute slot frees after N60000
-pilot spectra; no pilot measurements discarded or relabelled as burn.
+Continuation started after N60000 pilot spectra completed; no pilot
+measurements discarded or relabelled as burn.
 
 ### Next baseline convergence extension
 
@@ -27,7 +27,8 @@ through768 comparison. Do not treat intermediate1152 as a new stopping test.
   Analysis1630 completed all16 k2.5 pilot spectra.
   Simulation45227 completed successfully; all128 geometries validated.
   k1.5 session83128 completed; all128 geometries validated.
-- 52125: N60000 spectra, jobf045a528fac6359e9df4,total128/stride8.
+- 33770: N60000 long continuation, jobea92befaeacb0e7f05e1.
+  Analysis52125 completed all16 N60000 pilot spectra.
   Simulation97299 completed successfully; all128 geometries validated.
   Analysis9883 completed all64 independent baseline spectra(total768/stride12).
   Simulation90274 completed successfully; all768 geometries validated.
@@ -40,10 +41,17 @@ through768 comparison. Do not treat intermediate1152 as a new stopping test.
   Analysis93628 completed all16 k1.5 pilot spectra.
   k2 session13068 completed; all128 geometries validated.
   After89099 completes, extend same chain1152→1536 as already planned.
-- Four simulators plus N60000 spectral analysis52125 occupy five compute slots.
+- Five simulators occupy five compute slots. No analysis is running.
   Wait for a slot before starting another heavy worker.
 
 ### Latest matched baseline comparison (768 vs768)
+
+N60000 pilot spectra complete: peakDs3.04922218 at191,Ds15=2.53242445,
+Ds25=2.65643221,maxrelativeSE.01805438. Three-volume pilot comparison saved
+in `finite_size_pilot_three_volumes.csv/json` and PDF/PNG. PDF rendered and
+visually verified. Mean condensate volumes9002/29127/59177, peakDs2.793/2.944/3.049.
+These are the fixed initial pilot datasets, not the later extended chains;
+convergence remains pending. No reproduction-pass tag or topology work yet.
 
 N60000 pilotf045 completed in4200.310 seconds including validation.
 Saved through128 diagnostics: N0/N3/N31 screens pass; peak tau3108.68452,
