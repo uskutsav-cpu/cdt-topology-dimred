@@ -207,3 +207,15 @@ single-thread simulators, no heavy analysis currently running. This extends
 the initial two-simulator cap using the now-free analysis slot and the earlier
 measured low simulator resident memory. Do not add more jobs without checking
 resource use and the scientific need. Finite-size outputs are not yet available.
+
+## Saved-data figure completed
+
+`plot_saved_baseline.py 4a40078dbf0e6b9a5f5c` renders exact vs sampled UV Ds
+and rho-scaled curves using saved tables only. PDF and PNG saved under
+results/figures/4a40078dbf0e6b9a5f5c_precision_and_rho.*. PDF rendered through
+pdftoppm and visually checked: readable labels, no clipping; explicitly
+marked equilibrium not certified. Exact/sample ensemble means are close even
+though per-geometry start-sampling variance exceeded physical variation.
+Bothfacts are compatible. Visible parity artifacts occur at the first few
+steps; no production UV cutoff has been chosen from topology labels.
+All three simulation handles60619,55518,43971 verified live this turn.
