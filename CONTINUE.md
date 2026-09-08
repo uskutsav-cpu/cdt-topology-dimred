@@ -1,6 +1,7 @@
 # Operational continuation state
 
-Prepared NOT RUN remaining long coupling stages: coupling_1p5_30000_long.json
+Remaining long coupling stages: coupling_1p5_30000_long.json is RUNNING71701,
+job6e544248940a191f8dbc.
 (stride2800,358400 sweeps),coupling_2p0_30000_long.json(stride1800,230400),
 coupling_2p5_30000_long.json(stride1200,153600). Each128 snapshots inherits its
 own completed pilot checkpoint and tunedk3, with tune0/burn0 and timeout43200.
@@ -53,13 +54,15 @@ through768 comparison. Do not treat intermediate1152 as a new stopping test.
 - 78681: job1c43898e12fc22400dec, k0=.5 N30000 long extension128→256,
   configcoupling_0p5_30000_long_256.json. Prior70973 completed128 validated.
   Prior session45527 completed and all128 pilot geometries validated.
-- 77805: first-chain4a40078dbf0e6b9a5f5c spectra,total1536/stride12,
-  128 curves spanning full trajectory; prior64 curves reused.
+- 71701: k1.5 long continuation, job6e544248940a191f8dbc,
+  coupling_1p5_30000_long.json,128 snapshots/stride2800.
+  Analysis77805 completed128 first-chain curves,total1536/stride12,
+  reusing prior64 curves. PeakDs2.79156606,maxrelativeSE.01817605.
   Simulation67775 completed; diagnostic session62694 completed and saved.
   Analysis93628 completed all16 k1.5 pilot spectra.
   k2 session13068 completed; all128 geometries validated.
   Compare chains only after both reach1536 completed snapshots.
-- Four simulators plus spectral analysis77805 occupy five compute slots.
+- Five simulators occupy five compute slots. No spectral analysis is running.
   Wait for a slot before starting another heavy worker.
 
 ### Latest matched baseline comparison (768 vs768)

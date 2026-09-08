@@ -114,6 +114,12 @@ not exactly fixed-condensate-volume data. The decrease at higher coupling
 is descriptive evidence only, pending convergence and the remaining grid.
 # Matched 768-snapshot baseline comparison
 
+The first1536-snapshot baseline spectrum is complete:128 configurations
+(stride12),512 starts each,peakDs2.79156606,maxrelative return SE1.8176%.
+The earlier64-configuration estimate was2.79022348. Cross-chain comparison
+still awaits the independent1536-snapshot run; no new convergence pass is
+claimed. Source: `results/tables/4a40078dbf0e6b9a5f5c_n512_s256_stride12_aggregate.csv`.
+
 The first N10000 baseline now has1536 validated snapshots and307200
 measurement sweeps. All its per-chain screens pass. Peak-slice tau773.83835,
 ESS198.49107,split-z0.36617. This does not certify cross-chain convergence;
