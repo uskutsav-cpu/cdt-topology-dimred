@@ -195,3 +195,15 @@ using all32 cached start-mean curves. rho=.2,.4,.6,.8 peaks2.82296,2.81274,
 CSV/NPZ/JSON saved with input hashes. No repeated sparse propagation. Original
 curve caches remain unchanged. This is exploratory; baseline gate stays closed.
 Simulation sessions60619 and55518 were both revalidated live this turn.
+
+## Third simulator launched after analysis finished
+
+Session43971: jobdc0bd0d263f25696be2d, volume_30000.json, fresh RNG,
+N30000/T64/k0=1. Tuning reachedN3=29732 at sweep1359 (elapsed76.27sec).
+Handle revalidated live. Do not restart.
+Sessions60619 and55518 also revalidated live this turn. Exact UV analysis
+has finished; its compute slot is now used for this third simulator. Three
+single-thread simulators, no heavy analysis currently running. This extends
+the initial two-simulator cap using the now-free analysis slot and the earlier
+measured low simulator resident memory. Do not add more jobs without checking
+resource use and the scientific need. Finite-size outputs are not yet available.

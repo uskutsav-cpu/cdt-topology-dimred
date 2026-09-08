@@ -62,3 +62,9 @@ See results/tables/precision_variance.json. Sampling variance from 512 starts
 was 3.22–6.67 times the exact between-geometry variance at sigma=9,15,17,20,25.
 This small nonstationary pilot justifies exact short-time returns; it is not an
 estimate of equilibrium production variance or a frozen UV physics window.
+
+After the exact UV analysis completed, its CPU/memory slot was assigned to a
+third independent simulator (N30000). Initial tuning reachedN3=29732 in76.27sec
+at1359 sweeps. Three single-thread simulations now run concurrently, with no
+heavy analysis at the same time. This is a measured-throughput refinement of
+the initial conservative scheduling, not parallelization within a Markov chain.
