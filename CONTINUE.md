@@ -23,13 +23,18 @@ through768 comparison. Do not treat intermediate1152 as a new stopping test.
   Prior session43971 finished and all128 geometries validated.
 - 70973: job1c43898e12fc22400dec, k0=.5 N30000 long continuation.
   Prior session45527 completed and all128 pilot geometries validated.
-- 93628: k1.5 spectral analysis for d98f6ba3a813c6c7f098,total128/stride8.
+- 58898: k2 spectral analysis for029620366a1c017aaa4b,total128/stride8.
+  Analysis93628 completed all16 k1.5 pilot spectra.
   k2 session13068 completed; all128 geometries validated.
-  Next in this analysis slot: measure029620366a1c017aaa4b,total128/stride8.
-- Four simulators plus analysis93628 occupy the five compute slots.
+  Next after58898: first N10000 checkpoint extension1152.
+- Four simulators plus analysis58898 occupy the five compute slots.
   Wait for a slot before starting another heavy worker.
 
 ### Latest matched baseline comparison (768 vs768)
+
+k1.5 pilot spectra complete: peakDs2.94200850,maxrelativeSE.01953097.
+Ds15=2.49594960,Ds25=2.60538756. Three-point coupling comparison saved;
+k2 andk2.5 remain pending. All remain explicitly nonconverged pilots.
 
 `results/tables/chain_comparison_6fdc582a8fea.json` verifies both completed
 diagnostic hashes and compares153600 post-burn sweeps per chain.

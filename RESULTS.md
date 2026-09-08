@@ -114,6 +114,11 @@ not exactly fixed-condensate-volume data. The decrease at higher coupling
 is descriptive evidence only, pending convergence and the remaining grid.
 # Matched 768-snapshot baseline comparison
 
+Saved k0=1.5 pilot spectra (16 configurations,512 starts each,rho=.8) give
+peakDs2.94200850,Ds(15)=2.49594960,andDs(25)=2.60538756. The three available
+couplings(.5,1,1.5) show decreasing short-timeDs at fixed total-volume target,
+but all are nonconverged pilot ensembles. See `results/tables/coupling_pilot.*`.
+
 The k0=2,N30000,T64 pilot has128 validated geometries. Its peak-slice
 autocorrelation time is818.15444 sweeps,ESS15.64497,split-z2.12705; the
 shape observable fails both sampling and drift screens. N0/N3/N31 screens

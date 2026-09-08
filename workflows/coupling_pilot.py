@@ -4,7 +4,7 @@ import json,hashlib,csv
 import numpy as np
 ROOT=Path(__file__).resolve().parents[1];T=ROOT/'results/tables'
 rows=[];inputs={};pending=[];curves=[]
-for job,k0 in [('590bcc4ae5515ad24761',.5),('dc0bd0d263f25696be2d',1.),('d98f6ba3a813c6c7f098',1.5),('029620366a1c017aaa4b',2.)]:
+for job,k0 in [('590bcc4ae5515ad24761',.5),('dc0bd0d263f25696be2d',1.),('d98f6ba3a813c6c7f098',1.5),('029620366a1c017aaa4b',2.),('4f7a75be6ed25248ce1e',2.5)]:
     p=T/f'{job}_n512_s256_stride8_aggregate.csv'
     if not p.exists():pending.append(job);continue
     a=np.genfromtxt(p,names=True,delimiter=',');inputs[p.name]=hashlib.sha256(p.read_bytes()).hexdigest();vols=[];cond=[]
