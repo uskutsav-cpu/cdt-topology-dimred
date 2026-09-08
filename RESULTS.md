@@ -38,8 +38,10 @@ Completed observations:
   variance at the five checked times. This motivates exact UV computation.
   The geometries are nonthermalized; this is a numerical precision result.
 - A dedicated equilibration stage 4a40078dbf0e6b9a5f5c inherits the complete
-  checkpoint and RNG state. Its 20,000 burn sweeps have completed; measurement
-  and validation remain running. No equilibrium conclusion is available yet.
+  checkpoint and RNG state. Its 20,000 burn and 25,600 measurement sweeps completed; all 128 saved
+  geometries validated. N3 ESS=1509.36, split-z=0.679; peak-slice ESS=18.27,
+  split-z=0.873. The effective-sample screen fails. A continuation to 384 total
+  configurations is running, preserving previous work.
 
 These runtimes are local measurements, not guarantees for production scale.
 Pilot curves and raw return data are under results/. Registry files identify

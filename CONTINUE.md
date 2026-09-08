@@ -9,14 +9,14 @@ Do not rerun completed experiments. Do not spawn agents (not authorized).
 
 - Current job: `4a40078dbf0e6b9a5f5c`.
 - Config: `configs/reproduction/equilibration_10000.json`.
-- Process was started through exec_command; session ID **79485**.
+- Process was started through exec_command; session ID **60619** (extension; original79485 finished).
 - Poll with write_stdin, bounded waits. Do not start it a second time.
 - This is a full-state continuation of job `99188cc153094acfc0b4`, with
   20,000 dedicated burn sweeps, then 128 snapshots spaced by 200 sweeps.
   Each sweep is 100,000 attempted moves; k0=1, k3=1.1777799999999796,
   N3 target 10,000, T=64. Timeout 7,200 seconds.
 - Checkpoints every 50 sweeps and after snapshots. Raw geometry is immutable.
-- At last inspection it was at measurement sweep 31,136, elapsed C++ time 1,372.5 sec.
+- The first 128 snapshots are complete and validated (1,974.71 sec total).
   These are substantial computations: avoid filling the wait with redundant
   analyses or claiming that passing software tests completes the research.
 - Job manifest remains running until independent geometry validation completes.
@@ -117,3 +117,27 @@ Host has 8 GiB RAM / 8 logical CPUs. Prefer one large simulator process at a tim
   figures have been visually checked; render new final PDFs before delivery.
 - Goal is not BLOCKED_COMPUTE merely because runs take time. Continue useful work
   and do not fabricate completion. No results-v1.0 tag has been made.
+
+## Latest completed diagnostic and continuation decision
+
+Stage 4a40078dbf0e6b9a5f5c completed its 20,000 burn +25,600 measurement
+sweeps. All128 retained geometries validated. Total1,974.713sec.
+N0 ESS1826.35 z0.476; N3 ESS1509.36 z0.679; peak-slice ESS18.271,
+tau700.56 sweeps, split-z0.873. Insufficient effective samples; gate remains
+closed. Immutable diagnostic: results/tables/4a40078dbf0e6b9a5f5c_through128_diagnostics.json.
+
+Started same-job extension with configs/reproduction/equilibration_10000_384.json
+and --extend-job 4a40078dbf0e6b9a5f5c. No new tuning or burn, no old sweeps repeated.
+It requests384 total saved configurations (76,800 total measurement sweeps).
+The128-snapshot manifest is preserved as .through_128.json. Resume a FAILED
+extension with the same config, --extend-job and --resume, not while running.
+The target follows observed slow-mode ESS, not any conditioned spectral result.
+
+Live extension session60619; do not restart.
+
+Live baseline measurement session9243:
+`workflows/measure_returns.py 4a40078dbf0e6b9a5f5c --total 128 --stride 4`.
+32 saved geometries,512 starts,256 steps, immutable per-configuration cache.
+Runs concurrently with extension. Do not duplicate it. Final aggregate remains
+exploratory until equilibrium and sampling uncertainties are established.
+Future extension measurements reuse these indices by keeping stride4.
