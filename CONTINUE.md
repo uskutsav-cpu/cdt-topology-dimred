@@ -10,7 +10,9 @@ measurements discarded or relabelled as burn.
 ### Next baseline convergence extension
 
 Prepared1152 and1536 sample configs for both N10000 chains. First-chain
-1152→1536 extension is live67775; independent768→1152 is live8989.
+1152→1536 extension is live67775; independent1152→1536 is live58256.
+Independent8989 completed1152 validated snapshots in4887.477 seconds for
+that extension. Preserved through1152 manifest; no interim convergence test.
 First-chain89099 completed1152 validated snapshots in4476.851 seconds for
 that extension. Preserved through1152 manifest; no interim convergence test.
 The planned next matched comparison is1536vs1536, doubling the completed
@@ -24,8 +26,8 @@ through768 comparison. Do not treat intermediate1152 as a new stopping test.
 
 ## Current handles — supersede older running-work entries below
 
-- 8989: independent8b3e5e63ecacfa361207 extension768→1152,
-  configindependent_10000_1152.json. Then extend1152→1536 as planned.
+- 58256: independent8b3e5e63ecacfa361207 extension1152→1536,
+  configindependent_10000_1536.json. Prior8989 completed successfully.
   Analysis1630 completed all16 k2.5 pilot spectra.
   Simulation45227 completed successfully; all128 geometries validated.
   k1.5 session83128 completed; all128 geometries validated.
