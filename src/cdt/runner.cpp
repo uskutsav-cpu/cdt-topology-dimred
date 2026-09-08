@@ -51,8 +51,13 @@ int main(int argc,char** argv) {
     int completed=0;
     std::string checkpoint=out+"/checkpoint.bin";
     if(std::ifstream(checkpoint).good()) completed=load_checkpoint(checkpoint);
+    else if(const char* initial=std::getenv("CDT_INITIAL_CHECKPOINT")) {
+        // New explicitly recorded stage, preserving the microscopic state/RNGs.
+        load_checkpoint(initial); completed=0; Simulation::k3=k3;
+    }
     else if(!Universe::initialize(input,"research",3,1)) return 3;
     validate();
+    if(!completed) save_checkpoint(checkpoint,0);
     std::ofstream log(out+"/diagnostics.csv",completed?std::ios::app:std::ios::out);
     if(!completed) {
         log<<"sweep,phase,N0,N3,N31,k3,peak_slice,seconds";

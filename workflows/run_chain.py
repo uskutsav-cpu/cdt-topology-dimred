@@ -1,5 +1,5 @@
 """Immutable independent-chain jobs; completed jobs are verified and skipped."""
-import argparse, hashlib, json, subprocess, time, sys, platform
+import argparse, hashlib, json, subprocess, time, sys, platform,os,shutil
 from pathlib import Path
 from datetime import datetime,timezone
 ROOT=Path(__file__).resolve().parents[1]
@@ -13,6 +13,8 @@ def main():
     cfg=json.loads(Path(args.config).read_text()); exe=ROOT/'build/simulator/cdt-run'; inp=ROOT/cfg['input']
     cfg.setdefault('sample_stride',1)
     contract={'parameters':cfg,'binary_sha256':sha(exe),'input_sha256':sha(inp),'driver_sha256':sha(__file__)}
+    initial_checkpoint=ROOT/cfg['initial_checkpoint'] if cfg.get('initial_checkpoint') else None
+    if initial_checkpoint:contract['initial_checkpoint_sha256']=sha(initial_checkpoint)
     job=hashlib.sha256(json.dumps(contract,sort_keys=True).encode()).hexdigest()[:20]
     if args.extend_job:
         job=args.extend_job
@@ -47,9 +49,17 @@ def main():
     manifest.write_text(json.dumps(rec,indent=2)+'\n')
     command=[str(exe),str(inp),str(out),*[str(cfg[k]) for k in ['seed','k0','k3','target','tune','burn','samples','attempts','check_every_move','sample_stride']]]
     rec['command']=command; start=time.perf_counter()
+    env=os.environ.copy()
+    if initial_checkpoint:
+        saved_initial=out/'initial_checkpoint.bin'
+        if not saved_initial.exists():
+            with open(saved_initial,'xb') as f:f.write(initial_checkpoint.read_bytes())
+        assert sha(saved_initial)==contract['initial_checkpoint_sha256']
+        env['CDT_INITIAL_CHECKPOINT']=str(saved_initial)
+        rec['rng_origin']='inherited from initial checkpoint; config seed does not reset inherited RNGs'
     try:
         with open(ROOT/'logs'/f'{job}.log','a' if args.resume or args.extend_job else 'x') as log:
-            subprocess.run(command,stdout=log,stderr=subprocess.STDOUT,check=True,timeout=cfg.get('timeout_seconds',3600))
+            subprocess.run(command,stdout=log,stderr=subprocess.STDOUT,check=True,timeout=cfg.get('timeout_seconds',3600),env=env)
         reports=[]
         for p in sorted(out.glob('geometry_*.dat')):
             idx=int(p.stem.split('_')[1]); dest=ROOT/'data/geometry'/f'{job}_{idx}.npz'

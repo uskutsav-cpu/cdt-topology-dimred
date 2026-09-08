@@ -1,0 +1,17 @@
+{
+  "name": "equilibration_N10000_T64",
+  "input": "data/raw/99188cc153094acfc0b4/geometry_319.dat",
+  "seed": 20260908,
+  "k0": 1.0,
+  "k3": 1.1777799999999796,
+  "target": 10000,
+  "tune": 0,
+  "burn": 20000,
+  "samples": 128,
+  "attempts": 100000,
+  "check_every_move": 0,
+  "timeout_seconds": 7200,
+  "sample_stride": 200,
+  "parent_chain": "99188cc153094acfc0b4",
+  "initial_checkpoint": "data/raw/99188cc153094acfc0b4/checkpoint.bin"
+}

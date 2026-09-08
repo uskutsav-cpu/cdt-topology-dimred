@@ -1,0 +1,21 @@
+{
+  "3d-cdt": {
+    "url": "https://github.com/JorenB/3d-cdt",
+    "tag": "v1.0.1",
+    "commit": "5720c0b98d809b35974d5c6fe067a828fe6b1267"
+  },
+  "python": "3.13.5 (v3.13.5:6cb20a219a8, Jun 11 2025, 12:23:45) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.1.1.101)",
+  "literature": {
+    "hl": "13b7038c20b3aba0e41560aa4727ab155f7e99b01184b75057a9d1bdcb76b7a8",
+    "boundaries": "83d3d71d9d84e9cdc28c2dab964587764a38c0b5398f4f66b0431440344cb02c",
+    "spectral": "df7a8f84ae8c43618d4956001981e3394a5fa7eba4fbe50cb9f54895d788ca15",
+    "simulating": "ff0b3bd72ec3cbe26e148fb8cbedb25830b0be97a131ad21035f2631fa55e84a"
+  },
+  "later_upstreams": {
+    "dyntri-rs": "not acquired: spectral prerequisite pending",
+    "poisson-disk-sampling": "not acquired: spectral prerequisite pending",
+    "canonical-stratification": "not acquired: spectral prerequisite pending"
+  }
+}
