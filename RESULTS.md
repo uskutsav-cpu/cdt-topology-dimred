@@ -114,6 +114,13 @@ not exactly fixed-condensate-volume data. The decrease at higher coupling
 is descriptive evidence only, pending convergence and the remaining grid.
 # Matched 768-snapshot baseline comparison
 
+The k0=2 pilot spectrum (16 configurations,512 starts each,rho=.8) gives
+peakDs2.95889762,Ds(15)=2.44484283,andDs(25)=2.56027081. Four coupling points
+(.5,1,1.5,2) now show decreasing short-timeDs at similar condensate volumes,
+with intermediate-scale peaks near2.95. These remain nonconverged pilots.
+Maximum relative return SE over9..64 is2.0781%, slightly above2%.
+The fifth pointk0=2.5 is still running; no coupling-reproduction pass is claimed.
+
 Saved k0=1.5 pilot spectra (16 configurations,512 starts each,rho=.8) give
 peakDs2.94200850,Ds(15)=2.49594960,andDs(25)=2.60538756. The three available
 couplings(.5,1,1.5) show decreasing short-timeDs at fixed total-volume target,
