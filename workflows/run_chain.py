@@ -19,6 +19,7 @@ def main():
         if not (len(job)==20 and all(c in '0123456789abcdef' for c in job)):raise ValueError('invalid job id')
     manifest=ROOT/'results/manifests'/f'{job}.json'
     previous=None
+    history=[];base_elapsed=0.
     if manifest.exists():
         old=json.loads(manifest.read_text())
         if old['status']=='complete':
@@ -34,10 +35,15 @@ def main():
             previous={'manifest':str(revision.relative_to(ROOT)),'sha256':sha(revision),'completed_samples':old['parameters']['samples'],'elapsed_seconds':old.get('total_elapsed_seconds',old['elapsed_seconds'])}
         elif not (args.resume and old['status']=='failed' and (ROOT/'data/raw'/job/'checkpoint.bin').exists()):
             raise RuntimeError(f'Previous incomplete job {job}: --resume requires a failed job with a checkpoint.')
+        if args.resume:
+            previous=old.get('previous_revision')
+        base_elapsed=old.get('total_elapsed_seconds',old.get('elapsed_seconds',0.))
+        history=old.get('attempt_history',[])+[{k:old.get(k) for k in ['status','started_at','completed_at','elapsed_seconds','error']}]
     elif args.extend_job:raise ValueError('extension requires a completed job')
     out=ROOT/'data/raw'/job; out.mkdir(exist_ok=args.resume or bool(args.extend_job))
     rec={**contract,'experiment_id':cfg['name'],'configuration_id':job,'stage':'simulation','status':'running','seed':cfg['seed'],'started_at':now(),'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True,stderr=subprocess.DEVNULL).strip(),'platform':platform.platform()}
     if previous:rec['previous_revision']=previous
+    rec['attempt_history']=history
     manifest.write_text(json.dumps(rec,indent=2)+'\n')
     command=[str(exe),str(inp),str(out),*[str(cfg[k]) for k in ['seed','k0','k3','target','tune','burn','samples','attempts','check_every_move','sample_stride']]]
     rec['command']=command; start=time.perf_counter()
@@ -61,7 +67,7 @@ def main():
         rec['status']='failed'; rec['error']=repr(e); raise
     finally:
         rec['elapsed_seconds']=time.perf_counter()-start; rec['completed_at']=now()
-        rec['total_elapsed_seconds']=rec['elapsed_seconds']+(previous['elapsed_seconds'] if previous else 0)
+        rec['total_elapsed_seconds']=rec['elapsed_seconds']+base_elapsed
         outputs=list(out.glob('*'))+list((ROOT/'data/geometry').glob(f'{job}_*.npz'))
         rec['output_hashes']={str(p.relative_to(ROOT)):sha(p) for p in outputs}
         manifest.write_text(json.dumps(rec,indent=2)+'\n')

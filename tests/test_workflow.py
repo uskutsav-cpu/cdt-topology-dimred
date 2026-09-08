@@ -32,3 +32,12 @@ def test_failed_job_resumes_from_checkpoint(project,monkeypatch):
     monkeypatch.delenv('CDT_STOP_AFTER_SWEEP');run('--resume')
     assert json.loads(manifest.read_text())['status']=='complete'
     assert len(list((root/'data/raw'/manifest.stem).glob('*.dat')))==3
+
+def test_failed_extension_resumes_without_losing_revision(project,monkeypatch):
+    root,path,c,run=project;run();manifest=next((root/'results/manifests').glob('*.json'));job=manifest.stem
+    c['samples']=5;path.write_text(json.dumps(c));monkeypatch.setenv('CDT_STOP_AFTER_SWEEP','14')
+    with pytest.raises(subprocess.CalledProcessError):run('--extend-job',job)
+    monkeypatch.delenv('CDT_STOP_AFTER_SWEEP');run('--extend-job',job,'--resume')
+    rec=json.loads(manifest.read_text())
+    assert rec['status']=='complete' and rec['previous_revision']['completed_samples']==3
+    assert len(rec['attempt_history'])==2 and len(rec['geometry_validation'])==5
