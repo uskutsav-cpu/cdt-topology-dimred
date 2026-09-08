@@ -1,3 +1,16 @@
+## Full baseline spectral comparison
+
+Both baseline chains now have 128 saved spectral curves sampled every 12th
+configuration across all 1,536 snapshots. The independent measurement reused
+64 existing curves and computed 64 missing curves. The maximum absolute
+spectral-dimension difference over diffusion steps 9–64 is 0.00527413;
+the maximum relative return-probability difference is 0.00111390 (0.1114%).
+Peak dimensions are 2.79156606 and 2.78553443. Independent maximum relative
+SE is 0.01784764. These descriptive results complement the separately saved
+passing baseline convergence screens. Finite-volume/coupling convergence
+and production precision requirements remain; no reproduction gate is claimed.
+Evidence: results/tables/independent_baseline_spectral_comparison_total1536_stride12.json.
+
 ## N30000 long continuation diagnostic
 
 All 128 configurations from the 307,200-sweep long continuation validated.

@@ -1,3 +1,17 @@
+# Latest full baseline spectra and next coupling — supersedes13035 below
+
+Session13035 COMPLETE:128 independent curves, total1536/stride12;64 reused,
+64 newly measured. PeakDs2.785534433, maximum relative SE0.017847643.
+Full saved comparison COMPLETE: independent_baseline_spectral_comparison_total1536_stride12.*.
+Maximum absolute Ds difference sigma9–64:0.00527413345; maximum relative
+return difference0.00111389878. First-chain peak2.791566061.
+Comparison script status is conservative/descriptive; consult separate passing
+full baseline diagnostic4209d27d5996. This is not REPRODUCTION_PASS.
+RUNNING31488, job3202783a6790eb66924d: coupling_2p0_30000_long.json,
+128 samples/stride1800,230400 stage sweeps, parent029620366a1c017aaa4b.
+Current five heavy workers:31488,92019,33770,71701,78681.
+Remaining prepared unrun coupling stage: coupling_2p5_30000_long.json.
+
 # Latest N30000 continuation — supersedes live28894 below
 
 Session28894 COMPLETE, all128 geometries validated, elapsed23589.429470083s.
