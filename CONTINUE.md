@@ -1,5 +1,17 @@
 # Operational continuation state
 
+### Next baseline convergence extension
+
+Prepared (NOT RUN)1152 and1536 sample configs for both N10000 chains.
+The planned next matched comparison is1536vs1536, doubling the completed
+trajectory because the minimum split ESS is29.07 and peak Rhat1.01217.
+Perform two384-snapshot checkpoint extensions per chain, first1152 then1536,
+to stay within the first chain's unchanged7200-second execution timeout.
+Only sample count changes; no retuning, reburning, discarded prefix, or
+threshold relaxation. Use --extend-job with4a40078dbf0e6b9a5f5c or
+8b3e5e63ecacfa361207. Start only after a compute slot frees. Preserve the
+through768 comparison. Do not treat intermediate1152 as a new stopping test.
+
 ## Current handles — supersede older running-work entries below
 
 - 45227: job4f7a75be6ed25248ce1e, coupling_2p5_30000.json.
