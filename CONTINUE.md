@@ -181,3 +181,17 @@ or begin independent_10000.json if diagnostics permit the comparison.
 -Memory query allowed via escalated read-onlyps: simulatorRSS~2.6MiB, driver14MiB,
  exactUVanalysis~845MiB. Earlier sequential-only rule was conservative; changed
  based on evidence to two independent simulators. No subagents were spawned.
+
+## Latest efficient rho comparison
+
+Added spectral_thinning.py: M_new=(1-q)I+qM_old gives binomial mixture of saved
+returns for q=rho_new/rho_old<=1. Truncation error bounded by omitted binomial
+mass, never silently renormalized. New direct-propagation/error-bound test
+passed (PYTHONPATH=src pytest tests/test_thinning.py).
+
+`rho_from_saved.py 4a40078dbf0e6b9a5f5c --total128 --stride4` completed in<1sec
+using all32 cached start-mean curves. rho=.2,.4,.6,.8 peaks2.82296,2.81274,
+2.80283,2.79320 and scaled peak times62.2,63.6,64.8,66.4. Tailbound1.81e-34.
+CSV/NPZ/JSON saved with input hashes. No repeated sparse propagation. Original
+curve caches remain unchanged. This is exploratory; baseline gate stays closed.
+Simulation sessions60619 and55518 were both revalidated live this turn.

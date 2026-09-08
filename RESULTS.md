@@ -56,3 +56,11 @@ geometries,512 starts,256 steps, give an exploratory Ds peak2.79320 and maximum
 relative return sampling SE1.679%. Autocorrelation screen remains unmet at
 128 configurations; this is not a reproduction pass. Exact all-site short-time
 measurement is running to eliminate starting-point sampling uncertainty.
+
+Diffusion-rate baseline sensitivity on32 saved geometries, obtained from exact
+binomial mixtures of the existing rho=.8 return sequences: rho=.2,.4,.6,.8
+has peak Ds=2.82296,2.81274,2.80283,2.79320, respectively. The corresponding
+rho*sigma_peak values are62.2,63.6,64.8,66.4. Maximum omitted binomial mass
+is1.81e-34. RMS differences from rho=.8 over scaled time8..80 are0.0622,0.0404,
+0.0198,0. These are paired rate sensitivities on a not-yet-certified ensemble,
+not independent confirmation of equilibrium or exact continuum scaling.

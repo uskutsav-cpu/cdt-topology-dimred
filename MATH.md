@@ -217,3 +217,15 @@ samples; the paper recommends at least50 per split chain and four chains.
 Do not reinterpret the existing ESS>=50 single-chain screen as meeting that
 stronger recommendation. No cross-chain statistic has yet been computed on
 completed independent CDT chains.
+
+## Reusing returns for slower diffusion
+
+For 0<rho_new<=rho_old, q=rho_new/rho_old and M_new=(1-q)I+qM_old.
+Commutativity gives M_new^s=sum_k binom(s,k)q^k(1-q)^(s-k)M_old^k.
+This identity holds sitewise and for every fixed start class. If only powers
+0..K are saved, the omitted return contribution lies between0 and
+Pr[Binomial(s,q)>K], since Markov return probabilities are in[0,1]. The code
+refuses requests exceeding the specified absolute tail tolerance. It does not
+renormalize the truncated weights. Direct propagation and the error bound
+were tested on a periodic graph. Rates above the saved rate are not supported.
+This avoids repeating sparse diffusion while retaining the same starts.
