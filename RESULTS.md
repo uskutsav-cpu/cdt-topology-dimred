@@ -114,6 +114,12 @@ not exactly fixed-condensate-volume data. The decrease at higher coupling
 is descriptive evidence only, pending convergence and the remaining grid.
 # Matched 768-snapshot baseline comparison
 
+The k0=2,N30000,T64 pilot has128 validated geometries. Its peak-slice
+autocorrelation time is818.15444 sweeps,ESS15.64497,split-z2.12705; the
+shape observable fails both sampling and drift screens. N0/N3/N31 screens
+pass. No production-equilibrium inference follows from this pilot.
+Source: `results/tables/029620366a1c017aaa4b_through128_diagnostics.json`.
+
 The k0=1.5,N30000,T64 pilot has128 validated geometries. Its peak-slice
 autocorrelation time is1301.96691 sweeps,ESS9.83128,split-z1.23488; volume
 and vertex-number screens pass but the shape ESS fails. This pilot is not a

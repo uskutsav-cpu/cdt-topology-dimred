@@ -11,9 +11,10 @@
   Prior session43971 finished and all128 geometries validated.
 - 70973: job1c43898e12fc22400dec, k0=.5 N30000 long continuation.
   Prior session45527 completed and all128 pilot geometries validated.
-- 13068: job029620366a1c017aaa4b, k0=2 N30000 baseline pilot.
-  Spectral analysis33167 completed all16 k0=.5 pilot geometries.
-- Five simulators occupy the five compute slots. No analysis is running.
+- 93628: k1.5 spectral analysis for d98f6ba3a813c6c7f098,total128/stride8.
+  k2 session13068 completed; all128 geometries validated.
+  Next in this analysis slot: measure029620366a1c017aaa4b,total128/stride8.
+- Four simulators plus analysis93628 occupy the five compute slots.
   Wait for a slot before starting another heavy worker.
 
 ### Latest matched baseline comparison (768 vs768)
@@ -41,6 +42,12 @@ ESS9.83128,split-z1.23488; peak ESS fails. N0/N3/N31 screens pass.
 Its spectral measurements and longer physical-state continuation are pending
 available compute slots. `workflows/diagnose_chain.py` now provides the same
 saved per-chain diagnostics with completed-manifest hash verification.
+
+k2 pilot029620366a1c017aaa4b completed in3421.694 seconds including validation.
+Saved through128 diagnostics: N0/N3/N31 screens pass; peak tau818.15444,
+ESS15.64497 and split-z2.12705 fail the peak ESS/drift screens. Preserve this
+pilot; any longer continuation must inherit the final checkpoint without
+relabelling failed measurements as burn. k1.5 spectra are now running93628.
 
 
 The user's goal is ACTIVE and is the entire computational project in
