@@ -8,8 +8,10 @@
   independent_10000_384.json. Prior session55518 finished successfully.
 - 28894: jobd614ea076af1a31a8018 N30000 long-spacing continuation.
   Prior session43971 finished and all128 geometries validated.
-- 47098: baseline spectra on16 saved N30000 pilot geometries.
-- Only the analysis47098 listed above is running. Never duplicate live jobs.
+- 45527: job590bcc4ae5515ad24761, k0=.5 N30000 baseline comparison.
+  Spectral analysis47098 finished successfully.
+- No analysis is running. Four single-thread simulators occupy the prior
+  three-simulator-plus-analysis slots. Never duplicate live jobs.
 
 
 The user's goal is ACTIVE and is the entire computational project in
@@ -324,3 +326,23 @@ measure_returns.py dc0bd0d263f25696be2d --total128 --stride8
 (16 geometries,512 starts,256steps; per-start curves cached). No equilibrium
 claim; this provides first controlled volume comparison atfixedT64,k0=1.
 13823 and19336 continue in parallel. No other process should be restarted.
+
+## First controlled finite-volume spectrum completed
+
+47098 finished:16 N30000 geometries,512 starts,256steps. PeakDs2.9435603,
+maxrelative samplingSE0.0174189. Per-start curves saved. Compared with32
+N10000 geometries atsameT64,k0=1,rho=.8: measured condensate volumes9002.375
+and29126.563; peakDs2.79320 and2.94356 at sigma83 and129. Ds15=2.52228 and
+2.53403; Ds25=2.62842 and2.64883. This is qualitative finite-volume evidence,
+not asymptotic scaling or a convergence/reproduction pass.
+
+finite_size_pilot.py creates source-hashed tables and PDF/PNG from saved
+returns only. Rendered PDF throughpdftoppm and visually checked: no clipping,
+legible labels, explicitlypilot/convergencepending. Outputs committed.
+
+Freed analysis slot assigned to fourth single-thread simulator:
+job590bcc4ae5515ad24761,session45527,configcoupling_0p5_30000.json.
+Predeclaredk0=.5, N30000,T64 comparison withfresh RNG. Three others remain
+13823,19336,28894. No heavy analysis currentlyrunning; do not add another
+CPU-intensive job without a completion or resource check. All base comparisons
+remain gated on proper diagnostics. Novel topology work has not begun.

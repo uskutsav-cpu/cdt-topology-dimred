@@ -82,3 +82,9 @@ N30000/T64 pilot completed: all128 geometries validate. MeanN3=30021.22;
 volume ESS=1782.86, but peak spatial-volume ESS=4.33 with estimated tau=2954
 sweeps. Convergence is not established. A checkpoint continuation with saved
 spacing2400 sweeps is running; the earlier measurements are retained.
+
+Controlled volume pilot (T64,k0=1,rho=.8): mean condensate volumes9002 and29127
+have Ds peaks2.79320 and2.94356 at diffusion times83 and129. Short-time Ds15
+is2.52228 and2.53403. This supports the qualitative finite-volume trend, but
+neither ensemble has passed slow-mode convergence. Two sizes do not establish
+an asymptotic scaling law. Tables and rendered figure: finite_size_pilot.*.
