@@ -346,3 +346,19 @@ Predeclaredk0=.5, N30000,T64 comparison withfresh RNG. Three others remain
 13823,19336,28894. No heavy analysis currentlyrunning; do not add another
 CPU-intensive job without a completion or resource check. All base comparisons
 remain gated on proper diagnostics. Novel topology work has not begun.
+
+## Completed-stage comparison during extensions
+
+compare_chains.py now accepts archived stage identifiers such as
+4a40078dbf0e6b9a5f5c.through_384. It reads the original diagnostic prefix,
+verifies its SHA256 against that completed manifest, and refuses two revisions
+of the same physical chain as independent inputs. Running current manifests
+are still rejected. This allows comparing completed stages while later
+continuations run, without stopping them.
+
+Validated against the archived4a400...through384 and8b3e...through128:
+exact diagnostic hashes verified and ALL numeric diagnostics match the prior
+completed-stage calculation. No simulation or diffusion was repeated.
+When19336 finishes its384 stage while13823 still runs, compare
+4a40078dbf0e6b9a5f5c.through_384 with8b3e5e63ecacfa361207 immediately.
+Four simulators13823,19336,28894,45527 were revalidated live this turn.
