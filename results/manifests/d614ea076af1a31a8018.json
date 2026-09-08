@@ -1,0 +1,46 @@
+{
+  "parameters": {
+    "name": "volume_30000_long_spacing_T64",
+    "input": "data/raw/dc0bd0d263f25696be2d/geometry_127.dat",
+    "seed": 20261002,
+    "k0": 1.0,
+    "k3": 1.1761599999999985,
+    "target": 30000,
+    "tune": 0,
+    "burn": 0,
+    "samples": 256,
+    "attempts": 100000,
+    "check_every_move": 0,
+    "timeout_seconds": 28800,
+    "sample_stride": 2400,
+    "parent_chain": "dc0bd0d263f25696be2d",
+    "initial_checkpoint": "data/raw/dc0bd0d263f25696be2d/checkpoint.bin"
+  },
+  "binary_sha256": "321e6a690c6775fd6a43d0c99083d78da777d511f255e33175ef55c1452e98fa",
+  "input_sha256": "0385afa4e845b9ac036686914eca84b70f9c17540f5876a778e6b56df4082a4f",
+  "driver_sha256": "33d81f62c9122b4951fb1a9eafa4f07c16d72a2d174b11df283652f3bb4b881d",
+  "initial_checkpoint_sha256": "afd0068e08c3a0324077b696c95358b3ac4fd28dcd5ee35791e9fb48700873b9",
+  "experiment_id": "volume_30000_long_spacing_T64",
+  "configuration_id": "d614ea076af1a31a8018",
+  "stage": "simulation",
+  "status": "running",
+  "seed": 20261002,
+  "started_at": "2026-09-08T13:54:04.493886+00:00",
+  "code_commit": "ea7c486617e5faa27fe91c1de31fc43940492afa",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "previous_revision": {
+    "manifest": "results/manifests/d614ea076af1a31a8018.through_128.json",
+    "sha256": "335b68961580abae3714472791d55cdc003258a9871e7e586c2112ebb74f19a1",
+    "completed_samples": 128,
+    "elapsed_seconds": 23589.429470083094
+  },
+  "attempt_history": [
+    {
+      "status": "complete",
+      "started_at": "2026-09-08T07:19:19.184787+00:00",
+      "completed_at": "2026-09-08T13:52:29.166996+00:00",
+      "elapsed_seconds": 23589.429470083094,
+      "error": null
+    }
+  ]
+}

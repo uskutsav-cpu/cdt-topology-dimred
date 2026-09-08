@@ -1,0 +1,32 @@
+{
+  "parameters": {
+    "name": "coupling_2p0_30000_long_spacing_T64",
+    "input": "data/raw/029620366a1c017aaa4b/geometry_127.dat",
+    "seed": 20261006,
+    "k0": 2.0,
+    "k3": 1.3202200000000008,
+    "target": 30000,
+    "tune": 0,
+    "burn": 0,
+    "samples": 128,
+    "attempts": 100000,
+    "check_every_move": 0,
+    "timeout_seconds": 43200,
+    "sample_stride": 1800,
+    "parent_chain": "029620366a1c017aaa4b",
+    "initial_checkpoint": "data/raw/029620366a1c017aaa4b/checkpoint.bin"
+  },
+  "binary_sha256": "321e6a690c6775fd6a43d0c99083d78da777d511f255e33175ef55c1452e98fa",
+  "input_sha256": "077a777885712ee2b3b042f927423792db0eeaae2b3cc846f38269bd081cf110",
+  "driver_sha256": "33d81f62c9122b4951fb1a9eafa4f07c16d72a2d174b11df283652f3bb4b881d",
+  "initial_checkpoint_sha256": "871982388fb1a501a4b2766097804fe8a591f596b8312b511e13b9951e16b0e1",
+  "experiment_id": "coupling_2p0_30000_long_spacing_T64",
+  "configuration_id": "3202783a6790eb66924d",
+  "stage": "simulation",
+  "status": "running",
+  "seed": 20261006,
+  "started_at": "2026-09-08T14:00:52.502481+00:00",
+  "code_commit": "a02616c566e103aa22553b49ea9b45243200b805",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "attempt_history": []
+}
