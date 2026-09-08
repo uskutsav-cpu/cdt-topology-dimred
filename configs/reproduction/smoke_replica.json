@@ -1,0 +1,14 @@
+{
+  "name": "debug_determinism_replica",
+  "input": "data/raw/initial_T8.dat",
+  "seed": 20260907,
+  "k0": 1.0,
+  "k3": 1.0,
+  "target": 300,
+  "tune": 10,
+  "burn": 10,
+  "samples": 4,
+  "attempts": 100,
+  "check_every_move": 1,
+  "timeout_seconds": 120
+}

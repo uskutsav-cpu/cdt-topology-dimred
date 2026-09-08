@@ -1,0 +1,14 @@
+{
+  "name": "pilot_N3000_T16",
+  "input": "data/raw/initial_T16.dat",
+  "seed": 20260907,
+  "k0": 1.0,
+  "k3": 1.0,
+  "target": 3000,
+  "tune": 600,
+  "burn": 600,
+  "samples": 128,
+  "attempts": 30000,
+  "check_every_move": 0,
+  "timeout_seconds": 600
+}
