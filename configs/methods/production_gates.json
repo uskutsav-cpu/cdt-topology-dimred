@@ -1,0 +1,6 @@
+{
+  "baseline_reproduction": {"status": "NOT_ESTABLISHED", "evidence": []},
+  "effective_topology_2d_reproduction": {"status": "NOT_ESTABLISHED", "evidence": []},
+  "coarsegrain_3d_validation": {"status": "NOT_ESTABLISHED", "evidence": []},
+  "microscopic_mapping_validation": {"status": "NOT_ESTABLISHED", "evidence": []}
+}

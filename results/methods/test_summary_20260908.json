@@ -1,0 +1,24 @@
+{
+  "base_repository_commit": "84f53821e52f77f2490f5293e21369bac9bb1e6d",
+  "command": "PYTHONPATH=src python -m pytest -q tests/test_topology_foundations.py tests/test_coarsegrain_foundations.py tests/test_conditioned_analysis.py tests/test_runtime_foundations.py tests/test_conditioned_workflow.py",
+  "elapsed_seconds": 2.329,
+  "environment": {
+    "numpy": "2.3.5",
+    "pytest": "9.0.2",
+    "python": "3.13.5",
+    "scipy": "1.17.0"
+  },
+  "errors": 0,
+  "failures": 0,
+  "scope": "new method tests plus unchanged spectral dependency; not full legacy/C++ suite",
+  "skipped": 0,
+  "test_sha256": {
+    "tests/test_coarsegrain_foundations.py": "92379539b46900239edebfbe6a65d0a1ecbe55ca991d36375f04857d9a1a8c4b",
+    "tests/test_conditioned_analysis.py": "df35fd1e00c210cb69ad35d41f022497dbbc624c1b3bfb4bb851dbee726d36e9",
+    "tests/test_conditioned_workflow.py": "819f37cd46f614a510b8f73ad1eb33389e1735d5eb2801bf1b508da933013149",
+    "tests/test_runtime_foundations.py": "1ac41d898a85fcf452ffc9bf78ddf3650474f018b05e08ee9bebdabe61ce52f4",
+    "tests/test_topology_foundations.py": "60b63856e3596acc0f2394308bd8e518694d38aa542323d519599be196fdcffd"
+  },
+  "tests": 102,
+  "unchanged_spectral_git_blob_sha": "4a21b2c5b2d3479edd8704b4a6700f7f41e85024"
+}

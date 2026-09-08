@@ -1,0 +1,37 @@
+name: Synthetic method tests
+on:
+  push:
+    branches: [main]
+    paths: ['src/**', 'tests/**', 'workflows/**', 'configs/methods/**', '.github/workflows/method-tests.yml']
+  pull_request:
+    paths: ['src/**', 'tests/**', 'workflows/**', 'configs/methods/**', '.github/workflows/method-tests.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  methods:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          sparse-checkout: |
+            src
+            tests
+            workflows
+            configs/methods
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned numerical test dependencies
+        run: python -m pip install numpy==2.2.6 scipy==1.15.3 pytest==8.3.5
+      - name: Test new methods (not legacy C++ integration or physics reproduction)
+        env:
+          PYTHONPATH: src
+        run: >-
+          python -m pytest -q
+          tests/test_topology_foundations.py tests/test_coarsegrain_foundations.py
+          tests/test_conditioned_analysis.py tests/test_runtime_foundations.py
+          tests/test_conditioned_workflow.py
+      - name: Execute synthetic validation
+        run: python workflows/validate_methods.py

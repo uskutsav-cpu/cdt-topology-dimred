@@ -1,0 +1,22 @@
+{
+  "contract": {
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "scipy": "1.17.0",
+    "seed": 20260908,
+    "sources": {
+      "src/coarsegrain/__init__.py": "7b009c6708d504dd4cbcaa0248614ccc0a2f1c3afcee0f4011db13b3eb3d7839",
+      "src/coarsegrain/dual2d.py": "c4123b49af93bb4c7a925c092a31f77b54798323a958c585ec4059261020160d",
+      "src/coarsegrain/dual3d.py": "9d990ed8ec9c62049057414b07aba921d835da27d8d480157f92ad5361227760",
+      "src/coarsegrain/voronoi.py": "675f17fc28bcb366bf933e0f0d2de400c46d5691a427a077b24ff0e7460a2d6c",
+      "src/conditioned.py": "ee8882873bf3bbb77efe2c66fc7b96ecd1c031cd8481d08323d9c2f1d7a6e23b",
+      "src/runtime_safety.py": "d2c590171035b97978fa51bb1cfb0bba05226d9fcb621f584407cdc2e5636a1b",
+      "src/spectral/__init__.py": "ed07d16b59bf1869c460f37036bd49fc853f03b8c50b6dfda7e80cc175b9e8e1",
+      "src/topology/__init__.py": "d1975e5874dfcca6928a4a37d51597bacaf6975657e16e2cf089ee219d2f6871",
+      "src/topology/synthetic.py": "7beeaf73954448a8297d06b38075d76a54a5c4ccb3f708b141c62aeecc564cf7",
+      "src/uncertainty.py": "2e36c1b5eee3e4a5fd6880a8344de7805ad76ba6966ffdd0b9b20669c2e6e467",
+      "workflows/validate_methods.py": "f45cb8b55b9845104864713b9cf0a9a7e17ca7c0766c26f3f80a3ff1d84e024e"
+    }
+  },
+  "output_sha256": "6093db85f879c3ad95b13cda96791cf652c7d4f29adf84d352baeb2bb3d71778"
+}
