@@ -1,3 +1,17 @@
+## Extended independent baseline comparison
+
+Both N10000 baseline chains have completed 1,536 validated snapshots and
+307,200 measurement sweeps. All configured per-chain and matched-chain
+screens now pass. For peak slice volume, rank/folded split Rhat is
+1.007266635 and minimum split single-chain ESS is 73.00882. Full-chain peak
+ESS values are 198.49107 and 193.89995. The independent chain has split-z
+0.24071. This improves on the preserved 768-snapshot comparison, which
+failed these thresholds. It is a two-chain diagnostic result, not automatic
+equilibrium certification or a completed reproduction gate. Full independent
+spectral measurement is running, reusing all existing per-configuration data.
+Evidence: results/tables/chain_comparison_4209d27d5996.json and
+results/tables/8b3e5e63ecacfa361207_through1536_diagnostics.json.
+
 # Computational results — in progress
 
 PRIMARY RESULT: NOT COMPUTED. Ordinary spectral reproduction has not passed.

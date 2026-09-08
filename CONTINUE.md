@@ -1,3 +1,21 @@
+# Latest completed baseline comparison — supersedes older live58256 references
+
+Independent job8b3e5e63ecacfa361207 completed1536 snapshots, all validated,
+session58256 exit0; extension elapsed7782.574589625 seconds including validation.
+Diagnostics23104 and comparison53660 COMPLETE. Through1536 all per-chain
+screens pass: peak tau792.16110686, ESS193.89995125, split-z0.240710969.
+Matched307200-sweep comparison4209d27d5996: all configured screens PASS;
+peak rank/folded split Rhat1.007266635, minimum split ESS73.00882094.
+This is a two-chain diagnostic screen, not automatic equilibrium certification
+or REPRODUCTION_PASS. Preserve earlier failed comparisons.
+
+RUNNING13035: measure_returns.py8b3e5e63ecacfa361207 --total1536 --stride12;
+reuses64 existing curves and computes64 missing curves. When complete run
+compare_saved_spectra.py4a40078dbf0e6b9a5f5c8b3e5e63ecacfa361207
+with --total1536 --stride12 (separate job arguments).
+Other live handles unchanged:28894 (N30000 now validating after307200 final
+sweeps),33770,71701,78681. Five total heavy workers including13035.
+
 # Operational continuation state
 
 Remaining long coupling stages: coupling_1p5_30000_long.json is RUNNING71701,
