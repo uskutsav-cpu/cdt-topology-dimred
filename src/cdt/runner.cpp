@@ -37,12 +37,13 @@ void validate() {
 }
 
 int main(int argc,char** argv) {
-    if(argc!=12) { std::cerr<<"input output_dir seed k0 k3 target tune burn samples attempts_per_sweep check_every_move\n"; return 2; }
+    if(argc!=13) { std::cerr<<"input output_dir seed k0 k3 target tune burn samples attempts_per_sweep check_every_move sample_stride\n"; return 2; }
     std::string input=argv[1], out=argv[2];
     unsigned seed=std::stoul(argv[3]); double k0=std::stod(argv[4]),k3=std::stod(argv[5]);
     int target=std::stoi(argv[6]),tune=std::stoi(argv[7]),burn=std::stoi(argv[8]),samples=std::stoi(argv[9]),attempts=std::stoi(argv[10]);
     bool debug=std::stoi(argv[11]);
-    if(target<=0 || tune<0 || burn<0 || samples<0 || attempts<=0) return 2;
+    int stride=std::stoi(argv[12]);
+    if(target<=0 || tune<0 || burn<0 || samples<0 || attempts<=0 || stride<1) return 2;
     if(!Universe::initialize(input,"research",3,1)) return 3;
     Simulation::k0=k0; Simulation::k3=k3; Simulation::targetVolume=target;
     Simulation::target2Volume=0; Simulation::moveFreqs={1,1,1};
@@ -53,7 +54,7 @@ int main(int argc,char** argv) {
     for(int j=1;j<=5;j++) log<<",attempt_"<<j<<",accept_"<<j;
     log<<"\n";
     auto start=std::chrono::steady_clock::now();
-    for(int i=0;i<tune+burn+samples;i++) {
+    for(int i=0;i<tune+burn+samples*stride;i++) {
         long proposed[6]={},accepted[6]={};
         for(int j=0;j<attempts;j++) {
             int m=Simulation::attemptMove(); proposed[abs(m)]++; if(m>0) accepted[m]++;
@@ -65,9 +66,9 @@ int main(int argc,char** argv) {
         for(int j=1;j<=5;j++) log<<","<<proposed[j]<<","<<accepted[j];
         log<<"\n"; log.flush();
         if(i<tune) Simulation::tune_once();
-        if(i>=tune+burn) {
+        if(i>=tune+burn && (i-tune-burn+1)%stride==0) {
             validate();
-            std::string path=out+"/geometry_"+std::to_string(i-tune-burn)+".dat";
+            std::string path=out+"/geometry_"+std::to_string((i-tune-burn+1)/stride-1)+".dat";
             if(std::ifstream(path).good()) throw std::runtime_error("raw output already exists");
             Universe::exportGeometry(path);
         }

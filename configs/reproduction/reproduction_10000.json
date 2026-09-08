@@ -1,0 +1,15 @@
+{
+  "name": "reproduction_N10000_T64",
+  "input": "data/raw/initial_T64.dat",
+  "seed": 20260907,
+  "k0": 1.0,
+  "k3": 1.0,
+  "target": 10000,
+  "tune": 1200,
+  "burn": 2500,
+  "samples": 128,
+  "attempts": 100000,
+  "check_every_move": 0,
+  "timeout_seconds": 1800,
+  "sample_stride": 10
+}

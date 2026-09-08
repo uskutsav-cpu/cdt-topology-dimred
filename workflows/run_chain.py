@@ -11,6 +11,7 @@ def now(): return datetime.now(timezone.utc).isoformat()
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('config'); args=ap.parse_args()
     cfg=json.loads(Path(args.config).read_text()); exe=ROOT/'build/simulator/cdt-run'; inp=ROOT/cfg['input']
+    cfg.setdefault('sample_stride',1)
     contract={'parameters':cfg,'binary_sha256':sha(exe),'input_sha256':sha(inp),'driver_sha256':sha(__file__)}
     job=hashlib.sha256(json.dumps(contract,sort_keys=True).encode()).hexdigest()[:20]
     manifest=ROOT/'results/manifests'/f'{job}.json'
@@ -24,7 +25,7 @@ def main():
     out=ROOT/'data/raw'/job; out.mkdir()
     rec={**contract,'experiment_id':cfg['name'],'configuration_id':job,'stage':'simulation','status':'running','seed':cfg['seed'],'started_at':now(),'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True,stderr=subprocess.DEVNULL).strip(),'platform':platform.platform()}
     manifest.write_text(json.dumps(rec,indent=2)+'\n')
-    command=[str(exe),str(inp),str(out),*[str(cfg[k]) for k in ['seed','k0','k3','target','tune','burn','samples','attempts','check_every_move']]]
+    command=[str(exe),str(inp),str(out),*[str(cfg[k]) for k in ['seed','k0','k3','target','tune','burn','samples','attempts','check_every_move','sample_stride']]]
     rec['command']=command; start=time.perf_counter()
     try:
         with open(ROOT/'logs'/f'{job}.log','x') as log:
@@ -32,7 +33,7 @@ def main():
         reports=[]
         for p in sorted(out.glob('geometry_*.dat')):
             idx=int(p.stem.split('_')[1]); dest=ROOT/'data/geometry'/f'{job}_{idx}.npz'
-            reports.append(export_npz(p,dest,{**cfg,'configuration_id':f'{job}_{idx}','sweep':cfg['tune']+cfg['burn']+idx+1,'binary_sha256':sha(exe)}))
+            reports.append(export_npz(p,dest,{**cfg,'configuration_id':f'{job}_{idx}','sweep':cfg['tune']+cfg['burn']+(idx+1)*cfg['sample_stride'],'binary_sha256':sha(exe)}))
         assert len(reports)==cfg['samples']
         rec['geometry_validation']=reports
         rec['status']='complete'
