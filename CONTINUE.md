@@ -8,10 +8,11 @@
   independent_10000_768.json. Prior session19336 finished successfully.
 - 28894: jobd614ea076af1a31a8018 N30000 long-spacing continuation.
   Prior session43971 finished and all128 geometries validated.
-- 45527: job590bcc4ae5515ad24761, k0=.5 N30000 baseline comparison.
-  Spectral analysis47098 finished successfully.
-- No analysis is running. Four single-thread simulators occupy the prior
-  three-simulator-plus-analysis slots. Never duplicate live jobs.
+- 70973: job1c43898e12fc22400dec, k0=.5 N30000 long continuation.
+  Prior session45527 completed and all128 pilot geometries validated.
+- 33167: fills10 missing k0=.5 pilot spectra, reuses6 cached curves.
+- Four single-thread simulators plus moderate analysis33167 are active.
+  Latest resource check supports this load; do not add another heavy job.
 
 
 The user's goal is ACTIVE and is the entire computational project in
@@ -443,3 +444,22 @@ Started session3163: measure_returns.py 590bcc4ae5515ad24761 --total128
 aftervalidation, rerun samecommand tofill ONLY missing caches. Noanalysis
 otherthan3163 should be started while it is live. Three active simulators
 83128(k1.5),90274(independent10k),28894(long30k) remain unchanged.
+
+## k0=.5 validation complete and continuation launched
+
+45527 finished exit0: all128 pilot geometries validate, total3078.260sec.
+3163 finished with6 newly computed spectra and10pending exports. After all
+exports completed, started33167 with same measure_returns command tocompute
+ONLY those10 missing spectra and reuse6. Do not duplicate33167.
+
+Started exactcheckpoint continuation1c43898e12fc22400dec, session70973,
+configcoupling_0p5_30000_long.json (153600new sweeps, savedstride1200). Parent
+590bcc... data remain unchanged. No tuning/burn or oldMC repeated.
+Other live simulators83128,90274,28894 continue unchanged.
+
+Read-onlyprocess resource check whilefour simulators+analysis ran: CPU~95–96%
+per active process (about4.8 of8logical cores total); simulator resident memory
+ranged4–442MiB, analysis~298MiB, waiting drivers~14MiB each. The new checkpoint
+stage initialization is much larger inRSS than older compressed/idle pages;
+do not treat earlier2.6MiB as guaranteed simulator memory. Noadditional heavy
+job should start until a slot frees or resources are rechecked.

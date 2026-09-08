@@ -68,3 +68,10 @@ third independent simulator (N30000). Initial tuning reachedN3=29732 in76.27sec
 at1359 sweeps. Three single-thread simulations now run concurrently, with no
 heavy analysis at the same time. This is a measured-throughput refinement of
 the initial conservative scheduling, not parallelization within a Markov chain.
+
+A later process check with four simulators and one moderate spectral analysis
+found simulator RSS4–442MiB, analysis298MiB and each waiting driver14MiB.
+Active processes each used about95–96% of one CPU, roughly4.8 of8logical cores.
+The newly initialized checkpoint stage had much higher RSS than older stages;
+earlier tiny resident figures are not a guaranteed simulator footprint.
+Keep this as the current maximum workload until a completion or resource check.
