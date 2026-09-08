@@ -424,3 +424,22 @@ NEW session83128, configcoupling_1p5_30000.json. It uses the freed analysis/
 main-simulation slot. Four active simulators:83128,90274,28894,45527.
 N60000, k0=2 and2.5 configs remain NOT RUN. Whole project baseline gate still
 requires matched long-record comparison and completed coupling/volume checks.
+
+## k0=.5 pilot MC completed; validation/measurement still live
+
+590bcc... reached47600sweeps; measurementN3mean29992.311, ESS1928.83,z0.395;
+N0ESS1411.37,z0.701. Peak_slice mean609.260, tau1184.012, ESS10.811,
+z0.584: fails effective-sample/length screen. Saved through128 diagnostics.
+Session45527 is still validating (37exports atlastcheck), do not call it done.
+
+Prepared, NOT STARTED, configcoupling_0p5_30000_long.json: exactcheckpoint
+continuation, frozenk3=1.1102199999999947,tune0,burn0,128snapshots,stride1200,
+153600new sweeps. Expected~65effective samples iftaupersists, NOT a claim.
+Start only after45527 exits0 and all128 validate. Do not discard/relabel
+parentmeasurements asburn-in. Larger spacing saves sixfold output work.
+
+Started session3163: measure_returns.py 590bcc4ae5515ad24761 --total128
+--stride8, onvalidatedexports asavailable. May finish withpending indices;
+aftervalidation, rerun samecommand tofill ONLY missing caches. Noanalysis
+otherthan3163 should be started while it is live. Three active simulators
+83128(k1.5),90274(independent10k),28894(long30k) remain unchanged.
