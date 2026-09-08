@@ -77,3 +77,8 @@ give peaks2.79320 and2.79799. Over sigma9..64 the maximum absolute Ds difference
 is0.00556 and maximum relative P difference0.254%. These are descriptive
 agreements; slow-mode convergence remains unestablished. The independent
 chain's diffusion-rate scaling gives similar rescaled peak times63.0–66.4.
+
+N30000/T64 pilot completed: all128 geometries validate. MeanN3=30021.22;
+volume ESS=1782.86, but peak spatial-volume ESS=4.33 with estimated tau=2954
+sweeps. Convergence is not established. A checkpoint continuation with saved
+spacing2400 sweeps is running; the earlier measurements are retained.

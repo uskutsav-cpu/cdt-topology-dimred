@@ -6,8 +6,10 @@
   equilibration_10000_768.json. Prior session60619 finished successfully.
 - 19336: job8b3e5e63ecacfa361207 extension128→384 samples, config
   independent_10000_384.json. Prior session55518 finished successfully.
-- 43971: jobdc0bd0d263f25696be2d N30000 baseline, collecting measurements.
-- No other analysis is running. Never duplicate any live job.
+- 28894: jobd614ea076af1a31a8018 N30000 long-spacing continuation.
+  Prior session43971 finished and all128 geometries validated.
+- 47098: baseline spectra on16 saved N30000 pilot geometries.
+- Only the analysis47098 listed above is running. Never duplicate live jobs.
 
 
 The user's goal is ACTIVE and is the entire computational project in
@@ -296,3 +298,29 @@ compare_saved_spectra.py JOB1 JOB2. Over sigma9..64 max|Ds difference|=.005557,
 maxrelative P difference=.002536. This numerical agreement does not override
 the failed slow-mode convergence diagnostics. Main/independent extensions
 13823/19336 andN30000 session43971 remain live; no analysis remains running.
+
+## Completed N30000 pilot and efficient continuation
+
+Jobdc0bd0d263f25696be2d finished, all128 exports validated, total3036.592sec
+(C++2653.844sec). MeanN3=30021.215, ESS1782.86,z0.231; N0ESS1340.25,z0.080.
+Peak_slice mean697.511, SD90.531, tau2953.656sweeps, ESS4.334,z1.771.
+The short record fails both effective-sample and chain-length screens. Slow
+shape fluctuations, not volume counts, remain the issue. Saved through128
+diagnostics JSON. Do not certify equilibrium.
+
+Started new stage d614ea076af1a31a8018, session28894,
+configvolume_30000_long.json. EXACT checkpoint continuation, no tuning or
+burn repeated, frozenk3=1.1761599999999985, samples128,stride2400, attempts100k,
+307,200 new sweeps, timeout28800sec. Predicted ESS~52 if measured tau persists;
+this is a schedule estimate, not evidence. Twelvefold fewer saved/validated
+geometries than stride200 for the same simulation effort. Old candidate
+measurements remain retained; do not relabel them post hoc as burn-in. Include
+lineage and check long-mode consistency when assessing the combined trajectory.
+When measuring this future long-spaced stage, avoid default stride4 thinning
+without statistical justification; all128 snapshots may be useful.
+
+Started baseline measurement47098:
+measure_returns.py dc0bd0d263f25696be2d --total128 --stride8
+(16 geometries,512 starts,256steps; per-start curves cached). No equilibrium
+claim; this provides first controlled volume comparison atfixedT64,k0=1.
+13823 and19336 continue in parallel. No other process should be restarted.
