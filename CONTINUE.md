@@ -4,16 +4,29 @@
 
 - 83128: jobd98f6ba3a813c6c7f098, coupling_1p5_30000.json.
   Main10k session13823 is complete; all768 geometries validated.
-- 90274: job8b3e5e63ecacfa361207 extension384→768 samples, config
-  independent_10000_768.json. Prior session19336 finished successfully.
+- 9883: missing spectral measurements for independent job8b3e5e63ecacfa361207,
+  total768/stride12 (64 configurations, cached curves reused).
+  Simulation90274 completed successfully; all768 geometries validated.
 - 28894: jobd614ea076af1a31a8018 N30000 long-spacing continuation.
   Prior session43971 finished and all128 geometries validated.
 - 70973: job1c43898e12fc22400dec, k0=.5 N30000 long continuation.
   Prior session45527 completed and all128 pilot geometries validated.
 - 13068: job029620366a1c017aaa4b, k0=2 N30000 baseline pilot.
   Spectral analysis33167 completed all16 k0=.5 pilot geometries.
-- Five single-thread simulators occupy the same five active compute slots
-  previously measured. No analysis running; wait for a slot before heavy work.
+- Four simulators plus spectral analysis9883 occupy the five compute slots.
+  Wait for a slot before starting another heavy worker.
+
+### Latest matched baseline comparison (768 vs768)
+
+`results/tables/chain_comparison_6fdc582a8fea.json` verifies both completed
+diagnostic hashes and compares153600 post-burn sweeps per chain.
+Peak-slice rank/folded split Rhat=1.01217491 (improved from1.033155 at384),
+minimum split ESS=29.07361: both remain outside declared screens.
+Full-chain peak ESS=73.00882 and117.01872; both peak split-z screens pass.
+Independent total-volume split-z=2.81397 fails, despite Rhat=1.000278 and
+ESS10114.55. Preserve all these results; do not cherry-pick passing checks.
+The independent extension took4087.098 seconds including validation.
+No new topology gate has passed. Baseline gridk2.5 andN60000 remain unrun.
 
 
 The user's goal is ACTIVE and is the entire computational project in

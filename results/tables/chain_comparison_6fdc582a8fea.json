@@ -1,0 +1,133 @@
+{
+  "status": "diagnostic comparison, not automatic equilibrium certification",
+  "jobs": [
+    "4a40078dbf0e6b9a5f5c",
+    "8b3e5e63ecacfa361207"
+  ],
+  "common_prefix_sweeps": 153600,
+  "input_sha256": {
+    "4a40078dbf0e6b9a5f5c": "23700894512cd9dcf86e5b7b7f4cd3dd8bd4351e5380ffea3cdb3fafe4b9a87c",
+    "8b3e5e63ecacfa361207": "42ef0ebb0ad84d477f86c2b4ca526b715aa2e140203d530d7847eaa6a83b84d9"
+  },
+  "lineage": [
+    {
+      "configuration_id": "4a40078dbf0e6b9a5f5c",
+      "seed": 20260908,
+      "rng_origin": "inherited from initial checkpoint; config seed does not reset inherited RNGs",
+      "initial_checkpoint_sha256": "78f4983cf6f239228ec2d4af3b83a66e47559fae8712368944b344b7c8a21959"
+    },
+    {
+      "configuration_id": "8b3e5e63ecacfa361207",
+      "seed": 20261001,
+      "rng_origin": null,
+      "initial_checkpoint_sha256": null
+    }
+  ],
+  "observables": {
+    "N0": {
+      "rank_folded_split_rhat": 1.0001440559766959,
+      "rhat_below_1p01": true,
+      "minimum_split_single_chain_ess": 5660.873735238422,
+      "split_ess_at_least_50": true,
+      "full_chain_summaries": [
+        {
+          "mean": 1552.8133463541667,
+          "sd": 18.344074234966953,
+          "tau_int": 6.388467370910183,
+          "effective_samples": 12021.662715177661,
+          "half_mean_difference": -0.3452083333331757,
+          "split_z": 1.0317050536455488,
+          "screen_pass": true
+        },
+        {
+          "mean": 1552.50599609375,
+          "sd": 18.242078983625007,
+          "tau_int": 5.73378247415116,
+          "effective_samples": 13394.299547676792,
+          "half_mean_difference": -0.5462109375000637,
+          "split_z": 1.7328594181839247,
+          "screen_pass": true
+        }
+      ]
+    },
+    "N3": {
+      "rank_folded_split_rhat": 1.0002780692045046,
+      "rhat_below_1p01": true,
+      "minimum_split_single_chain_ess": 4626.329927716416,
+      "split_ess_at_least_50": true,
+      "full_chain_summaries": [
+        {
+          "mean": 9983.984361979166,
+          "sd": 112.88815302001052,
+          "tau_int": 8.269661617831066,
+          "effective_samples": 9286.957985608944,
+          "half_mean_difference": 0.863593750000291,
+          "split_z": 0.3686121372618004,
+          "screen_pass": true
+        },
+        {
+          "mean": 9982.74162109375,
+          "sd": 112.20512618923665,
+          "tau_int": 7.5930188746899825,
+          "effective_samples": 10114.554074927897,
+          "half_mean_difference": -6.276549479167443,
+          "split_z": 2.8139744800097555,
+          "screen_pass": false
+        }
+      ]
+    },
+    "N31": {
+      "rank_folded_split_rhat": 1.0001440559766959,
+      "rhat_below_1p01": true,
+      "minimum_split_single_chain_ess": 5660.873735238422,
+      "split_ess_at_least_50": true,
+      "full_chain_summaries": [
+        {
+          "mean": 2849.6266927083334,
+          "sd": 36.68814846993391,
+          "tau_int": 6.388467370910183,
+          "effective_samples": 12021.662715177661,
+          "half_mean_difference": -0.6904166666663514,
+          "split_z": 1.0317050536455488,
+          "screen_pass": true
+        },
+        {
+          "mean": 2849.0119921875,
+          "sd": 36.48415796725001,
+          "tau_int": 5.73378247415116,
+          "effective_samples": 13394.299547676792,
+          "half_mean_difference": -1.0924218750001273,
+          "split_z": 1.7328594181839247,
+          "screen_pass": true
+        }
+      ]
+    },
+    "peak_slice": {
+      "rank_folded_split_rhat": 1.012174909865072,
+      "rhat_below_1p01": false,
+      "minimum_split_single_chain_ess": 29.073608510912166,
+      "split_ess_at_least_50": false,
+      "full_chain_summaries": [
+        {
+          "mean": 303.747578125,
+          "sd": 39.18340924609908,
+          "tau_int": 1051.9276850071005,
+          "effective_samples": 73.0088209433157,
+          "half_mean_difference": -4.407864583333321,
+          "split_z": 0.48136039937557035,
+          "screen_pass": true
+        },
+        {
+          "mean": 294.6758984375,
+          "sd": 35.88672875866725,
+          "tau_int": 656.3052721512984,
+          "effective_samples": 117.01871561728862,
+          "half_mean_difference": -6.058776041666647,
+          "split_z": 0.9164319228794174,
+          "screen_pass": true
+        }
+      ]
+    }
+  },
+  "notes": "Two chains provide a first check; four overdispersed chains are recommended by the Rhat reference. Single-chain ESS is not multichain bulk/tail ESS. Confirm same model/time extent and genuinely independent RNGs from manifests before interpretation."
+}

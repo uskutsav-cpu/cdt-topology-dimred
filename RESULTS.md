@@ -112,3 +112,13 @@ Ds15=2.56959 vs2.53403 and Ds25=2.69342 vs2.64883 (16 geometries each).
 PeakDs=2.95475 vs2.94356. Mean condensate volumes differ by0.57%; these are
 not exactly fixed-condensate-volume data. The decrease at higher coupling
 is descriptive evidence only, pending convergence and the remaining grid.
+# Matched 768-snapshot baseline comparison
+
+Both N10000 chains have768 validated snapshots. The common153600 post-burn
+sweeps give peak-slice rank/folded split Rhat1.01217491 and minimum split
+ESS29.07361, still failing the declared1.01/50 comparison screens. Full-chain
+peak ESS values are73.00882 and117.01872. The independent chain's total-volume
+split-z2.81397 also fails its per-chain screen. These checks do not certify
+equilibrium. Source: `results/tables/chain_comparison_6fdc582a8fea.json`.
+The full-length independent spectral measurement is in progress; earlier
+128-snapshot spectra must not be presented as the new full-length result.
