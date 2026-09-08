@@ -2,8 +2,8 @@
 
 ## Current handles — supersede older running-work entries below
 
-- 13823: job4a40078dbf0e6b9a5f5c extension384→768 samples, config
-  equilibration_10000_768.json. Prior session60619 finished successfully.
+- 83128: jobd98f6ba3a813c6c7f098, coupling_1p5_30000.json.
+  Main10k session13823 is complete; all768 geometries validated.
 - 90274: job8b3e5e63ecacfa361207 extension384→768 samples, config
   independent_10000_768.json. Prior session19336 finished successfully.
 - 28894: jobd614ea076af1a31a8018 N30000 long-spacing continuation.
@@ -405,3 +405,22 @@ Other live simulators90274,28894,45527 continue. After32940 finishes and
 The768-vs768 cross-chain comparison must wait for independent90274; previous
 Rhat1.033 refers to384-vs384 stages and must not be presented as a fresh768
 comparison. Baseline coupling/volume gates remain incomplete.
+
+## Main768 validated and broad spectral subset finished
+
+13823 FINISHED exit0, all768 geometries validate. Extension elapsed4132.501sec,
+same-stage cumulative8618.930sec (parent stages not included). Complete
+manifest4a400...json is now stable, until explicitly extended in the future.
+
+32940 completed with50 newly computed,11 cached,3 pending geometry exports.
+After validation finished, session10742 computed ONLY the final3 missing
+measurements, reused61 valid caches, and finished the64-geometry set spanning
+all768 snapshots atstride12. PeakDs2.79022348, maxrelative samplingSE0.01815738.
+Aggregate/report filenamesinclude n512_s256_stride12. Both sessions finished;
+no analysis is running. Do not recompute the64 basis-return arrays.
+
+Started predeclaredk0=1.5 N30000/T64 baseline: jobd98f6ba3a813c6c7f098,
+NEW session83128, configcoupling_1p5_30000.json. It uses the freed analysis/
+main-simulation slot. Four active simulators:83128,90274,28894,45527.
+N60000, k0=2 and2.5 configs remain NOT RUN. Whole project baseline gate still
+requires matched long-record comparison and completed coupling/volume checks.

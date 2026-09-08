@@ -100,3 +100,9 @@ screens, including peak spatial-volume ESS73.01 and split-z0.481. Geometry
 validation is pending. Measurements spanning the full trajectory are running,
 with matching old return files reused. Cross-chain convergence for the longer
 matched records has not yet been assessed.
+
+All768 first-chain geometries are validated. A64-geometry spectral sample
+spanning the full trajectory gives peakDs2.79022, maximum relative return
+samplingSE1.816%. Earlier saved returns were reused. This supports stability
+of the baseline spectrum with longer sampling, while the matched long-chain
+comparison is still pending. The predeclaredk0=1.5 comparison is running.
