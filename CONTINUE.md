@@ -23,7 +23,8 @@ Do not rerun completed experiments. Do not spawn agents (not authorized).
 
 Workspace runtime: `/Users/swethasunilkumar/Documents/Codex/2026-09-07/do-t/work/venv/bin/python`.
 Project root: `/Users/swethasunilkumar/Documents/Codex/2026-09-07/do-t/outputs/cdt-topology-dimred`.
-Host has 8 GiB RAM / 8 logical CPUs. Prefer one large simulator process at a time.
+Host has8GiB RAM/8logical CPUs. Measured resident simulator memory permits
+two independent simulators plus one analysis; see COMPUTE.md.
 
 ## Completed work
 
@@ -164,3 +165,19 @@ are explicitly heuristic, then retuned. No inherited RNG checkpoints for
 these independent chains. Do not claim the unrun design is reproduction.
 Next simulator after60619 should address any remaining same-chain problem,
 or begin independent_10000.json if diagnostics permit the comparison.
+
+## Latest authoritative sessions
+
+-60619: extension4a40078dbf0e6b9a5f5c still running.
+-55518: NEW independent job8b3e5e63ecacfa361207, configindependent_10000.json,
+ fresh RNG, running concurrently. Neither chain should be restarted.
+-4647: FINISHED exit0.32 exact all-site UV geometries through26, all crosschecked
+ against512 saved starts. Noise/exact between-geometry variance=4.922,3.352,
+ 3.072,2.771,2.456 at sigma9,15,17,20,25. No equilibrium claim.
+-Added rank_split_rhat to diagnostics.py and two tests. It follows primarypaper
+ normal-score denominatorS+1/4, not currentStan manual typoS-1/4. Tests invoked
+ with PYTHONPATH=src (initial invocation without it failed collection only).
+ Do not use lowESSRhat as convergence proof. New independentchain not complete.
+-Memory query allowed via escalated read-onlyps: simulatorRSS~2.6MiB, driver14MiB,
+ exactUVanalysis~845MiB. Earlier sequential-only rule was conservative; changed
+ based on evidence to two independent simulators. No subagents were spawned.

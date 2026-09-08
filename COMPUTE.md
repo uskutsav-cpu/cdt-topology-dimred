@@ -2,8 +2,12 @@
 
 Host: Apple Silicon macOS, 8 logical CPU cores, 8 GiB physical RAM (read-only
 hardware query). Python 3.13, pinned NumPy/SciPy and Apple C++14 toolchain.
-No GPU acceleration has been measured or claimed. Keep large simulator jobs
-sequential to preserve headroom for the desktop application and analysis.
+No GPU acceleration has been measured or claimed. Initially large simulator jobs were kept sequential. A later live process
+measurement showed ~2.6 MiB resident memory for the N10000 simulator, ~14 MiB
+for its waiting Python driver, and ~845 MiB for exact UV analysis. Two
+independent simulators may therefore run concurrently with one analysis on
+this host; monitor actual resource use before increasing concurrency. Fixed
+virtual allocations do not imply equally large resident memory.
 
 Measured on the first 10,000-tetrahedron chain: 498 million attempted moves,
 401.6 seconds for the C++ simulation, 717.7 seconds including independent

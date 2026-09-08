@@ -23,7 +23,7 @@
   "retention": "Never discard measurements post hoc to force agreement; preserve all stage lineage and manifests.",
   "finite_size_volume": "Fit against measured condensate volume; requested total N3 differs from historical condensate N3.",
   "coupling_convention": "Coefficients of S=-k0*N0+k3*N3 in this research driver. Historical action agrees on paper, numerical calibration remains provisional.",
-  "constraints": "One large simulator at a time on this 8GiB host; no topology-conditioned production before baseline gate.",
+  "constraints": "At most two independent simulators plus one analysis initially, based on measured resident memory; no topology-conditioned production before baseline gate.",
   "jobs": [
     "independent_10000.json",
     "volume_30000.json",

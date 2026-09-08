@@ -29,3 +29,26 @@ def bootstrap_return(P,reps,seed):
     if P.ndim!=2 or len(P)<2: raise ValueError('configuration x sigma required')
     rng=np.random.default_rng(seed)
     for _ in range(reps): yield P[rng.integers(len(P),size=len(P))].mean(axis=0)
+
+def rank_split_rhat(chains):
+    """Max rank/folded split Rhat, Vehtari et al. (2021), equations 4 and 14.
+
+    Input shape is chains x draws. Equal-length independent chains are required;
+    an odd middle draw is omitted. This is a diagnostic, not convergence proof.
+    """
+    from scipy.stats import rankdata
+    from scipy.special import ndtri
+    x=np.asarray(chains,float)
+    if x.ndim!=2 or x.shape[0]<2 or x.shape[1]<4:
+        raise ValueError('at least two chains with four draws required')
+    if not np.isfinite(x).all() or np.any(np.ptp(x,axis=1)==0):return float('nan')
+    n=x.shape[1]//2
+    def evaluate(y):
+        y=np.concatenate((y[:,:n],y[:,-n:]),axis=0)
+        z=ndtri((rankdata(y,method='average').reshape(y.shape)-.375)/(y.size+.25))
+        within=z.var(axis=1,ddof=1).mean()
+        if within==0:return float('nan')
+        between=n*z.mean(axis=1).var(ddof=1)
+        return float(np.sqrt(((n-1)*within/n+between/n)/within))
+    bulk=evaluate(x);folded=evaluate(abs(x-np.median(x)))
+    return float(np.maximum(bulk,folded))

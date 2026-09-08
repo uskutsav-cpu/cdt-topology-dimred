@@ -198,3 +198,22 @@ this source of uncertainty, but do not remove configuration autocorrelation.
 [spectral scaling, equations 3.6–3.12](https://arxiv.org/abs/1711.02685);
 [effective topology](https://arxiv.org/abs/2510.05695);
 [canonical stratification](https://arxiv.org/abs/1808.06568).
+
+## Independent-chain diagnostic
+
+`rank_split_rhat` splits each equal-length input chain into its first and last
+floor(n/2) draws, omitting the central draw for odd lengths. Pool average ranks
+r across the S split draws and transform z=Phi^-1((r-3/8)/(S+1/4)). With split
+length m, W is mean within-chain sample variance and B=m times the sample
+variance of chain means. Rhat=sqrt(((m-1)*W/m+B/m)/W). Repeat on absolute
+deviations from the pooled median and report the maximum. Nonfinite or
+constant chains yield NaN. See [Vehtari et al., equations 4,14,15](https://arxiv.org/html/1903.08008).
+
+This implementation uses the paper's S+1/4 denominator. The current Stan
+manual displayed S-1/4 when checked; that documentation expression is not
+used. Two independent chains are a first cross-check, not a proof that all
+modes were explored. Values near1 are meaningful only with sufficient effective
+samples; the paper recommends at least50 per split chain and four chains.
+Do not reinterpret the existing ESS>=50 single-chain screen as meeting that
+stronger recommendation. No cross-chain statistic has yet been computed on
+completed independent CDT chains.

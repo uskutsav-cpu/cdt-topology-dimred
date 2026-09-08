@@ -1,0 +1,2527 @@
+{
+  "status": "baseline measurement; no equilibrium claim",
+  "job": "4a40078dbf0e6b9a5f5c",
+  "configurations": 32,
+  "steps": 26,
+  "sampling_variance_comparison": [
+    {
+      "sigma": 9,
+      "sampling_variance_over_exact_geometry_variance": 4.921896475867469
+    },
+    {
+      "sigma": 15,
+      "sampling_variance_over_exact_geometry_variance": 3.352066727082537
+    },
+    {
+      "sigma": 17,
+      "sampling_variance_over_exact_geometry_variance": 3.0724335736296795
+    },
+    {
+      "sigma": 20,
+      "sampling_variance_over_exact_geometry_variance": 2.771422535053798
+    },
+    {
+      "sigma": 25,
+      "sampling_variance_over_exact_geometry_variance": 2.4560065781095637
+    }
+  ],
+  "records": [
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 48865,
+          "storage_bytes": 625476
+        },
+        {
+          "power": 2,
+          "nnz": 143137,
+          "storage_bytes": 1756740
+        },
+        {
+          "power": 3,
+          "nnz": 328013,
+          "storage_bytes": 3975252
+        },
+        {
+          "power": 4,
+          "nnz": 649801,
+          "storage_bytes": 7836708
+        },
+        {
+          "power": 5,
+          "nnz": 1170847,
+          "storage_bytes": 14089260
+        },
+        {
+          "power": 6,
+          "nnz": 1971493,
+          "storage_bytes": 23697012
+        },
+        {
+          "power": 7,
+          "nnz": 3146099,
+          "storage_bytes": 37792284
+        },
+        {
+          "power": 8,
+          "nnz": 4797111,
+          "storage_bytes": 57604428
+        },
+        {
+          "power": 9,
+          "nnz": 7029515,
+          "storage_bytes": 84393276
+        },
+        {
+          "power": 10,
+          "nnz": 9929355,
+          "storage_bytes": 119191356
+        },
+        {
+          "power": 11,
+          "nnz": 13539437,
+          "storage_bytes": 162512340
+        },
+        {
+          "power": 12,
+          "nnz": 17848533,
+          "storage_bytes": 214221492
+        },
+        {
+          "power": 13,
+          "nnz": 22780633,
+          "storage_bytes": 273406692
+        }
+      ],
+      "stop": null,
+      "configuration": 0,
+      "seconds": 5.870078832958825,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.04842249009519395,
+      "fraction_condensate": 0.9020771513353115
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49850,
+          "storage_bytes": 638084
+        },
+        {
+          "power": 2,
+          "nnz": 146366,
+          "storage_bytes": 1796276
+        },
+        {
+          "power": 3,
+          "nnz": 336460,
+          "storage_bytes": 4077404
+        },
+        {
+          "power": 4,
+          "nnz": 668126,
+          "storage_bytes": 8057396
+        },
+        {
+          "power": 5,
+          "nnz": 1205594,
+          "storage_bytes": 14507012
+        },
+        {
+          "power": 6,
+          "nnz": 2031006,
+          "storage_bytes": 24411956
+        },
+        {
+          "power": 7,
+          "nnz": 3237868,
+          "storage_bytes": 38894300
+        },
+        {
+          "power": 8,
+          "nnz": 4924356,
+          "storage_bytes": 59132156
+        },
+        {
+          "power": 9,
+          "nnz": 7181814,
+          "storage_bytes": 86221652
+        },
+        {
+          "power": 10,
+          "nnz": 10084708,
+          "storage_bytes": 121056380
+        },
+        {
+          "power": 11,
+          "nnz": 13677348,
+          "storage_bytes": 164168060
+        },
+        {
+          "power": 12,
+          "nnz": 17966218,
+          "storage_bytes": 215634500
+        },
+        {
+          "power": 13,
+          "nnz": 22895448,
+          "storage_bytes": 274785260
+        }
+      ],
+      "stop": null,
+      "configuration": 4,
+      "seconds": 5.713457999983802,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.048570103753985,
+      "fraction_condensate": 0.9053159478435306
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 50060,
+          "storage_bytes": 640772
+        },
+        {
+          "power": 2,
+          "nnz": 146848,
+          "storage_bytes": 1802228
+        },
+        {
+          "power": 3,
+          "nnz": 337242,
+          "storage_bytes": 4086956
+        },
+        {
+          "power": 4,
+          "nnz": 669826,
+          "storage_bytes": 8077964
+        },
+        {
+          "power": 5,
+          "nnz": 1208290,
+          "storage_bytes": 14539532
+        },
+        {
+          "power": 6,
+          "nnz": 2032556,
+          "storage_bytes": 24430724
+        },
+        {
+          "power": 7,
+          "nnz": 3236200,
+          "storage_bytes": 38874452
+        },
+        {
+          "power": 8,
+          "nnz": 4915256,
+          "storage_bytes": 59023124
+        },
+        {
+          "power": 9,
+          "nnz": 7159200,
+          "storage_bytes": 85950452
+        },
+        {
+          "power": 10,
+          "nnz": 10043608,
+          "storage_bytes": 120563348
+        },
+        {
+          "power": 11,
+          "nnz": 13606960,
+          "storage_bytes": 163323572
+        },
+        {
+          "power": 12,
+          "nnz": 17829842,
+          "storage_bytes": 213998156
+        },
+        {
+          "power": 13,
+          "nnz": 22635932,
+          "storage_bytes": 271671236
+        }
+      ],
+      "stop": null,
+      "configuration": 8,
+      "seconds": 5.958929667016491,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.05174135146168549,
+      "fraction_condensate": 0.9010187774670395
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49220,
+          "storage_bytes": 630020
+        },
+        {
+          "power": 2,
+          "nnz": 143918,
+          "storage_bytes": 1766396
+        },
+        {
+          "power": 3,
+          "nnz": 330122,
+          "storage_bytes": 4000844
+        },
+        {
+          "power": 4,
+          "nnz": 655630,
+          "storage_bytes": 7906940
+        },
+        {
+          "power": 5,
+          "nnz": 1183870,
+          "storage_bytes": 14245820
+        },
+        {
+          "power": 6,
+          "nnz": 1994906,
+          "storage_bytes": 23978252
+        },
+        {
+          "power": 7,
+          "nnz": 3181250,
+          "storage_bytes": 38214380
+        },
+        {
+          "power": 8,
+          "nnz": 4844788,
+          "storage_bytes": 58176836
+        },
+        {
+          "power": 9,
+          "nnz": 7086956,
+          "storage_bytes": 85082852
+        },
+        {
+          "power": 10,
+          "nnz": 9990760,
+          "storage_bytes": 119928500
+        },
+        {
+          "power": 11,
+          "nnz": 13590514,
+          "storage_bytes": 163125548
+        },
+        {
+          "power": 12,
+          "nnz": 17861200,
+          "storage_bytes": 214373780
+        },
+        {
+          "power": 13,
+          "nnz": 22703680,
+          "storage_bytes": 272483540
+        }
+      ],
+      "stop": null,
+      "configuration": 12,
+      "seconds": 6.321303291944787,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.04590336737976604,
+      "fraction_condensate": 0.8984152783421373
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 50295,
+          "storage_bytes": 643780
+        },
+        {
+          "power": 2,
+          "nnz": 147363,
+          "storage_bytes": 1808596
+        },
+        {
+          "power": 3,
+          "nnz": 338363,
+          "storage_bytes": 4100596
+        },
+        {
+          "power": 4,
+          "nnz": 671203,
+          "storage_bytes": 8094676
+        },
+        {
+          "power": 5,
+          "nnz": 1209125,
+          "storage_bytes": 14549740
+        },
+        {
+          "power": 6,
+          "nnz": 2034369,
+          "storage_bytes": 24452668
+        },
+        {
+          "power": 7,
+          "nnz": 3240837,
+          "storage_bytes": 38930284
+        },
+        {
+          "power": 8,
+          "nnz": 4926925,
+          "storage_bytes": 59163340
+        },
+        {
+          "power": 9,
+          "nnz": 7182785,
+          "storage_bytes": 86233660
+        },
+        {
+          "power": 10,
+          "nnz": 10078193,
+          "storage_bytes": 120978556
+        },
+        {
+          "power": 11,
+          "nnz": 13650537,
+          "storage_bytes": 163846684
+        },
+        {
+          "power": 12,
+          "nnz": 17887915,
+          "storage_bytes": 214695220
+        },
+        {
+          "power": 13,
+          "nnz": 22718429,
+          "storage_bytes": 272661388
+        }
+      ],
+      "stop": null,
+      "configuration": 16,
+      "seconds": 6.140084000071511,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.07635785928643558,
+      "fraction_condensate": 0.9103290585545283
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49845,
+          "storage_bytes": 638020
+        },
+        {
+          "power": 2,
+          "nnz": 146481,
+          "storage_bytes": 1797652
+        },
+        {
+          "power": 3,
+          "nnz": 336773,
+          "storage_bytes": 4081156
+        },
+        {
+          "power": 4,
+          "nnz": 669975,
+          "storage_bytes": 8079580
+        },
+        {
+          "power": 5,
+          "nnz": 1211423,
+          "storage_bytes": 14576956
+        },
+        {
+          "power": 6,
+          "nnz": 2041415,
+          "storage_bytes": 24536860
+        },
+        {
+          "power": 7,
+          "nnz": 3252807,
+          "storage_bytes": 39073564
+        },
+        {
+          "power": 8,
+          "nnz": 4947769,
+          "storage_bytes": 59413108
+        },
+        {
+          "power": 9,
+          "nnz": 7230425,
+          "storage_bytes": 86804980
+        },
+        {
+          "power": 10,
+          "nnz": 10188207,
+          "storage_bytes": 122298364
+        },
+        {
+          "power": 11,
+          "nnz": 13875893,
+          "storage_bytes": 166550596
+        },
+        {
+          "power": 12,
+          "nnz": 18293619,
+          "storage_bytes": 219563308
+        },
+        {
+          "power": 13,
+          "nnz": 23378249,
+          "storage_bytes": 280578868
+        }
+      ],
+      "stop": null,
+      "configuration": 20,
+      "seconds": 5.438596082967706,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.04539197547707219,
+      "fraction_condensate": 0.9089176446985655
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 50690,
+          "storage_bytes": 648836
+        },
+        {
+          "power": 2,
+          "nnz": 148474,
+          "storage_bytes": 1822244
+        },
+        {
+          "power": 3,
+          "nnz": 340298,
+          "storage_bytes": 4124132
+        },
+        {
+          "power": 4,
+          "nnz": 673978,
+          "storage_bytes": 8128292
+        },
+        {
+          "power": 5,
+          "nnz": 1213280,
+          "storage_bytes": 14599916
+        },
+        {
+          "power": 6,
+          "nnz": 2037292,
+          "storage_bytes": 24488060
+        },
+        {
+          "power": 7,
+          "nnz": 3234228,
+          "storage_bytes": 38851292
+        },
+        {
+          "power": 8,
+          "nnz": 4896266,
+          "storage_bytes": 58795748
+        },
+        {
+          "power": 9,
+          "nnz": 7114286,
+          "storage_bytes": 85411988
+        },
+        {
+          "power": 10,
+          "nnz": 9967244,
+          "storage_bytes": 119647484
+        },
+        {
+          "power": 11,
+          "nnz": 13507240,
+          "storage_bytes": 162127436
+        },
+        {
+          "power": 12,
+          "nnz": 17747782,
+          "storage_bytes": 213013940
+        },
+        {
+          "power": 13,
+          "nnz": 22651530,
+          "storage_bytes": 271858916
+        }
+      ],
+      "stop": null,
+      "configuration": 24,
+      "seconds": 5.536228792043403,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.04637062354297082,
+      "fraction_condensate": 0.8931741960939041
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49915,
+          "storage_bytes": 638916
+        },
+        {
+          "power": 2,
+          "nnz": 146025,
+          "storage_bytes": 1792236
+        },
+        {
+          "power": 3,
+          "nnz": 335173,
+          "storage_bytes": 4062012
+        },
+        {
+          "power": 4,
+          "nnz": 664151,
+          "storage_bytes": 8009748
+        },
+        {
+          "power": 5,
+          "nnz": 1195299,
+          "storage_bytes": 14383524
+        },
+        {
+          "power": 6,
+          "nnz": 2008273,
+          "storage_bytes": 24139212
+        },
+        {
+          "power": 7,
+          "nnz": 3194301,
+          "storage_bytes": 38371548
+        },
+        {
+          "power": 8,
+          "nnz": 4858257,
+          "storage_bytes": 58339020
+        },
+        {
+          "power": 9,
+          "nnz": 7106831,
+          "storage_bytes": 85321908
+        },
+        {
+          "power": 10,
+          "nnz": 10042095,
+          "storage_bytes": 120545076
+        },
+        {
+          "power": 11,
+          "nnz": 13744209,
+          "storage_bytes": 164970444
+        },
+        {
+          "power": 12,
+          "nnz": 18247915,
+          "storage_bytes": 219014916
+        },
+        {
+          "power": 13,
+          "nnz": 23515607,
+          "storage_bytes": 282227220
+        }
+      ],
+      "stop": null,
+      "configuration": 28,
+      "seconds": 5.298750124988146,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.04884228952658146,
+      "fraction_condensate": 0.8911148953220475
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 50460,
+          "storage_bytes": 645892
+        },
+        {
+          "power": 2,
+          "nnz": 147740,
+          "storage_bytes": 1813252
+        },
+        {
+          "power": 3,
+          "nnz": 338942,
+          "storage_bytes": 4107676
+        },
+        {
+          "power": 4,
+          "nnz": 671960,
+          "storage_bytes": 8103892
+        },
+        {
+          "power": 5,
+          "nnz": 1209642,
+          "storage_bytes": 14556076
+        },
+        {
+          "power": 6,
+          "nnz": 2031954,
+          "storage_bytes": 24423820
+        },
+        {
+          "power": 7,
+          "nnz": 3231620,
+          "storage_bytes": 38819812
+        },
+        {
+          "power": 8,
+          "nnz": 4906714,
+          "storage_bytes": 58920940
+        },
+        {
+          "power": 9,
+          "nnz": 7152180,
+          "storage_bytes": 85866532
+        },
+        {
+          "power": 10,
+          "nnz": 10043386,
+          "storage_bytes": 120561004
+        },
+        {
+          "power": 11,
+          "nnz": 13633282,
+          "storage_bytes": 163639756
+        },
+        {
+          "power": 12,
+          "nnz": 17944972,
+          "storage_bytes": 215380036
+        },
+        {
+          "power": 13,
+          "nnz": 22953092,
+          "storage_bytes": 275477476
+        }
+      ],
+      "stop": null,
+      "configuration": 32,
+      "seconds": 5.364180624950677,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.03857273834033179,
+      "fraction_condensate": 0.8857510899722553
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 48635,
+          "storage_bytes": 622532
+        },
+        {
+          "power": 2,
+          "nnz": 142521,
+          "storage_bytes": 1749164
+        },
+        {
+          "power": 3,
+          "nnz": 326535,
+          "storage_bytes": 3957332
+        },
+        {
+          "power": 4,
+          "nnz": 646075,
+          "storage_bytes": 7791812
+        },
+        {
+          "power": 5,
+          "nnz": 1160181,
+          "storage_bytes": 13961084
+        },
+        {
+          "power": 6,
+          "nnz": 1942681,
+          "storage_bytes": 23351084
+        },
+        {
+          "power": 7,
+          "nnz": 3078325,
+          "storage_bytes": 36978812
+        },
+        {
+          "power": 8,
+          "nnz": 4654565,
+          "storage_bytes": 55893692
+        },
+        {
+          "power": 9,
+          "nnz": 6755529,
+          "storage_bytes": 81105260
+        },
+        {
+          "power": 10,
+          "nnz": 9451071,
+          "storage_bytes": 113451764
+        },
+        {
+          "power": 11,
+          "nnz": 12780603,
+          "storage_bytes": 153406148
+        },
+        {
+          "power": 12,
+          "nnz": 16741297,
+          "storage_bytes": 200934476
+        },
+        {
+          "power": 13,
+          "nnz": 21275193,
+          "storage_bytes": 255341228
+        }
+      ],
+      "stop": null,
+      "configuration": 36,
+      "seconds": 4.8261916659539565,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.04952113576306993,
+      "fraction_condensate": 0.9009972242212398
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49010,
+          "storage_bytes": 627332
+        },
+        {
+          "power": 2,
+          "nnz": 143796,
+          "storage_bytes": 1764764
+        },
+        {
+          "power": 3,
+          "nnz": 330140,
+          "storage_bytes": 4000892
+        },
+        {
+          "power": 4,
+          "nnz": 655860,
+          "storage_bytes": 7909532
+        },
+        {
+          "power": 5,
+          "nnz": 1185006,
+          "storage_bytes": 14259284
+        },
+        {
+          "power": 6,
+          "nnz": 1999114,
+          "storage_bytes": 24028580
+        },
+        {
+          "power": 7,
+          "nnz": 3194078,
+          "storage_bytes": 38368148
+        },
+        {
+          "power": 8,
+          "nnz": 4871188,
+          "storage_bytes": 58493468
+        },
+        {
+          "power": 9,
+          "nnz": 7130028,
+          "storage_bytes": 85599548
+        },
+        {
+          "power": 10,
+          "nnz": 10052856,
+          "storage_bytes": 120673484
+        },
+        {
+          "power": 11,
+          "nnz": 13681322,
+          "storage_bytes": 164215076
+        },
+        {
+          "power": 12,
+          "nnz": 18009898,
+          "storage_bytes": 216157988
+        },
+        {
+          "power": 13,
+          "nnz": 22968042,
+          "storage_bytes": 275655716
+        }
+      ],
+      "stop": null,
+      "configuration": 40,
+      "seconds": 5.551355000003241,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.043845438362444256,
+      "fraction_condensate": 0.8937971842481126
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49920,
+          "storage_bytes": 638980
+        },
+        {
+          "power": 2,
+          "nnz": 146176,
+          "storage_bytes": 1794052
+        },
+        {
+          "power": 3,
+          "nnz": 335560,
+          "storage_bytes": 4066660
+        },
+        {
+          "power": 4,
+          "nnz": 665936,
+          "storage_bytes": 8031172
+        },
+        {
+          "power": 5,
+          "nnz": 1201618,
+          "storage_bytes": 14459356
+        },
+        {
+          "power": 6,
+          "nnz": 2025300,
+          "storage_bytes": 24343540
+        },
+        {
+          "power": 7,
+          "nnz": 3229396,
+          "storage_bytes": 38792692
+        },
+        {
+          "power": 8,
+          "nnz": 4912966,
+          "storage_bytes": 58995532
+        },
+        {
+          "power": 9,
+          "nnz": 7175282,
+          "storage_bytes": 86143324
+        },
+        {
+          "power": 10,
+          "nnz": 10110108,
+          "storage_bytes": 121361236
+        },
+        {
+          "power": 11,
+          "nnz": 13794850,
+          "storage_bytes": 165578140
+        },
+        {
+          "power": 12,
+          "nnz": 18268586,
+          "storage_bytes": 219262972
+        },
+        {
+          "power": 13,
+          "nnz": 23506774,
+          "storage_bytes": 282121228
+        }
+      ],
+      "stop": null,
+      "configuration": 44,
+      "seconds": 6.147497999947518,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.05027599211345298,
+      "fraction_condensate": 0.8912259615384616
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 48680,
+          "storage_bytes": 623108
+        },
+        {
+          "power": 2,
+          "nnz": 142848,
+          "storage_bytes": 1753124
+        },
+        {
+          "power": 3,
+          "nnz": 328136,
+          "storage_bytes": 3976580
+        },
+        {
+          "power": 4,
+          "nnz": 651204,
+          "storage_bytes": 7853396
+        },
+        {
+          "power": 5,
+          "nnz": 1174496,
+          "storage_bytes": 14132900
+        },
+        {
+          "power": 6,
+          "nnz": 1978008,
+          "storage_bytes": 23775044
+        },
+        {
+          "power": 7,
+          "nnz": 3153632,
+          "storage_bytes": 37882532
+        },
+        {
+          "power": 8,
+          "nnz": 4802278,
+          "storage_bytes": 57666284
+        },
+        {
+          "power": 9,
+          "nnz": 7029908,
+          "storage_bytes": 84397844
+        },
+        {
+          "power": 10,
+          "nnz": 9922598,
+          "storage_bytes": 119110124
+        },
+        {
+          "power": 11,
+          "nnz": 13531906,
+          "storage_bytes": 162421820
+        },
+        {
+          "power": 12,
+          "nnz": 17860280,
+          "storage_bytes": 214362308
+        },
+        {
+          "power": 13,
+          "nnz": 22844366,
+          "storage_bytes": 274171340
+        }
+      ],
+      "stop": null,
+      "configuration": 48,
+      "seconds": 5.823259250028059,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.04072380993176798,
+      "fraction_condensate": 0.8965694330320461
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 50610,
+          "storage_bytes": 647812
+        },
+        {
+          "power": 2,
+          "nnz": 148676,
+          "storage_bytes": 1824604
+        },
+        {
+          "power": 3,
+          "nnz": 341302,
+          "storage_bytes": 4136116
+        },
+        {
+          "power": 4,
+          "nnz": 679252,
+          "storage_bytes": 8191516
+        },
+        {
+          "power": 5,
+          "nnz": 1230162,
+          "storage_bytes": 14802436
+        },
+        {
+          "power": 6,
+          "nnz": 2080796,
+          "storage_bytes": 25010044
+        },
+        {
+          "power": 7,
+          "nnz": 3331508,
+          "storage_bytes": 40018588
+        },
+        {
+          "power": 8,
+          "nnz": 5087652,
+          "storage_bytes": 61092316
+        },
+        {
+          "power": 9,
+          "nnz": 7448090,
+          "storage_bytes": 89417572
+        },
+        {
+          "power": 10,
+          "nnz": 10489534,
+          "storage_bytes": 125914900
+        },
+        {
+          "power": 11,
+          "nnz": 14248008,
+          "storage_bytes": 171016588
+        },
+        {
+          "power": 12,
+          "nnz": 18693140,
+          "storage_bytes": 224358172
+        },
+        {
+          "power": 13,
+          "nnz": 23733374,
+          "storage_bytes": 284840980
+        }
+      ],
+      "stop": null,
+      "configuration": 52,
+      "seconds": 6.182830374920741,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.03735511542532673,
+      "fraction_condensate": 0.926002766251729
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 50910,
+          "storage_bytes": 651652
+        },
+        {
+          "power": 2,
+          "nnz": 149472,
+          "storage_bytes": 1834396
+        },
+        {
+          "power": 3,
+          "nnz": 343962,
+          "storage_bytes": 4168276
+        },
+        {
+          "power": 4,
+          "nnz": 684938,
+          "storage_bytes": 8259988
+        },
+        {
+          "power": 5,
+          "nnz": 1239330,
+          "storage_bytes": 14912692
+        },
+        {
+          "power": 6,
+          "nnz": 2089066,
+          "storage_bytes": 25109524
+        },
+        {
+          "power": 7,
+          "nnz": 3329652,
+          "storage_bytes": 39996556
+        },
+        {
+          "power": 8,
+          "nnz": 5064846,
+          "storage_bytes": 60818884
+        },
+        {
+          "power": 9,
+          "nnz": 7400400,
+          "storage_bytes": 88845532
+        },
+        {
+          "power": 10,
+          "nnz": 10434884,
+          "storage_bytes": 125259340
+        },
+        {
+          "power": 11,
+          "nnz": 14242556,
+          "storage_bytes": 170951404
+        },
+        {
+          "power": 12,
+          "nnz": 18853758,
+          "storage_bytes": 226285828
+        },
+        {
+          "power": 13,
+          "nnz": 24220616,
+          "storage_bytes": 290688124
+        }
+      ],
+      "stop": null,
+      "configuration": 56,
+      "seconds": 6.112083666026592,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.042112026178653846,
+      "fraction_condensate": 0.8980553918680023
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 50550,
+          "storage_bytes": 647044
+        },
+        {
+          "power": 2,
+          "nnz": 148372,
+          "storage_bytes": 1820908
+        },
+        {
+          "power": 3,
+          "nnz": 340942,
+          "storage_bytes": 4131748
+        },
+        {
+          "power": 4,
+          "nnz": 677310,
+          "storage_bytes": 8168164
+        },
+        {
+          "power": 5,
+          "nnz": 1222576,
+          "storage_bytes": 14711356
+        },
+        {
+          "power": 6,
+          "nnz": 2061670,
+          "storage_bytes": 24780484
+        },
+        {
+          "power": 7,
+          "nnz": 3292274,
+          "storage_bytes": 39547732
+        },
+        {
+          "power": 8,
+          "nnz": 5017120,
+          "storage_bytes": 60245884
+        },
+        {
+          "power": 9,
+          "nnz": 7334476,
+          "storage_bytes": 88054156
+        },
+        {
+          "power": 10,
+          "nnz": 10325186,
+          "storage_bytes": 123942676
+        },
+        {
+          "power": 11,
+          "nnz": 14048112,
+          "storage_bytes": 168617788
+        },
+        {
+          "power": 12,
+          "nnz": 18527938,
+          "storage_bytes": 222375700
+        },
+        {
+          "power": 13,
+          "nnz": 23739682,
+          "storage_bytes": 284916628
+        }
+      ],
+      "stop": null,
+      "configuration": 60,
+      "seconds": 5.669513082946651,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.040186034674087226,
+      "fraction_condensate": 0.9057368941641939
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49870,
+          "storage_bytes": 638340
+        },
+        {
+          "power": 2,
+          "nnz": 146400,
+          "storage_bytes": 1796700
+        },
+        {
+          "power": 3,
+          "nnz": 336338,
+          "storage_bytes": 4075956
+        },
+        {
+          "power": 4,
+          "nnz": 666766,
+          "storage_bytes": 8041092
+        },
+        {
+          "power": 5,
+          "nnz": 1202334,
+          "storage_bytes": 14467908
+        },
+        {
+          "power": 6,
+          "nnz": 2025368,
+          "storage_bytes": 24344316
+        },
+        {
+          "power": 7,
+          "nnz": 3231056,
+          "storage_bytes": 38812572
+        },
+        {
+          "power": 8,
+          "nnz": 4921278,
+          "storage_bytes": 59095236
+        },
+        {
+          "power": 9,
+          "nnz": 7195140,
+          "storage_bytes": 86381580
+        },
+        {
+          "power": 10,
+          "nnz": 10142372,
+          "storage_bytes": 121748364
+        },
+        {
+          "power": 11,
+          "nnz": 13825924,
+          "storage_bytes": 165950988
+        },
+        {
+          "power": 12,
+          "nnz": 18260958,
+          "storage_bytes": 219171396
+        },
+        {
+          "power": 13,
+          "nnz": 23404274,
+          "storage_bytes": 280891188
+        }
+      ],
+      "stop": null,
+      "configuration": 64,
+      "seconds": 5.5591790420003235,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.041906911553969986,
+      "fraction_condensate": 0.9057549629035492
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49435,
+          "storage_bytes": 632772
+        },
+        {
+          "power": 2,
+          "nnz": 145187,
+          "storage_bytes": 1781796
+        },
+        {
+          "power": 3,
+          "nnz": 334015,
+          "storage_bytes": 4047732
+        },
+        {
+          "power": 4,
+          "nnz": 663523,
+          "storage_bytes": 8001828
+        },
+        {
+          "power": 5,
+          "nnz": 1197193,
+          "storage_bytes": 14405868
+        },
+        {
+          "power": 6,
+          "nnz": 2014671,
+          "storage_bytes": 24215604
+        },
+        {
+          "power": 7,
+          "nnz": 3205289,
+          "storage_bytes": 38503020
+        },
+        {
+          "power": 8,
+          "nnz": 4864795,
+          "storage_bytes": 58417092
+        },
+        {
+          "power": 9,
+          "nnz": 7086733,
+          "storage_bytes": 85080348
+        },
+        {
+          "power": 10,
+          "nnz": 9955509,
+          "storage_bytes": 119505660
+        },
+        {
+          "power": 11,
+          "nnz": 13527951,
+          "storage_bytes": 162374964
+        },
+        {
+          "power": 12,
+          "nnz": 17810481,
+          "storage_bytes": 213765324
+        },
+        {
+          "power": 13,
+          "nnz": 22742057,
+          "storage_bytes": 272944236
+        }
+      ],
+      "stop": null,
+      "configuration": 68,
+      "seconds": 5.34254250000231,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.058081079240167574,
+      "fraction_condensate": 0.8905633660362091
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 50150,
+          "storage_bytes": 641924
+        },
+        {
+          "power": 2,
+          "nnz": 147030,
+          "storage_bytes": 1804484
+        },
+        {
+          "power": 3,
+          "nnz": 337604,
+          "storage_bytes": 4091372
+        },
+        {
+          "power": 4,
+          "nnz": 670456,
+          "storage_bytes": 8085596
+        },
+        {
+          "power": 5,
+          "nnz": 1208480,
+          "storage_bytes": 14541884
+        },
+        {
+          "power": 6,
+          "nnz": 2033330,
+          "storage_bytes": 24440084
+        },
+        {
+          "power": 7,
+          "nnz": 3238576,
+          "storage_bytes": 38903036
+        },
+        {
+          "power": 8,
+          "nnz": 4924682,
+          "storage_bytes": 59136308
+        },
+        {
+          "power": 9,
+          "nnz": 7197998,
+          "storage_bytes": 86416100
+        },
+        {
+          "power": 10,
+          "nnz": 10155404,
+          "storage_bytes": 121904972
+        },
+        {
+          "power": 11,
+          "nnz": 13867464,
+          "storage_bytes": 166449692
+        },
+        {
+          "power": 12,
+          "nnz": 18345832,
+          "storage_bytes": 220190108
+        },
+        {
+          "power": 13,
+          "nnz": 23526328,
+          "storage_bytes": 282356060
+        }
+      ],
+      "stop": null,
+      "configuration": 72,
+      "seconds": 5.595071749994531,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.04232510982299726,
+      "fraction_condensate": 0.9126620139581256
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 50360,
+          "storage_bytes": 644612
+        },
+        {
+          "power": 2,
+          "nnz": 147828,
+          "storage_bytes": 1814228
+        },
+        {
+          "power": 3,
+          "nnz": 339812,
+          "storage_bytes": 4118036
+        },
+        {
+          "power": 4,
+          "nnz": 674326,
+          "storage_bytes": 8132204
+        },
+        {
+          "power": 5,
+          "nnz": 1215484,
+          "storage_bytes": 14626100
+        },
+        {
+          "power": 6,
+          "nnz": 2043130,
+          "storage_bytes": 24557852
+        },
+        {
+          "power": 7,
+          "nnz": 3249952,
+          "storage_bytes": 39039716
+        },
+        {
+          "power": 8,
+          "nnz": 4933638,
+          "storage_bytes": 59243948
+        },
+        {
+          "power": 9,
+          "nnz": 7187778,
+          "storage_bytes": 86293628
+        },
+        {
+          "power": 10,
+          "nnz": 10093162,
+          "storage_bytes": 121158236
+        },
+        {
+          "power": 11,
+          "nnz": 13693588,
+          "storage_bytes": 164363348
+        },
+        {
+          "power": 12,
+          "nnz": 17987940,
+          "storage_bytes": 215895572
+        },
+        {
+          "power": 13,
+          "nnz": 22923988,
+          "storage_bytes": 275128148
+        }
+      ],
+      "stop": null,
+      "configuration": 76,
+      "seconds": 5.607481417013332,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.0481944630387026,
+      "fraction_condensate": 0.9058776806989675
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49895,
+          "storage_bytes": 638660
+        },
+        {
+          "power": 2,
+          "nnz": 146371,
+          "storage_bytes": 1796372
+        },
+        {
+          "power": 3,
+          "nnz": 336021,
+          "storage_bytes": 4072172
+        },
+        {
+          "power": 4,
+          "nnz": 666705,
+          "storage_bytes": 8040380
+        },
+        {
+          "power": 5,
+          "nnz": 1202671,
+          "storage_bytes": 14471972
+        },
+        {
+          "power": 6,
+          "nnz": 2025779,
+          "storage_bytes": 24349268
+        },
+        {
+          "power": 7,
+          "nnz": 3230949,
+          "storage_bytes": 38811308
+        },
+        {
+          "power": 8,
+          "nnz": 4924249,
+          "storage_bytes": 59130908
+        },
+        {
+          "power": 9,
+          "nnz": 7212389,
+          "storage_bytes": 86588588
+        },
+        {
+          "power": 10,
+          "nnz": 10185393,
+          "storage_bytes": 122264636
+        },
+        {
+          "power": 11,
+          "nnz": 13900251,
+          "storage_bytes": 166842932
+        },
+        {
+          "power": 12,
+          "nnz": 18369951,
+          "storage_bytes": 220479332
+        },
+        {
+          "power": 13,
+          "nnz": 23528045,
+          "storage_bytes": 282376460
+        }
+      ],
+      "stop": null,
+      "configuration": 80,
+      "seconds": 5.576374875032343,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.040287910489719914,
+      "fraction_condensate": 0.911814811103317
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49790,
+          "storage_bytes": 637316
+        },
+        {
+          "power": 2,
+          "nnz": 145996,
+          "storage_bytes": 1791788
+        },
+        {
+          "power": 3,
+          "nnz": 335348,
+          "storage_bytes": 4064012
+        },
+        {
+          "power": 4,
+          "nnz": 665850,
+          "storage_bytes": 8030036
+        },
+        {
+          "power": 5,
+          "nnz": 1202912,
+          "storage_bytes": 14474780
+        },
+        {
+          "power": 6,
+          "nnz": 2027730,
+          "storage_bytes": 24372596
+        },
+        {
+          "power": 7,
+          "nnz": 3233028,
+          "storage_bytes": 38836172
+        },
+        {
+          "power": 8,
+          "nnz": 4914920,
+          "storage_bytes": 59018876
+        },
+        {
+          "power": 9,
+          "nnz": 7170210,
+          "storage_bytes": 86082356
+        },
+        {
+          "power": 10,
+          "nnz": 10084434,
+          "storage_bytes": 121053044
+        },
+        {
+          "power": 11,
+          "nnz": 13718648,
+          "storage_bytes": 164663612
+        },
+        {
+          "power": 12,
+          "nnz": 18093868,
+          "storage_bytes": 217166252
+        },
+        {
+          "power": 13,
+          "nnz": 23160156,
+          "storage_bytes": 277961708
+        }
+      ],
+      "stop": null,
+      "configuration": 84,
+      "seconds": 5.7553548329742625,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.046162692598179796,
+      "fraction_condensate": 0.9043984735890741
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49280,
+          "storage_bytes": 630788
+        },
+        {
+          "power": 2,
+          "nnz": 144234,
+          "storage_bytes": 1770236
+        },
+        {
+          "power": 3,
+          "nnz": 331470,
+          "storage_bytes": 4017068
+        },
+        {
+          "power": 4,
+          "nnz": 657000,
+          "storage_bytes": 7923428
+        },
+        {
+          "power": 5,
+          "nnz": 1180672,
+          "storage_bytes": 14207492
+        },
+        {
+          "power": 6,
+          "nnz": 1979936,
+          "storage_bytes": 23798660
+        },
+        {
+          "power": 7,
+          "nnz": 3145544,
+          "storage_bytes": 37785956
+        },
+        {
+          "power": 8,
+          "nnz": 4778622,
+          "storage_bytes": 57382892
+        },
+        {
+          "power": 9,
+          "nnz": 6981942,
+          "storage_bytes": 83822732
+        },
+        {
+          "power": 10,
+          "nnz": 9848176,
+          "storage_bytes": 118217540
+        },
+        {
+          "power": 11,
+          "nnz": 13427206,
+          "storage_bytes": 161165900
+        },
+        {
+          "power": 12,
+          "nnz": 17705976,
+          "storage_bytes": 212511140
+        },
+        {
+          "power": 13,
+          "nnz": 22601836,
+          "storage_bytes": 271261460
+        }
+      ],
+      "stop": null,
+      "configuration": 88,
+      "seconds": 5.318940790952183,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.05674541986123649,
+      "fraction_condensate": 0.9048295454545454
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49710,
+          "storage_bytes": 636292
+        },
+        {
+          "power": 2,
+          "nnz": 145862,
+          "storage_bytes": 1790116
+        },
+        {
+          "power": 3,
+          "nnz": 335070,
+          "storage_bytes": 4060612
+        },
+        {
+          "power": 4,
+          "nnz": 665200,
+          "storage_bytes": 8022172
+        },
+        {
+          "power": 5,
+          "nnz": 1200104,
+          "storage_bytes": 14441020
+        },
+        {
+          "power": 6,
+          "nnz": 2019918,
+          "storage_bytes": 24278788
+        },
+        {
+          "power": 7,
+          "nnz": 3219100,
+          "storage_bytes": 38668972
+        },
+        {
+          "power": 8,
+          "nnz": 4896424,
+          "storage_bytes": 58796860
+        },
+        {
+          "power": 9,
+          "nnz": 7144996,
+          "storage_bytes": 85779724
+        },
+        {
+          "power": 10,
+          "nnz": 10047186,
+          "storage_bytes": 120606004
+        },
+        {
+          "power": 11,
+          "nnz": 13647390,
+          "storage_bytes": 163808452
+        },
+        {
+          "power": 12,
+          "nnz": 17932978,
+          "storage_bytes": 215235508
+        },
+        {
+          "power": 13,
+          "nnz": 22815088,
+          "storage_bytes": 273820828
+        }
+      ],
+      "stop": null,
+      "configuration": 92,
+      "seconds": 5.751963709015399,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.06984471634849555,
+      "fraction_condensate": 0.9152082076041038
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 50540,
+          "storage_bytes": 646916
+        },
+        {
+          "power": 2,
+          "nnz": 148292,
+          "storage_bytes": 1819940
+        },
+        {
+          "power": 3,
+          "nnz": 339930,
+          "storage_bytes": 4119596
+        },
+        {
+          "power": 4,
+          "nnz": 673556,
+          "storage_bytes": 8123108
+        },
+        {
+          "power": 5,
+          "nnz": 1213588,
+          "storage_bytes": 14603492
+        },
+        {
+          "power": 6,
+          "nnz": 2039898,
+          "storage_bytes": 24519212
+        },
+        {
+          "power": 7,
+          "nnz": 3245420,
+          "storage_bytes": 38985476
+        },
+        {
+          "power": 8,
+          "nnz": 4929260,
+          "storage_bytes": 59191556
+        },
+        {
+          "power": 9,
+          "nnz": 7190950,
+          "storage_bytes": 86331836
+        },
+        {
+          "power": 10,
+          "nnz": 10116426,
+          "storage_bytes": 121437548
+        },
+        {
+          "power": 11,
+          "nnz": 13751102,
+          "storage_bytes": 165053660
+        },
+        {
+          "power": 12,
+          "nnz": 18084670,
+          "storage_bytes": 217056476
+        },
+        {
+          "power": 13,
+          "nnz": 23047520,
+          "storage_bytes": 276610676
+        }
+      ],
+      "stop": null,
+      "configuration": 96,
+      "seconds": 5.691320792073384,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.06426075035993131,
+      "fraction_condensate": 0.8962208151958845
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 50090,
+          "storage_bytes": 641156
+        },
+        {
+          "power": 2,
+          "nnz": 146864,
+          "storage_bytes": 1802444
+        },
+        {
+          "power": 3,
+          "nnz": 337376,
+          "storage_bytes": 4088588
+        },
+        {
+          "power": 4,
+          "nnz": 670144,
+          "storage_bytes": 8081804
+        },
+        {
+          "power": 5,
+          "nnz": 1207042,
+          "storage_bytes": 14524580
+        },
+        {
+          "power": 6,
+          "nnz": 2025448,
+          "storage_bytes": 24345452
+        },
+        {
+          "power": 7,
+          "nnz": 3213206,
+          "storage_bytes": 38598548
+        },
+        {
+          "power": 8,
+          "nnz": 4863368,
+          "storage_bytes": 58400492
+        },
+        {
+          "power": 9,
+          "nnz": 7063894,
+          "storage_bytes": 84806804
+        },
+        {
+          "power": 10,
+          "nnz": 9885670,
+          "storage_bytes": 118668116
+        },
+        {
+          "power": 11,
+          "nnz": 13366950,
+          "storage_bytes": 160443476
+        },
+        {
+          "power": 12,
+          "nnz": 17503572,
+          "storage_bytes": 210082940
+        },
+        {
+          "power": 13,
+          "nnz": 22258820,
+          "storage_bytes": 267145916
+        }
+      ],
+      "stop": null,
+      "configuration": 100,
+      "seconds": 5.73458995798137,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.05075735368146743,
+      "fraction_condensate": 0.8750249550808544
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 50660,
+          "storage_bytes": 648452
+        },
+        {
+          "power": 2,
+          "nnz": 148648,
+          "storage_bytes": 1824308
+        },
+        {
+          "power": 3,
+          "nnz": 341824,
+          "storage_bytes": 4142420
+        },
+        {
+          "power": 4,
+          "nnz": 679366,
+          "storage_bytes": 8192924
+        },
+        {
+          "power": 5,
+          "nnz": 1226816,
+          "storage_bytes": 14762324
+        },
+        {
+          "power": 6,
+          "nnz": 2065744,
+          "storage_bytes": 24829460
+        },
+        {
+          "power": 7,
+          "nnz": 3291246,
+          "storage_bytes": 39535484
+        },
+        {
+          "power": 8,
+          "nnz": 5003556,
+          "storage_bytes": 60083204
+        },
+        {
+          "power": 9,
+          "nnz": 7302884,
+          "storage_bytes": 87675140
+        },
+        {
+          "power": 10,
+          "nnz": 10277882,
+          "storage_bytes": 123375116
+        },
+        {
+          "power": 11,
+          "nnz": 13979726,
+          "storage_bytes": 167797244
+        },
+        {
+          "power": 12,
+          "nnz": 18397194,
+          "storage_bytes": 220806860
+        },
+        {
+          "power": 13,
+          "nnz": 23453288,
+          "storage_bytes": 281479988
+        }
+      ],
+      "stop": null,
+      "configuration": 104,
+      "seconds": 6.296592082944699,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.07055647218074004,
+      "fraction_condensate": 0.9112712198973549
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49845,
+          "storage_bytes": 638020
+        },
+        {
+          "power": 2,
+          "nnz": 146209,
+          "storage_bytes": 1794388
+        },
+        {
+          "power": 3,
+          "nnz": 335463,
+          "storage_bytes": 4065436
+        },
+        {
+          "power": 4,
+          "nnz": 665135,
+          "storage_bytes": 8021500
+        },
+        {
+          "power": 5,
+          "nnz": 1195487,
+          "storage_bytes": 14385724
+        },
+        {
+          "power": 6,
+          "nnz": 2001495,
+          "storage_bytes": 24057820
+        },
+        {
+          "power": 7,
+          "nnz": 3165653,
+          "storage_bytes": 38027716
+        },
+        {
+          "power": 8,
+          "nnz": 4773001,
+          "storage_bytes": 57315892
+        },
+        {
+          "power": 9,
+          "nnz": 6903535,
+          "storage_bytes": 82882300
+        },
+        {
+          "power": 10,
+          "nnz": 9619245,
+          "storage_bytes": 115470820
+        },
+        {
+          "power": 11,
+          "nnz": 12936731,
+          "storage_bytes": 155280652
+        },
+        {
+          "power": 12,
+          "nnz": 16802247,
+          "storage_bytes": 201666844
+        },
+        {
+          "power": 13,
+          "nnz": 21104033,
+          "storage_bytes": 253288276
+        }
+      ],
+      "stop": null,
+      "configuration": 108,
+      "seconds": 5.7617282080464065,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.08831899384633407,
+      "fraction_condensate": 0.9078142240946936
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49575,
+          "storage_bytes": 634564
+        },
+        {
+          "power": 2,
+          "nnz": 145379,
+          "storage_bytes": 1784212
+        },
+        {
+          "power": 3,
+          "nnz": 333825,
+          "storage_bytes": 4045564
+        },
+        {
+          "power": 4,
+          "nnz": 662859,
+          "storage_bytes": 7993972
+        },
+        {
+          "power": 5,
+          "nnz": 1197117,
+          "storage_bytes": 14405068
+        },
+        {
+          "power": 6,
+          "nnz": 2014901,
+          "storage_bytes": 24218476
+        },
+        {
+          "power": 7,
+          "nnz": 3205659,
+          "storage_bytes": 38507572
+        },
+        {
+          "power": 8,
+          "nnz": 4858857,
+          "storage_bytes": 58345948
+        },
+        {
+          "power": 9,
+          "nnz": 7052427,
+          "storage_bytes": 84668788
+        },
+        {
+          "power": 10,
+          "nnz": 9840615,
+          "storage_bytes": 118127044
+        },
+        {
+          "power": 11,
+          "nnz": 13236633,
+          "storage_bytes": 158879260
+        },
+        {
+          "power": 12,
+          "nnz": 17198737,
+          "storage_bytes": 206424508
+        },
+        {
+          "power": 13,
+          "nnz": 21612001,
+          "storage_bytes": 259383676
+        }
+      ],
+      "stop": null,
+      "configuration": 112,
+      "seconds": 5.390506500029005,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.11326763999475238,
+      "fraction_condensate": 0.9201210287443268
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 50195,
+          "storage_bytes": 642500
+        },
+        {
+          "power": 2,
+          "nnz": 147439,
+          "storage_bytes": 1809428
+        },
+        {
+          "power": 3,
+          "nnz": 339451,
+          "storage_bytes": 4113572
+        },
+        {
+          "power": 4,
+          "nnz": 674039,
+          "storage_bytes": 8128628
+        },
+        {
+          "power": 5,
+          "nnz": 1214143,
+          "storage_bytes": 14609876
+        },
+        {
+          "power": 6,
+          "nnz": 2037111,
+          "storage_bytes": 24485492
+        },
+        {
+          "power": 7,
+          "nnz": 3229627,
+          "storage_bytes": 38795684
+        },
+        {
+          "power": 8,
+          "nnz": 4882593,
+          "storage_bytes": 58631276
+        },
+        {
+          "power": 9,
+          "nnz": 7081639,
+          "storage_bytes": 85019828
+        },
+        {
+          "power": 10,
+          "nnz": 9891559,
+          "storage_bytes": 118738868
+        },
+        {
+          "power": 11,
+          "nnz": 13342121,
+          "storage_bytes": 160145612
+        },
+        {
+          "power": 12,
+          "nnz": 17397331,
+          "storage_bytes": 208808132
+        },
+        {
+          "power": 13,
+          "nnz": 21961125,
+          "storage_bytes": 263573660
+        }
+      ],
+      "stop": null,
+      "configuration": 116,
+      "seconds": 5.548267833888531,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.053847905000468654,
+      "fraction_condensate": 0.893913736427931
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49915,
+          "storage_bytes": 638916
+        },
+        {
+          "power": 2,
+          "nnz": 146359,
+          "storage_bytes": 1796244
+        },
+        {
+          "power": 3,
+          "nnz": 336621,
+          "storage_bytes": 4079388
+        },
+        {
+          "power": 4,
+          "nnz": 669641,
+          "storage_bytes": 8075628
+        },
+        {
+          "power": 5,
+          "nnz": 1208721,
+          "storage_bytes": 14544588
+        },
+        {
+          "power": 6,
+          "nnz": 2034435,
+          "storage_bytes": 24453156
+        },
+        {
+          "power": 7,
+          "nnz": 3243271,
+          "storage_bytes": 38959188
+        },
+        {
+          "power": 8,
+          "nnz": 4941323,
+          "storage_bytes": 59335812
+        },
+        {
+          "power": 9,
+          "nnz": 7233315,
+          "storage_bytes": 86839716
+        },
+        {
+          "power": 10,
+          "nnz": 10209591,
+          "storage_bytes": 122555028
+        },
+        {
+          "power": 11,
+          "nnz": 13925947,
+          "storage_bytes": 167151300
+        },
+        {
+          "power": 12,
+          "nnz": 18396369,
+          "storage_bytes": 220796364
+        },
+        {
+          "power": 13,
+          "nnz": 23571945,
+          "storage_bytes": 282903276
+        }
+      ],
+      "stop": null,
+      "configuration": 120,
+      "seconds": 5.976159167010337,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.04634464855157545,
+      "fraction_condensate": 0.9022337974556747
+    },
+    {
+      "computed_steps": 26,
+      "requested_steps": 26,
+      "powers": [
+        {
+          "power": 1,
+          "nnz": 49805,
+          "storage_bytes": 637508
+        },
+        {
+          "power": 2,
+          "nnz": 145867,
+          "storage_bytes": 1790252
+        },
+        {
+          "power": 3,
+          "nnz": 335085,
+          "storage_bytes": 4060868
+        },
+        {
+          "power": 4,
+          "nnz": 665907,
+          "storage_bytes": 8030732
+        },
+        {
+          "power": 5,
+          "nnz": 1201309,
+          "storage_bytes": 14455556
+        },
+        {
+          "power": 6,
+          "nnz": 2022103,
+          "storage_bytes": 24305084
+        },
+        {
+          "power": 7,
+          "nnz": 3223277,
+          "storage_bytes": 38719172
+        },
+        {
+          "power": 8,
+          "nnz": 4906189,
+          "storage_bytes": 58914116
+        },
+        {
+          "power": 9,
+          "nnz": 7164753,
+          "storage_bytes": 86016884
+        },
+        {
+          "power": 10,
+          "nnz": 10072181,
+          "storage_bytes": 120906020
+        },
+        {
+          "power": 11,
+          "nnz": 13663977,
+          "storage_bytes": 164007572
+        },
+        {
+          "power": 12,
+          "nnz": 17948755,
+          "storage_bytes": 215424908
+        },
+        {
+          "power": 13,
+          "nnz": 22895767,
+          "storage_bytes": 274789052
+        }
+      ],
+      "stop": null,
+      "configuration": 124,
+      "seconds": 6.184848290984519,
+      "rho": 0.8,
+      "operator": "full microscopic graph",
+      "fit_relative_rmse": 0.04679451849721352,
+      "fraction_condensate": 0.9019174781648429
+    }
+  ],
+  "source_sha256": "b9e46122dc7f559110dc779e251ec91946dde004e42e285a127ad5a5e4b22edf"
+}
