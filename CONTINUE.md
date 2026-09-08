@@ -281,3 +281,18 @@ is a moderate dense propagation workload (~40MiB per state array), not the
 simulators; do not start another analysis simultaneously. No equilibrium claim.
 
 Independent return-measurement live session:94006. Poll; do not duplicate.
+
+## Independent spectra completed
+
+Session94006 finished successfully.32 independent geometries,512 starts,
+sigma0..256. PeakDs2.7979867, maxrelative returnSE0.01959395. Saved all
+per-start arrays. rho_from_saved.py also completed on this chain without
+new propagation:rho=.2,.4,.6,.8 peaks2.82734,2.81728,2.80751,2.79799,
+rescaled peaks63.0,64.4,65.4,66.4.
+
+Descriptive first32-vs-first32 chain spectrum comparison saved as
+independent_baseline_spectral_comparison.csv/json, reproducible through
+compare_saved_spectra.py JOB1 JOB2. Over sigma9..64 max|Ds difference|=.005557,
+maxrelative P difference=.002536. This numerical agreement does not override
+the failed slow-mode convergence diagnostics. Main/independent extensions
+13823/19336 andN30000 session43971 remain live; no analysis remains running.

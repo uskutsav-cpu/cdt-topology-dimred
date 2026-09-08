@@ -71,3 +71,9 @@ is29.07 and21.52, respectively. On equal25,600-sweep prefixes, rank/folded
 splitRhat is1.01929 for peak spatial volume, exceeding1.01; splitESS is also
 insufficient. Mean volume and vertex counts agree closely. Both trajectories
 are being extended from checkpoints. Convergence remains unestablished.
+
+Independent baseline spectra:32 geometries per chain,512 starts per geometry,
+give peaks2.79320 and2.79799. Over sigma9..64 the maximum absolute Ds difference
+is0.00556 and maximum relative P difference0.254%. These are descriptive
+agreements; slow-mode convergence remains unestablished. The independent
+chain's diffusion-rate scaling gives similar rescaled peak times63.0–66.4.
