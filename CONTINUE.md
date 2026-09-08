@@ -16,7 +16,7 @@ Do not rerun completed experiments. Do not spawn agents (not authorized).
   Each sweep is 100,000 attempted moves; k0=1, k3=1.1777799999999796,
   N3 target 10,000, T=64. Timeout 7,200 seconds.
 - Checkpoints every 50 sweeps and after snapshots. Raw geometry is immutable.
-- At last inspection it was at burn sweep 4,622, elapsed C++ time 351.8 sec.
+- At last inspection it was at measurement sweep 31,136, elapsed C++ time 1,372.5 sec.
   These are substantial computations: avoid filling the wait with redundant
   analyses or claiming that passing software tests completes the research.
 - Job manifest remains running until independent geometry validation completes.
@@ -68,6 +68,19 @@ Host has 8 GiB RAM / 8 logical CPUs. Prefer one large simulator process at a tim
   not certified equilibrium confidence intervals.
 - The precision pilot starts for configuration 0 were reused in this measurement.
 - No novel topology-conditioned curves or effect sizes exist.
+
+### Exact UV precision work completed
+
+- Commit a153c8f adds `src/spectral_exact_short.py`, three targeted passing
+  tests, and benchmark/variance workflows. Prior sixteen tests passed earlier.
+- Eight cached exact all-site return arrays through sigma=26 exist for 9918...
+  indices 0,5,50,100,150,200,250,300. Do not repeat these propagations.
+- `precision_variance.py` finished successfully (session42561, exit0).
+  Sampling variance at512 starts / exact between-geometry variance is
+  6.67,3.84,3.57,3.35,3.22 at sigma9,15,17,20,25 respectively. Nonstationary pilot.
+- Sparse half-power identity gives two times per multiplication, about5sec per
+  geometry through26. Selected row batches keep the full microscopic operator.
+- RESULTS/MATH/COMPUTE updated with this evidence. No UV physics window frozen.
 
 ## Immediate next work
 

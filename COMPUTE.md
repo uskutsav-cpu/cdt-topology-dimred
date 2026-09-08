@@ -46,3 +46,15 @@ The second command resumes only a failed same-binary job with a checkpoint;
 completed jobs are hash-verified and skipped. It is not an instruction to
 start both commands concurrently. Numerical production remains gated on
 baseline reproduction and validated topology, and has not yet been launched.
+
+## Exact ultraviolet precision pilot
+
+On eight saved, nonthermalized N3~10,000 geometries, all-site exact returns
+through sigma=26 were checked against previously saved 512-start propagation.
+Seven new computations took 4.71–5.75 seconds each; the eighth reused its cache.
+One measured sparse power occupied 280.8 MB (not total peak process memory).
+A 32-million-nonzero cap and row-batch fallback avoid unrestricted fill-in.
+See results/tables/precision_variance.json. Sampling variance from 512 starts
+was 3.22–6.67 times the exact between-geometry variance at sigma=9,15,17,20,25.
+This small nonstationary pilot justifies exact short-time returns; it is not an
+estimate of equilibrium production variance or a frozen UV physics window.

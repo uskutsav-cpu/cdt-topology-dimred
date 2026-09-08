@@ -1,0 +1,102 @@
+[
+  {
+    "configuration": "99188cc153094acfc0b4_0",
+    "window": [
+      9,
+      64
+    ],
+    "relative_se_target": 0.02,
+    "history": [
+      {
+        "starts": 64,
+        "maximum_relative_se": 0.043099842422666096
+      },
+      {
+        "starts": 128,
+        "maximum_relative_se": 0.032586980135666146
+      },
+      {
+        "starts": 192,
+        "maximum_relative_se": 0.026320858709855177
+      },
+      {
+        "starts": 256,
+        "maximum_relative_se": 0.02207968602083378
+      },
+      {
+        "starts": 320,
+        "maximum_relative_se": 0.019675265090177176
+      }
+    ],
+    "precision_pass": true,
+    "seconds": 2.3634178339270875
+  },
+  {
+    "configuration": "99188cc153094acfc0b4_64",
+    "window": [
+      9,
+      64
+    ],
+    "relative_se_target": 0.02,
+    "history": [
+      {
+        "starts": 64,
+        "maximum_relative_se": 0.04123849720743812
+      },
+      {
+        "starts": 128,
+        "maximum_relative_se": 0.028769359311618226
+      },
+      {
+        "starts": 192,
+        "maximum_relative_se": 0.022932764035088045
+      },
+      {
+        "starts": 256,
+        "maximum_relative_se": 0.02113010258837297
+      },
+      {
+        "starts": 320,
+        "maximum_relative_se": 0.018491963854731876
+      }
+    ],
+    "precision_pass": true,
+    "seconds": 2.1514004999771714
+  },
+  {
+    "configuration": "99188cc153094acfc0b4_127",
+    "window": [
+      9,
+      64
+    ],
+    "relative_se_target": 0.02,
+    "history": [
+      {
+        "starts": 64,
+        "maximum_relative_se": 0.04637441217978174
+      },
+      {
+        "starts": 128,
+        "maximum_relative_se": 0.03571146240410943
+      },
+      {
+        "starts": 192,
+        "maximum_relative_se": 0.02786022188606566
+      },
+      {
+        "starts": 256,
+        "maximum_relative_se": 0.02481597932924945
+      },
+      {
+        "starts": 320,
+        "maximum_relative_se": 0.02100688044978061
+      },
+      {
+        "starts": 384,
+        "maximum_relative_se": 0.019074720695216027
+      }
+    ],
+    "precision_pass": true,
+    "seconds": 2.7421229580650106
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "status": "precision pilot, nonthermalized geometries",
+  "configurations": 8,
+  "exact_steps": 26,
+  "comparison": [
+    {
+      "sigma": 9,
+      "exact_between_configuration_sd": 0.00010633839250289078,
+      "mean_sampling_se_512": 0.00027464547114888413,
+      "sampling_variance_over_exact_geometry_variance": 6.670596975314702
+    },
+    {
+      "sigma": 15,
+      "exact_between_configuration_sd": 0.00010230119715450066,
+      "mean_sampling_se_512": 0.00020057880912814906,
+      "sampling_variance_over_exact_geometry_variance": 3.8442238170171
+    },
+    {
+      "sigma": 17,
+      "exact_between_configuration_sd": 9.65281880603545e-05,
+      "mean_sampling_se_512": 0.0001824348771998173,
+      "sampling_variance_over_exact_geometry_variance": 3.5719669279295507
+    },
+    {
+      "sigma": 20,
+      "exact_between_configuration_sd": 8.714154242953208e-05,
+      "mean_sampling_se_512": 0.00015953453227654196,
+      "sampling_variance_over_exact_geometry_variance": 3.3516520111365486
+    },
+    {
+      "sigma": 25,
+      "exact_between_configuration_sd": 7.247329722426994e-05,
+      "mean_sampling_se_512": 0.0001300144631748001,
+      "sampling_variance_over_exact_geometry_variance": 3.2183056942988575
+    }
+  ],
+  "new_computations": [
+    {
+      "configuration": 0,
+      "seconds": 5.646362417028286
+    },
+    {
+      "configuration": 50,
+      "seconds": 5.74530183407478
+    },
+    {
+      "configuration": 100,
+      "seconds": 5.310971459024586
+    },
+    {
+      "configuration": 150,
+      "seconds": 5.430608666967601
+    },
+    {
+      "configuration": 200,
+      "seconds": 4.714162667049095
+    },
+    {
+      "configuration": 250,
+      "seconds": 4.711909541976638
+    },
+    {
+      "configuration": 300,
+      "seconds": 5.2007768750190735
+    }
+  ]
+}

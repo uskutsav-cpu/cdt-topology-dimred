@@ -1,0 +1,82 @@
+[
+  {
+    "configuration": "341d14fabe08e6c5b531_0",
+    "stalk_level": 5.207910208032592,
+    "width": 6.197818199643327,
+    "center": 3.6746650810003043,
+    "radius": 8.903731408434242,
+    "relative_rmse": 0.10262063724151056,
+    "resolved_stalk": true,
+    "fraction_condensate": 0.8729599032843038
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_18",
+    "stalk_level": 4.9332396328060755,
+    "width": 6.583885150582982,
+    "center": 3.110187962964885,
+    "radius": 9.458703937163081,
+    "relative_rmse": 0.06388148831247456,
+    "resolved_stalk": true,
+    "fraction_condensate": 0.9082303706656039
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_36",
+    "stalk_level": 4.817127565579931,
+    "width": 6.425239933976202,
+    "center": 3.167268945037727,
+    "radius": 9.233364922041023,
+    "relative_rmse": 0.04499209754331355,
+    "resolved_stalk": true,
+    "fraction_condensate": 0.9190300041101521
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_54",
+    "stalk_level": 4.709897610816011,
+    "width": 6.327812583269638,
+    "center": 3.3825818280828432,
+    "radius": 9.13270254768933,
+    "relative_rmse": 0.03955663018378008,
+    "resolved_stalk": true,
+    "fraction_condensate": 0.9170374765153763
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_72",
+    "stalk_level": 4.9270072990158535,
+    "width": 6.645214510221723,
+    "center": 3.3140746853910086,
+    "radius": 9.541313659669616,
+    "relative_rmse": 0.05373942020453892,
+    "resolved_stalk": true,
+    "fraction_condensate": 0.9190850463522773
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_90",
+    "stalk_level": 5.275323379895228,
+    "width": 5.596397985579631,
+    "center": 3.4640582554250674,
+    "radius": 8.069349958680183,
+    "relative_rmse": 0.062128886392060476,
+    "resolved_stalk": true,
+    "fraction_condensate": 0.8694286871961102
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_108",
+    "stalk_level": 5.128205128251012,
+    "width": 6.9045121997435475,
+    "center": 3.090955904762068,
+    "radius": 9.876851533279737,
+    "relative_rmse": 0.056866315778457105,
+    "resolved_stalk": true,
+    "fraction_condensate": 0.9090909090909091
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_127",
+    "stalk_level": 5.072123446856475,
+    "width": 6.541225528228209,
+    "center": 3.059947263081016,
+    "radius": 9.38356695313546,
+    "relative_rmse": 0.06506745574364635,
+    "resolved_stalk": true,
+    "fraction_condensate": 0.9049869294188618
+  }
+]

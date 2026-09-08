@@ -174,6 +174,24 @@ w_Q(sigma) Ds_Q with w_C=f_C P_C/P_all. The relevant weights depend on return
 probabilities, not just site abundance. Even a small f_Q can matter if P_Q/P_R
 is very large; rarity alone cannot rule out a contribution.
 
+## Exact ultraviolet diagonal returns
+
+For the symmetric microscopic operator, let B=M^k. Then
+K(i,i;2k)=sum_j B_ij^2 and K(i,i;2k+1)=sum_j B_ij (BM)_ij.
+Thus one sparse multiplication supplies two successive return times. Selected
+rows may be batched without changing the graph or restricting the walk.
+`src/spectral_exact_short.py` implements these identities and reports a partial
+result if its sparse storage limit is exceeded. The batched entry point bounds
+row storage even when powers become dense. These identities require symmetry;
+they do not apply unchanged to the renormalized excised boundary operator.
+
+For a simple random sample without replacement of n starts from N allowed
+sites, an estimated sampling variance of the mean is (1-n/N)*s^2/n, where s^2
+is the sample variance with denominator n-1. The variance-comparison pilot applies this finite-population correction.
+Small relative return error does not alone establish negligible noise
+relative to between-configuration variance. Exact all-site UV returns remove
+this source of uncertainty, but do not remove configuration autocorrelation.
+
 ## Sources
 
 [Simulation, equations 23–30](https://arxiv.org/abs/2310.16744);

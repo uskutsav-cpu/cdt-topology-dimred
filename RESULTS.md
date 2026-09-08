@@ -8,7 +8,7 @@ Completed observations:
 
 - Untouched upstream v1.0.1 builds. Detailed-balance discrepancies documented
   in DECISIONS.md; the research build implements the cited paper's factors.
-- Nine baseline Python tests and three diagnostic/boundary tests pass.
+- Sixteen prior Python tests pass; three new exact-short-return tests pass.
 - Four move/inverse pairs restore the identical tetrahedron vertex sets.
 - Two same-seed debug runs give four byte-identical configurations.
 - Checkpoint interruptions during tuning and measurement each reproduce five
@@ -26,6 +26,20 @@ Completed observations:
   and has maximum relative estimated SE 2.04% over sigma=9..64. 500,000 walks
   take 3.747 s with maximum observed relative error 5.10% on that interval.
   Exact propagation is selected for the current moderate-size measurements.
+
+- The continuation 99188cc153094acfc0b4 was extended to 320 snapshots without
+  repeating old sweeps. Across 16,000 measurement sweeps, peak-slice ESS=14.84
+  and split-half z=2.18; N0 split-half z=2.26. It fails the equilibrium screen.
+- Saved measurements on 64 configurations from that continuation (512 starts,
+  sigma=0..256) give an exploratory Ds peak=2.78654. Maximum relative return
+  sampling SE is 1.74%; block-bootstrap bands are not certified equilibrium CIs.
+- Exact all-site returns through sigma=26 on eight of those geometries show
+  512-start sampling variance is 3.22–6.67 times the exact between-geometry
+  variance at the five checked times. This motivates exact UV computation.
+  The geometries are nonthermalized; this is a numerical precision result.
+- A dedicated equilibration stage 4a40078dbf0e6b9a5f5c inherits the complete
+  checkpoint and RNG state. Its 20,000 burn sweeps have completed; measurement
+  and validation remain running. No equilibrium conclusion is available yet.
 
 These runtimes are local measurements, not guarantees for production scale.
 Pilot curves and raw return data are under results/. Registry files identify

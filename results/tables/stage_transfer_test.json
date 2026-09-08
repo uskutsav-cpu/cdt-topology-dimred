@@ -1,0 +1,7 @@
+{
+  "format": "CDT_CHECKPOINT_V1",
+  "old_binary_sha256": "657a74bbfec20c20e19f1760a844c15e3daa3d0f324ac4e662edd622bd1fe7c5",
+  "new_binary_sha256": "321e6a690c6775fd6a43d0c99083d78da777d511f255e33175ef55c1452e98fa",
+  "identical_continuation_snapshots": 3,
+  "pass": true
+}

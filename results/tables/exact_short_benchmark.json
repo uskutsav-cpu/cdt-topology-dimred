@@ -1,0 +1,59 @@
+{
+  "computed_steps": 18,
+  "requested_steps": 64,
+  "powers": [
+    {
+      "power": 1,
+      "nnz": 49075,
+      "storage_bytes": 628164
+    },
+    {
+      "power": 2,
+      "nnz": 143973,
+      "storage_bytes": 1766940
+    },
+    {
+      "power": 3,
+      "nnz": 330833,
+      "storage_bytes": 4009260
+    },
+    {
+      "power": 4,
+      "nnz": 657077,
+      "storage_bytes": 7924188
+    },
+    {
+      "power": 5,
+      "nnz": 1184905,
+      "storage_bytes": 14258124
+    },
+    {
+      "power": 6,
+      "nnz": 1993517,
+      "storage_bytes": 23961468
+    },
+    {
+      "power": 7,
+      "nnz": 3173675,
+      "storage_bytes": 38123364
+    },
+    {
+      "power": 8,
+      "nnz": 4819853,
+      "storage_bytes": 57877500
+    },
+    {
+      "power": 9,
+      "nnz": 7016087,
+      "storage_bytes": 84232308
+    }
+  ],
+  "stop": {
+    "reason": "nnz_limit",
+    "attempted_power": 10,
+    "next_nnz": 9825633
+  },
+  "seconds": 1.319041125010699,
+  "N3": 9815,
+  "crosscheck_512_basis_starts": true
+}

@@ -1,0 +1,5 @@
+job,measurement_k3_min,measurement_k3_max,frozen_k3,retained_geometries_valid,stationarity_certified
+341d14fabe08e6c5b531,1.1777799999999796,1.1777799999999796,True,128,False
+6e6f2fe5d7f4709d8982,1.1835799999999808,1.1835799999999808,True,128,False
+b3a0a98d4955072c7e32,0.792,0.792,True,4,False
+ba00c6fedfc34568c04a,0.792,0.792,True,4,False
