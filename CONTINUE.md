@@ -219,3 +219,15 @@ though per-geometry start-sampling variance exceeded physical variation.
 Bothfacts are compatible. Visible parity artifacts occur at the first few
 steps; no production UV cutoff has been chosen from topology labels.
 All three simulation handles60619,55518,43971 verified live this turn.
+
+## Cross-chain workflow ready
+
+`workflows/compare_chains.py JOB1 JOB2` refuses running jobs, compares common
+post-burn prefixes, reports rank/folded split Rhat, per-split single-chain ESS,
+full-chain summaries and RNG lineage. Input-hashed JSON avoids overwriting a
+comparison with different chain data. Syntax checked; numerical Rhat tests
+already passed. Apply to4a400... and8b3e... only after both complete. This is
+not an automatic convergence gate; time extent/RNG independence must agree.
+Independent job8b3e... has entered measurements (sweep22362, elapsed974.29sec)
+after2000 tune +20000 burn. Session55518 revalidated live. Other sessions
+60619 and43971 also remain active as last checked this turn.
