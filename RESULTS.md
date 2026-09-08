@@ -1,3 +1,13 @@
+## N30000 long continuation diagnostic
+
+All 128 configurations from the 307,200-sweep long continuation validated.
+N0, N3, and N31 pass the configured per-chain screens. Peak slice volume
+has integrated autocorrelation time 3181.21236 sweeps, effective sample size
+48.28348, and split-z 0.18856. The ESS is below the required 50, so this
+run does not pass the convergence screen. The same trajectory is being
+extended to 256 samples, retaining every earlier sample and all parameters.
+Evidence: results/tables/d614ea076af1a31a8018_through128_diagnostics.json.
+
 ## Extended independent baseline comparison
 
 Both N10000 baseline chains have completed 1,536 validated snapshots and

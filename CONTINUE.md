@@ -1,3 +1,16 @@
+# Latest N30000 continuation — supersedes live28894 below
+
+Session28894 COMPLETE, all128 geometries validated, elapsed23589.429470083s.
+Diagnostic6833 COMPLETE. Jobd614ea076af1a31a8018 through128/307200 sweeps:
+N0/N3/N31 pass; peak mean664.345026, tau3181.212362, ESS48.28347891,
+split-z0.188559435. ESS below50, so no convergence pass.
+RUNNING92019 extends this SAME stage128→256 with
+configs/reproduction/volume_30000_long_256.json. Only samples changed;
+all earlier data preserved, no retuning, reburn, or threshold relaxation.
+Final stage cutoff614400 sweeps; timeout28800 for extension invocation.
+Current five heavy workers:92019,13035(independent missing spectra),33770,
+71701,78681. Next unrun coupling stages remain k2 and k2.5 long configs.
+
 # Latest completed baseline comparison — supersedes older live58256 references
 
 Independent job8b3e5e63ecacfa361207 completed1536 snapshots, all validated,

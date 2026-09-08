@@ -1,0 +1,17 @@
+{
+  "name": "volume_30000_long_spacing_T64",
+  "input": "data/raw/dc0bd0d263f25696be2d/geometry_127.dat",
+  "seed": 20261002,
+  "k0": 1.0,
+  "k3": 1.1761599999999985,
+  "target": 30000,
+  "tune": 0,
+  "burn": 0,
+  "samples": 256,
+  "attempts": 100000,
+  "check_every_move": 0,
+  "timeout_seconds": 28800,
+  "sample_stride": 2400,
+  "parent_chain": "dc0bd0d263f25696be2d",
+  "initial_checkpoint": "data/raw/dc0bd0d263f25696be2d/checkpoint.bin"
+}
