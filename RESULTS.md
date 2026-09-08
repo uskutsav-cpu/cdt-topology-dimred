@@ -88,3 +88,9 @@ have Ds peaks2.79320 and2.94356 at diffusion times83 and129. Short-time Ds15
 is2.52228 and2.53403. This supports the qualitative finite-volume trend, but
 neither ensemble has passed slow-mode convergence. Two sizes do not establish
 an asymptotic scaling law. Tables and rendered figure: finite_size_pilot.*.
+
+Independent chain through384 now passes all single-chain screens: peak
+spatial-volume ESS52.73, split-z1.447. All384 geometries validate. However,
+the equal-length cross-chain comparison gives peak-volume Rhat1.033 and
+insufficient split-chain ESS; convergence remains unestablished. Both10k
+chains are continuing to768 saved configurations.

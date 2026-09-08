@@ -4,8 +4,8 @@
 
 - 13823: job4a40078dbf0e6b9a5f5c extension384→768 samples, config
   equilibration_10000_768.json. Prior session60619 finished successfully.
-- 19336: job8b3e5e63ecacfa361207 extension128→384 samples, config
-  independent_10000_384.json. Prior session55518 finished successfully.
+- 90274: job8b3e5e63ecacfa361207 extension384→768 samples, config
+  independent_10000_768.json. Prior session19336 finished successfully.
 - 28894: jobd614ea076af1a31a8018 N30000 long-spacing continuation.
   Prior session43971 finished and all128 geometries validated.
 - 45527: job590bcc4ae5515ad24761, k0=.5 N30000 baseline comparison.
@@ -362,3 +362,25 @@ completed-stage calculation. No simulation or diffusion was repeated.
 When19336 finishes its384 stage while13823 still runs, compare
 4a40078dbf0e6b9a5f5c.through_384 with8b3e5e63ecacfa361207 immediately.
 Four simulators13823,19336,28894,45527 were revalidated live this turn.
+
+## Independent384 completed; cross-chain issue persists
+
+Session19336 finished, all384 geometries validate; extension2795.833sec.
+First128 stage2228.804sec, total5024.637sec. Measurement length76,800sweeps.
+N0 ESS6624.03,z0.231; N3 ESS5257.20,z0.984; peak_slice ESS52.729,
+tau728.248,z1.447. This is the first chain passing all existing single-chain
+screens. It is not a multi-chain or physics reproduction pass.
+
+Compared4a400...through384 with8b3e...through384 (while4a400 extension stayed
+live). Exact completed-prefix hashes verified. Over76,800 common sweeps,
+peak_slice rank/folded splitRhat1.033155 and minimum splitESS13.492. N0/N3
+Rhat~1.0000. Thus slow-mode multi-chain convergence remains unestablished.
+Saved input-hashed comparison JSON. Do not claim convergence from scalar
+count agreement or matching spectral peaks.
+
+Started8b3e... extensionto768 total samples, configindependent_10000_768.json,
+NEW session90274. No previous MC sweeps/tuning/burn/exports repeated.
+Previous manifest preserved as8b3e...through_384.json. Other live handles
+13823(main10kto768),28894(longN30000),45527(k0=.5N30000).
+No analysis running. Next available physics baseline work includes completing
+k0 grid andN60000 once a slot frees, while resolving convergence honestly.

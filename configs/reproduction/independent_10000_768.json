@@ -1,0 +1,16 @@
+{
+  "name": "independent_10000_T64",
+  "input": "data/raw/4a40078dbf0e6b9a5f5c/geometry_127.dat",
+  "seed": 20261001,
+  "k0": 1.0,
+  "k3": 1.17778,
+  "target": 10000,
+  "tune": 2000,
+  "burn": 20000,
+  "samples": 768,
+  "attempts": 100000,
+  "check_every_move": 0,
+  "timeout_seconds": 14400,
+  "sample_stride": 200,
+  "parent_chain": "4a40078dbf0e6b9a5f5c"
+}

@@ -16,3 +16,6 @@ ACTIVE — baseline spectral reproduction and longer chain diagnostics.
 
 No primary scientific result has been obtained. See DECISIONS.md for the
 upstream discrepancies and results/manifests for actual completed jobs.
+
+One independent N10000 chain now passes the single-chain screens, but the
+slow-mode cross-chain Rhat remains1.033; the reproduction gate stays closed.
