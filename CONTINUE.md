@@ -1,5 +1,14 @@
 # Operational continuation state
 
+Prepared NOT RUN remaining long coupling stages: coupling_1p5_30000_long.json
+(stride2800,358400 sweeps),coupling_2p0_30000_long.json(stride1800,230400),
+coupling_2p5_30000_long.json(stride1200,153600). Each128 snapshots inherits its
+own completed pilot checkpoint and tunedk3, with tune0/burn0 and timeout43200.
+Spacing is just over twice each measured pilot tau, giving room for the
+underestimated correlation observed in the k.5 continuation. This does not
+guarantee independence or convergence. Preserve pilot data and assess full
+lineage. Start these when compute slots free; do not exceed five heavy workers.
+
 RUNNING33770, jobea92befaeacb0e7f05e1, `volume_60000_long.json`: inherit completef045 checkpoint,
 frozenk3=1.1737999999999928,tune0,burn0,128 snapshots separated by3200 sweeps,
 409600 new sweeps. Spacing chosen from pilot tau3108.68452; expected stage

@@ -1,0 +1,17 @@
+{
+  "name": "coupling_2p0_30000_long_spacing_T64",
+  "input": "data/raw/029620366a1c017aaa4b/geometry_127.dat",
+  "seed": 20261006,
+  "k0": 2.0,
+  "k3": 1.3202200000000008,
+  "target": 30000,
+  "tune": 0,
+  "burn": 0,
+  "samples": 128,
+  "attempts": 100000,
+  "check_every_move": 0,
+  "timeout_seconds": 43200,
+  "sample_stride": 1800,
+  "parent_chain": "029620366a1c017aaa4b",
+  "initial_checkpoint": "data/raw/029620366a1c017aaa4b/checkpoint.bin"
+}
