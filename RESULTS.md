@@ -114,6 +114,12 @@ not exactly fixed-condensate-volume data. The decrease at higher coupling
 is descriptive evidence only, pending convergence and the remaining grid.
 # Matched 768-snapshot baseline comparison
 
+The initial five-point coupling scan is complete. Atk0=2.5,peakDs=2.91173118,
+Ds(15)=2.39052069,Ds(25)=2.49874777. Maximum relative return SE is2.0905%.
+Short-timeDs decreases across all fivek0 values; all ensembles remain pilots
+with failed shape ESS checks. See `results/figures/coupling_pilot.pdf` and
+`results/tables/coupling_pilot.*`. The rendered PDF passed visual inspection.
+
 The k0=2.5,N30000,T64 pilot has128 validated geometries. Peak-slice
 autocorrelation time579.13442 sweeps,ESS22.10195,split-z0.94476: the shape
 ESS fails, while N0/N3/N31 screens pass. Spectrum measurement is in progress.
