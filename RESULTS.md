@@ -114,6 +114,13 @@ not exactly fixed-condensate-volume data. The decrease at higher coupling
 is descriptive evidence only, pending convergence and the remaining grid.
 # Matched 768-snapshot baseline comparison
 
+The first N10000 baseline now has1536 validated snapshots and307200
+measurement sweeps. All its per-chain screens pass. Peak-slice tau773.83835,
+ESS198.49107,split-z0.36617. This does not certify cross-chain convergence;
+the independent1536 run remains active. Source:
+`results/tables/4a40078dbf0e6b9a5f5c_through1536_diagnostics.json`.
+The128-configuration spectral measurement spanning this trajectory is running.
+
 The k0=.5 long continuation has128 validated snapshots spanning153600
 measurement sweeps. Peak-slice tau2569.38242,ESS29.89045,split-z1.69722:
 shape ESS remains below50. N0/N3/N31 screens pass. The stage is extending

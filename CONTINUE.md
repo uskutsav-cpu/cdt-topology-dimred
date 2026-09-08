@@ -10,7 +10,10 @@ measurements discarded or relabelled as burn.
 ### Next baseline convergence extension
 
 Prepared1152 and1536 sample configs for both N10000 chains. First-chain
-1152→1536 extension is live67775; independent1152→1536 is live58256.
+1536-snapshot simulation67775 is complete; independent1152→1536 is live58256.
+First-chain all1536 geometries valid; latest extension5036.166 seconds.
+Through1536 diagnostics all per-chain screens pass: peak tau773.83835,
+ESS198.49107,split-z.36617. Await independent1536 before cross-chain check.
 Independent8989 completed1152 validated snapshots in4887.477 seconds for
 that extension. Preserved through1152 manifest; no interim convergence test.
 First-chain89099 completed1152 validated snapshots in4476.851 seconds for
@@ -41,12 +44,13 @@ through768 comparison. Do not treat intermediate1152 as a new stopping test.
 - 78681: job1c43898e12fc22400dec, k0=.5 N30000 long extension128→256,
   configcoupling_0p5_30000_long_256.json. Prior70973 completed128 validated.
   Prior session45527 completed and all128 pilot geometries validated.
-- 67775: first-chain4a40078dbf0e6b9a5f5c extension1152→1536,
-  configequilibration_10000_1536.json. Prior89099 completed successfully.
+- 77805: first-chain4a40078dbf0e6b9a5f5c spectra,total1536/stride12,
+  128 curves spanning full trajectory; prior64 curves reused.
+  Simulation67775 completed; diagnostic session62694 completed and saved.
   Analysis93628 completed all16 k1.5 pilot spectra.
   k2 session13068 completed; all128 geometries validated.
   Compare chains only after both reach1536 completed snapshots.
-- Five simulators occupy five compute slots. No analysis is running.
+- Four simulators plus spectral analysis77805 occupy five compute slots.
   Wait for a slot before starting another heavy worker.
 
 ### Latest matched baseline comparison (768 vs768)
