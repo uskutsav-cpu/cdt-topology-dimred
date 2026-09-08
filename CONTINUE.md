@@ -36,7 +36,8 @@ through768 comparison. Do not treat intermediate1152 as a new stopping test.
   Simulation90274 completed successfully; all768 geometries validated.
 - 28894: jobd614ea076af1a31a8018 N30000 long-spacing continuation.
   Prior session43971 finished and all128 geometries validated.
-- 70973: job1c43898e12fc22400dec, k0=.5 N30000 long continuation.
+- 78681: job1c43898e12fc22400dec, k0=.5 N30000 long extension128→256,
+  configcoupling_0p5_30000_long_256.json. Prior70973 completed128 validated.
   Prior session45527 completed and all128 pilot geometries validated.
 - 67775: first-chain4a40078dbf0e6b9a5f5c extension1152→1536,
   configequilibration_10000_1536.json. Prior89099 completed successfully.
@@ -47,6 +48,13 @@ through768 comparison. Do not treat intermediate1152 as a new stopping test.
   Wait for a slot before starting another heavy worker.
 
 ### Latest matched baseline comparison (768 vs768)
+
+k.5 long stage1c438 completed128 snapshots/153600 sweeps in9780.026 seconds.
+Saved through128 diagnostics: peak tau2569.38242,ESS29.89045,split-z1.69722,
+so shape ESS still fails. N0/N3/N31 screens pass. The correlation time grew
+relative to the pilot, motivating doubling the same stage to256 snapshots
+(307200 total sweeps) with no parameter changes, no discard, and no new burn.
+Extension78681 is live. No long-stage spectral propagation performed yet.
 
 N60000 pilot spectra complete: peakDs3.04922218 at191,Ds15=2.53242445,
 Ds25=2.65643221,maxrelativeSE.01805438. Three-volume pilot comparison saved

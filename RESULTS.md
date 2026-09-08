@@ -114,6 +114,12 @@ not exactly fixed-condensate-volume data. The decrease at higher coupling
 is descriptive evidence only, pending convergence and the remaining grid.
 # Matched 768-snapshot baseline comparison
 
+The k0=.5 long continuation has128 validated snapshots spanning153600
+measurement sweeps. Peak-slice tau2569.38242,ESS29.89045,split-z1.69722:
+shape ESS remains below50. N0/N3/N31 screens pass. The stage is extending
+to256 snapshots without discarding these data. Source:
+`results/tables/1c43898e12fc22400dec_through128_diagnostics.json`.
+
 The three-volume pilot comparison is complete. At mean condensate volumes
 9002.375,29126.5625,59177.0625, peakDs values are2.79319873,2.94356034,3.04922218
 at sigma83,129,191. Ds(15) stays near2.52–2.53. Largest-volume maximum return
