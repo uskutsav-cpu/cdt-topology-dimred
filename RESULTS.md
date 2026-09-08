@@ -106,3 +106,9 @@ spanning the full trajectory gives peakDs2.79022, maximum relative return
 samplingSE1.816%. Earlier saved returns were reused. This supports stability
 of the baseline spectrum with longer sampling, while the matched long-chain
 comparison is still pending. The predeclaredk0=1.5 comparison is running.
+
+First fixed-volume coupling pilot: k0=.5 vs1 atN30000,T64,rho=.8 gives
+Ds15=2.56959 vs2.53403 and Ds25=2.69342 vs2.64883 (16 geometries each).
+PeakDs=2.95475 vs2.94356. Mean condensate volumes differ by0.57%; these are
+not exactly fixed-condensate-volume data. The decrease at higher coupling
+is descriptive evidence only, pending convergence and the remaining grid.

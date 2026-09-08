@@ -10,9 +10,10 @@
   Prior session43971 finished and all128 geometries validated.
 - 70973: job1c43898e12fc22400dec, k0=.5 N30000 long continuation.
   Prior session45527 completed and all128 pilot geometries validated.
-- 33167: fills10 missing k0=.5 pilot spectra, reuses6 cached curves.
-- Four single-thread simulators plus moderate analysis33167 are active.
-  Latest resource check supports this load; do not add another heavy job.
+- 13068: job029620366a1c017aaa4b, k0=2 N30000 baseline pilot.
+  Spectral analysis33167 completed all16 k0=.5 pilot geometries.
+- Five single-thread simulators occupy the same five active compute slots
+  previously measured. No analysis running; wait for a slot before heavy work.
 
 
 The user's goal is ACTIVE and is the entire computational project in
@@ -463,3 +464,20 @@ ranged4–442MiB, analysis~298MiB, waiting drivers~14MiB each. The new checkpoin
 stage initialization is much larger inRSS than older compressed/idle pages;
 do not treat earlier2.6MiB as guaranteed simulator memory. Noadditional heavy
 job should start until a slot frees or resources are rechecked.
+
+## First coupling spectrum comparison completed
+
+33167 finished all16 k0=.5 N30000 pilot spectra: peakDs2.95474894,
+maxrelative samplingSE0.01804084. Compared atsameT64,target30000,rho=.8:
+k0=.5 vs1 gives Ds15=2.56959 vs2.53403, Ds25=2.69342 vs2.64883,
+peakDs2.95475 vs2.94356. Mean condensate volumes29292.813 vs29126.563.
+Saved coupling_pilot.csv, coupling_pilot_curves.csv and source-hashed JSON;
+workflowcoupling_pilot.py can update with newly completed k1.5/k2 data.
+This is descriptive pilot evidence, not a convergence/coupling-gate pass.
+
+Freed analysis slot now used by fifth single-thread simulator:
+job029620366a1c017aaa4b, session13068, coupling_2p0_30000.json.
+Other live handles83128,90274,28894,70973. Noanalysis remains live.
+Five total CPU-heavy workers is now the cap, independent of whether each
+worker is a simulator or an analysis. Do NOT add a sixth heavy worker by
+repeatedly redefining a freed slot. k2.5 andN60000 remain unrun.
