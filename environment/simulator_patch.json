@@ -1,0 +1,14 @@
+{
+  "simulation.cpp": {
+    "upstream_sha256": "84ab4e25f4ccd69bc36a5053129fd26fe762010ee63cb3d9053e9c2a0dfb3ce5",
+    "patched_sha256": "210ca9bc48fcaac1c79f7a826ab76d308d3bf6eef83b6fbc23e407d58b105a5f"
+  },
+  "simulation.hpp": {
+    "upstream_sha256": "d1af84bb35d7b0f619044d0d22d4768f1451fc1678eac650ef2f85873ab4d773",
+    "patched_sha256": "e3a8bcd726dce44ed536e0440d2d785c65285cf374e22588f6301a65329cc790"
+  },
+  "universe.hpp": {
+    "upstream_sha256": "c60ca7d5fe2d31c35a552443427835e3bcb2a574d366270ebc65c48f434b8645",
+    "patched_sha256": "35d5afdbc914da70ba713fa564cf890cffe470082aa877f9a32ae5f58fec3afd"
+  }
+}

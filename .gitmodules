@@ -1,0 +1,3 @@
+[submodule "external/3d-cdt"]
+	path = external/3d-cdt
+	url = https://github.com/JorenB/3d-cdt.git

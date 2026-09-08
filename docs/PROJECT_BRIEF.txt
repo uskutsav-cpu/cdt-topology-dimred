@@ -1,0 +1,2433 @@
+Yes. I would freeze the project now and execute it in the following order. The biggest correction from the earlier sketch is that the 3D coarse-graining step itself is part of the research, because the February 2026 effective-topology paper only implements the construction in 2D and explicitly says higher-dimensional coarse-graining is substantially more complex.
+
+Final research project
+
+Topological Origins of Dimensional Reduction in Quantum Spacetime
+
+Core question
+
+In \(2+1\)-dimensional causal dynamical triangulations:
+
+$$ \boxed{ \text{Are the regions that become topologically singular under coarse-graining responsible for} \quad D_s:3\rightarrow2? } $$
+
+The known phenomenon is real: 3D CDT exhibits a spectral dimension close to the topological dimension \(3\) at intermediate scales and a reduction toward roughly \(2\) at short scales. Cooperman specifically proposed microscopic branched-polymer-like geometry as a tentative explanation, not an established mechanism.
+
+Your frozen hypothesis remains:
+
+$$ H_1: D_s^{\rm singular}(\sigma,\delta) < D_s^{\rm regular}(\sigma,\delta) $$
+
+in the ultraviolet region.
+
+The null is:
+
+$$ H_0: D_s^{\rm singular} \simeq D_s^{\rm regular}. $$
+
+That matches the scientific hierarchy you had already settled on.
+
+Phase 0 — Set the project up correctly
+
+Time: 1–2 days
+
+Create one repository containing the entire research pipeline.
+
+I would structure it roughly as:
+
+cdt-topological-dimred/
+│
+├── external/
+│   ├── 3d-cdt/
+│   ├── dyntri-rs/
+│   └── canonical-stratification/
+│
+├── src/
+│   ├── spectral/
+│   ├── coarse_grain/
+│   ├── topology/
+│   ├── mapping/
+│   └── statistics/
+│
+├── tests/
+│
+├── configs/
+│
+├── data/
+│   ├── raw/
+│   ├── triangulations/
+│   ├── coarse/
+│   └── measurements/
+│
+├── notebooks/
+│
+├── figures/
+│
+├── docs/
+│   ├── theory_notes.md
+│   ├── reproduction_log.md
+│   └── methods_decisions.md
+│
+└── paper/
+
+Pin exact dependency versions and random seeds from the start.
+
+For the 3D simulations, use the public JorenB/3d-cdt implementation. It is specifically a Monte Carlo implementation of \(2+1\)D CDT, is written primarily in C++, and its latest published release is v1.0.1 from April 17, 2026.
+
+Gate 0: repository builds from a fresh clone using documented commands.
+
+Phase 1 — Learn only the theory required for the project
+
+Time: ~1 week alongside coding
+
+You don't need to become a quantum-gravity theorist first.
+
+Read these five things in this order:
+
+Brunekreef, Görlich & Loll — Simulating CDT quantum gravity
+
+This is basically your simulation manual. It explains the 2D/3D Monte Carlo moves, detailed balance, storage, reconstruction, tuning, thermalization and observable measurement.
+
+Cooperman — spectral dimension in 3D CDT
+
+Understand:
+
+$$ P(\sigma),\qquad D_s(\sigma), $$
+
+diffusion constant \(\rho\), volume \(N_3\), bare coupling \(k_0\), finite-size effects and the phase-C setup.
+
+van der Duin, Loll, Schiffer & Silva — effective topology
+
+Understand:
+
+$$ T\rightarrow T_\delta $$
+
+using sampled vertices, Voronoi cells and the dual coarse Delaunay complex.
+
+Asai & Shah — canonical stratification
+
+Understand local homology, links and why a simplicial complex can be separated into topologically distinct strata. Their algorithm explicitly specializes to dimension \(\le3\), has polynomial complexity, and published code is available.
+
+Brunekreef & Németh — generalized 3D CDT
+
+Save this for the eventual universality test. They studied controlled relaxations of the simplicial-manifold restriction and found the phase structure remained qualitatively similar.
+
+Deliverable: a 5–10 page personal theory note explaining every object used in your code.
+
+Do not spend a month reading textbooks before coding.
+
+Phase 2 — Reproduce the 3D CDT simulator
+
+Time: week 1–2
+
+Your first job is not topology.
+
+It is proving that you can generate trustworthy CDT universes.
+
+The simulation has three logically separate stages:
+
+$$ \text{tuning} \rightarrow \text{thermalization} \rightarrow \text{measurements}. $$
+
+The official simulation paper explicitly emphasizes these stages.
+
+Run tiny configurations first.
+
+Check:
+
+vertices;
+edges;
+triangles;
+tetrahedra;
+tetrahedron types;
+foliation/time slices;
+neighbor tables;
+Monte Carlo moves;
+volume;
+acceptance rates;
+manifold checks;
+reproducibility from random seeds.
+
+Then verify simple observables already supported by or naturally derived from the simulator.
+
+Output
+
+For every retained configuration save:
+
+config_id
+seed
+N3
+k0
+time_extent
+MC_sweep
+tetrahedra
+tetrahedron_neighbors
+vertex_neighbors
+time_slice_labels
+
+Do not invent your own simulation code if the public implementation works. The public 3D repository exists precisely to avoid rebuilding the entire CDT machinery.
+
+Gate 1
+
+Same seed + parameters → identical configuration sequence.
+
+Basic geometric observables → agree with supplied examples/literature.
+
+Phase 3 — Reproduce ordinary spectral dimension
+
+Time: weeks 2–4
+
+This is your most important reproduction gate.
+
+The spectral dimension is obtained from diffusion.
+
+For starting tetrahedron \(x\):
+
+$$ K(x,x;\sigma) $$
+
+is the probability of a random walker returning to \(x\) after diffusion time \(\sigma\).
+
+Average over starting positions/configurations:
+
+$$ P(\sigma) = \langle K(x,x;\sigma)\rangle . $$
+
+Then:
+
+$$ \boxed{ D_s(\sigma) = -2 \frac{d\log P(\sigma)} {d\log\sigma} } $$
+
+You should use diffusion on the dual triangulation, where tetrahedra become nodes and adjacency gives diffusion edges.
+
+Reproduction sequence
+
+First run one moderate ensemble.
+
+Then vary:
+
+$$ N_3 $$
+
+for finite-volume behavior.
+
+Then:
+
+$$ \rho $$
+
+for diffusion-step scaling.
+
+Then:
+
+$$ k_0. $$
+
+Cooperman specifically found that the reduction becomes stronger approaching the phase transition and that the spectral dimension is close to \(3\) on intermediate scales while moving downward toward \(\sim2\) at short scales.
+
+Also reproduce the same treatment of the extended condensate/stalk rather than unknowingly mixing lattice artifacts into your measurement; the published 3D analysis explicitly excludes the stalk for the spectral-dimension measurement.
+
+Produce Figure 1
+
+Something resembling:
+
+Ds
+3.2 |           _______
+3.0 |        __/       \__
+2.8 |      /
+2.6 |    /
+2.4 |  /
+2.2 | /
+2.0 |/
+    +-----------------------
+             log σ
+
+It does not need to numerically match every historical run.
+
+It needs to reproduce the qualitative and scaling behavior.
+
+Gate 2 — absolute requirement
+
+Do not proceed to claiming new physics until ordinary \(D_s(\sigma)\) is reproduced.
+
+Phase 4 — Reproduce the 2026 effective-topology calculation in 2D
+
+Time: weeks 3–5
+
+This is a step I would add that wasn't emphasized enough before.
+
+Before inventing 3D coarse-graining, reproduce the authors' 2D method.
+
+Their procedure is:
+
+$$ T \rightarrow \mathcal S_\delta \rightarrow \text{Voronoi decomposition} \rightarrow T_\delta \rightarrow \beta_k(T_\delta). $$
+
+The three explicit steps are:
+
+$$ \boxed{ \begin{aligned} 1.&\ \text{sample vertices separated by scale }\delta,\\ 2.&\ \text{construct Voronoi cells},\\ 3.&\ \text{construct the dual coarse Delaunay triangulation}. \end{aligned} } $$
+
+Their current software ecosystem is public through dyntri-rs; the newer packages include 2D CDT and EDT implementations plus generic triangulation/graph tools.
+
+They used GUDHI for homology computation. Their paper reports that Betti-number computation on a roughly 100k-size triangulation takes on the order of a second in their setup, so homology itself was not the computational bottleneck in 2D.
+
+The exact coarse-graining/measurement software is also available from the authors on request.
+
+Why bother doing 2D first?
+
+Because then when the 3D version fails, you'll know whether:
+
+your implementation is bad, or
+the difficulty is genuinely caused by the third dimension.
+Gate 3
+
+Your 2D code must reproduce known:
+
+$$ \beta_0(\delta),\; \beta_1(\delta),\; \beta_2(\delta) $$
+
+qualitatively.
+
+Phase 5 — Invent and validate the 3D effective-topology coarse-graining
+
+Time: weeks 5–9
+
+This is probably the hardest technical part of the entire project.
+
+And this is genuine research.
+
+The authors explicitly warn that the higher-dimensional version has more freedom in how topology changes should be handled and will be more computationally demanding.
+
+Start with a triangulation:
+
+$$ T. $$
+
+For each scale:
+
+$$ \delta=1,2,3,\ldots $$
+
+construct:
+
+$$ T_\delta. $$
+5A. Seed selection
+
+Select:
+
+$$ \mathcal S_\delta\subset V(T) $$
+
+with typical nearest-neighbor graph distance approximately \(\delta\).
+
+Use graph-distance Poisson-disk/farthest-point-style sampling similar in spirit to the 2D procedure.
+
+5B. Voronoi assignment
+
+Use multi-source BFS over the triangulation's vertex graph.
+
+Assign every microscopic vertex to its closest coarse seed.
+
+Store:
+
+$$ v\mapsto s(v,\delta). $$
+
+Tie-breaking must be deterministic for reproducibility.
+
+5C. Construct the 3D dual complex
+
+In 3D the coarse complex contains:
+
+vertices;
+edges;
+triangles;
+tetrahedra.
+
+A candidate dual construction is based on which Voronoi cells meet.
+
+Conceptually:
+
+$$ \begin{aligned} 2\text{ cells intersect} &\rightarrow \text{edge},\\ 3\text{ cells intersect} &\rightarrow \text{triangle},\\ 4\text{ cells intersect} &\rightarrow \text{tetrahedron}. \end{aligned} $$
+
+But do not assume that the naive 3D extension is automatically mathematically valid.
+
+This is where your mentor feedback will be most valuable.
+
+Phase 6 — Validate your 3D coarse-graining before doing physics
+
+This deserves an entire phase.
+
+Run it on synthetic complexes where you already know the answer.
+
+Examples:
+
+$$ S^3, $$ $$ T^3, $$
+
+a triangulated 3-ball,
+
+two 3D regions connected by a narrow neck,
+
+branched constructions,
+
+pinched constructions.
+
+Check:
+
+Identity control
+
+At
+
+$$ \delta=1, $$
+
+the method should reproduce the original geometry or its intended equivalent.
+
+The 2D effective-topology construction explicitly has this property.
+
+Homology control
+
+For small \(\delta\), ordinary smooth/regular triangulations should retain expected:
+
+$$ \beta_0,\beta_1,\beta_2,\beta_3. $$
+Pinch detection
+
+Artificial narrow necks should eventually collapse when:
+
+$$ \delta \gtrsim \text{neck width}. $$
+Sampling stability
+
+Repeat the seed selection.
+
+Topology should not change wildly merely because you selected a different random coarse sample.
+
+If it does, your observable isn't stable enough.
+
+Gate 4
+
+No novel CDT analysis until the 3D coarse-graining passes synthetic controls.
+
+Phase 7 — Apply local homology and canonical stratification
+
+Time: weeks 8–10
+
+Now take:
+
+$$ T_\delta. $$
+
+Apply the Asai–Shah canonical-stratification algorithm.
+
+This is exactly the sort of setting it was designed for: finite simplicial complexes, particularly dimension \(\le3\), classified via local homological structure.
+
+Conceptually:
+
+$$ T_\delta \rightarrow S_3 \sqcup S_2 \sqcup S_1 \sqcup S_0. $$
+
+But don't blindly assume every stratum has the physical interpretation you want.
+
+Inspect them.
+
+Regular sector
+
+Define:
+
+$$ R_\delta $$
+
+as locally 3-manifold-like regions.
+
+Nonregular sector
+
+Define:
+
+$$ Q_\delta $$
+
+as the union of regions whose local topology is not 3-manifold-like.
+
+Then later, if sample sizes permit, split:
+
+$$ Q_\delta \rightarrow S_2,S_1,S_0. $$
+Important negative control
+
+Run canonical stratification on the original raw CDT geometry.
+
+Because CDT simulations enforce the simplicial-manifold property, essentially everything should be identified as ordinary manifold structure.
+
+The simulation paper explicitly describes the local link condition used to maintain the manifold property.
+
+If your algorithm sees thousands of raw singularities:
+
+you have a bug.
+
+Gate 5
+
+Toy complexes classified correctly.
+
+Raw CDT essentially regular.
+
+Coarse CDT develops meaningful nonregular strata at some \(\delta\).
+
+Phase 8 — Map coarse topology back to microscopic spacetime
+
+Time: week 10
+
+This is another scientifically important decision.
+
+Your diffusion happens on the microscopic CDT triangulation.
+
+Your topological classification happens on:
+
+$$ T_\delta. $$
+
+So construct a map:
+
+$$ M_\delta: T\rightarrow T_\delta. $$
+
+Every microscopic diffusion starting site must acquire a label:
+
+$$ L_\delta(x) \in \{\text{regular},\text{singular}\}. $$
+
+The cleanest initial mapping will probably use the coarse Voronoi cells generated during coarse-graining.
+
+Store it explicitly:
+
+microscopic_tetra_id
+delta
+coarse_cell_id
+coarse_stratum
+regular_or_singular
+
+Never recompute the mapping differently during analysis.
+
+Phase 9 — Run the actual novel experiment
+
+Time: weeks 10–12
+
+Now you finally calculate the object that makes this paper new.
+
+For starts mapped to regular regions:
+
+$$ P_R(\sigma;\delta) = \Pr(X_\sigma=X_0 \mid L_\delta(X_0)=R). $$
+
+For singular regions:
+
+$$ P_Q(\sigma;\delta) = \Pr(X_\sigma=X_0 \mid L_\delta(X_0)=Q). $$
+
+Then:
+
+$$ \boxed{ D_s^R(\sigma;\delta) = -2 \frac{d\log P_R} {d\log\sigma} } $$
+
+and
+
+$$ \boxed{ D_s^Q(\sigma;\delta) = -2 \frac{d\log P_Q} {d\log\sigma}. } $$
+
+That gives your most important figure:
+
+$$ \boxed{ D_s^R(\sigma;\delta) \quad\text{versus}\quad D_s^Q(\sigma;\delta) } $$
+
+Your old plan already identified this as the central new calculation.
+
+Phase 10 — Make the claim quantitative
+
+Don't write:
+
+"The blue curve looks lower."
+
+Define:
+
+$$ \Delta D_s(\sigma,\delta) = D_s^R(\sigma,\delta) - D_s^Q(\sigma,\delta). $$
+
+Your hypothesis predicts:
+
+$$ \Delta D_s>0 $$
+
+in the UV.
+
+Before looking at the final production result, define a UV diffusion window:
+
+$$ \sigma\in[\sigma_{\min},\sigma_{\max}] $$
+
+from the ordinary spectral-dimension reproduction, not from whichever interval makes your hypothesis look best.
+
+Then define a summary statistic, for example:
+
+$$ A(\delta) = \frac{1}{|\mathcal U|} \sum_{\sigma\in\mathcal U} \left[ D_s^R-D_s^Q \right]. $$
+
+Primary test:
+
+$$ H_0:A(\delta)=0. $$
+Phase 11 — Statistics done correctly
+
+Time: weeks 11–13
+
+Your independent objects are CDT configurations, not individual random walks.
+
+If you run one million walks on one geometry, you do not have one million independent universes.
+
+So uncertainty should primarily be estimated by resampling configurations.
+
+Use:
+
+$$ \text{configuration-level bootstrap} $$
+
+or jackknife.
+
+For each bootstrap sample:
+
+resample configurations;
+recompute \(P_R,P_Q\);
+recompute \(D_s^R,D_s^Q\);
+recompute \(A(\delta)\).
+
+Report:
+
+mean;
+standard error;
+95% confidence interval;
+effect size.
+Phase 12 — Rule out the obvious confounders
+
+This part could determine whether the paper is actually strong.
+
+Maybe singular regions have lower spectral dimension merely because they have unusual coordination number, not because of topology.
+
+So perform matched analyses.
+
+Match regular and singular starting sites on things like:
+
+$$ \text{local degree}, $$ $$ \text{coordination number}, $$ $$ \text{time slice}, $$ $$ \text{local volume density}, $$
+
+and potentially local curvature proxies.
+
+Then compare again.
+
+Also run a label permutation control:
+
+randomly shuffle regular/singular labels while preserving their counts.
+
+Then:
+
+$$ \Delta D_s^{\rm shuffled} \approx0 $$
+
+should result.
+
+If shuffled labels reproduce your signal, something is wrong.
+
+Phase 13 — Understand how much of global dimensional reduction is explained
+
+This is a particularly nice analysis.
+
+Let:
+
+$$ f_Q(\delta) $$
+
+be the fraction of starting locations classified singular.
+
+If your classes partition all starts:
+
+$$ P_{\rm all} = (1-f_Q)P_R + f_QP_Q. $$
+
+That lets you quantify whether the singular sector merely has a strange spectral dimension or whether it is actually abundant enough to explain the global spectral-dimension flow.
+
+This distinction matters.
+
+You could find:
+
+$$ D_s^Q\approx2 $$
+
+but
+
+$$ f_Q=0.001. $$
+
+Then the singular sector probably cannot explain the global \(3\rightarrow2\) phenomenon.
+
+The strongest result would be both:
+
+$$ D_s^Q<D_s^R $$
+
+and sufficient statistical weight for \(Q\) to account for a substantial fraction of the global change.
+
+Phase 14 — Run across coarse-graining scales
+
+Now vary:
+
+$$ \delta. $$
+
+Maybe the effect exists at:
+
+$$ \delta=3,4,5 $$
+
+but disappears at huge coarse-graining.
+
+That's fine.
+
+You want a scale-localized phenomenon, not necessarily a signal at every \(\delta\).
+
+Measure:
+
+$$ D_s^R(\sigma,\delta), $$ $$ D_s^Q(\sigma,\delta), $$ $$ f_Q(\delta), $$ $$ A(\delta). $$
+
+This produces a 2D map:
+
+$$ (\sigma,\delta) \rightarrow \Delta D_s. $$
+
+That could become one of the coolest figures in the project.
+
+Phase 15 — Finite-size scaling
+
+Time: weeks 13–15
+
+Repeat at several:
+
+$$ N_3. $$
+
+You want to know whether your signal:
+
+$$ A(\delta,N_3) $$
+
+is:
+
+growing;
+shrinking;
+stable
+
+as system size increases.
+
+A signal that disappears rapidly with volume could be a lattice artifact.
+
+Cooperman's work already emphasizes finite-volume scaling as essential when interpreting the 3D spectral dimension.
+
+Phase 16 — Coupling dependence
+
+Repeat for several:
+
+$$ k_0. $$
+
+Particularly investigate movement toward the phase transition.
+
+Existing 3D results found stronger dimensional reduction nearer the transition.
+
+Your question becomes:
+
+$$ \boxed{ \text{Does the abundance or strength of singular topology increase at the same time?} } $$
+
+Measure:
+
+$$ A(\delta,k_0) $$
+
+and
+
+$$ f_Q(\delta,k_0). $$
+
+If both grow as dimensional reduction strengthens, that would substantially strengthen the mechanism interpretation.
+
+Phase 17 — Optional universality test
+
+Time: weeks 15–18
+
+Only do this after the main result works.
+
+Use the generalized/relaxed triangulation ensemble studied by Brunekreef & Németh.
+
+They found the major phase structure and semiclassical features remain qualitatively similar under controlled relaxations of the simplicial-manifold restrictions.
+
+Then test:
+
+$$ D_s^{R,\text{standard}} \quad\text{vs}\quad D_s^{R,\text{relaxed}} $$
+
+and
+
+$$ D_s^{Q,\text{standard}} \quad\text{vs}\quad D_s^{Q,\text{relaxed}}. $$
+
+If the relationship survives:
+
+$$ \boxed{ \text{topology–dimensional-reduction connection may be universal} } $$
+
+within 3D CDT.
+
+That's a major extension, not necessary for paper 1.
+
+Phase 18 — Interpret every possible outcome
+
+You are not trying to force a positive result.
+
+Outcome A — dream result
+$$ D_s^R\approx3, $$
+
+while
+
+$$ D_s^Q\approx2 $$
+
+in the UV.
+
+And the singular sector has enough weight to explain much of the ordinary curve.
+
+Interpretation: strong evidence that UV dimensional reduction is associated with effective topological singularities/branching.
+
+Outcome B — both go to 2
+$$ D_s^R\simeq D_s^Q\simeq2. $$
+
+Interpretation: effective topology does not explain dimensional reduction.
+
+That directly challenges the tentative branched-geometry mechanism suggested in previous 3D spectral-dimension work.
+
+Still publishable.
+
+Outcome C — singular lower, but disappears after geometric matching
+
+Then the real mechanism may be:
+
+$$ \text{local connectivity} $$
+
+rather than topology itself.
+
+Also interesting.
+
+Outcome D — singular regions exist but are extremely rare
+
+Then they probably don't explain the ensemble-wide spectral dimension.
+
+Again, useful falsification.
+
+Outcome E — no stable 3D coarse-graining exists
+
+This isn't necessarily project death.
+
+If you discover and solve a mathematically nontrivial problem in defining topology-preserving Voronoi/Delaunay coarse-graining for fluctuating 3D simplicial manifolds, you may end up with a methods/topology paper first.
+
+The 2026 authors themselves say this higher-dimensional extension is substantially more complicated.
+
+Phase 19 — Final paper figures
+
+I would aim for approximately these figures:
+
+Figure 1: ordinary reproduced \(D_s(\sigma)\)
+
+Figure 2: example microscopic 3D CDT configuration
+
+Figure 3: coarse-graining
+
+$$ T\rightarrow T_\delta $$
+
+Figure 4: synthetic pinch/branch validation
+
+Figure 5: local-homology strata in \(T_\delta\)
+
+Figure 6 — main result:
+
+$$ D_s^R \quad\text{vs}\quad D_s^Q $$
+
+Figure 7:
+
+$$ \Delta D_s(\sigma,\delta) $$
+
+heatmap
+
+Figure 8: singular fraction
+
+$$ f_Q(\delta) $$
+
+Figure 9: matched-confounder analysis
+
+Figure 10: finite-size scaling
+
+Figure 11: coupling dependence
+
+Figure 12: optional universality test.
+
+Phase 20 — Paper structure
+
+Your paper becomes:
+
+1. Introduction
+
+Why dimensional reduction matters.
+
+Known \(3\rightarrow2\) result.
+
+Branched-geometry conjecture.
+
+Your question.
+
+2. CDT
+
+Only enough theory to understand the numerical ensemble.
+
+3. Spectral dimension
+
+Standard observable and reproduction.
+
+4. Effective topology in 3D CDT
+
+This could be a major methods section.
+
+5. Local-homology stratification
+
+Define:
+
+$$ R_\delta,\quad Q_\delta. $$
+6. Topology-conditioned diffusion
+
+Define your new observable.
+
+7. Results
+
+Main comparison.
+
+8. Robustness
+
+Finite size, \(\delta\), matching, permutation, coupling.
+
+9. Discussion
+
+Mechanism or falsification.
+
+10. Conclusion
+
+What this says about quantum spacetime.
+
+Realistic timeline
+
+If you work consistently:
+
+Period	Goal
+Week 1	CDT environment + theory
+Weeks 2–3	reproduce simulation
+Weeks 3–4	reproduce spectral dimension
+Weeks 4–5	reproduce 2D effective topology
+Weeks 5–9	build + validate 3D coarse-graining
+Weeks 8–10	local-homology stratification
+Weeks 10–12	conditioned spectral diffusion
+Weeks 12–14	statistics + controls
+Weeks 14–16	volume/coupling scaling
+Weeks 16–18	robustness/universality
+Weeks 18–20	paper + code + final figures
+
+I would expect the 3D coarse-graining phase to dominate the uncertainty. Everything after it is conceptually much clearer.
+
+What you should literally do first
+
+For the next few days, forget the final exotic result.
+
+Your sequence should be:
+
+$$ \boxed{ \text{3d-cdt runs} } $$
+
+then
+
+$$ \boxed{ \text{you understand its geometry representation} } $$
+
+then
+
+$$ \boxed{ P(\sigma)\text{ works} } $$
+
+then
+
+$$ \boxed{ D_s(\sigma)\text{ reproduces the known curve} } $$
+
+then
+
+$$ \boxed{ \text{2D effective topology reproduction works} } $$
+
+then and only then:
+
+$$ \boxed{ \text{start the novel 3D coarse-graining}. } $$
+
+That is the full research path I would actually execute. The project is not “run some TDA on CDT.” The real chain is:
+
+$$ \boxed{ \begin{array}{c} \text{CDT ensemble}\\ \downarrow\\ \text{validated spectral diffusion}\\ \downarrow\\ \text{validated 3D coarse-graining}\\ \downarrow\\ \text{local-homology strata}\\ \downarrow\\ \text{map strata back to microscopic geometry}\\ \downarrow\\ \text{condition diffusion on topology}\\ \downarrow\\ D_s^R \text{ vs. } D_s^Q\\ \downarrow\\ \text{confounder + finite-size + coupling tests}\\ \downarrow\\ \boxed{\text{mechanism or falsification}} \end{array} } $$
+
+And importantly, the public infrastructure is good enough to begin: the 3D CDT simulator is open source, the 2D effective-topology ecosystem is open source, GUDHI is available for homology, and the \(\le3\)-dimensional canonical-stratification algorithm has published code.
+
+So you can begin essentially the entire pipeline right now. Mentor input becomes most valuable around Phase 5, where you have to freeze the mathematically and physically defensible definition of \(3\)D \(T_\delta\), not before you start.
+
+no like 
+@Web search
+ no not for me like entire plan needed for codex to do all of the computation and all of the work not the manuscript I will right that all of the math physics, and computation all needed and the plan
+
+Yes — now I understand. You want a research-engineering specification that you can hand directly to Codex and tell it: “do the entire scientific/computational project; I will write the manuscript myself.”
+
+Codex should do the physics implementation, mathematical implementation, simulations, derivations needed for the code, numerical experiments, validation, statistics, figures, tables, reproducibility, and final result package. It should not write the paper.
+
+The public infrastructure is sufficient to begin: the 3D CDT code implements the Monte Carlo model in C++, with Universe, Simulation, and extensible Observable machinery; the simulation paper specifies the 3D action, moves, volume fixing, tuning, thermalization and measurement workflow. The 2026 effective-topology work gives the 2D Voronoi/Delaunay construction and uses GUDHI for homology, while dyntri-rs is actively maintained and the associated Poisson-disk project now includes 3D support. The Asai–Shah canonical-stratification algorithm specifically handles complexes of dimension \(\le3\), and its implementation is public.
+
+Below is the plan I would give Codex.
+
+Codex master objective
+
+Project: Topology-conditioned spectral dimensional reduction in \(2+1\)D Causal Dynamical Triangulations.
+
+Do all scientific/computational work necessary to answer:
+
+$$ \boxed{ \text{Is the ultraviolet reduction of spectral dimension in 3D CDT concentrated around} \\ \text{effective topologically non-manifold/branched/pinched regions?} } $$
+
+The established baseline is that 3D CDT has scale-dependent spectral dimension: near \(3\) at intermediate scales, decreasing toward roughly \(2\) at short scales, with stronger reduction near the phase transition. The branched-polymer explanation is explicitly tentative.
+
+Codex's job is to produce the complete evidence package, not prose for publication.
+
+0. Non-negotiable operating rules for Codex
+
+Give Codex these rules before anything else:
+
+You are responsible for executing the entire computational/mathematical
+research project, not merely proposing a plan.
+
+Do not write the manuscript.
+
+Do:
+- inspect and understand the cited literature and upstream code;
+- create the research repository;
+- reproduce known CDT results;
+- implement all new algorithms;
+- write tests;
+- run the computations;
+- analyze the outputs statistically;
+- generate all final figures and tables;
+- document every mathematical/physics definition actually used;
+- record all parameters, seeds, versions and provenance;
+- make incremental git commits at meaningful scientific milestones;
+- keep a machine-readable experiment registry;
+- preserve raw results;
+- produce a final RESULTS.md that contains facts/results only,
+  not manuscript prose.
+
+Never:
+- fabricate numerical results;
+- silently substitute a different mathematical definition;
+- claim a validation passed when it did not;
+- continue to later physics claims if an earlier validation gate failed;
+- alter upstream simulation physics merely to obtain the expected result;
+- tune analysis choices after looking at the final result unless the change
+  is explicitly labelled exploratory.
+
+If a production computation exceeds available hardware:
+1. complete and validate the production-ready pipeline on smaller systems;
+2. estimate RAM/disk/CPU/GPU requirements from measured scaling;
+3. write the exact resumable production command;
+4. mark the result BLOCKED_COMPUTE;
+5. do not pretend the large run happened.
+1. Build one research repository
+
+Codex should create:
+
+cdt-topology-dimred/
+│
+├── README.md
+├── STATUS.md
+├── DECISIONS.md
+├── RESULTS.md
+├── REPRODUCTION.md
+├── PHYSICS.md
+├── MATH.md
+├── COMPUTE.md
+│
+├── environment/
+│   ├── environment.yml
+│   ├── requirements.lock
+│   ├── Cargo.lock
+│   └── upstream_versions.json
+│
+├── external/
+│   ├── 3d-cdt/
+│   ├── dyntri-rs/
+│   ├── poisson-disk-sampling/
+│   └── canonical-stratification/
+│
+├── src/
+│   ├── cdt/
+│   ├── io/
+│   ├── spectral/
+│   ├── coarsegrain/
+│   ├── topology/
+│   ├── mapping/
+│   ├── statistics/
+│   └── plotting/
+│
+├── tests/
+│   ├── unit/
+│   ├── synthetic/
+│   ├── integration/
+│   └── regression/
+│
+├── configs/
+│   ├── pilot/
+│   ├── reproduction/
+│   └── production/
+│
+├── workflows/
+│   ├── local/
+│   └── production/
+│
+├── data/
+│   ├── raw/
+│   ├── geometry/
+│   ├── coarse/
+│   ├── topology/
+│   └── spectral/
+│
+├── results/
+│   ├── tables/
+│   ├── figures/
+│   ├── statistics/
+│   └── manifests/
+│
+└── logs/
+
+The four upstream projects should be pinned to exact commits/tags.
+
+Do not copy code without retaining licenses/citations.
+
+2. Audit the 3D CDT physics implementation
+
+Do not rewrite CDT.
+
+The upstream 3D model samples labelled triangulations with
+
+$$ P_l(T) \propto \frac{1}{N_0(T)!} e^{k_0N_0-k_3N_3}. $$
+
+Equivalently,
+
+$$ S_E(T)=-k_0N_0+k_3N_3. $$
+
+Here \(k_0\) is proportional to the inverse bare Newton coupling and \(k_3\) contains the cosmological coupling.
+
+The 3D Monte Carlo move set is:
+
+$$ (2,6)\leftrightarrow(6,2), $$ $$ (4,4), $$ $$ (2,3)\leftrightarrow(3,2). $$
+
+The simulation paper describes these and the associated detailed-balance implementation.
+
+Codex should verify in code:
+
+all moves preserve foliation;
+all manifold checks execute;
+all neighbour pointers remain consistent;
+\(N_0,N_1,N_2,N_3\) update correctly;
+inverse moves are valid;
+detailed-balance factors correspond to the source derivation;
+fixed random seed gives deterministic output.
+Test invariants
+
+After every accepted move in debug mode:
+
+$$ \chi=N_0-N_1+N_2-N_3 $$
+
+must match the expected topology.
+
+Every tetrahedron has four triangular faces.
+
+Every interior triangle has exactly two incident tetrahedra.
+
+Vertex links must satisfy the intended manifold conditions.
+
+The upstream simulations explicitly check the manifold property during Monte Carlo evolution.
+
+3. Add a lossless geometry exporter
+
+Codex needs a representation independent of the simulator.
+
+For every saved configuration export:
+
+configuration_id
+seed
+k0
+k3
+epsilon
+target_N3
+actual_N3
+time_extent
+MC_sweep
+thermalization_sweeps
+measurement_index
+
+plus arrays:
+
+vertices:
+    vertex_id
+    time
+    coordination
+
+tetrahedra:
+    tetra_id
+    v0 v1 v2 v3
+    tetra_type
+    time_lower
+    time_upper
+
+tetra_neighbors:
+    tetra_id
+    n0 n1 n2 n3
+
+Also derive:
+
+edges
+triangles
+vertex adjacency
+tetrahedron dual adjacency
+spatial slice membership
+
+Use an efficient binary format such as HDF5 or compressed NPZ plus metadata JSON.
+
+Round-trip test:
+
+$$ T \rightarrow \text{file} \rightarrow T' $$
+
+must preserve all combinatorial invariants.
+
+4. Reproduce thermalization and autocorrelation correctly
+
+A simulation run should explicitly contain:
+
+$$ \text{tuning} \rightarrow \text{thermalization} \rightarrow \text{measurement}. $$
+
+That is the workflow specified by the CDT implementation paper.
+
+Codex must automatically monitor:
+
+\(N_3\);
+\(N_0\);
+move acceptance rates;
+volume profile;
+peak spatial volume;
+simple coordination statistics.
+
+Do not declare thermalization based only on an arbitrary sweep count.
+
+Estimate integrated autocorrelation time for several observables.
+
+Only store production configurations separated by enough sweeps that effective sample sizes are known.
+
+The CDT implementation paper notes that sweep sizes are commonly tens of times the target volume but emphasizes that higher-dimensional thermalization and measurement spacing must be established empirically.
+
+5. Reproduce the known spectral dimension before doing anything new
+
+This is Gate A.
+
+On the dual tetrahedron graph, each tetrahedron is a random-walk state.
+
+Use the same lazy diffusion equation as the 3D spectral-dimension analysis:
+
+$$ K(s,s_0,\sigma+1) = (1-\rho)K(s,s_0,\sigma) + \frac{\rho}{4} \sum_{s'\sim s}K(s',s_0,\sigma). $$
+
+The published 3D analysis defines
+
+$$ P(\sigma) = \frac{1}{N_3} \sum_s K(s,s,\sigma) $$
+
+and
+
+$$ D_s(\sigma) = -2\frac{d\log P}{d\log\sigma}. $$
+
+For unit finite differences it used
+
+$$ \boxed{ D_s(\sigma) = -\frac{\sigma}{P(\sigma)} \left[ P(\sigma+1)-P(\sigma-1) \right]. } $$
+
+Implement two independent estimators
+
+Estimator A — random walkers
+
+For many starting tetrahedra:
+
+stay with probability \(1-\rho\);
+otherwise choose one of four neighbours uniformly;
+count returns after every \(\sigma\).
+
+Estimator B — stochastic trace
+
+Construct
+
+$$ M=(1-\rho)I+\frac{\rho}{4}A, $$
+
+where \(A\) is dual adjacency.
+
+Then
+
+$$ P(\sigma)=\frac{1}{N_3}\operatorname{Tr}M^\sigma. $$
+
+Use Hutchinson/Rademacher trace estimates:
+
+$$ \operatorname{Tr}M^\sigma \approx \frac1R \sum_{r=1}^{R} z_r^TM^\sigma z_r. $$
+
+This may massively reduce computation.
+
+Validate estimator B against:
+
+exact matrices on tiny triangulations;
+random-walker estimator on medium triangulations.
+
+Do not use it in production until the two agree within uncertainty.
+
+6. Exact spectral reproduction targets
+
+Start with the literature benchmark
+
+$$ \rho=0.8. $$
+
+One published finite-size study used approximately
+
+$$ N_3= 9267,\, 15276,\, 29887,\, 60781,\, 99940,\, 148194,\, 198659 $$
+
+at \(k_0=1\).
+
+A coupling scan used
+
+$$ k_0= 0.5,\, 1.0,\, 1.5,\, 2.0,\, 2.5 $$
+
+with roughly
+
+$$ N_3=30850,\qquad T=64,\qquad\rho=0.8. $$
+
+However: Codex must verify that the normalization of \(k_0\) in the current upstream code matches the historical paper before copying those numerical values blindly.
+
+Required reproduction figures
+
+Produce:
+
+repro_spectral_vs_sigma.pdf
+repro_volume_scaling.pdf
+repro_k0_scan.pdf
+repro_rho_scaling.pdf
+
+The expected qualitative result is
+
+$$ D_s\sim3 $$
+
+at intermediate scale, with reduction toward approximately \(2\) toward the UV.
+
+If Gate A fails, stop the novel analysis.
+
+7. Identify and exclude the stalk consistently
+
+The historical 3D spectral-dimension analysis restricts measurement to the condensate and removes the stalk, which it treats as a numerical artifact.
+
+Codex should implement condensate/stalk identification from the time-dependent spatial-volume profile.
+
+Do not invent an undocumented threshold.
+
+Implement:
+
+the literature-compatible definition;
+a threshold-sensitivity test.
+
+Save both the full and condensate-only geometry masks.
+
+8. Reproduce effective topology in 2D first
+
+This is Gate B.
+
+Do not attempt the novel 3D generalization immediately.
+
+Use dyntri-rs and reproduce the 2026 effective-topology pipeline.
+
+The published construction proceeds approximately as:
+
+$$ T \rightarrow \mathcal S_\delta \rightarrow \text{Voronoi cells} \rightarrow T_\delta \rightarrow \{\beta_i(T_\delta)\}. $$
+
+The 2D construction selects separated seeds, assigns vertices by simultaneous breadth-first search to their nearest seed, forms connected Voronoi cells, and builds the dual Delaunay object.
+
+Codex should reproduce:
+
+seed sampling;
+graph-distance Voronoi cells;
+tie handling;
+connected cells;
+dual structure;
+Betti numbers versus \(\delta\).
+
+The published work used GUDHI for Betti numbers.
+
+Output:
+
+2d_effective_topology_reproduction/
+    betti0.csv
+    betti1.csv
+    betti2.csv
+    figures/
+    seed_variance/
+
+Do not proceed to 3D until the 2D implementation behaves correctly.
+
+9. Reuse the existing Poisson-disk machinery
+
+Do not reinvent seed selection unless necessary.
+
+The current dynamical-triangulation project has a separate Poisson-disk-sampling package whose repository now contains 3D examples/support.
+
+Benchmark it against a custom farthest-point sampler.
+
+For every \(\delta\), record:
+
+$$ n_\mathrm{seeds}, $$
+
+nearest-seed distance distribution,
+
+coverage radius,
+
+minimum inter-seed distance.
+
+Also measure sampling-to-sampling variance.
+
+The 2D paper reports that its sampling randomness was smaller than configuration-to-configuration variance for the quantities studied, but Codex must test whether this remains true in 3D.
+
+10. The main methodological research task: 3D coarse-graining
+
+This is Gate C and probably the hardest part.
+
+Do not implement the naive graph nerve only
+
+Why?
+
+If two Voronoi cells meet along multiple disconnected interface components, collapsing all of them to one abstract edge destroys topology.
+
+The 2D construction explicitly keeps different boundary segments between the same cells distinct; such multiplicity is involved in pinching behaviour.
+
+Therefore Codex should construct an incidence-preserving dual cell complex.
+
+11. Construct the microscopic 3D Voronoi partition
+
+Given microscopic CDT triangulation \(T\) and seeds
+
+$$ \mathcal S_\delta, $$
+
+perform simultaneous multi-source BFS over the vertex graph.
+
+Assign each microscopic vertex:
+
+$$ v\mapsto c_\delta(v). $$
+
+Tie choices must be reproducible from a recorded seed.
+
+For each microscopic tetrahedron, record its color pattern:
+
+aaaa
+aaab
+aabb
+aabc
+abcd
+
+where letters denote different Voronoi cells.
+
+Extend the coloring through tetrahedron interiors using a barycentric/PL subdivision analogous to the 2D triangle coloring.
+
+12. Build the 3D dual incidence complex
+
+In three dimensions:
+
+Voronoi 3-cell
+
+$$ \longleftrightarrow $$
+
+dual vertex.
+
+Connected 2D interface component shared by two cells
+
+$$ \longleftrightarrow $$
+
+dual edge.
+
+Connected 1D junction component shared by three cells
+
+$$ \longleftrightarrow $$
+
+dual triangle.
+
+0D junction of four cells
+
+$$ \longleftrightarrow $$
+
+dual tetrahedron.
+
+The key word is connected component.
+
+Two interfaces between the same pair of cells must remain two different dual edges.
+
+Similarly, multiple triple junctions involving the same three cells must remain distinct.
+
+Create persistent IDs:
+
+dual_vertex_id
+dual_edge_id
+dual_triangle_id
+dual_tetra_id
+
+with explicit incidence relations.
+
+13. Convert the dual cellulation into a genuine simplicial complex
+
+Canonical stratification and homology tools work most cleanly on simplicial complexes.
+
+If the coarse dual object contains:
+
+parallel edges;
+repeated faces on identical vertex sets;
+loops;
+non-standard cell incidences,
+
+do not silently collapse them.
+
+Instead build a topology-preserving barycentric subdivision of the incidence complex.
+
+Call it
+
+$$ \operatorname{Sd}(T_\delta). $$
+
+Every cell becomes a barycentric vertex.
+
+Chains of nested cells become simplices.
+
+This creates an ordinary abstract simplicial complex without losing incidence multiplicity.
+
+Validate:
+
+$$ H_*(T_\delta) \cong H_*(\operatorname{Sd}(T_\delta)). $$
+14. Synthetic topology test suite
+
+Before touching production CDT, Codex must build synthetic 3D complexes.
+
+At minimum:
+
+Smooth controls
+$$ S^3 $$
+
+triangulations.
+
+$$ T^3 $$
+
+triangulations.
+
+3-ball.
+
+\(S^2\times S^1\).
+
+Singular controls
+
+Two 3-balls meeting at one point.
+
+Two 3-balls meeting along an edge.
+
+Branched 3D complexes.
+
+Narrow-neck dumbbell.
+
+Pinched \(S^3\).
+
+Multiple bubbles joined through necks.
+
+Required known invariants
+
+Compute:
+
+$$ \beta_0,\beta_1,\beta_2,\beta_3. $$
+
+Verify Euler–Poincaré:
+
+$$ \chi = \beta_0-\beta_1+\beta_2-\beta_3 $$
+
+matches
+
+$$ N_0-N_1+N_2-N_3. $$
+15. Implement canonical stratification / local homology
+
+Reuse and independently test the published \(\le3\)D algorithm.
+
+Asai–Shah's method canonically stratifies finite simplicial complexes using local homology and has a specialized efficient implementation for dimension at most three.
+
+For a regular interior point of a 3-manifold, the local homology should behave like
+
+$$ H_i(M,M-\{x\}) \simeq \begin{cases} \mathbb Z, & i=3,\\ 0, & i\neq3. \end{cases} $$
+
+Codex should classify coarse simplices into
+
+$$ S_3,\quad S_2,\quad S_1,\quad S_0. $$
+
+Define
+
+$$ R_\delta=S_3 $$
+
+as the regular sector and initially
+
+$$ Q_\delta=S_0\cup S_1\cup S_2 $$
+
+as the nonregular sector.
+
+Later analyze \(S_0,S_1,S_2\) separately if sample counts permit.
+
+16. Crucial negative control
+
+Run canonical stratification on the raw CDT triangulation.
+
+Because standard CDT enforces a simplicial-manifold condition, it should be essentially all regular. The upstream implementation explicitly checks that manifold property during moves.
+
+Therefore:
+
+raw_cdt_nonregular_fraction
+
+should be effectively zero except for algorithmic/boundary conventions.
+
+If it is not:
+
+stop.
+
+Either the geometry conversion or stratification implementation is wrong.
+
+17. Validate 3D coarse-graining
+
+For each synthetic smooth geometry:
+
+$$ \delta=1 $$
+
+must preserve the intended topology.
+
+For increasing \(\delta\):
+
+topology should remain stable until geometric structures fall below resolution;
+narrow synthetic necks should pinch near their characteristic width;
+thick necks should survive longer;
+results should not depend strongly on seed randomness.
+
+Record:
+
+$$ \beta_k(\delta), $$ $$ f_\mathrm{sing}(\delta) = \frac{\#\text{nonregular coarse cells}} {\#\text{all coarse cells}}, $$
+
+seed-sampling variance,
+
+number of surviving coarse cells.
+
+If this gate fails, do not compute conditioned spectral dimensions yet.
+
+18. Map coarse topology back to microscopic CDT
+
+Spectral diffusion must remain on the original fine CDT lattice.
+
+Do not run the primary spectral observable on the coarse graph.
+
+Construct a preimage map:
+
+$$ \pi_\delta:T\rightarrow T_\delta. $$
+
+For every microscopic tetrahedron record:
+
+tetra_id
+delta
+voronoi_seed_ids
+coarse_cell_ids
+intersected_coarse_strata
+distance_to_nearest_singular_preimage
+
+Define several labels.
+
+Primary
+
+singular_core
+
+Microscopic tetrahedron intersects the preimage of a nonregular coarse stratum.
+
+Regular
+
+regular_core
+
+Microscopic tetrahedron maps entirely to regular coarse structure.
+
+Distance analysis
+
+Calculate microscopic dual-graph distance
+
+$$ d_Q(x) $$
+
+from every tetrahedron to the nearest singular-core tetrahedron.
+
+Then bin starts by
+
+$$ d_Q=0,\;1,\;2,\;3,\ldots $$
+
+This gives a much stronger result than an arbitrary binary label.
+
+19. Define the main new observable
+
+The random walk dynamics stays unchanged.
+
+Only the starting-point ensemble changes.
+
+For class \(C\):
+
+$$ P_C(\sigma;\delta) = \frac{1}{|C|} \sum_{s\in C} K(s,s;\sigma). $$
+
+Then
+
+$$ \boxed{ D_s^{C}(\sigma;\delta) = -2 \frac{d\log P_C} {d\log\sigma}. } $$
+
+The principal comparison is:
+
+$$ \boxed{ D_s^{R}(\sigma;\delta) \quad\text{versus}\quad D_s^{Q}(\sigma;\delta). } $$
+
+Do not confine the walk to the stratum.
+
+A walk starting in \(Q\) should be allowed to move anywhere according to the original CDT diffusion process.
+
+Otherwise you would be changing the physical diffusion operator.
+
+20. Implement conditioned stochastic-trace estimation
+
+Let
+
+$$ \Pi_C $$
+
+be the diagonal projector onto class \(C\).
+
+Then
+
+$$ P_C(\sigma) = \frac{1}{|C|} \operatorname{Tr} \left( \Pi_C M^\sigma \right). $$
+
+Use Rademacher vectors whose entries are zero outside \(C\).
+
+Then
+
+$$ P_C(\sigma) \approx \frac{1}{R|C|} \sum_r z_r^TM^\sigma z_r. $$
+
+This allows Codex to obtain all
+
+$$ P_R(\sigma), \quad P_Q(\sigma), \quad P_{S_0}(\sigma), \quad P_{S_1}(\sigma), \quad P_{S_2}(\sigma) $$
+
+with repeated sparse matrix-vector multiplication.
+
+Benchmark:
+
+CPU CSR;
+OpenMP;
+GPU sparse operations if available.
+
+Pick the fastest implementation after measured profiling.
+
+21. Choose number of probes/walkers statistically, not arbitrarily
+
+Run convergence tests.
+
+Increase trace probes:
+
+$$ R=4,8,16,32,64,\ldots $$
+
+until spectral-return uncertainty is below a predeclared threshold, e.g. approximately 1–2% through the main diffusion window.
+
+For walker implementation similarly increase:
+
+starting locations
+walks/start
+
+until Monte Carlo noise is comfortably below configuration-to-configuration variance.
+
+22. Pilot experiment first
+
+Use one baseline ensemble.
+
+A sensible historical reference is approximately:
+
+$$ k_0=1, \qquad \rho=0.8, \qquad T=64, \qquad N_3\sim30{,}000. $$
+
+Try a broad coarse scale grid such as
+
+$$ \delta= 2,3,4,5,6,8,10,12,16,\ldots $$
+
+but stop adaptively when the coarse complex becomes too small to support meaningful local topology.
+
+Do not select the final \(\delta\) because it maximizes the desired result.
+
+Use pilot data to define a principled production range.
+
+23. Measure sampling randomness
+
+For a subset of each CDT configuration, perform multiple independent Voronoi seed samples.
+
+Estimate variance decomposition:
+
+$$ \operatorname{Var}_{\rm total} = \operatorname{Var}_{\rm configuration} + \operatorname{Var}_{\rm seed} + \operatorname{Var}_{\rm diffusion}. $$
+
+If seed variance is negligible:
+
+use fewer seed realizations in production.
+
+If not:
+
+average over enough seeds per geometry.
+
+24. Main production experiment
+
+For every retained configuration and every accepted \(\delta\), compute:
+
+N3
+k0
+delta
+
+coarse_N0
+coarse_N1
+coarse_N2
+coarse_N3
+
+beta0
+beta1
+beta2
+beta3
+
+fraction_regular
+fraction_S2
+fraction_S1
+fraction_S0
+
+P_all(sigma)
+P_regular(sigma)
+P_singular(sigma)
+
+Ds_all(sigma)
+Ds_regular(sigma)
+Ds_singular(sigma)
+
+and, when sample sizes permit:
+
+Ds_S2
+Ds_S1
+Ds_S0
+25. Define the primary effect size before examining production results
+
+Use
+
+$$ \Delta D_s(\sigma,\delta) = D_s^R(\sigma,\delta) - D_s^Q(\sigma,\delta). $$
+
+Positive:
+
+$$ \Delta D_s>0 $$
+
+means singular-region starts have lower effective dimension.
+
+Define a UV window
+
+$$ \mathcal U $$
+
+from the ordinary spectral-dimension reproduction, not from the conditioned result.
+
+Then
+
+$$ \boxed{ A(\delta) = \frac1{|\mathcal U|} \sum_{\sigma\in\mathcal U} \Delta D_s(\sigma,\delta). } $$
+
+This becomes the main scalar effect size.
+
+26. Handle lattice artifacts correctly
+
+Very small \(\sigma\) contains discreteness effects.
+
+For example, Cooperman excluded different very-small-\(\sigma\) ranges for different \(k_0\) values in one analysis.
+
+Codex must:
+
+detect parity/lattice effects;
+report the excluded region;
+vary the lower cutoff;
+show that the conclusion is not a single-cutoff artifact.
+
+Do the same at large \(\sigma\), where finite-volume curvature sends \(D_s\) downward.
+
+27. Bootstrap at the configuration level
+
+Never treat one million random walks as one million independent universes.
+
+The independent Monte Carlo unit is the retained triangulation configuration.
+
+Use hierarchical bootstrap:
+
+resample CDT configurations;
+within each selected configuration resample coarse seed realization if needed;
+propagate return-probability uncertainty;
+recompute \(P\);
+recompute \(D_s\);
+recompute \(\Delta D_s\);
+recompute \(A(\delta)\).
+
+Report 95% bootstrap intervals.
+
+28. Use two spectral-dimension estimators as robustness
+
+Primary:
+
+the literature-compatible central difference.
+
+Secondary:
+
+local polynomial derivative of
+
+$$ \log P $$
+
+versus
+
+$$ \log\sigma. $$
+
+Do not use smoothing to manufacture a signal.
+
+Raw \(P(\sigma)\) must always be published in the results package.
+
+29. Geometric confounder controls
+
+This is essential.
+
+A lower spectral dimension near \(Q\) might be caused by unusual connectivity rather than topology itself.
+
+For every microscopic start measure:
+
+vertex/tetra coordination;
+local dual degree;
+local simplex density;
+time slice;
+spatial volume at that slice;
+distance from condensate/stalk boundary;
+local graph-volume growth;
+discrete curvature proxy if available.
+
+Construct matched regular starts with similar geometric features.
+
+Then compare:
+
+$$ D_{s,\mathrm{matched}}^R \quad\text{vs}\quad D_s^Q. $$
+30. Permutation null
+
+Within each configuration and \(\delta\):
+
+randomly shuffle regular/singular labels while preserving class counts.
+
+Recompute:
+
+$$ \Delta D_s^{\rm perm}. $$
+
+Repeat many times.
+
+Observed
+
+$$ A_{\rm obs} $$
+
+should be extreme relative to the permutation null if topology contains real predictive information.
+
+31. Distance-to-singularity analysis
+
+This may actually be stronger than the binary result.
+
+Compute:
+
+$$ D_s(\sigma\mid d_Q=r). $$
+
+For
+
+$$ r=0,1,2,\ldots $$
+
+look for monotonic recovery:
+
+$$ D_s(d_Q=0) < D_s(d_Q=1) < D_s(d_Q=2) \rightarrow D_s^\mathrm{bulk}. $$
+
+That would show spatial localization of the effect around singular coarse structure.
+
+32. Walk-exposure analysis
+
+For each random walk record whether it ever encounters the singular preimage.
+
+Compute:
+
+start regular / never hits Q
+start regular / later hits Q
+start singular
+
+This helps answer whether the lowered return dimension is purely a starting-environment effect or comes from trajectories interacting with topological structure.
+
+Keep this secondary; do not redefine the primary hypothesis after results arrive.
+
+33. Exactly reconstruct the global return probability
+
+Because the start classes partition the microscopic sites,
+
+$$ \boxed{ P_{\rm all}(\sigma) = f_RP_R(\sigma) + f_QP_Q(\sigma) } $$
+
+where
+
+$$ f_R+f_Q=1. $$
+
+Codex must numerically verify this equality to floating/Monte-Carlo error.
+
+This gives a way to quantify whether singular regions are abundant enough to actually account for the ordinary global dimensional reduction.
+
+If
+
+$$ D_s^Q\approx2 $$
+
+but
+
+$$ f_Q\ll1, $$
+
+then they cannot explain much of the global phenomenon.
+
+34. Coarse-scale sweep
+
+Construct the full surface
+
+$$ \Delta D_s(\sigma,\delta). $$
+
+Generate:
+
+delta_sigma_heatmap.pdf
+
+Also plot:
+
+$$ f_Q(\delta), $$ $$ A(\delta), $$ $$ \beta_i(\delta). $$
+
+Look for a coherent resolution window, not one lucky \(\delta\).
+
+35. Finite-size analysis
+
+Repeat at several volumes.
+
+Ideally include a subset inspired by the historical range:
+
+$$ N_3\sim 10^4, 3\times10^4, 6\times10^4, 10^5, 2\times10^5 $$
+
+as hardware permits. The published 3D spectral analysis extended to roughly \(2\times10^5\) condensate tetrahedra.
+
+Analyze:
+
+$$ A(\delta,N_3), $$ $$ f_Q(\delta,N_3). $$
+
+Determine whether the effect:
+
+survives;
+strengthens;
+weakens;
+vanishes
+
+with increasing volume.
+
+36. Bare-coupling analysis
+
+Use several \(k_0\) values across phase C.
+
+The historical spectral analysis used the five-value scan
+
+$$ 0.5,1,1.5,2,2.5 $$
+
+under its convention and found deeper UV reduction toward the phase transition.
+
+Test whether increasing UV reduction correlates with:
+
+$$ f_Q, $$ $$ A, $$
+
+or singularity density.
+
+Calculate correlations with configuration-level uncertainty.
+
+A particularly compelling result would be:
+
+$$ k_0\uparrow \Rightarrow f_Q\uparrow \Rightarrow D_s^{UV}\downarrow. $$
+
+Do not call this causal without stronger evidence.
+
+37. Separate different singular strata
+
+If statistics permit:
+
+$$ D_s^{S_0}, \quad D_s^{S_1}, \quad D_s^{S_2}, \quad D_s^{S_3}. $$
+
+Then determine whether dimensional reduction is specifically associated with:
+
+pinch points;
+branch lines;
+lower-dimensional sheets;
+all nonregular structure.
+
+This is far more informative than a single singular/non-singular split.
+
+38. Topology-independent graph controls
+
+Create artificial labels based solely on:
+
+high coordination;
+low coordination;
+high local curvature;
+local volume bottlenecks;
+graph betweenness;
+local Cheeger/bottleneck-like quantities.
+
+Compare their explanatory power with the local-homology classification.
+
+The scientific question is not merely:
+
+can we find some graph property associated with \(D_s\)?
+
+It is:
+
+does effective topology explain something beyond simpler local geometry?
+
+39. Model-comparison analysis
+
+At the starting-site level build models predicting a local return statistic.
+
+For example:
+
+$$ Y_i = \text{UV-average return feature}. $$
+
+Compare:
+
+Model G
+
+geometry covariates only.
+
+Model G+T
+
+geometry + topological-stratum label.
+
+Use configuration-grouped cross-validation.
+
+Report whether topology supplies additional predictive power.
+
+This is supporting evidence, not the main result.
+
+40. Robustness to coarse-graining definition
+
+Because the 3D coarse-graining is new, Codex should implement at least two defensible variants.
+
+Variant A
+
+Incidence-preserving Voronoi dual described above.
+
+Variant B
+
+Barycentric/nerve-style dual using the same seeds but a slightly different intersection construction.
+
+The physics conclusion should not depend completely on one tiny implementation convention.
+
+If they disagree strongly, that disagreement itself becomes an important result and must be investigated.
+
+41. Optional generalized-CDT universality extension
+
+Only after the main experiment is complete.
+
+Run the same observable on a relaxed/generalized 3D triangulation ensemble if compatible code/data can be obtained.
+
+This asks whether
+
+$$ D_s^R-D_s^Q $$
+
+is universal across different microscopic ensemble definitions.
+
+Do not let this extension delay the primary project.
+
+42. Performance engineering Codex should do automatically
+
+Profile every major stage.
+
+Expected hot paths:
+
+MCMC simulation;
+multi-source BFS;
+construction of interface connected components;
+barycentric subdivision;
+canonical stratification;
+sparse diffusion;
+bootstrap.
+
+Use:
+
+contiguous integer arrays;
+CSR adjacency;
+multiprocessing across configurations;
+OpenMP for C++;
+Rust parallelism where appropriate;
+GPU sparse matrix/vector operations when objectively faster;
+memory mapping;
+compressed chunked HDF5.
+
+Never parallelize dependent MCMC steps inside one chain incorrectly.
+
+Parallelize independent chains/configurations instead.
+
+43. Production workflow must be resumable
+
+Every job gets:
+
+experiment_id
+configuration_id
+stage
+input_hash
+code_commit
+seed
+started_at
+completed_at
+status
+output_hash
+
+If interrupted, rerunning should skip completed valid outputs.
+
+No giant one-off shell command whose failure destroys three days of work.
+
+44. Data integrity
+
+Every raw configuration gets SHA-256.
+
+Every derived output stores input hashes.
+
+Never overwrite raw data.
+
+Use:
+
+data/raw/
+
+immutable.
+
+Derived analysis goes elsewhere.
+
+45. Required automated tests
+
+At minimum:
+
+Simulation
+test_neighbor_symmetry
+test_tetra_incidence
+test_euler_characteristic
+test_time_foliation
+test_move_inverse
+test_seed_determinism
+Spectral
+test_walk_probability_sums_to_one
+test_flat_cycle_spectral_dimension
+test_regular_2d_grid
+test_regular_3d_lattice
+test_exact_vs_walk
+test_exact_vs_hutchinson
+Topology
+test_sphere_betti
+test_torus_betti
+test_3sphere_betti
+test_3torus_betti
+test_ball_local_homology
+test_pinched_complex_strata
+test_barycentric_homology_invariance
+Coarse-graining
+test_delta1_identity
+test_voronoi_connectedness
+test_seed_min_distance
+test_interface_multiplicity_preserved
+test_dual_incidence_consistency
+Statistics
+test_bootstrap_seed
+test_permutation_null
+test_mixture_identity
+46. Final figures Codex should generate
+
+Not manuscript figures with elaborate prose — just publication-quality scientific outputs.
+
+Reproduction
+ordinary_Ds.pdf
+ordinary_P_return.pdf
+finite_size_reproduction.pdf
+k0_reproduction.pdf
+Method
+voronoi_3d_example.pdf
+coarse_dual_example.pdf
+synthetic_pinching_validation.pdf
+local_homology_strata.pdf
+Main result
+Ds_regular_vs_singular.pdf
+delta_Ds.pdf
+delta_sigma_heatmap.pdf
+distance_to_singularity.pdf
+Robustness
+sampling_variance.pdf
+matched_geometry_control.pdf
+permutation_null.pdf
+finite_size_main_result.pdf
+k0_dependence_main_result.pdf
+singular_fraction.pdf
+Mechanism
+global_return_decomposition.pdf
+strata_specific_Ds.pdf
+47. Final tables Codex should generate
+simulation_parameters.csv
+thermalization_diagnostics.csv
+autocorrelation_times.csv
+spectral_reproduction.csv
+coarsegrain_validation.csv
+synthetic_topology_tests.csv
+main_effect_sizes.csv
+bootstrap_intervals.csv
+permutation_tests.csv
+finite_size_results.csv
+k0_results.csv
+robustness_summary.csv
+48. Final computational result package
+
+When finished, Codex should leave you:
+
+RESULTS.md
+
+containing only things like:
+
+PRIMARY RESULT
+A(delta=...) = ...
+95% CI = ...
+permutation p = ...
+
+REGULAR:
+Ds_UV = ...
+
+SINGULAR:
+Ds_UV = ...
+
+SINGULAR FRACTION:
+fQ = ...
+
+FINITE SIZE:
+...
+
+K0 DEPENDENCE:
+...
+
+ROBUSTNESS:
+...
+
+FAILED / PASSED CONTROLS:
+...
+
+Not:
+
+"This groundbreaking result demonstrates..."
+
+You will do the interpretation/writing.
+
+49. Mathematical notebook Codex must produce
+
+MATH.md should derive/define everything the implementation depends on:
+
+$$ S_E=-k_0N_0+k_3N_3, $$
+
+Metropolis–Hastings acceptance,
+
+volume-fixing term,
+
+$$ M=(1-\rho)I+\frac{\rho}{4}A, $$ $$ P(\sigma), $$ $$ D_s(\sigma), $$
+
+conditional trace,
+
+$$ P_C, $$
+
+local homology,
+
+Betti numbers,
+
+barycentric subdivision,
+
+Euler characteristic,
+
+bootstrap estimator,
+
+permutation statistic.
+
+This is not a paper.
+
+It is the exact mathematical contract between equations and code.
+
+50. Physics notebook Codex must produce
+
+PHYSICS.md should record:
+
+What does k0 mean?
+What does k3 mean?
+Why is volume fixed?
+What phase is being simulated?
+Why is the stalk excluded?
+What does sigma measure?
+Why is rho used?
+What is spectral dimension?
+What is the exact hypothesis?
+Why is the diffusion operator unchanged when conditioning?
+Which quantities are physical observables vs algorithmic labels?
+Which claims are established literature vs new assumptions?
+
+This prevents you from later discovering that the code answered a different physics question.
+
+51. Scientific decision tree
+
+Codex should follow this literally.
+
+Does upstream 3D CDT validate?
+    NO -> repair reproduction only.
+    YES
+
+Does ordinary Ds reproduce?
+    NO -> stop novel physics.
+    YES
+
+Does 2D effective topology reproduce?
+    NO -> repair coarse-graining.
+    YES
+
+Does 3D coarse-graining pass synthetic controls?
+    NO -> improve/replace 3D construction.
+    YES
+
+Does raw CDT classify as regular?
+    NO -> topology implementation bug.
+    YES
+
+Does coarse CDT contain stable nonregular structure?
+    NO -> report null / try justified delta range.
+    YES
+
+Can those strata be mapped reproducibly to microscopic sites?
+    NO -> repair mapping.
+    YES
+
+Compute conditioned Ds.
+
+Is Ds_Q < Ds_R?
+    YES -> run confounders + scaling.
+    NO  -> still run enough robustness to establish null.
+
+Does effect survive matching/permutation?
+    NO -> likely geometric confounder.
+    YES
+
+Does it persist with N3?
+    NO -> finite-size/lattice effect.
+    YES
+
+Does singular sector have sufficient abundance to reconstruct
+the global dimensional flow?
+    YES -> evidence for mechanism.
+    NO  -> association exists but does not explain global flow.
+52. Commit/tag structure
+
+I would instruct Codex to make commits approximately:
+
+01 bootstrap reproducible environment
+02 import and validate upstream 3d CDT
+03 implement geometry export and roundtrip tests
+04 reproduce thermalization and ensemble generation
+05 reproduce ordinary spectral dimension
+06 reproduce 2D effective topology
+07 implement validated 3D Voronoi coarse graining
+08 implement dual incidence complex and barycentric subdivision
+09 integrate canonical local-homology stratification
+10 validate synthetic singular and smooth complexes
+11 map coarse strata to microscopic CDT
+12 implement topology-conditioned spectral diffusion
+13 complete pilot experiment
+14 complete production baseline
+15 complete confounder and permutation controls
+16 complete finite-size scaling
+17 complete coupling dependence
+18 freeze final result tables and figures
+
+Then:
+
+tag: results-v1.0
+
+only after the full result pipeline is reproducible from a clean checkout.
+
+53. What Codex should do first
+
+The first actual work order is therefore:
+
+1. Create the project repository.
+2. Pin and build JorenB/3d-cdt.
+3. Read the 2024 simulation paper alongside the source.
+4. Run the supplied examples.
+5. Implement exhaustive geometry validation.
+6. Add lossless configuration export.
+7. Generate a small thermalized 3D CDT ensemble.
+8. Implement the lazy dual-lattice diffusion operator.
+9. Implement random-walk P(sigma).
+10. Implement stochastic-trace P(sigma).
+11. Cross-validate them.
+12. Reproduce ordinary Ds(sigma).
+13. Reproduce finite-size and k0 trends.
+14. Freeze this as REPRODUCTION_PASS.
+15. Only then move to effective topology.
+
+The MCMC side should remain grounded in the upstream implementation: the open-source code already provides the model and observable infrastructure, and the accompanying simulation paper gives the exact detailed-balance, tuning, volume-fixing and thermalization framework.
+
+Then Codex moves through:
+
+$$ \boxed{ \text{CDT} \rightarrow D_s \rightarrow \text{2D topology reproduction} \rightarrow \text{3D coarse-graining} \rightarrow \text{local homology} \rightarrow \text{microscopic mapping} \rightarrow D_s^R/D_s^Q \rightarrow \text{controls} \rightarrow \text{scaling} \rightarrow \text{final results package}. } $$
+
+That is the complete computational project. You should not need to manually perform the calculations, topology implementation, statistics, simulation analysis, or figure production. Your part can begin after Codex hands you the frozen numerical results, at which point you write the manuscript and decide how aggressively the evidence supports the mechanism claim.
