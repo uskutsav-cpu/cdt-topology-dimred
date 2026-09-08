@@ -15,7 +15,8 @@ through768 comparison. Do not treat intermediate1152 as a new stopping test.
 
 ## Current handles — supersede older running-work entries below
 
-- 45227: job4f7a75be6ed25248ce1e, coupling_2p5_30000.json.
+- 1630: k2.5 spectral analysis, job4f7a75be6ed25248ce1e,total128/stride8.
+  Simulation45227 completed successfully; all128 geometries validated.
   k1.5 session83128 completed; all128 geometries validated.
 - 97299: jobf045a528fac6359e9df4, volume_60000.json, fresh RNG pilot.
   Analysis9883 completed all64 independent baseline spectra(total768/stride12).
@@ -29,10 +30,16 @@ through768 comparison. Do not treat intermediate1152 as a new stopping test.
   Analysis93628 completed all16 k1.5 pilot spectra.
   k2 session13068 completed; all128 geometries validated.
   After89099 completes, extend same chain1152→1536 as already planned.
-- Five simulators occupy the five compute slots; no analysis is running.
+- Three simulators, N60000 validation97299, and spectral analysis1630
+  occupy the five compute slots. N60000 spectra should follow its validation.
   Wait for a slot before starting another heavy worker.
 
 ### Latest matched baseline comparison (768 vs768)
+
+k2.5 pilot4f7a75be6ed25248ce1e completed in3618.198 seconds including validation.
+All128 geometries valid; N0/N3/N31 screens pass. Peak tau579.13442,
+ESS22.10195,split-z.94476; shape ESS fails. Saved through128 diagnostics.
+Analysis1630 now measures the16 fixed pilot configurations; no spectrum yet.
 
 k2 pilot spectra complete: peakDs2.95889762,maxrelativeSE.02078117,
 Ds15=2.44484283,Ds25=2.56027081. Four-point coupling comparison saved;

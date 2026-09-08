@@ -114,6 +114,11 @@ not exactly fixed-condensate-volume data. The decrease at higher coupling
 is descriptive evidence only, pending convergence and the remaining grid.
 # Matched 768-snapshot baseline comparison
 
+The k0=2.5,N30000,T64 pilot has128 validated geometries. Peak-slice
+autocorrelation time579.13442 sweeps,ESS22.10195,split-z0.94476: the shape
+ESS fails, while N0/N3/N31 screens pass. Spectrum measurement is in progress.
+Source: `results/tables/4f7a75be6ed25248ce1e_through128_diagnostics.json`.
+
 The k0=2 pilot spectrum (16 configurations,512 starts each,rho=.8) gives
 peakDs2.95889762,Ds(15)=2.44484283,andDs(25)=2.56027081. Four coupling points
 (.5,1,1.5,2) now show decreasing short-timeDs at similar condensate volumes,
