@@ -384,3 +384,24 @@ Previous manifest preserved as8b3e...through_384.json. Other live handles
 13823(main10kto768),28894(longN30000),45527(k0=.5N30000).
 No analysis running. Next available physics baseline work includes completing
 k0 grid andN60000 once a slot frees, while resolving convergence honestly.
+
+## Main768 MC complete; validation and broader spectra running
+
+Main4a400... C++ reached173600 final stage sweep:153600 measurement sweeps.
+N0 ESS12021.66,z1.032; N3 ESS9286.96,z0.369; peak_slice ESS73.009,
+tau1051.928,z0.481. ALL single-chain screens pass. Saved through768 diagnostic
+JSON. Geometry validation remains under session13823; at last inspection488
+of768 exports exist. Do not mark that session complete until exit0.
+
+Started session32940:
+measure_returns.py 4a40078dbf0e6b9a5f5c --total768 --stride12.
+This selects64 geometries spanning the full trajectory, reuses11 matching
+previous128-stage measurement caches, and computes only missing start-return
+arrays. It can run during validation, may finish withpending indices, and is
+safe to rerun after export completion because valid caches skip. Do not
+concurrently duplicate32940. No new simulation was started in the main slot.
+Other live simulators90274,28894,45527 continue. After32940 finishes and
+13823 validates, check pending counts and finish only missing measurements.
+The768-vs768 cross-chain comparison must wait for independent90274; previous
+Rhat1.033 refers to384-vs384 stages and must not be presented as a fresh768
+comparison. Baseline coupling/volume gates remain incomplete.

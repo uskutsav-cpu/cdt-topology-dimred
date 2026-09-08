@@ -94,3 +94,9 @@ spatial-volume ESS52.73, split-z1.447. All384 geometries validate. However,
 the equal-length cross-chain comparison gives peak-volume Rhat1.033 and
 insufficient split-chain ESS; convergence remains unestablished. Both10k
 chains are continuing to768 saved configurations.
+
+First chain through768:153600 measurement sweeps now pass all single-chain
+screens, including peak spatial-volume ESS73.01 and split-z0.481. Geometry
+validation is pending. Measurements spanning the full trajectory are running,
+with matching old return files reused. Cross-chain convergence for the longer
+matched records has not yet been assessed.
