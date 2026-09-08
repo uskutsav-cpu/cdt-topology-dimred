@@ -64,3 +64,10 @@ rho*sigma_peak values are62.2,63.6,64.8,66.4. Maximum omitted binomial mass
 is1.81e-34. RMS differences from rho=.8 over scaled time8..80 are0.0622,0.0404,
 0.0198,0. These are paired rate sensitivities on a not-yet-certified ensemble,
 not independent confirmation of equilibrium or exact continuum scaling.
+
+Extended convergence check:384 configurations of4a400... and128 independent
+configurations of8b3e... all pass geometry validation. Peak spatial-volume ESS
+is29.07 and21.52, respectively. On equal25,600-sweep prefixes, rank/folded
+splitRhat is1.01929 for peak spatial volume, exceeding1.01; splitESS is also
+insufficient. Mean volume and vertex counts agree closely. Both trajectories
+are being extended from checkpoints. Convergence remains unestablished.

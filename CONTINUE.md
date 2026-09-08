@@ -1,5 +1,15 @@
 # Operational continuation state
 
+## Current handles — supersede older running-work entries below
+
+- 13823: job4a40078dbf0e6b9a5f5c extension384→768 samples, config
+  equilibration_10000_768.json. Prior session60619 finished successfully.
+- 19336: job8b3e5e63ecacfa361207 extension128→384 samples, config
+  independent_10000_384.json. Prior session55518 finished successfully.
+- 43971: jobdc0bd0d263f25696be2d N30000 baseline, collecting measurements.
+- No other analysis is running. Never duplicate any live job.
+
+
 The user's goal is ACTIVE and is the entire computational project in
 `docs/PROJECT_BRIEF.txt`, not just the baseline. Do not mark it complete.
 No manuscript. Never claim a gate passed without the numerical evidence.
@@ -231,3 +241,30 @@ not an automatic convergence gate; time extent/RNG independence must agree.
 Independent job8b3e... has entered measurements (sweep22362, elapsed974.29sec)
 after2000 tune +20000 burn. Session55518 revalidated live. Other sessions
 60619 and43971 also remain active as last checked this turn.
+
+## Completed convergence comparison and next extensions
+
+4a400... through384: all384 geometries validate, 76,800 measurement sweeps;
+N0 ESS5660.87 z0.478, N3 ESS4626.33 z0.174, peak_slice ESS29.074,
+tau1320.785, z1.036. Extension took2511.716sec incl validation. Original128
+stage was1974.713sec, so same-stage total4486.429sec. Gate still fails.
+
+8b3e... through128: all128 geometries validate, total2228.804sec;
+N0 ESS2139.80 z0.602, N3 ESS1735.77 z1.516, peak_slice ESS21.522,
+tau594.727, z0.568. Gate still fails. Both are T64,k0=1,target10000,
+same driver, distinct RNG origins; frozen k3 differs slightly after tuning
+(1.17778 vs1.17798), mean N3 agrees within diagnostic uncertainty.
+
+compare_chains.py completed on both before extensions. Common first25,600
+measurement sweeps: rank/folded splitRhat N0=1.000159,N3=1.000515,
+peak_slice=1.019292; minimum split peakESS9.176. Saved input-hashed JSON
+under results/tables/chain_comparison_*.json. Rhat1.019>1.01 and lowESS,
+so no convergence certification. Do not mistake agreement in mean counts
+for agreement in slow profile fluctuations.
+
+Started extensions from exact checkpoints:4a400... to768 total snapshots,
+8b3e... to384. No tuning,burn,old sweeps,or exports repeated. Previous complete
+manifests preserved as4a400...through_384.json and8b3e...through_128.json.
+New live handles13823 and19336. Resume only if genuinely failed using both
+--extend-job JOB and --resume with the matching new config. N30000 session
+43971 remains live. Goal remains active, not blocked or complete.
