@@ -120,5 +120,9 @@ ESS29.07361, still failing the declared1.01/50 comparison screens. Full-chain
 peak ESS values are73.00882 and117.01872. The independent chain's total-volume
 split-z2.81397 also fails its per-chain screen. These checks do not certify
 equilibrium. Source: `results/tables/chain_comparison_6fdc582a8fea.json`.
-The full-length independent spectral measurement is in progress; earlier
-128-snapshot spectra must not be presented as the new full-length result.
+The full-length spectral comparison uses64 configurations per chain (every
+12th of768),512 starts each. PeakDs values are2.79022348 and2.78819427.
+Maximum absoluteDs difference over sigma9..64 is0.00577099; maximum relative
+return difference is0.00337239. This agreement does not override the failed
+convergence checks. Exact source hashes and curves are in
+`results/tables/independent_baseline_spectral_comparison_total768_stride12.*`.

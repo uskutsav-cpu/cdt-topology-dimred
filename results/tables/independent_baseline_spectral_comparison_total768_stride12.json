@@ -1,0 +1,19 @@
+{
+  "status": "descriptive comparison; slow-mode convergence not established",
+  "jobs": [
+    "4a40078dbf0e6b9a5f5c",
+    "8b3e5e63ecacfa361207"
+  ],
+  "configurations_per_chain": 64,
+  "starts_per_configuration": 512,
+  "input_sha256": {
+    "4a40078dbf0e6b9a5f5c": "77fab54f2fab900ea0ad7afffb5d88c27c1088650636073cecf26480b73393e5",
+    "8b3e5e63ecacfa361207": "b22095a5c0a77736784776bf41714cf668d8fb372a2fe0d35c74a7cc1c89b3f4"
+  },
+  "maximum_absolute_Ds_difference_sigma_9_64": 0.005770986515099885,
+  "maximum_relative_P_difference_sigma_9_64": 0.0033723948503805445,
+  "peak_Ds_sigma_ge_10": [
+    2.7902234771281993,
+    2.788194269026192
+  ]
+}

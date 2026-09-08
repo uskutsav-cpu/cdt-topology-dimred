@@ -4,8 +4,8 @@
 
 - 83128: jobd98f6ba3a813c6c7f098, coupling_1p5_30000.json.
   Main10k session13823 is complete; all768 geometries validated.
-- 9883: missing spectral measurements for independent job8b3e5e63ecacfa361207,
-  total768/stride12 (64 configurations, cached curves reused).
+- 97299: jobf045a528fac6359e9df4, volume_60000.json, fresh RNG pilot.
+  Analysis9883 completed all64 independent baseline spectra(total768/stride12).
   Simulation90274 completed successfully; all768 geometries validated.
 - 28894: jobd614ea076af1a31a8018 N30000 long-spacing continuation.
   Prior session43971 finished and all128 geometries validated.
@@ -13,7 +13,7 @@
   Prior session45527 completed and all128 pilot geometries validated.
 - 13068: job029620366a1c017aaa4b, k0=2 N30000 baseline pilot.
   Spectral analysis33167 completed all16 k0=.5 pilot geometries.
-- Four simulators plus spectral analysis9883 occupy the five compute slots.
+- Five chain drivers occupy the five compute slots (k1.5 is validating).
   Wait for a slot before starting another heavy worker.
 
 ### Latest matched baseline comparison (768 vs768)
@@ -26,7 +26,14 @@ Full-chain peak ESS=73.00882 and117.01872; both peak split-z screens pass.
 Independent total-volume split-z=2.81397 fails, despite Rhat=1.000278 and
 ESS10114.55. Preserve all these results; do not cherry-pick passing checks.
 The independent extension took4087.098 seconds including validation.
-No new topology gate has passed. Baseline gridk2.5 andN60000 remain unrun.
+No new topology gate has passed. Baseline gridk2.5 remains unrun;N60000 is live.
+
+Full-length saved spectral comparison now complete:
+`independent_baseline_spectral_comparison_total768_stride12.json/csv`.
+64 configurations per chain, every12th of768. PeakDs2.79022348/2.78819427;
+maxabsDs difference9..64=.00577099; maxrelativeP difference=.00337239.
+These are descriptive agreements, not replacements for failed convergence
+screens. Analysis9883 reused11 cached curves and computed53 missing ones.
 
 
 The user's goal is ACTIVE and is the entire computational project in
