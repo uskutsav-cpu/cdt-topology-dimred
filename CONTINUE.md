@@ -268,3 +268,16 @@ manifests preserved as4a400...through_384.json and8b3e...through_128.json.
 New live handles13823 and19336. Resume only if genuinely failed using both
 --extend-job JOB and --resume with the matching new config. N30000 session
 43971 remains live. Goal remains active, not blocked or complete.
+
+## Independent spectral comparison started
+
+Three simulators revalidated live:13823,19336,43971. Latest main stage sweep
+98228, independent49019, larger35134; checkpoints continue advancing.
+Started `measure_returns.py 8b3e5e63ecacfa361207 --total128 --stride4` on the
+already validated first128 independent geometries. It measures32 geometries,
+512 fixed starts,256 steps; all per-start returns cached and reusable. This
+is a moderate dense propagation workload (~40MiB per state array), not the
+~845MiB all-site sparse-power analysis. It may run alongside three lightweight
+simulators; do not start another analysis simultaneously. No equilibrium claim.
+
+Independent return-measurement live session:94006. Poll; do not duplicate.
