@@ -8,6 +8,7 @@
 #include <stdexcept>
 #include <set>
 #include <map>
+#include "checkpoint.hpp"
 
 void validate() {
     std::set<std::array<int,2>> edges;
@@ -44,17 +45,22 @@ int main(int argc,char** argv) {
     bool debug=std::stoi(argv[11]);
     int stride=std::stoi(argv[12]);
     if(target<=0 || tune<0 || burn<0 || samples<0 || attempts<=0 || stride<1) return 2;
-    if(!Universe::initialize(input,"research",3,1)) return 3;
     Simulation::k0=k0; Simulation::k3=k3; Simulation::targetVolume=target;
     Simulation::target2Volume=0; Simulation::moveFreqs={1,1,1};
     Simulation::seed_rng(seed); Universe::seed_rng(seed^0x9e3779b9U);
+    int completed=0;
+    std::string checkpoint=out+"/checkpoint.bin";
+    if(std::ifstream(checkpoint).good()) completed=load_checkpoint(checkpoint);
+    else if(!Universe::initialize(input,"research",3,1)) return 3;
     validate();
-    std::ofstream log(out+"/diagnostics.csv");
-    log<<"sweep,phase,N0,N3,N31,k3,peak_slice,seconds";
-    for(int j=1;j<=5;j++) log<<",attempt_"<<j<<",accept_"<<j;
-    log<<"\n";
+    std::ofstream log(out+"/diagnostics.csv",completed?std::ios::app:std::ios::out);
+    if(!completed) {
+        log<<"sweep,phase,N0,N3,N31,k3,peak_slice,seconds";
+        for(int j=1;j<=5;j++) log<<",attempt_"<<j<<",accept_"<<j;
+        log<<"\n";
+    }
     auto start=std::chrono::steady_clock::now();
-    for(int i=0;i<tune+burn+samples*stride;i++) {
+    for(int i=completed;i<tune+burn+samples*stride;i++) {
         long proposed[6]={},accepted[6]={};
         for(int j=0;j<attempts;j++) {
             int m=Simulation::attemptMove(); proposed[abs(m)]++; if(m>0) accepted[m]++;
@@ -69,9 +75,19 @@ int main(int argc,char** argv) {
         if(i>=tune+burn && (i-tune-burn+1)%stride==0) {
             validate();
             std::string path=out+"/geometry_"+std::to_string((i-tune-burn+1)/stride-1)+".dat";
-            if(std::ifstream(path).good()) throw std::runtime_error("raw output already exists");
-            Universe::exportGeometry(path);
+            Universe::exportGeometry(path+".pending");
+            if(std::ifstream(path).good()) {
+                std::ifstream a(path),b(path+".pending");
+                std::string aa((std::istreambuf_iterator<char>(a)),{}),bb((std::istreambuf_iterator<char>(b)),{});
+                if(aa!=bb) throw std::runtime_error("raw output mismatch during checkpoint recovery");
+                std::remove((path+".pending").c_str());
+            } else if(std::rename((path+".pending").c_str(),path.c_str())!=0) throw std::runtime_error("raw export rename");
+            save_checkpoint(checkpoint,i+1);
         }
+        if((i+1)%50==0 || i+1==tune+burn+samples*stride) save_checkpoint(checkpoint,i+1);
+        // Bounded, deliberate checkpoint exit used for restart regression tests.
+        const char* stop=std::getenv("CDT_STOP_AFTER_SWEEP");
+        if(stop && i+1==std::stoi(stop)) { save_checkpoint(checkpoint,i+1); return 75; }
     }
     return 0;
 }

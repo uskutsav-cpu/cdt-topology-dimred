@@ -20,6 +20,9 @@ The research build applies documented corrections to a generated copy of
 upstream source. It does not modify external/3d-cdt. The build manifest pins
 the changed file hashes. The chain registry stores binary/input/output hashes,
 parameters, seed, timestamps, commit and status, and skips verified completed jobs.
+Failed same-binary jobs with a valid checkpoint can use the same command plus
+`--resume`. Existing geometry files are compared, never replaced. Recovery
+tests: `.venv/bin/python workflows/test_checkpoint.py`.
 
 Source references: [simulation paper](https://arxiv.org/abs/2310.16744),
 [spectral scaling](https://arxiv.org/abs/1711.02685),

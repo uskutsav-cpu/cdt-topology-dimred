@@ -1,0 +1,114 @@
+[
+  {
+    "configuration": "341d14fabe08e6c5b531_0",
+    "N3": 9926,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 8.984974208055064
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_8",
+    "N3": 10045,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 3.7123267920687795
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_16",
+    "N3": 10009,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 3.304326624958776
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_25",
+    "N3": 9979,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 4.030904166982509
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_33",
+    "N3": 10168,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 2.672036667005159
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_42",
+    "N3": 10063,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 2.6090828329324722
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_50",
+    "N3": 9916,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 2.3932472079759464
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_59",
+    "N3": 10193,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 2.462703625089489
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_67",
+    "N3": 9839,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 2.2676771669648588
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_76",
+    "N3": 9933,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 2.447041125036776
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_84",
+    "N3": 10068,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 2.630347124999389
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_93",
+    "N3": 10118,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 2.6014592910651118
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_101",
+    "N3": 9948,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 2.4260193750960752
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_110",
+    "N3": 9928,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 2.4738575839437544
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_118",
+    "N3": 10233,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 2.4331478329841048
+  },
+  {
+    "configuration": "341d14fabe08e6c5b531_127",
+    "N3": 9946,
+    "starts": 128,
+    "steps": 512,
+    "seconds": 2.363865791936405
+  }
+]

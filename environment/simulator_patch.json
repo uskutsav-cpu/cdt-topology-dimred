@@ -5,10 +5,18 @@
   },
   "simulation.hpp": {
     "upstream_sha256": "d1af84bb35d7b0f619044d0d22d4768f1451fc1678eac650ef2f85873ab4d773",
-    "patched_sha256": "e3a8bcd726dce44ed536e0440d2d785c65285cf374e22588f6301a65329cc790"
+    "patched_sha256": "5094958aec0a51a725ac311f73cbad0b84e8fc6955c60ef51323225ce1b4d9da"
   },
   "universe.hpp": {
     "upstream_sha256": "c60ca7d5fe2d31c35a552443427835e3bcb2a574d366270ebc65c48f434b8645",
-    "patched_sha256": "35d5afdbc914da70ba713fa564cf890cffe470082aa877f9a32ae5f58fec3afd"
+    "patched_sha256": "75031cf2ba69d1b4484d765889be681a9f12d9ce4debe7437562f92e8cf049d6"
+  },
+  "pool.hpp": {
+    "upstream_sha256": "77841d3b63aeb6c6d27fc1efcd643f2c305eb357f09da3050466ac8e37e4fe3e",
+    "patched_sha256": "94874d691efcb8fc909391f901649acfd324b42fed9271615454d04493b201d0"
+  },
+  "bag.hpp": {
+    "upstream_sha256": "9f3f2bf62356166b03f34613948d80c05c35b41f3f6736c5736f4e268d4b6a59",
+    "patched_sha256": "6de33ba38ff629106ae9b424df6c7bf7982a1d87da694f9b87c58a8c1d75d6d8"
   }
 }

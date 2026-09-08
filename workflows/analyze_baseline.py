@@ -11,22 +11,27 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('job');ap.add_argument('--steps',type=int,default=256);ap.add_argument('--configurations',type=int,default=16);ap.add_argument('--starts',type=int,default=64);args=ap.parse_args()
     manifest=json.loads((ROOT/'results/manifests'/f'{args.job}.json').read_text()); assert manifest['status']=='complete'
     diag=np.genfromtxt(ROOT/'data/raw'/args.job/'diagnostics.csv',names=True,delimiter=',',dtype=None,encoding='utf8')
+    # Recovery may replay a partial checkpoint interval; each sweep counts once.
+    _,unique=np.unique(diag['sweep'],return_index=True);diag=diag[np.sort(unique)]
     measure=diag[diag['phase']=='measure']; reports={k:summary(measure[k]) for k in ['N0','N3','N31','peak_slice']}
     out=ROOT/'results/tables'/f'{args.job}_diagnostics.json';out.write_text(json.dumps(reports,indent=2)+'\n')
     paths=sorted((ROOT/'data/geometry').glob(f'{args.job}_*.npz'),key=lambda p:int(p.stem.split('_')[-1]))
     chosen=np.linspace(0,len(paths)-1,min(args.configurations,len(paths)),dtype=int)
     curves=[]; timings=[]
+    codehash=hashlib.sha256((ROOT/'src/spectral/__init__.py').read_bytes()).hexdigest()
     for i in chosen:
         p=paths[i]; raw=np.load(p); nb=raw['neighbors']; M=operator(nb,.8)
         dest=ROOT/'results/tables'/f'{p.stem}_spectral_s{args.steps}_n{args.starts}.npz'
         key=hashlib.sha256(p.read_bytes()).hexdigest()
         if dest.exists():
-            cached=np.load(dest); assert str(cached['input_sha256'])==key; P=cached['returns']
+            cached=np.load(dest); assert str(cached['input_sha256'])==key
+            assert 'code_sha256' in cached and str(cached['code_sha256'])==codehash, 'stale spectral cache'
+            P=cached['returns']
         else:
             starts=np.random.default_rng(88000+i).choice(len(nb),min(args.starts,len(nb)),replace=False)
             start=time.perf_counter(); P=exact_returns(M,args.steps,starts)
             seconds=time.perf_counter()-start
-            np.savez_compressed(dest,returns=P,starts=starts,rho=.8,input_sha256=key,elapsed_seconds=seconds)
+            np.savez_compressed(dest,returns=P,starts=starts,rho=.8,input_sha256=key,code_sha256=codehash,elapsed_seconds=seconds)
             timings.append({'configuration':p.stem,'N3':len(nb),'starts':len(starts),'steps':args.steps,'seconds':seconds})
         curves.append(P.mean(axis=0))
     curves=np.array(curves); sigma=np.arange(args.steps+1)

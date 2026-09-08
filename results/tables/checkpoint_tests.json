@@ -1,0 +1,14 @@
+[
+  {
+    "stop_after_sweep": 13,
+    "identical_snapshots": 5,
+    "pass": true,
+    "checkpoint_bytes": 27568
+  },
+  {
+    "stop_after_sweep": 52,
+    "identical_snapshots": 5,
+    "pass": true,
+    "checkpoint_bytes": 27568
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "N0": {
+    "mean": 450.046875,
+    "sd": 15.9323665887435,
+    "tau_int": 10.39318234954057,
+    "effective_samples": 6.157882912814391,
+    "half_mean_difference": 12.28125,
+    "split_z": 1.033117307539846,
+    "screen_pass": false
+  },
+  "N3": {
+    "mean": 2913.9921875,
+    "sd": 117.73488809818492,
+    "tau_int": 11.101774479834551,
+    "effective_samples": 5.764844180202964,
+    "half_mean_difference": 90.984375,
+    "split_z": 1.0025850425995035,
+    "screen_pass": false
+  },
+  "N31": {
+    "mean": 836.09375,
+    "sd": 31.864733177487,
+    "tau_int": 10.39318234954057,
+    "effective_samples": 6.157882912814391,
+    "half_mean_difference": 24.5625,
+    "split_z": 1.033117307539846,
+    "screen_pass": false
+  },
+  "peak_slice": {
+    "mean": 94.1875,
+    "sd": 10.929804660709168,
+    "tau_int": 10.350514585324458,
+    "effective_samples": 6.18326745713134,
+    "half_mean_difference": 10.625,
+    "split_z": 1.3792185826378263,
+    "screen_pass": false
+  }
+}

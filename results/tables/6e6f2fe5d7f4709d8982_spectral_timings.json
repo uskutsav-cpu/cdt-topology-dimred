@@ -1,0 +1,114 @@
+[
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_0",
+    "N3": 2786,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.12894579104613513
+  },
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_8",
+    "N3": 2828,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.16143550002016127
+  },
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_16",
+    "N3": 2949,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.16561499994713813
+  },
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_25",
+    "N3": 2912,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.17438608303200454
+  },
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_33",
+    "N3": 2847,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.14279687497764826
+  },
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_42",
+    "N3": 2918,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.14563587494194508
+  },
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_50",
+    "N3": 2919,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.15305741608608514
+  },
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_59",
+    "N3": 2829,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.2708082089666277
+  },
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_67",
+    "N3": 2796,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.18787825002800673
+  },
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_76",
+    "N3": 2803,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.21292441606055945
+  },
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_84",
+    "N3": 2944,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.15644120797514915
+  },
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_93",
+    "N3": 2950,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.15097158402204514
+  },
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_101",
+    "N3": 3012,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.14468758297152817
+  },
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_110",
+    "N3": 3006,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.12079029099550098
+  },
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_118",
+    "N3": 3182,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.14122162503190339
+  },
+  {
+    "configuration": "6e6f2fe5d7f4709d8982_127",
+    "N3": 3083,
+    "starts": 64,
+    "steps": 256,
+    "seconds": 0.13573770795483142
+  }
+]

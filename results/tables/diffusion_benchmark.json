@@ -1,0 +1,70 @@
+[
+  {
+    "method": "exact_256_fixed_starts",
+    "seconds": 0.6842996660852805,
+    "max_relative_error": 0.0
+  },
+  {
+    "method": "hutchinson",
+    "probes": 4,
+    "seconds": 0.033055624924600124,
+    "max_relative_error": 0.04671876688333026,
+    "max_relative_se": 0.059881738505431534,
+    "max_standardized_error": 5.8474556810215175
+  },
+  {
+    "method": "hutchinson",
+    "probes": 8,
+    "seconds": 0.037736207945272326,
+    "max_relative_error": 0.12954996967837507,
+    "max_relative_se": 0.12707928538574803,
+    "max_standardized_error": 1.084731031108816
+  },
+  {
+    "method": "hutchinson",
+    "probes": 16,
+    "seconds": 0.047573375049978495,
+    "max_relative_error": 0.09486464193244676,
+    "max_relative_se": 0.0797172909396578,
+    "max_standardized_error": 1.6493175887869669
+  },
+  {
+    "method": "hutchinson",
+    "probes": 32,
+    "seconds": 0.0905822089407593,
+    "max_relative_error": 0.025562829319366848,
+    "max_relative_se": 0.05608635950979195,
+    "max_standardized_error": 1.6120193892584869
+  },
+  {
+    "method": "hutchinson",
+    "probes": 64,
+    "seconds": 0.1489999999757856,
+    "max_relative_error": 0.01693532352365825,
+    "max_relative_se": 0.04340481043824667,
+    "max_standardized_error": 2.0624815619187267
+  },
+  {
+    "method": "hutchinson",
+    "probes": 128,
+    "seconds": 0.2689041659468785,
+    "max_relative_error": 0.009106325305320927,
+    "max_relative_se": 0.02514549747352383,
+    "max_standardized_error": 0.9873909356163539
+  },
+  {
+    "method": "hutchinson",
+    "probes": 256,
+    "seconds": 0.8558957909699529,
+    "max_relative_error": 0.012265327570015234,
+    "max_relative_se": 0.02037025544853178,
+    "max_standardized_error": 0.8543616362461535
+  },
+  {
+    "method": "walkers",
+    "walks": 500000,
+    "seconds": 3.747129833092913,
+    "max_relative_error": 0.050954252467202685,
+    "max_standardized_error": 2.352073137799453
+  }
+]

@@ -9,7 +9,7 @@ from geometry import read_geometry,validate,export_npz
 def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def now(): return datetime.now(timezone.utc).isoformat()
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('config'); args=ap.parse_args()
+    ap=argparse.ArgumentParser(); ap.add_argument('config'); ap.add_argument('--resume',action='store_true'); args=ap.parse_args()
     cfg=json.loads(Path(args.config).read_text()); exe=ROOT/'build/simulator/cdt-run'; inp=ROOT/cfg['input']
     cfg.setdefault('sample_stride',1)
     contract={'parameters':cfg,'binary_sha256':sha(exe),'input_sha256':sha(inp),'driver_sha256':sha(__file__)}
@@ -21,19 +21,26 @@ def main():
             for f,h in old['output_hashes'].items():
                 if sha(ROOT/f)!=h: raise RuntimeError(f'completed output corrupted: {f}')
             print(f'SKIP verified {job}'); return
-        raise RuntimeError(f'Previous incomplete job {job}: preserve raw files; inspect failure before a new chain.')
-    out=ROOT/'data/raw'/job; out.mkdir()
+        if not (args.resume and old['status']=='failed' and (ROOT/'data/raw'/job/'checkpoint.bin').exists()):
+            raise RuntimeError(f'Previous incomplete job {job}: --resume requires a failed job with a checkpoint.')
+    out=ROOT/'data/raw'/job; out.mkdir(exist_ok=args.resume)
     rec={**contract,'experiment_id':cfg['name'],'configuration_id':job,'stage':'simulation','status':'running','seed':cfg['seed'],'started_at':now(),'code_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True,stderr=subprocess.DEVNULL).strip(),'platform':platform.platform()}
     manifest.write_text(json.dumps(rec,indent=2)+'\n')
     command=[str(exe),str(inp),str(out),*[str(cfg[k]) for k in ['seed','k0','k3','target','tune','burn','samples','attempts','check_every_move','sample_stride']]]
     rec['command']=command; start=time.perf_counter()
     try:
-        with open(ROOT/'logs'/f'{job}.log','x') as log:
+        with open(ROOT/'logs'/f'{job}.log','a' if args.resume else 'x') as log:
             subprocess.run(command,stdout=log,stderr=subprocess.STDOUT,check=True,timeout=cfg.get('timeout_seconds',3600))
         reports=[]
         for p in sorted(out.glob('geometry_*.dat')):
             idx=int(p.stem.split('_')[1]); dest=ROOT/'data/geometry'/f'{job}_{idx}.npz'
-            reports.append(export_npz(p,dest,{**cfg,'configuration_id':f'{job}_{idx}','sweep':cfg['tune']+cfg['burn']+(idx+1)*cfg['sample_stride'],'binary_sha256':sha(exe)}))
+            if dest.exists():
+                import numpy as np
+                saved=json.loads(str(np.load(dest)['metadata']))
+                assert saved['input_sha256']==sha(p)
+                reports.append(saved['validation'])
+            else:
+                reports.append(export_npz(p,dest,{**cfg,'configuration_id':f'{job}_{idx}','sweep':cfg['tune']+cfg['burn']+(idx+1)*cfg['sample_stride'],'binary_sha256':sha(exe)}))
         assert len(reports)==cfg['samples']
         rec['geometry_validation']=reports
         rec['status']='complete'

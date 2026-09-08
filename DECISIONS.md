@@ -49,9 +49,16 @@ and only starts are conditioned. These are distinct choices.
 
 ## Reproducibility and scope
 
-Completed independent-chain jobs are hash-verified and skipped. Raw outputs
-are never overwritten. Mid-chain exact restart is not implemented: geometry
-alone does not preserve pool/bag ordering and both RNG states. An interrupted
-chain stays failed until investigated. Do not claim exact checkpoint resume.
+Completed independent-chain jobs are hash-verified and skipped. Raw geometry
+outputs are never overwritten. Same-binary checkpoint recovery now preserves
+vertex/tetra pools and free lists, bag order, both RNGs, coupling and sweep.
+Derived halfedge/triangle caches are rebuilt. Restart tests interrupt tuning
+and measurement and reproduce all five final snapshots byte-for-byte.
+Checkpoints are mutable recovery files, distinct from immutable configurations.
+The two earlier pilot runs predate this checkpoint implementation.
+Failed jobs can resume with --resume; a partially completed checkpoint interval
+may replay bounded work, verifying existing geometry bytes before proceeding.
+This format is local to the binary/architecture and is not a portable dataset.
+Geometry-only warm starts are explicitly new trajectories with parent lineage.
 No topology-conditioned computation is authorized by the scientific gates
 until baseline spectral and 2D/3D topology reproduction passes.

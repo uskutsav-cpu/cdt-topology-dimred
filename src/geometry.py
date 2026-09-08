@@ -53,8 +53,12 @@ def validate(g, links=True):
             for k,j in enumerate(g.neighbors[i]): assert set(np.delete(row,k))<=set(g.tetra[j])
     assert all(len(v)==2 for v in faces.values())
     assert n0-len(edges)+len(faces)-n3==0
+    slice_faces=defaultdict(list)
+    for f in faces:
+        t=g.time[f[0]]
+        if all(g.time[v]==t for v in f): slice_faces[t].append(f)
     for i in range(T):
-        sf=[f for f in faces if all(g.time[v]==i for v in f)]
+        sf=slice_faces[i]
         se={e for f in sf for e in combinations(f,2)}
         sv={v for f in sf for v in f}
         assert len(sv)-len(se)+len(sf)==2, 'spatial slice is not a sphere'

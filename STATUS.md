@@ -1,12 +1,13 @@
 # Status
 
-ACTIVE — simulator audit and baseline validation in progress.
+ACTIVE — baseline spectral reproduction and longer chain diagnostics.
 
 | Gate | Status |
 |---|---|
 | Untouched upstream builds | PASS |
-| Detailed-balance audit | Discrepancies found; explicit corrections under test |
-| Geometry and deterministic simulation | In progress |
+| Detailed-balance audit | Explicit corrections derived and tested; upstream differs |
+| Geometry and deterministic simulation | PASS on tested debug/pilot configurations |
+| Exact local checkpoint recovery | PASS for tuning and measurement interruptions |
 | Thermalized phase-C ensembles | Not established |
 | Ordinary spectral reproduction | Not established |
 | 2D effective topology | Not started: prerequisite gate |

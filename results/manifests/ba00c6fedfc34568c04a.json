@@ -1,0 +1,152 @@
+{
+  "parameters": {
+    "name": "debug_determinism_replica",
+    "input": "data/raw/initial_T8.dat",
+    "seed": 20260907,
+    "k0": 1.0,
+    "k3": 1.0,
+    "target": 300,
+    "tune": 10,
+    "burn": 10,
+    "samples": 4,
+    "attempts": 100,
+    "check_every_move": 1,
+    "timeout_seconds": 120
+  },
+  "binary_sha256": "91982ff486f62f7c0c660193af8baba9b3ae4b982c1a7fd26e0dfc8f17076db8",
+  "input_sha256": "f82c3bbbf91f6f2259656634fd9fec50d7f15d6b4c86b30a28eb9236421a8f6e",
+  "driver_sha256": "cf97293535716e654b132065e5b011a0e5f8dfbad3b59d4907be59b7635a9fce",
+  "experiment_id": "debug_determinism_replica",
+  "configuration_id": "ba00c6fedfc34568c04a",
+  "stage": "simulation",
+  "status": "complete",
+  "seed": 20260907,
+  "started_at": "2026-09-08T04:54:25.121294+00:00",
+  "code_commit": "d7691a08bd7a95bf50e98e40def930ec3f078ce1",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "command": [
+    "/Users/swethasunilkumar/Documents/Codex/2026-09-07/do-t/outputs/cdt-topology-dimred/build/simulator/cdt-run",
+    "/Users/swethasunilkumar/Documents/Codex/2026-09-07/do-t/outputs/cdt-topology-dimred/data/raw/initial_T8.dat",
+    "/Users/swethasunilkumar/Documents/Codex/2026-09-07/do-t/outputs/cdt-topology-dimred/data/raw/ba00c6fedfc34568c04a",
+    "20260907",
+    "1.0",
+    "1.0",
+    "300",
+    "10",
+    "10",
+    "4",
+    "100",
+    "1"
+  ],
+  "geometry_validation": [
+    {
+      "N0": 60,
+      "N1": 321,
+      "N2": 522,
+      "N3": 261,
+      "chi": 0,
+      "time_extent": 8,
+      "tetra_types": {
+        "(3, 1)": 88,
+        "(2, 2)": 85,
+        "(1, 3)": 88
+      },
+      "spatial_volume": [
+        12,
+        12,
+        10,
+        8,
+        6,
+        22,
+        10,
+        8
+      ],
+      "all_vertex_links_S2": true
+    },
+    {
+      "N0": 59,
+      "N1": 317,
+      "N2": 516,
+      "N3": 258,
+      "chi": 0,
+      "time_extent": 8,
+      "tetra_types": {
+        "(3, 1)": 86,
+        "(2, 2)": 86,
+        "(1, 3)": 86
+      },
+      "spatial_volume": [
+        12,
+        10,
+        10,
+        6,
+        6,
+        20,
+        10,
+        12
+      ],
+      "all_vertex_links_S2": true
+    },
+    {
+      "N0": 62,
+      "N1": 332,
+      "N2": 540,
+      "N3": 270,
+      "chi": 0,
+      "time_extent": 8,
+      "tetra_types": {
+        "(3, 1)": 92,
+        "(2, 2)": 86,
+        "(1, 3)": 92
+      },
+      "spatial_volume": [
+        16,
+        12,
+        10,
+        6,
+        6,
+        20,
+        10,
+        12
+      ],
+      "all_vertex_links_S2": true
+    },
+    {
+      "N0": 64,
+      "N1": 343,
+      "N2": 558,
+      "N3": 279,
+      "chi": 0,
+      "time_extent": 8,
+      "tetra_types": {
+        "(3, 1)": 96,
+        "(2, 2)": 87,
+        "(1, 3)": 96
+      },
+      "spatial_volume": [
+        18,
+        12,
+        12,
+        6,
+        6,
+        18,
+        8,
+        16
+      ],
+      "all_vertex_links_S2": true
+    }
+  ],
+  "elapsed_seconds": 2.1525338330538943,
+  "completed_at": "2026-09-08T04:54:27.517537+00:00",
+  "output_hashes": {
+    "data/raw/ba00c6fedfc34568c04a/diagnostics.csv": "0fe06e78aff112912654bf14f88ba2580fa968248c1b6d6d51a1eec321bed085",
+    "data/raw/ba00c6fedfc34568c04a/geometry_2.dat": "e46d7ea7457c85c0de45fdf4f6882b5c5c9150314a00fb6544d63c58696e6964",
+    "data/raw/ba00c6fedfc34568c04a/geometry_3.dat": "6d229ab8e699d25235f59c2bb3f2db97066b8127a6c500a6e30dec1434796238",
+    "data/raw/ba00c6fedfc34568c04a/geometry_1.dat": "b3cb436baaa3837d964d4e94e146d81a374a30aebf6235bec69ea3e423580c3d",
+    "data/raw/ba00c6fedfc34568c04a/geometry_0.dat": "a111972d473aa053493c1c77561effbbdc740f7ea816487e80d2e7c9f122a2d1",
+    "data/geometry/ba00c6fedfc34568c04a_1.npz": "fb36ed3be2b2595241d6dcdb09278011e03fdbb9e00aaeeebb64b22af747a415",
+    "data/geometry/ba00c6fedfc34568c04a_0.npz": "7787aec36f4ea6a62fe7e9df75bea65c1723d0d1b468af895fb5074f1734f73c",
+    "data/geometry/ba00c6fedfc34568c04a_2.npz": "bd49dcf3864192e52ed4d847c18e1e1335ff2b55fbe8ea4a2ae44c93c93c388b",
+    "data/geometry/ba00c6fedfc34568c04a_3.npz": "891abe889367a5b4e8206759a3e8f035b9609bf6c3db78cd55be9d2e9abc1f36"
+  }
+}
