@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "kind": "production",
+  "name": "native_baseline_production",
+  "time_extent": 64,
+  "volumes": [
+    10000,
+    30000,
+    60000
+  ],
+  "couplings": [
+    1.0
+  ],
+  "chains": 4,
+  "seed": 20260909,
+  "attempts_per_target": 10,
+  "tuning_sweeps": 2000,
+  "dispersal_sweeps": 2000,
+  "dispersal_factors": [
+    0.8,
+    0.95,
+    1.05,
+    1.2
+  ],
+  "burn_sweeps": 20000,
+  "samples": 1024,
+  "sample_stride": 200,
+  "rho": 0.8,
+  "rho_sensitivity": [
+    0.4
+  ],
+  "max_steps": 1024,
+  "roots": 64,
+  "root_batch": 16,
+  "diagnostic_sigmas": [
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "analysis_window": [
+    16,
+    768
+  ],
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 92026,
+  "limits": {
+    "rhat": 1.01,
+    "bulk_ess": 400,
+    "tail_ess": 400,
+    "mean_mcse_sd": 0.05,
+    "volume_relative_offset": 0.03,
+    "ds_halfwidth": 0.15,
+    "drift_ds": 0.15,
+    "root_refinement_ds": 0.1,
+    "stationary_multiple": 10,
+    "minimum_blocks": 8,
+    "block_lengths": [
+      16,
+      32,
+      64
+    ],
+    "reference_reviewed": false
+  },
+  "notes": [
+    "Long-run baseline design; not an estimate of equilibration time.",
+    "Runs stop at the requested budget, retain failures, and never automatically declare physical reproduction.",
+    "Changing samples is a documented continuation; changing any other design field requires a new study directory.",
+    "A sweep is 10*target N3 proposals; preserve this normalization in comparisons with historical runs."
+  ]
+}

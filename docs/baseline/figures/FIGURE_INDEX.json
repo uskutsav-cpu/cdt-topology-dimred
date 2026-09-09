@@ -1,0 +1,22 @@
+{
+  "analysis_id": "ccfcb9a22d41b833943c",
+  "status": "UNEQUILIBRATED NATIVE PILOT",
+  "files": [
+    "01_native_spectral_curves.png",
+    "01_native_spectral_curves.svg",
+    "02_convergence_rhat.png",
+    "02_convergence_rhat.svg",
+    "03_convergence_ess.png",
+    "03_convergence_ess.svg",
+    "04_peak_trace_10000.png",
+    "04_peak_trace_10000.svg",
+    "05_peak_trace_30000.png",
+    "05_peak_trace_30000.svg",
+    "06_peak_trace_60000.png",
+    "06_peak_trace_60000.svg",
+    "07_distinct_estimands.png",
+    "07_distinct_estimands.svg",
+    "08_rho_sensitivity.png",
+    "08_rho_sensitivity.svg"
+  ]
+}

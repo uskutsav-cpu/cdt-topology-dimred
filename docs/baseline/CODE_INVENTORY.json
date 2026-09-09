@@ -1,0 +1,137 @@
+{
+  "new_code_and_test_lines": 2425,
+  "new_code_and_test_files": 26,
+  "scope": "Python and C++ new scientific/runtime/workflow/test source; excludes copied upstream/native reference source, installers, configurations, CI, reports, arrays and logs.",
+  "files": [
+    {
+      "path": "src/cdt_baseline/__init__.py",
+      "lines": 2,
+      "sha256": "0575a741f199f6e35fce21c892c1db1205ac98fef09cf824396d161c6c22c40a"
+    },
+    {
+      "path": "src/cdt_baseline/analysis.py",
+      "lines": 199,
+      "sha256": "eec552a01224315622c14e3391dd021621a9ef3daed5bcda217feba7989a0cfb"
+    },
+    {
+      "path": "src/cdt_baseline/chain.py",
+      "lines": 209,
+      "sha256": "b99f4b9f04a46e59ee4bf0ef16386beb182f1aa6382d8579c2ee12d821e95fc8"
+    },
+    {
+      "path": "src/cdt_baseline/cpp/validate_geometry.cpp",
+      "lines": 111,
+      "sha256": "9e944c702c258c30d8ef1280814661f32ef38b49907b68fb08f48d25a9792e8e"
+    },
+    {
+      "path": "src/cdt_baseline/design.py",
+      "lines": 80,
+      "sha256": "a8318ed31b71c1603daf6da39ad7b23439d6525f6ccab2cb5f37abceffedf506"
+    },
+    {
+      "path": "src/cdt_baseline/geometry.py",
+      "lines": 128,
+      "sha256": "dc4cec75d016c1210efca4afc0c0239db70d1eeb994a88fe8787f2220e8be944"
+    },
+    {
+      "path": "src/cdt_baseline/initial.py",
+      "lines": 50,
+      "sha256": "1efc8cb0dcc232766ee592a5238b1334259305d0e993f1ac2bdccb40677a4205"
+    },
+    {
+      "path": "src/cdt_baseline/io.py",
+      "lines": 133,
+      "sha256": "c45ec48cc029b8c4bdf0984abbcd66813af351fb2c1993d17c6c4bde41b1399d"
+    },
+    {
+      "path": "src/cdt_baseline/measure.py",
+      "lines": 222,
+      "sha256": "d39cc5bb612d02859508d61348661b176ec304ddbbd0d82caf103d29281c3ac0"
+    },
+    {
+      "path": "src/cdt_baseline/native.py",
+      "lines": 117,
+      "sha256": "7d3e28df07743cec9b12e5692cec1300916b175221b57e0980f6cdb22fda7e35"
+    },
+    {
+      "path": "src/cdt_baseline/operations.py",
+      "lines": 40,
+      "sha256": "8fc60763582d4fbf480355c685a7fbd05c537b55027d0a1e4a0ed4463b55d4cd"
+    },
+    {
+      "path": "src/cdt_baseline/pipeline.py",
+      "lines": 93,
+      "sha256": "42b60c93a6d917e8089e796c088bcbd31c2d955c128c7dea7276cb6f5fa52506"
+    },
+    {
+      "path": "src/cdt_baseline/statistics.py",
+      "lines": 95,
+      "sha256": "0094686224a2a3fab8723e584973f9a8e27f6035efb09efae3a338952adcce83"
+    },
+    {
+      "path": "src/cdt_baseline/summary_storage.py",
+      "lines": 51,
+      "sha256": "0b0e0e55fe1827f100c0d83d53894ce8bd6641d0607e41cfe4d15536f5a1cb03"
+    },
+    {
+      "path": "src/cdt_baseline/verify.py",
+      "lines": 98,
+      "sha256": "f3aa19106ce37a9d58b0e2c082fa18853612d36c7fb461e9d03f1ce2ada72ef3"
+    },
+    {
+      "path": "tests/baseline_native/conftest.py",
+      "lines": 27,
+      "sha256": "72f516e4b01223683bb80ab9c9c179fbd3fddfe180b1f53d741915e5d8eb381a"
+    },
+    {
+      "path": "tests/baseline_native/test_geometry_diffusion.py",
+      "lines": 98,
+      "sha256": "93c975ff98a9285136b9d478aa50d98577c6304a75e87da3c2c46da75f628111"
+    },
+    {
+      "path": "tests/baseline_native/test_io_design.py",
+      "lines": 84,
+      "sha256": "8d737982792be98f9dd666a3c19ceb132a8d6a592d8a309d965a03309853f1fc"
+    },
+    {
+      "path": "tests/baseline_native/test_native.py",
+      "lines": 184,
+      "sha256": "4872802aa9388568ed37183c955404b2bbf0f45b3e1457ed5fc903d47b175fda"
+    },
+    {
+      "path": "tests/baseline_native/test_operations.py",
+      "lines": 96,
+      "sha256": "46aadbf9c517e0572e0ee3dd9767a13b4371379582aa893d9617a7698d3e88fa"
+    },
+    {
+      "path": "tests/baseline_native/test_pipeline.py",
+      "lines": 72,
+      "sha256": "c40288908762e69e1db0a8ec82147a891e585237aa4277a32abea60bead9b454"
+    },
+    {
+      "path": "tests/baseline_native/test_summary_storage.py",
+      "lines": 49,
+      "sha256": "b21e58698e9a31afc01149300a982146c17d7047526a5c24a39b828395428465"
+    },
+    {
+      "path": "workflows/baseline.py",
+      "lines": 57,
+      "sha256": "547b820895faf3eb9d87fa5415b69843ee176f463dbb283d26ebc55d5d398cf4"
+    },
+    {
+      "path": "workflows/fresh_baseline_checkout.py",
+      "lines": 47,
+      "sha256": "15070569d5f0c720ba428c53a0a2d87f7e085894f29cb8ffa17950cb79f3c279"
+    },
+    {
+      "path": "workflows/plot_native_baseline.py",
+      "lines": 74,
+      "sha256": "5f6386b01d762094d0ab525fac7b83e736f257edbb255e231092f8f160e52c3e"
+    },
+    {
+      "path": "workflows/test_native_baseline.py",
+      "lines": 9,
+      "sha256": "41fbc08ae9b2e6a8a0a3adcd34cb321861220d93f6fce24f81222f57ff27ed97"
+    }
+  ]
+}

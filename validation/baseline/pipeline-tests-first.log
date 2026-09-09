@@ -1,0 +1,11 @@
+..............                                                           [100%]
+=============================== warnings summary ===============================
+test_pipeline.py::test_end_to_end_verified
+test_pipeline.py::test_end_to_end_verified
+test_pipeline.py::test_idempotent_cached_stages
+test_pipeline.py::test_idempotent_cached_stages
+  /usr/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=3448) is multi-threaded, use of fork() may lead to deadlocks in the child.
+    self.pid = os.fork()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+14 passed, 4 warnings in 13.57s

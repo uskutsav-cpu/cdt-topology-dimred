@@ -1,0 +1,31 @@
+.........F......                                                         [100%]
+=================================== FAILURES ===================================
+_________________ test_original_vs_adapter_and_acceptance_bug __________________
+
+root = PosixPath('/mnt/data/cdt-baseline-work/source')
+build = {'binary': 'build/baseline/8b55ef4286f4053695f7/cdt-run', 'binary_sha256': 'ce6658667083a61c7107e27753ef1b6f7ae06b198d...nt/data/cdt-baseline-work/source/build/baseline/8b55ef4286f4053695f7/source/build/simulator/observable.cpp', ...], ...}
+native_seed = PosixPath('/tmp/pytest-of-root/pytest-1/initial0/initial_T8.dat')
+tmp_path = PosixPath('/tmp/pytest-of-root/pytest-1/test_original_vs_adapter_and_a0')
+
+    def test_original_vs_adapter_and_acceptance_bug(root,build,native_seed,tmp_path):
+        p=dict(seed=12345,k0=1.,k3=2.,target=144,tune=0,burn=3000,samples=1,attempts=1,check_every_move=0,sample_stride=1)
+        old=tmp_path/'original';new=tmp_path/'adapter'
+        assert direct(root,build['original_binary'],native_seed,old,p)==0
+        assert direct(root,build['binary'],native_seed,new,p)==0
+        assert geometry_hashes(old)==geometry_hashes(new)
+        def false_accepts(folder):
+            rows=list(csv.DictReader((folder/'diagnostics.csv').open()));previous=40;false=0
+            for row in rows:
+                n=int(row['N0'])
+                if int(row['accept_2']) and n==previous:false+=1
+                previous=n
+            return false
+>       assert false_accepts(old)>0
+E       AssertionError: assert 0 > 0
+E        +  where 0 = <function test_original_vs_adapter_and_acceptance_bug.<locals>.false_accepts at 0x7ff24e870ea0>(PosixPath('/tmp/pytest-of-root/pytest-1/test_original_vs_adapter_and_a0/original'))
+
+mnt/data/cdt-baseline-work/source/tests/baseline_native/test_native.py:86: AssertionError
+=========================== short test summary info ============================
+FAILED mnt/data/cdt-baseline-work/source/tests/baseline_native/test_native.py::test_original_vs_adapter_and_acceptance_bug - AssertionError: assert 0 > 0
+ +  where 0 = <function test_original_vs_adapter_and_acceptance_bug.<locals>.false_accepts at 0x7ff24e870ea0>(PosixPath('/tmp/pytest-of-root/pytest-1/test_original_vs_adapter_and_a0/original'))
+1 failed, 15 passed in 10.16s

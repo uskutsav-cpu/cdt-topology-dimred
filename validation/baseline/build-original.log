@@ -1,0 +1,7 @@
+In file included from /mnt/data/cdt-baseline-work/source/build/simulator/universe.hpp:10,
+                 from /mnt/data/cdt-baseline-work/source/build/simulator/universe.cpp:5:
+/mnt/data/cdt-baseline-work/source/build/simulator/tetra.hpp: In member function ‘const char* Tetra::ToString(Type)’:
+/mnt/data/cdt-baseline-work/source/build/simulator/tetra.hpp:24:9: warning: control reaches end of non-void function [-Wreturn-type]
+   24 |         }
+      |         ^
+/mnt/data/cdt-baseline-work/source/build/simulator/cdt-run

@@ -1,0 +1,15 @@
+{
+  "python": "3.13.5",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "machine": "x86_64",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "arviz": "1.1.0",
+    "pytest": "9.0.2",
+    "matplotlib": "3.10.8",
+    "pytest-cov": "7.0.0"
+  },
+  "compiler": "c++ (Debian 14.2.0-19) 14.2.0",
+  "scope": "Actual Linux execution environment; macOS CI definition supplied but not executed here."
+}

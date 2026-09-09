@@ -1,0 +1,17 @@
+{
+  "code_and_test_scope": "139 new baseline tests plus 9 existing baseline tests; not the entire original repository suite",
+  "combined_final_passed": 148,
+  "packaged_new_suite_passed": 139,
+  "packaged_suite_is_not_additional_independent_test_cases": true,
+  "installer_safety_passed": 14,
+  "evidence_archives_extracted_and_byte_verified_files": 11055,
+  "scientific_evidence_artifacts_verified": 7806,
+  "zip_execution_permissions": "Python zipfile.extractall initially omitted execute permissions. Original ZIP entries declare 0755; these declared modes were restored before executing the extracted Linux binaries. Read-only scientific verification was unaffected.",
+  "initial_packaged_execution_failure_log_retained": true,
+  "macos_execution_tested_here": false,
+  "github_actions_executed": false,
+  "full_clean_git_clone_executed": false,
+  "physical_reproduction_pass": false,
+  "production_gates_changed": false,
+  "github_push_performed": false
+}

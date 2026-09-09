@@ -1,0 +1,135 @@
+{
+  "external/3d-cdt/universe.hpp": {
+    "git_blob_sha1": "40a56e2348098fef240a2b8cd114731a9d6fda4a",
+    "expected_git_blob_sha1": "40a56e2348098fef240a2b8cd114731a9d6fda4a",
+    "exact_match": true,
+    "bytes": 1941,
+    "sha256": "c60ca7d5fe2d31c35a552443427835e3bcb2a574d366270ebc65c48f434b8645"
+  },
+  "external/3d-cdt/simulation.hpp": {
+    "git_blob_sha1": "fed67fc472450c7dd901e9f7f0e807b14ae0c180",
+    "expected_git_blob_sha1": "fed67fc472450c7dd901e9f7f0e807b14ae0c180",
+    "exact_match": true,
+    "bytes": 1255,
+    "sha256": "d1af84bb35d7b0f619044d0d22d4768f1451fc1678eac650ef2f85873ab4d773"
+  },
+  "external/3d-cdt/pool.hpp": {
+    "git_blob_sha1": "29fb8e16d6302bc1c93f73726130d5050dbafcf9",
+    "expected_git_blob_sha1": "29fb8e16d6302bc1c93f73726130d5050dbafcf9",
+    "exact_match": true,
+    "bytes": 4167,
+    "sha256": "77841d3b63aeb6c6d27fc1efcd643f2c305eb357f09da3050466ac8e37e4fe3e"
+  },
+  "external/3d-cdt/bag.hpp": {
+    "git_blob_sha1": "c6c8227a546dbc23ba00d4891f2088d80d061e66",
+    "expected_git_blob_sha1": "c6c8227a546dbc23ba00d4891f2088d80d061e66",
+    "exact_match": true,
+    "bytes": 2096,
+    "sha256": "9f3f2bf62356166b03f34613948d80c05c35b41f3f6736c5736f4e268d4b6a59"
+  },
+  "external/3d-cdt/vertex.hpp": {
+    "git_blob_sha1": "d06909ef37c488519463f581842f6653bb937413",
+    "expected_git_blob_sha1": "d06909ef37c488519463f581842f6653bb937413",
+    "exact_match": true,
+    "bytes": 523,
+    "sha256": "b4f2305d959201275a1b512fba7d0c01244b32a8586f875d6585314d5c207f7e"
+  },
+  "external/3d-cdt/tetra.hpp": {
+    "git_blob_sha1": "24101f2ff356925b478186636dda9e1dfb2a84ef",
+    "expected_git_blob_sha1": "24101f2ff356925b478186636dda9e1dfb2a84ef",
+    "exact_match": true,
+    "bytes": 3427,
+    "sha256": "c043259ecf39c59305fe663608819adfe2f87e4cbe168f5939b8ca16842bcfd8"
+  },
+  "external/3d-cdt/halfedge.hpp": {
+    "git_blob_sha1": "fdb20642a0c10960b26a33394dc65a193de7a1c0",
+    "expected_git_blob_sha1": "fdb20642a0c10960b26a33394dc65a193de7a1c0",
+    "exact_match": true,
+    "bytes": 827,
+    "sha256": "adc966da948c6afe6b5713467ce47e750c63d47a1053ea5c5a92ea40acc591eb"
+  },
+  "external/3d-cdt/triangle.hpp": {
+    "git_blob_sha1": "398554df03609b1b1f5e76ae7f525a4824b1d026",
+    "expected_git_blob_sha1": "398554df03609b1b1f5e76ae7f525a4824b1d026",
+    "exact_match": true,
+    "bytes": 933,
+    "sha256": "98d552299d39fd56a84de134ddd9b6be3a386c43e616f50f1a46d71893f9dce5"
+  },
+  "external/3d-cdt/observable.hpp": {
+    "git_blob_sha1": "7237483d780db709d4e9471b2b5e426241a63b2e",
+    "expected_git_blob_sha1": "7237483d780db709d4e9471b2b5e426241a63b2e",
+    "exact_match": true,
+    "bytes": 1115,
+    "sha256": "91d05c01e28e4731f3a945c59e1024b54ee31b29b01a4181e0b5d9b4b795b883"
+  },
+  "external/3d-cdt/tetra.cpp": {
+    "git_blob_sha1": "83a15ca96d74c51aba4a5a29da0797886b087185",
+    "expected_git_blob_sha1": "83a15ca96d74c51aba4a5a29da0797886b087185",
+    "exact_match": true,
+    "bytes": 92,
+    "sha256": "8ff47173beda42e9f5a46fe5a7a3cf798a3ce220810e2082ccd4c8f205825227"
+  },
+  "external/3d-cdt/triangle.cpp": {
+    "git_blob_sha1": "0182d02e8a602bc638923839fd410ba1be3a421b",
+    "expected_git_blob_sha1": "0182d02e8a602bc638923839fd410ba1be3a421b",
+    "exact_match": true,
+    "bytes": 95,
+    "sha256": "6bd0c6a55a9bc7343372c5a1a1d60771ab5ee5faf9d6e923fa810f43f5f8d9bd"
+  },
+  "external/3d-cdt/halfedge.cpp": {
+    "git_blob_sha1": "99b9c1f476cef8a8386c3afa05aeb2e9126f0286",
+    "expected_git_blob_sha1": "99b9c1f476cef8a8386c3afa05aeb2e9126f0286",
+    "exact_match": true,
+    "bytes": 138,
+    "sha256": "7e191e20ba074a24bfbc5fa98f957f3ddd46ffa394e38cb8fa8b78842ae9b3ab"
+  },
+  "external/3d-cdt/vertex.cpp": {
+    "git_blob_sha1": "40eee121c2ec24ae44ae8870987cad1192d34ed1",
+    "expected_git_blob_sha1": "40eee121c2ec24ae44ae8870987cad1192d34ed1",
+    "exact_match": true,
+    "bytes": 2201,
+    "sha256": "b3e9201af5b508853fda6769c6ff22cbda2b539dc2514a239c89920043da99a2"
+  },
+  "external/3d-cdt/observable.cpp": {
+    "git_blob_sha1": "ec6e4448f49cd63f3b4c77eb0b5af3303446d8fa",
+    "expected_git_blob_sha1": "ec6e4448f49cd63f3b4c77eb0b5af3303446d8fa",
+    "exact_match": true,
+    "bytes": 4452,
+    "sha256": "bf22c8264b6aaab2c3a243f4e7f47f7b5526909ec16dcdd065aee100fe03712c"
+  },
+  "external/3d-cdt/universe.cpp": {
+    "git_blob_sha1": "c8b4ea0d19ea2d2bfbf6c8a22cba8f44f71e0afb",
+    "expected_git_blob_sha1": "c8b4ea0d19ea2d2bfbf6c8a22cba8f44f71e0afb",
+    "exact_match": true,
+    "bytes": 26056,
+    "sha256": "e9770792efa402f61063b45cde411c941f7f1c7ea7261d108a58a082d3d73550"
+  },
+  "external/3d-cdt/simulation.cpp": {
+    "git_blob_sha1": "ce8f4a4fffbab7e72c6b5438170d1d801f146d87",
+    "expected_git_blob_sha1": "ce8f4a4fffbab7e72c6b5438170d1d801f146d87",
+    "exact_match": true,
+    "bytes": 11792,
+    "sha256": "84ab4e25f4ccd69bc36a5053129fd26fe762010ee63cb3d9053e9c2a0dfb3ce5"
+  },
+  "src/cdt/runner.cpp": {
+    "git_blob_sha1": "c4367afec2e30e2ae6afffcb934339b783d37ca7",
+    "expected_git_blob_sha1": "c4367afec2e30e2ae6afffcb934339b783d37ca7",
+    "exact_match": true,
+    "bytes": 5260,
+    "sha256": "a00b5b9282072b6fa39bd0765c242e911fbdadfa2ed933a2f1e732598a94887b"
+  },
+  "src/cdt/checkpoint.hpp": {
+    "git_blob_sha1": "d509b129da796f463e73ed3a351447fcb38ea126",
+    "expected_git_blob_sha1": "d509b129da796f463e73ed3a351447fcb38ea126",
+    "exact_match": true,
+    "bytes": 2195,
+    "sha256": "bc343d84bc48d19dcf5ad27caa5cc5e2ea76fa93a1835060e205094d131f2c9a"
+  },
+  "workflows/build.py": {
+    "git_blob_sha1": "111c8a86bbd7f580f80d8d8a2b01a5ba5449e47b",
+    "expected_git_blob_sha1": "111c8a86bbd7f580f80d8d8a2b01a5ba5449e47b",
+    "exact_match": true,
+    "bytes": 5153,
+    "sha256": "b1419fb43613a627d859e176a0c86f09a0d74a0a1eec15f7d40a796c73d14e7a"
+  }
+}

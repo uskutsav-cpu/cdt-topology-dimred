@@ -1,0 +1,51 @@
+name: Native baseline checks (not reproduction certification)
+on:
+  push:
+    paths:
+      - 'src/cdt_baseline/**'
+      - 'src/cdt/**'
+      - 'external/3d-cdt'
+      - 'configs/baseline/**'
+      - 'workflows/*baseline*.py'
+      - 'tests/baseline_native/**'
+      - 'environment/baseline-requirements.txt'
+      - '.github/workflows/native-baseline.yml'
+  pull_request:
+    paths:
+      - 'src/cdt_baseline/**'
+      - 'src/cdt/**'
+      - 'external/3d-cdt'
+      - 'configs/baseline/**'
+      - 'workflows/*baseline*.py'
+      - 'tests/baseline_native/**'
+      - 'environment/baseline-requirements.txt'
+      - '.github/workflows/native-baseline.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          submodules: recursive
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install declared numerical dependencies
+        run: python -m pip install -r environment/baseline-requirements.txt
+      - name: Compile native sources and test replay, geometry, statistics and smoke pipeline
+        run: python workflows/test_native_baseline.py
+      - name: Scope of success
+        run: echo 'Tests passing does not issue REPRODUCTION_PASS or establish equilibration.'

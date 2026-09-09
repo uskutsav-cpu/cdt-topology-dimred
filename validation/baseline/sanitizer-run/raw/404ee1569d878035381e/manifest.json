@@ -1,0 +1,95 @@
+{
+  "attempt_history": [
+    {
+      "elapsed_seconds": null,
+      "ended_at": null,
+      "exit_code": null,
+      "started_at": "2026-09-09T21:44:28.675749+00:00",
+      "status": "running"
+    }
+  ],
+  "checkpoint": {
+    "completed_sweeps": 65,
+    "k3": 1.16,
+    "simulation_rng_state": "692179478",
+    "time_extent": 8,
+    "universe_rng_state": "1490055406"
+  },
+  "command": [
+    "/mnt/data/cdt-baseline-work/source/build/baseline/2e272945ea26aba6a406/cdt-run",
+    "/mnt/data/cdt-baseline-work/source/validation/baseline/sanitizer-run/raw/404ee1569d878035381e/input.dat",
+    "/mnt/data/cdt-baseline-work/source/validation/baseline/sanitizer-run/raw/404ee1569d878035381e",
+    "881",
+    "1.0",
+    "1.16",
+    "500",
+    "0",
+    "50",
+    "5",
+    "1000",
+    "1",
+    "3"
+  ],
+  "completed_samples": 5,
+  "contract": {
+    "binary_sha256": "6af4336eabbbcc60ac74206b9429157617112ae19e7f6bc6cbfd6133dca9920e",
+    "input_sha256": "cf698fb40a626b53fa3eeb178475e19471de263fff3b4913c73cfe9379657d75",
+    "label": "asan-restart",
+    "lineage": {},
+    "parameters": {
+      "attempts": 1000,
+      "burn": 50,
+      "check_every_move": 1,
+      "k0": 1.0,
+      "k3": 1.16,
+      "sample_stride": 3,
+      "seed": 881,
+      "target": 500,
+      "tune": 0
+    },
+    "rng_origin": "fresh independent native seeds on initial geometry; own checkpoint on resume",
+    "runner_sha256": "b99f4b9f04a46e59ee4bf0ef16386beb182f1aa6382d8579c2ee12d821e95fc8",
+    "stage": "debug"
+  },
+  "elapsed_seconds": 2.2098994660000244,
+  "ended_at": "2026-09-09T21:45:13.902562+00:00",
+  "equilibrium_established": false,
+  "error": null,
+  "exit_code": 0,
+  "initial_checkpoint_inherited": false,
+  "job_id": "404ee1569d878035381e",
+  "label": "asan-restart",
+  "outputs": {
+    "checkpoint.bin": "9659340d238917b6235757228b0ab0c6bf18dfcd90216c900bbc861c96977904",
+    "diagnostics.csv": "c398fa2ed5be4de9497d8d2a56a7b64f238a015c444fdacb005ba2656a3b42e0",
+    "geometry_0.dat": "2ac4af5075a0441a7aff2beacac7d46c3209c247b0f95190509e6fa381525883",
+    "geometry_1.dat": "79a5d2b80a12a51a2badccd66b23a114bd4ad641ec51e3b8668293c1fcfb9177",
+    "geometry_2.dat": "d37d37107f4107cac5eb23574f1a0f41026edd0aa0330e5ada4848ada341bd8e",
+    "geometry_3.dat": "7d478b69569441bf46b31131f92ab22940a82968549ed4a3d0c30516f6ff23db",
+    "geometry_4.dat": "c381e29cd6d255a26a6e7a662895f0b6e3641a57768f93897af370d94c9e40ac",
+    "input.dat": "cf698fb40a626b53fa3eeb178475e19471de263fff3b4913c73cfe9379657d75",
+    "native.log": "4614f9c852d67f07f888d84e4ada3349fd22bd2e8a41443c7e6d673cdb63ceaf"
+  },
+  "parameters": {
+    "attempts": 1000,
+    "burn": 50,
+    "check_every_move": 1,
+    "k0": 1.0,
+    "k3": 1.16,
+    "sample_stride": 3,
+    "samples": 5,
+    "seed": 881,
+    "target": 500,
+    "tune": 0
+  },
+  "physical_monte_carlo": true,
+  "pid": 4022,
+  "previous_revision": null,
+  "recovery": null,
+  "reproduction_pass": false,
+  "schema": 1,
+  "stage": "debug",
+  "started_at": "2026-09-09T21:45:11.692177+00:00",
+  "status": "complete",
+  "total_elapsed_seconds": 2.2098994660000244
+}

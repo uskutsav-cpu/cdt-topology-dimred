@@ -1,0 +1,14 @@
+['/mnt/data/cdt-native-evidence-10000.zip', '/mnt/data/cdt-native-evidence-30000.zip', '/mnt/data/cdt-native-evidence-60000.zip', '/mnt/data/cdt-native-evidence-common.zip']
+{
+  "verified": true,
+  "parts": 4,
+  "files": 11055,
+  "bytes": 2955089331,
+  "scope": "byte integrity only; run source_export/workflows/baseline.py verify for scientific checks",
+  "REPRODUCTION_PASS": false
+}
+
+
+{"verified": true, "native_jobs": 27, "independent_production_chains": 12, "geometries": 1536, "unique_geometry_hashes": 1536, "artifacts_verified": 7806, "native_artifact_bytes": 2299574224, "primary_estimands_recomputed": true, "source_snapshots_match": true, "physical_monte_carlo_executed": true, "diagnostic_screens_pass": false, "REPRODUCTION_PASS": false, "production_gates_changed": false}
+
+
