@@ -1,0 +1,114 @@
+{
+  "cases": {
+    "constant": {
+      "pass_screen": false,
+      "shape": [
+        4,
+        4000
+      ],
+      "status": "UNDEFINED_CONSTANT_CHAIN"
+    },
+    "identical": {
+      "arviz_version": "1.1.0",
+      "bulk_ess": 15696.070579053674,
+      "chains": 4,
+      "draws_per_chain": 4000,
+      "ess_implied_tau": 1.0182270033085707,
+      "identical_chain_trajectories": true,
+      "lag1_autocorrelation": [
+        -0.005370198161223437,
+        -0.005370198161223437,
+        -0.005370198161223437,
+        -0.005370198161223437
+      ],
+      "limits": {
+        "chains": 4,
+        "ess": 400.0,
+        "rhat": 1.01
+      },
+      "mean_ess": 15713.58837274054,
+      "pass_screen": false,
+      "rank_folded_split_rhat": 1.0000241622241497,
+      "reproduction_pass": false,
+      "status": "FAIL_SCREEN",
+      "tail_ess": 14929.68903499866
+    },
+    "iid": {
+      "arviz_version": "1.1.0",
+      "bulk_ess": 15235.281731308007,
+      "chains": 4,
+      "draws_per_chain": 4000,
+      "ess_implied_tau": 1.0495856054541939,
+      "identical_chain_trajectories": false,
+      "lag1_autocorrelation": [
+        -0.005370198161223437,
+        0.0240637337913257,
+        0.0011481362197027522,
+        0.007043536483919844
+      ],
+      "limits": {
+        "chains": 4,
+        "ess": 400.0,
+        "rhat": 1.01
+      },
+      "mean_ess": 15244.111501582778,
+      "pass_screen": true,
+      "rank_folded_split_rhat": 0.9999677908871509,
+      "reproduction_pass": false,
+      "status": "PASS_SCREEN",
+      "tail_ess": 14915.18389415363
+    },
+    "shifted": {
+      "arviz_version": "1.1.0",
+      "bulk_ess": 5.009072308030118,
+      "chains": 4,
+      "draws_per_chain": 4000,
+      "ess_implied_tau": 3386.598533732773,
+      "identical_chain_trajectories": false,
+      "lag1_autocorrelation": [
+        -0.005370198161223437,
+        0.024063733791325675,
+        0.0011481362197027607,
+        0.007043536483919874
+      ],
+      "limits": {
+        "chains": 4,
+        "ess": 400.0,
+        "rhat": 1.01
+      },
+      "mean_ess": 4.724504496363936,
+      "pass_screen": false,
+      "rank_folded_split_rhat": 2.260776168344457,
+      "reproduction_pass": false,
+      "status": "FAIL_SCREEN",
+      "tail_ess": 26.516447028460444
+    },
+    "strong_autocorrelation": {
+      "arviz_version": "1.1.0",
+      "bulk_ess": 28.713504929504158,
+      "chains": 4,
+      "draws_per_chain": 4000,
+      "ess_implied_tau": 573.1420042970504,
+      "identical_chain_trajectories": false,
+      "lag1_autocorrelation": [
+        0.9907765269569577,
+        0.9932948698070324,
+        0.9947544620372056,
+        0.9930139336383177
+      ],
+      "limits": {
+        "chains": 4,
+        "ess": 400.0,
+        "rhat": 1.01
+      },
+      "mean_ess": 27.916292786154706,
+      "pass_screen": false,
+      "rank_folded_split_rhat": 1.1440584909299525,
+      "reproduction_pass": false,
+      "status": "FAIL_SCREEN",
+      "tail_ess": 55.995239169530805
+    }
+  },
+  "physical_CDT": false,
+  "source": "SYNTHETIC_DIAGNOSTIC_CALIBRATION_NOT_CDT"
+}

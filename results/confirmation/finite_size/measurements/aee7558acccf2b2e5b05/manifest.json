@@ -1,0 +1,88 @@
+{
+  "artifacts": {
+    "betti_curves.npz": "3dfe34fa9a00108d595ccf5e5a850758e82ded595c70ca2c7f961af128897648",
+    "diffusion.npz": "d8173fb21f462509dabe5bb9e20274d513964dd5ab2ff725a8016012e4dfeb7f",
+    "geometry.dat": "74023e8449c5aea2cca02c7d8e6fed4333513eaa1fdac17b0b8ab8dc17129f13",
+    "positive_barcodes.json.gz": "1090491407086c9d9c9b29e1da1116af5e2533cf5b3e9787dd2abcf89f2adfa1",
+    "root_measurements.json": "68255f9caec3c42040a58318b68625fa96f15137063645fcb08c92048ecb1e06",
+    "summary.json": "1416d39523507ea785340bb73951249c08b6cafce1b02c74a918e839db066511",
+    "surgery.json": "448017cb45fe63b038d1a171841198cbbd4c89e06c405f0fe26f0391eb75dc1f"
+  },
+  "complete": true,
+  "identity": {
+    "config": {
+      "design": {
+        "field_roots": 16,
+        "fields": [
+          2,
+          3,
+          5
+        ],
+        "flips": 480,
+        "flips_per_spatial_vertex": 10,
+        "horizon": 8,
+        "interpretation": "Same seed is paired across sizes. This is synthetic finite-volume sensitivity, not continuum scaling or a coupling experiment.",
+        "max_steps": 48,
+        "moving_probability": 0.5,
+        "radii": [
+          2,
+          3,
+          4,
+          6,
+          8
+        ],
+        "roots": "all",
+        "secondary_exploratory_after_primary_analysis": true,
+        "seeds": [
+          3211,
+          3212,
+          3213,
+          3214,
+          3215,
+          3216,
+          3217,
+          3218
+        ],
+        "sigmas": [
+          8,
+          12,
+          16,
+          24,
+          32
+        ],
+        "source_kind": "constructed_non_Boltzmann",
+        "spatial_vertices": 48,
+        "time_slices": 4
+      },
+      "kind": "constructed_non_Boltzmann",
+      "seed": 3218
+    },
+    "environment": {
+      "networkx": "3.6.1",
+      "numpy": "2.3.5",
+      "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+      "python": "3.13.5",
+      "scipy": "1.17.0"
+    },
+    "inputs": {},
+    "source": {
+      "cdt_confirmation/fields.py": "e65aa1ce9dd055007d9fc2745240bee9da7de13b859aa8e7061bf4071351e6c2",
+      "cdt_confirmation/measurement.py": "d9b3b3d0fb971230dfb1dcd2e722611c36007708755a1e26778534a4a1c5a2ae",
+      "cdt_confirmation/provenance.py": "f7fe67d16a5ae0b0627ca116ddda950e1c6bdb7974f3f2b75cbcc907501b11c5",
+      "cdt_confirmation/walks.py": "c51bb8bcc22942af09df9ee574f16ec639e602f1755b62d7ce21f81373b75bdc",
+      "cdt_mechanisms/__init__.py": "7f380031e1c4e2f87679fe91aa7d0b968a526bdfb4d528d78ba63fb4e89b2a7b",
+      "cdt_mechanisms/bottlenecks.py": "c9b7a869177c88c036341c1634431d3c46574a868fb95f2ab4ea06c62f591016",
+      "cdt_mechanisms/diffusion.py": "71f3536943fcd24e5f00cb24fcfe910a0f057e9128673d7f493019540f7c2163",
+      "cdt_mechanisms/evidence.py": "daab7fbc61b1932fd5909fc0e9eb4de6d7d1093cedcdbac7bf078bb01b9cd185",
+      "cdt_mechanisms/fem.py": "150db2fa90a43e9414b149735e339563695ffd1ae75cf9d52925b472a3f82b8e",
+      "cdt_mechanisms/graph.py": "08c33ad3b313f96b99ecaedc6bce19f22d8e9d570dad865f4e2464878e55607a",
+      "cdt_mechanisms/inference.py": "43c20c53de8268ce507776a6bb7512efb645f041070c9d19661b1af0bb1b8583",
+      "cdt_mechanisms/persistence.py": "a6d7383792b08c806d264a91413030470bba6c8b96c994bcbc3ef0ff7d0da3fa",
+      "cdt_mechanisms/scales.py": "0339bf5a0f5279a2d37bbfebc703ec4e178e6f2db793743a9d72e2342c9b5ec0",
+      "cdt_mechanisms/study.py": "d0cc88af96f3d95133be9821a6c817975654410e0af937a6690b3b5bc4ebe2ea",
+      "cdt_mechanisms/triangulations.py": "d31d037f7239f7bea18be70dc4ebfc386116e5e8f334636cf5fbf84eeaec39ed"
+    }
+  },
+  "production_gates_changed": false,
+  "schema": "cdt-confirmation-stage-v1"
+}

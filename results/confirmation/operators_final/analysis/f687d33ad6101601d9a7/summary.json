@@ -1,0 +1,288 @@
+{
+  "clock": {
+    "fem_eigenvalue_to_dual_ratio": 115.41138122340897,
+    "mode_start": 1,
+    "mode_stop": 13,
+    "ratio_quartiles": [
+      106.660706357084,
+      144.47135898730102
+    ],
+    "ratios": [
+      431.19294143459734,
+      432.1249263867842,
+      144.32081751441015,
+      144.92298340597355,
+      84.82345089603824,
+      85.55951971526284,
+      106.26087681067003,
+      106.79398287255532,
+      116.24413371123241,
+      116.50205062329925,
+      114.45868754213696,
+      114.57862873558553
+    ],
+    "unique_physical_clock_established": false,
+    "use": "fem_time=dual_time/ratio; frozen on a separate reference geometry, never refitted per intervention"
+  },
+  "continuum_convergence_established": false,
+  "effects": {
+    "H1_total_change": {
+      "ci95": [
+        -1.5323390151515153,
+        0.10321969696969659
+      ],
+      "inference": "paired independent-unit bootstrap; sign flip assumes symmetric paired null",
+      "mean_difference": -0.675189393939394,
+      "n_independent_pairs": 8,
+      "sign_flip_p": 0.1744
+    },
+    "dual_continuous_change": {
+      "ci95": [
+        0.07977796399569613,
+        0.17264429394085515
+      ],
+      "inference": "paired independent-unit bootstrap; sign flip assumes symmetric paired null",
+      "mean_difference": 0.12525122429334828,
+      "n_independent_pairs": 8,
+      "sign_flip_p": 0.0186
+    },
+    "dual_discrete_change": {
+      "ci95": [
+        0.0628135572399688,
+        0.16357079234596797
+      ],
+      "inference": "paired independent-unit bootstrap; sign flip assumes symmetric paired null",
+      "mean_difference": 0.11286429479135718,
+      "n_independent_pairs": 8,
+      "sign_flip_p": 0.0194
+    },
+    "fem_refined_change": {
+      "ci95": [
+        -0.01278524786582974,
+        0.03311514664214377
+      ],
+      "inference": "paired independent-unit bootstrap; sign flip assumes symmetric paired null",
+      "mean_difference": 0.012191927713670114,
+      "n_independent_pairs": 8,
+      "sign_flip_p": 0.341
+    },
+    "neck_change": {
+      "ci95": [
+        -13.75,
+        -8.25
+      ],
+      "inference": "paired independent-unit bootstrap; sign flip assumes symmetric paired null",
+      "mean_difference": -11.125,
+      "n_independent_pairs": 8,
+      "sign_flip_p": 0.0082
+    }
+  },
+  "paired": [
+    {
+      "H1_total_change": 0.8181818181818175,
+      "dual_continuous_change": 0.1305054026948138,
+      "dual_discrete_change": 0.12515396116146693,
+      "fem_change_interval": [
+        -0.028393274071258467,
+        0.0329533069454806
+      ],
+      "fem_refined_change": 0.00025303725405834143,
+      "finite_refinement_pass": false,
+      "neck_change": -9,
+      "seed": 2011
+    },
+    {
+      "H1_total_change": -1.0984848484848486,
+      "dual_continuous_change": 0.1229976673029296,
+      "dual_discrete_change": 0.11229773332997928,
+      "fem_change_interval": [
+        0.015029294964815865,
+        0.07777344816026677
+      ],
+      "fem_refined_change": 0.046083163768067426,
+      "finite_refinement_pass": false,
+      "neck_change": -13,
+      "seed": 2012
+    },
+    {
+      "H1_total_change": -0.5075757575757578,
+      "dual_continuous_change": 0.13772041904837362,
+      "dual_discrete_change": 0.12193934286469377,
+      "fem_change_interval": [
+        0.001755628769669837,
+        0.06702704441102325
+      ],
+      "fem_refined_change": 0.033073488449224975,
+      "finite_refinement_pass": false,
+      "neck_change": -15,
+      "seed": 2013
+    },
+    {
+      "H1_total_change": 0.2575757575757578,
+      "dual_continuous_change": -0.004241249053016816,
+      "dual_discrete_change": -0.023240579809663764,
+      "fem_change_interval": [
+        -0.050271495248362275,
+        0.01312921934389255
+      ],
+      "fem_refined_change": -0.018785248930814902,
+      "finite_refinement_pass": false,
+      "neck_change": -9,
+      "seed": 2014
+    },
+    {
+      "H1_total_change": -1.371212121212121,
+      "dual_continuous_change": 0.10732705671662712,
+      "dual_discrete_change": 0.10297940564410357,
+      "fem_change_interval": [
+        0.019107105689203152,
+        0.08368616368696591
+      ],
+      "fem_refined_change": 0.04988867324913038,
+      "finite_refinement_pass": false,
+      "neck_change": -8,
+      "seed": 2015
+    },
+    {
+      "H1_total_change": 0.6212121212121211,
+      "dual_continuous_change": 0.09307720573115708,
+      "dual_discrete_change": 0.07714309888201454,
+      "fem_change_interval": [
+        -0.0813341161159582,
+        -0.023211508426539407
+      ],
+      "fem_refined_change": -0.053716468761805025,
+      "finite_refinement_pass": false,
+      "neck_change": -4,
+      "seed": 2016
+    },
+    {
+      "H1_total_change": -1.1136363636363633,
+      "dual_continuous_change": 0.15855285678688213,
+      "dual_discrete_change": 0.13802263776325896,
+      "fem_change_interval": [
+        -0.018397690349785556,
+        0.04532447828900121
+      ],
+      "fem_refined_change": 0.01255860099536621,
+      "finite_refinement_pass": false,
+      "neck_change": -16,
+      "seed": 2017
+    },
+    {
+      "H1_total_change": -3.0075757575757573,
+      "dual_continuous_change": 0.2560704351190197,
+      "dual_discrete_change": 0.24861875849500414,
+      "fem_change_interval": [
+        -0.004346975243588069,
+        0.06338096375052382
+      ],
+      "fem_refined_change": 0.028180175686133513,
+      "finite_refinement_pass": false,
+      "neck_change": -15,
+      "seed": 2018
+    }
+  ],
+  "physical_CDT": false,
+  "production_gates_changed": false,
+  "records": [
+    {
+      "flips": 0,
+      "path": "measurements/594444444cccd0f8208b",
+      "reused": false,
+      "seed": 2011
+    },
+    {
+      "flips": 240,
+      "path": "measurements/f9442b690b15a365401c",
+      "reused": false,
+      "seed": 2011
+    },
+    {
+      "flips": 0,
+      "path": "measurements/4e7ede10cda972e30cf5",
+      "reused": false,
+      "seed": 2012
+    },
+    {
+      "flips": 240,
+      "path": "measurements/9ceb405626f4c6d1cecc",
+      "reused": false,
+      "seed": 2012
+    },
+    {
+      "flips": 0,
+      "path": "measurements/ce986f62afe195a63863",
+      "reused": false,
+      "seed": 2013
+    },
+    {
+      "flips": 240,
+      "path": "measurements/7f1260a5fb2f71224412",
+      "reused": false,
+      "seed": 2013
+    },
+    {
+      "flips": 0,
+      "path": "measurements/94884772802c7e008f75",
+      "reused": false,
+      "seed": 2014
+    },
+    {
+      "flips": 240,
+      "path": "measurements/af9b51ef260b5aa8852f",
+      "reused": false,
+      "seed": 2014
+    },
+    {
+      "flips": 0,
+      "path": "measurements/963232b35ce6731cddec",
+      "reused": false,
+      "seed": 2015
+    },
+    {
+      "flips": 240,
+      "path": "measurements/2d202f9cb86aa9c7ea80",
+      "reused": false,
+      "seed": 2015
+    },
+    {
+      "flips": 0,
+      "path": "measurements/7915f6ad7bba4507bd1f",
+      "reused": false,
+      "seed": 2016
+    },
+    {
+      "flips": 240,
+      "path": "measurements/0fd103df43782225819f",
+      "reused": false,
+      "seed": 2016
+    },
+    {
+      "flips": 0,
+      "path": "measurements/7abdfad1dfdc82bab367",
+      "reused": false,
+      "seed": 2017
+    },
+    {
+      "flips": 240,
+      "path": "measurements/60ad6bd27506474fc384",
+      "reused": false,
+      "seed": 2017
+    },
+    {
+      "flips": 0,
+      "path": "measurements/15a18c9d561f45dca26c",
+      "reused": false,
+      "seed": 2018
+    },
+    {
+      "flips": 240,
+      "path": "measurements/f92a1512f15f9a5dc611",
+      "reused": false,
+      "seed": 2018
+    }
+  ],
+  "wall_seconds": 94.44826422900019,
+  "workers": 4
+}

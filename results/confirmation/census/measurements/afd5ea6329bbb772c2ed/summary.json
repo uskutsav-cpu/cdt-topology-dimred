@@ -1,0 +1,851 @@
+{
+  "aggregates": {
+    "Ds_12": 2.507752750330863,
+    "Ds_16": 2.554590898245058,
+    "Ds_24": 2.5554913351148247,
+    "Ds_32": 2.5181144725091404,
+    "Ds_8": 2.381256421127795,
+    "H1_censored_count": 2.856060606060606,
+    "H1_finite_count": 4.613636363636363,
+    "H1_finite_max_lifetime": 1.3181818181818181,
+    "H1_finite_mean_lifetime": 1.0598262848262847,
+    "H1_finite_median_lifetime": 1.0115384615384615,
+    "H1_finite_total_persistence": 5.0,
+    "H1_mean_birth": 5.927195027195028,
+    "H1_mean_death": 6.987021312021312,
+    "H1_observed_persistence": 8.333333333333334,
+    "H1_persistence_entropy": 1.3505684449531987,
+    "H1_total_per_tetrahedron": 0.014823074878945977,
+    "annular_components_r2": 8.257575757575758,
+    "annular_components_r3": 1.2878787878787878,
+    "annular_components_r4": 1.5227272727272727,
+    "annular_components_r6": 1.0303030303030303,
+    "annular_components_r8": 1.0378787878787878,
+    "ball_vertices_r2": 15.06060606060606,
+    "ball_vertices_r3": 34.04545454545455,
+    "ball_vertices_r4": 64.53030303030303,
+    "ball_vertices_r6": 170.93939393939394,
+    "ball_vertices_r8": 320.9848484848485,
+    "conductance_r2": 0.4131703060011884,
+    "conductance_r3": 0.3159715579469494,
+    "conductance_r4": 0.2495352858395576,
+    "conductance_r6": 0.16584841781048887,
+    "conductance_r8": 0.16935306842221853,
+    "curvature_proxy": -0.43113878740645784,
+    "graph_cycle_fraction_r2": 0.20231807321062883,
+    "graph_cycle_fraction_r3": 0.28972325692742507,
+    "graph_cycle_fraction_r4": 0.34354949708539323,
+    "graph_cycle_fraction_r6": 0.40393200752013486,
+    "graph_cycle_fraction_r8": 0.4460419660709622,
+    "one_step_escape_r2": 0.4131703060011884,
+    "one_step_escape_r3": 0.3159715579469494,
+    "one_step_escape_r4": 0.2495352858395576,
+    "one_step_escape_r6": 0.16584841781048887,
+    "one_step_escape_r8": 0.09997701377235227,
+    "pre_mix_12": 1.0,
+    "pre_mix_16": 1.0,
+    "pre_mix_24": 1.0,
+    "pre_mix_32": 1.0,
+    "pre_mix_8": 1.0,
+    "return_12": 0.04618849862052946,
+    "return_16": 0.032141237758517904,
+    "return_24": 0.019200920763288595,
+    "return_32": 0.013367019985123756,
+    "return_8": 0.07585124174753825,
+    "rms_12": 3.187310426529989,
+    "rms_16": 3.685095931426509,
+    "rms_24": 4.447180185647703,
+    "rms_32": 5.006833773102399,
+    "rms_8": 2.564474051972373,
+    "shell_vertices_r2": 10.06060606060606,
+    "shell_vertices_r3": 18.984848484848484,
+    "shell_vertices_r4": 30.484848484848484,
+    "shell_vertices_r6": 61.07575757575758,
+    "shell_vertices_r8": 77.77272727272727,
+    "spanning_annular_branches_r2": 8.257575757575758,
+    "spanning_annular_branches_r3": 1.2878787878787878,
+    "spanning_annular_branches_r4": 1.5227272727272727,
+    "spanning_annular_branches_r6": 1.0,
+    "spanning_annular_branches_r8": 1.0,
+    "topology_ball_volume": 320.9848484848485,
+    "whole_geometry": 0.0
+  },
+  "audit": {
+    "N0": 96,
+    "N1": 624,
+    "N2": 1056,
+    "N3": 528,
+    "all_vertex_links_S2": true,
+    "boltzmann_sample": false,
+    "chi": 0,
+    "dual_regular_degree": 4,
+    "spatial_volume": [
+      44,
+      44,
+      44,
+      44
+    ],
+    "tetra_types": {
+      "(1, 3)": 176,
+      "(2, 2)": 176,
+      "(3, 1)": 176
+    },
+    "time_extent": 4
+  },
+  "fiedler": {
+    "cheeger_lower_bound": 0.0077338021883101024,
+    "cheeger_upper_bound": 0.17588407760010685,
+    "exact_cheeger": false,
+    "normalized_gap": 0.015467604376620205,
+    "sweep_conductance": 0.029411764705882353,
+    "witness_vertices": [
+      252,
+      384,
+      120,
+      516,
+      393,
+      261,
+      129,
+      525,
+      249,
+      381,
+      117,
+      513,
+      390,
+      258,
+      126,
+      522,
+      253,
+      121,
+      385,
+      517,
+      263,
+      131,
+      395,
+      527,
+      254,
+      122,
+      386,
+      518,
+      251,
+      119,
+      383,
+      515,
+      262,
+      394,
+      130,
+      526,
+      250,
+      382,
+      118,
+      514,
+      260,
+      128,
+      392,
+      524,
+      259,
+      391,
+      127,
+      523,
+      225,
+      93,
+      357,
+      489,
+      229,
+      97,
+      361,
+      493,
+      226,
+      94,
+      358,
+      490,
+      243,
+      111,
+      375,
+      507,
+      244,
+      112,
+      376,
+      508,
+      228,
+      360,
+      96,
+      492,
+      257,
+      389,
+      125,
+      521,
+      95,
+      227,
+      491,
+      359,
+      256,
+      388,
+      124,
+      520,
+      98,
+      230,
+      494,
+      362,
+      113,
+      245,
+      509,
+      377,
+      247,
+      115,
+      379,
+      511,
+      387,
+      255,
+      519,
+      123,
+      15,
+      147,
+      411,
+      279,
+      116,
+      248,
+      380,
+      512,
+      12,
+      144,
+      276,
+      408,
+      246,
+      378,
+      114,
+      510,
+      16,
+      148,
+      412,
+      280,
+      373,
+      241,
+      109,
+      505,
+      222,
+      354,
+      90,
+      486,
+      13,
+      145,
+      409,
+      277,
+      231,
+      363,
+      99,
+      495,
+      92,
+      224,
+      488,
+      356,
+      372,
+      240,
+      504,
+      108,
+      17,
+      413,
+      149,
+      281,
+      242,
+      374,
+      110,
+      506,
+      232,
+      364,
+      100,
+      496,
+      19,
+      151,
+      415,
+      283,
+      14,
+      410,
+      146,
+      278,
+      233,
+      101,
+      365,
+      497,
+      223,
+      91,
+      355,
+      487,
+      235,
+      367,
+      103,
+      499,
+      10,
+      142,
+      406,
+      274,
+      150,
+      18,
+      282,
+      414,
+      20,
+      416,
+      152,
+      284,
+      234,
+      366,
+      102,
+      498,
+      236,
+      104,
+      368,
+      500,
+      11,
+      407,
+      143,
+      275,
+      9,
+      141,
+      273,
+      405
+    ]
+  },
+  "field_checks": [
+    {
+      "field": 3,
+      "root": 7,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 7,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 34,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 34,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 37,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 37,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 53,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 53,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 83,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 83,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 84,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 84,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 128,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 128,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 129,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 129,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 174,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 174,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 184,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 184,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 207,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 207,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 214,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 214,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 232,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 232,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 239,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 239,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 245,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 245,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 263,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 263,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 289,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 289,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 293,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 293,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 312,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 312,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 322,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 322,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 338,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 338,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 373,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 373,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 375,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 375,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 382,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 382,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 388,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 388,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 393,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 393,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 404,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 404,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 465,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 465,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 488,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 488,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 505,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 505,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 518,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 518,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 3,
+      "root": 523,
+      "same_barcode_as_F2": true
+    },
+    {
+      "field": 5,
+      "root": 523,
+      "same_barcode_as_F2": true
+    }
+  ],
+  "field_roots": [
+    7,
+    34,
+    37,
+    53,
+    83,
+    84,
+    128,
+    129,
+    174,
+    184,
+    207,
+    214,
+    232,
+    239,
+    245,
+    263,
+    289,
+    293,
+    312,
+    322,
+    338,
+    373,
+    375,
+    382,
+    388,
+    393,
+    404,
+    465,
+    488,
+    505,
+    518,
+    523
+  ],
+  "full_ds": {
+    "12": 2.493041191749488,
+    "16": 2.5362117994285236,
+    "24": 2.533809812694299,
+    "32": 2.4975202119567608,
+    "8": 2.3724810728959342
+  },
+  "full_return": {
+    "12": 0.04618849862052946,
+    "16": 0.032141237758517904,
+    "24": 0.01920092076328861,
+    "32": 0.013367019985123758,
+    "8": 0.07585124174753825
+  },
+  "geometry_digest": "4de1244f6e4d51091e59f2d7229df1537e3ce92a85e8cbb103adbb8d93bfa1d1",
+  "independent_rank_checks": [
+    {
+      "betti": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "field": 2,
+      "radius": 3,
+      "root": 7
+    },
+    {
+      "betti": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "field": 3,
+      "radius": 3,
+      "root": 7
+    },
+    {
+      "betti": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "field": 5,
+      "radius": 3,
+      "root": 7
+    }
+  ],
+  "legacy_validation": {
+    "blob_sha": "c4205be18d7cb71b6ae722436319e966f6a117b5",
+    "report": {
+      "N0": 96,
+      "N1": 624,
+      "N2": 1056,
+      "N3": 528,
+      "all_vertex_links_S2": true,
+      "chi": 0,
+      "spatial_volume": [
+        44,
+        44,
+        44,
+        44
+      ],
+      "tetra_types": {
+        "(1, 3)": 176,
+        "(2, 2)": 176,
+        "(3, 1)": 176
+      },
+      "time_extent": 4
+    }
+  },
+  "mass_error": 2.6645352591003757e-15,
+  "mean_pre_mix": {
+    "12": 1.0,
+    "16": 1.0,
+    "24": 1.0,
+    "32": 1.0,
+    "8": 1.0
+  },
+  "moving_probability": 0.5,
+  "n_roots": 528,
+  "necks": {
+    "branch_size_entropy": 2.1227632404648324,
+    "definition": "spatial non-facial separating triangles; regions can overlap",
+    "largest_separated_vertices": 8.0,
+    "mean_separated_vertices": 2.6666666666666665,
+    "neck_count": 12,
+    "separated_vertex_sizes": [
+      2.0,
+      8.0,
+      8.0,
+      1.0,
+      1.0,
+      2.0,
+      1.0,
+      1.0,
+      2.0,
+      1.0,
+      4.0,
+      1.0
+    ],
+    "summed_separated_vertices": 32.0
+  },
+  "peak_rss_kib": 147908,
+  "primary_horizon": 8,
+  "production_gates_changed": false,
+  "root_census": true,
+  "runtime_seconds": 7.821600294000007,
+  "seed": 1004,
+  "source_kind": "constructed_non_Boltzmann",
+  "wired_cuts": [
+    {
+      "conductance": 0.42857142857142855,
+      "core_vertices": 5,
+      "cut_weight": 12.0,
+      "exterior_vertices": 469,
+      "inner": 1,
+      "outer": 4,
+      "root": 263,
+      "witness_vertices": [
+        225,
+        228,
+        229,
+        253,
+        262,
+        263,
+        393
+      ]
+    },
+    {
+      "conductance": 0.375,
+      "core_vertices": 5,
+      "cut_weight": 12.0,
+      "exterior_vertices": 469,
+      "inner": 1,
+      "outer": 4,
+      "root": 312,
+      "witness_vertices": [
+        179,
+        182,
+        185,
+        312,
+        313,
+        315,
+        328,
+        329
+      ]
+    },
+    {
+      "conductance": 0.42857142857142855,
+      "core_vertices": 5,
+      "cut_weight": 12.0,
+      "exterior_vertices": 454,
+      "inner": 1,
+      "outer": 4,
+      "root": 388,
+      "witness_vertices": [
+        372,
+        373,
+        387,
+        388,
+        389,
+        391,
+        392
+      ]
+    },
+    {
+      "conductance": 0.42857142857142855,
+      "core_vertices": 5,
+      "cut_weight": 12.0,
+      "exterior_vertices": 466,
+      "inner": 1,
+      "outer": 4,
+      "root": 518,
+      "witness_vertices": [
+        117,
+        120,
+        489,
+        490,
+        515,
+        517,
+        518
+      ]
+    }
+  ]
+}

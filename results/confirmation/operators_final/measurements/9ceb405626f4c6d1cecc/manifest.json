@@ -1,0 +1,115 @@
+{
+  "artifacts": {
+    "diffusion.npz": "8194a592f88148a96c9810926a057d5be924fd0c7b9bae024c04df7ee56bad39",
+    "geometry.dat": "ac42163a7df85e935b39d57cd12d5747eebc4f1ccd430e293eee7f26a833e9aa",
+    "operators.json": "69a294555caa406baa1ee0776df441fbe31effd08718286211f46995849b749a",
+    "root_persistence.json": "b55d0130d1ca46e4acccfba9d98e1acca429b3179fb294cd2bfe59fe9d69920b",
+    "surgery.json": "5a49de27bdf2fc2182c22620e2876324191b8ea859844ba9e571883d0875314e"
+  },
+  "complete": true,
+  "identity": {
+    "config": {
+      "clock": {
+        "fem_eigenvalue_to_dual_ratio": 115.41138122340897,
+        "mode_start": 1,
+        "mode_stop": 13,
+        "ratio_quartiles": [
+          106.660706357084,
+          144.47135898730102
+        ],
+        "ratios": [
+          431.19294143459734,
+          432.1249263867842,
+          144.32081751441015,
+          144.92298340597355,
+          84.82345089603824,
+          85.55951971526284,
+          106.26087681067003,
+          106.79398287255532,
+          116.24413371123241,
+          116.50205062329925,
+          114.45868754213696,
+          114.57862873558553
+        ],
+        "unique_physical_clock_established": false,
+        "use": "fem_time=dual_time/ratio; frozen on a separate reference geometry, never refitted per intervention"
+      },
+      "config": {
+        "clock_modes": [
+          1,
+          13
+        ],
+        "dual_times": [
+          8,
+          12,
+          16,
+          24,
+          32
+        ],
+        "flip_counts": [
+          0,
+          240
+        ],
+        "horizon": 8,
+        "maximum_ds_tail_width": 0.05,
+        "maximum_refinement_ds_change": 0.05,
+        "moving_probability": 0.5,
+        "note": "Finite FEM convergence screens do not prove continuum convergence; no per-geometry clock fitting",
+        "primary_comparison_time": 32,
+        "reference": "independent deterministic bipyramid with 24 spatial vertices, four time slices",
+        "refinement_levels": 3,
+        "root_sampling": "all",
+        "secondary_study": true,
+        "seeds": [
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018
+        ],
+        "source_kind": "constructed_non_Boltzmann",
+        "sparse_modes": 256,
+        "spatial_vertices": 24,
+        "time_slices": 4
+      },
+      "flips": 240,
+      "seed": 2012,
+      "stage": "intervention and FEM refinement"
+    },
+    "environment": {
+      "networkx": "3.6.1",
+      "numpy": "2.3.5",
+      "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+      "python": "3.13.5",
+      "scipy": "1.17.0"
+    },
+    "inputs": {},
+    "source": {
+      "cdt_confirmation/__init__.py": "d66c6813d96ac86e7dba9266b5b893aa1212d827c17d386491eb197ce4b2575b",
+      "cdt_confirmation/analysis.py": "fffb4aa4cf95f01531c91d96f2ce20ca17b61c91638ceb106f6457d13fa0db3a",
+      "cdt_confirmation/fields.py": "e65aa1ce9dd055007d9fc2745240bee9da7de13b859aa8e7061bf4071351e6c2",
+      "cdt_confirmation/measurement.py": "d9b3b3d0fb971230dfb1dcd2e722611c36007708755a1e26778534a4a1c5a2ae",
+      "cdt_confirmation/operators.py": "e1bd67aca8b3bd1b5399990fe26047d2ae07725ba2a4d329fafa531bd5a67128",
+      "cdt_confirmation/physical.py": "3592cbe3e53ad54b385e69ef33d28923007fa4c12aa72fe3a3a7dcab159e229a",
+      "cdt_confirmation/provenance.py": "f7fe67d16a5ae0b0627ca116ddda950e1c6bdb7974f3f2b75cbcc907501b11c5",
+      "cdt_confirmation/statistics.py": "9a2e56f3ee106b448d118e97c803f12b325685b35029fc498b7b46a99dd49f6c",
+      "cdt_confirmation/walks.py": "c51bb8bcc22942af09df9ee574f16ec639e602f1755b62d7ce21f81373b75bdc",
+      "cdt_mechanisms/__init__.py": "7f380031e1c4e2f87679fe91aa7d0b968a526bdfb4d528d78ba63fb4e89b2a7b",
+      "cdt_mechanisms/bottlenecks.py": "c9b7a869177c88c036341c1634431d3c46574a868fb95f2ab4ea06c62f591016",
+      "cdt_mechanisms/diffusion.py": "71f3536943fcd24e5f00cb24fcfe910a0f057e9128673d7f493019540f7c2163",
+      "cdt_mechanisms/evidence.py": "daab7fbc61b1932fd5909fc0e9eb4de6d7d1093cedcdbac7bf078bb01b9cd185",
+      "cdt_mechanisms/fem.py": "150db2fa90a43e9414b149735e339563695ffd1ae75cf9d52925b472a3f82b8e",
+      "cdt_mechanisms/graph.py": "08c33ad3b313f96b99ecaedc6bce19f22d8e9d570dad865f4e2464878e55607a",
+      "cdt_mechanisms/inference.py": "43c20c53de8268ce507776a6bb7512efb645f041070c9d19661b1af0bb1b8583",
+      "cdt_mechanisms/persistence.py": "a6d7383792b08c806d264a91413030470bba6c8b96c994bcbc3ef0ff7d0da3fa",
+      "cdt_mechanisms/scales.py": "0339bf5a0f5279a2d37bbfebc703ec4e178e6f2db793743a9d72e2342c9b5ec0",
+      "cdt_mechanisms/study.py": "d0cc88af96f3d95133be9821a6c817975654410e0af937a6690b3b5bc4ebe2ea",
+      "cdt_mechanisms/triangulations.py": "d31d037f7239f7bea18be70dc4ebfc386116e5e8f334636cf5fbf84eeaec39ed"
+    }
+  },
+  "production_gates_changed": false,
+  "schema": "cdt-confirmation-stage-v1"
+}
