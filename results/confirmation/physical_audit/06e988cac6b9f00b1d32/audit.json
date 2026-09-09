@@ -1,0 +1,23 @@
+{
+  "all_production_gate_statuses_open": false,
+  "ensemble_screens": [],
+  "failures": [],
+  "missing_requirements": [
+    ".git",
+    "workflows/run_chain.py",
+    "workflows/run_chain_safe.py",
+    "external/3d-cdt/simulation.cpp",
+    "build/simulator/cdt-run",
+    "configs/methods/production_gates.json"
+  ],
+  "native_manifest_status_counts": {},
+  "no_process_liveness_inferred": true,
+  "note": "Diagnostic thresholds introduced by this continuation; not a historical preregistration.",
+  "physical_measurements_run": false,
+  "production_gate_records": {},
+  "production_gates_changed": false,
+  "repository": "/mnt/data/cdt-confirmation/work",
+  "reproduction_pass": false,
+  "status": "BLOCKED",
+  "valid_native_jobs": 0
+}

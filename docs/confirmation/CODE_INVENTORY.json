@@ -1,0 +1,122 @@
+[
+  {
+    "path": "src/cdt_confirmation/__init__.py",
+    "lines": 2,
+    "role": "Independent mechanism confirmation; constructed ensembles are not physical CDT."
+  },
+  {
+    "path": "src/cdt_confirmation/analysis.py",
+    "lines": 127,
+    "role": "Locked primary replication plus explicitly secondary controlled analyses."
+  },
+  {
+    "path": "src/cdt_confirmation/fields.py",
+    "lines": 111,
+    "role": "Oriented persistence over prime fields, independently reduced from the F2 backend."
+  },
+  {
+    "path": "src/cdt_confirmation/measurement.py",
+    "lines": 131,
+    "role": "All-root or explicitly uniform measurements of validated saved triangulations."
+  },
+  {
+    "path": "src/cdt_confirmation/operators.py",
+    "lines": 73,
+    "role": "Sparse generalized FEM modes and honest finite-matrix heat-trace tail bounds."
+  },
+  {
+    "path": "src/cdt_confirmation/physical.py",
+    "lines": 157,
+    "role": "Read-only audit of the ORIGINAL run_chain.py manifests and diagnostics.csv."
+  },
+  {
+    "path": "src/cdt_confirmation/provenance.py",
+    "lines": 63,
+    "role": "Immutable, hash-verified, independently resumable stages with POSIX advisory locks."
+  },
+  {
+    "path": "src/cdt_confirmation/statistics.py",
+    "lines": 70,
+    "role": "Independent-unit tests, prespecified directions, and cluster-aware diagnostics."
+  },
+  {
+    "path": "src/cdt_confirmation/walks.py",
+    "lines": 37,
+    "role": "Exact sparse propagation with full displacement distributions, not sqrt-time assumptions."
+  },
+  {
+    "path": "tests/confirmation/test_confirmation.py",
+    "lines": 166,
+    "role": "Regression and failure tests."
+  },
+  {
+    "path": "tests/confirmation/test_operators.py",
+    "lines": 43,
+    "role": "Regression and failure tests."
+  },
+  {
+    "path": "tests/confirmation/test_physical.py",
+    "lines": 101,
+    "role": "Regression and failure tests."
+  },
+  {
+    "path": "workflows/audit_intervention_controls.py",
+    "lines": 40,
+    "role": "Descriptive before/after geometric confounder audit, no selected significance test."
+  },
+  {
+    "path": "workflows/audit_physical_confirmation.py",
+    "lines": 22,
+    "role": "Read-only native physical CDT readiness audit; no simulator or gate modifications."
+  },
+  {
+    "path": "workflows/collect_confirmation_results.py",
+    "lines": 91,
+    "role": "Collect current-source verified studies, generate figures, and publish a report atomically."
+  },
+  {
+    "path": "workflows/crosscheck_confirmation_statistics.py",
+    "lines": 45,
+    "role": "Secondary verification against an independent statsmodels least-squares fit."
+  },
+  {
+    "path": "workflows/plot_confirmation.py",
+    "lines": 106,
+    "role": "Regenerate every figure from the delivered numerical summaries and saved arrays."
+  },
+  {
+    "path": "workflows/run_confirmation.py",
+    "lines": 48,
+    "role": "Generate immutable independent-geometry measurements; --analyze consumes saved stages."
+  },
+  {
+    "path": "workflows/run_confirmation_pipeline.py",
+    "lines": 48,
+    "role": "Selected reproducible research workflows, with physical data kept separate."
+  },
+  {
+    "path": "workflows/run_diagnostic_calibration.py",
+    "lines": 21,
+    "role": "Executed workflow and calibration entry point."
+  },
+  {
+    "path": "workflows/run_operator_confirmation.py",
+    "lines": 98,
+    "role": "Executed workflow and calibration entry point."
+  },
+  {
+    "path": "workflows/run_size_confirmation.py",
+    "lines": 46,
+    "role": "Executed workflow and calibration entry point."
+  },
+  {
+    "path": "workflows/test_confirmation.py",
+    "lines": 30,
+    "role": "Run the selected scientific suites; explicitly not the full legacy C++ suite."
+  },
+  {
+    "path": "workflows/verify_confirmation_results.py",
+    "lines": 36,
+    "role": "Verify selected evidence stages, every artifact hash, and executing source snapshots."
+  }
+]

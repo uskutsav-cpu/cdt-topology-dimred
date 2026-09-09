@@ -1,0 +1,28 @@
+{
+  "checked": {
+    "H1_finite_total_persistence": {
+      "beta_absolute_difference": 4.631711680858075e-16,
+      "n_geometry_clusters": 32,
+      "n_rows": 16896,
+      "production_beta": 0.010571075166049394,
+      "production_cluster_standard_error": 0.0019999587534983002,
+      "residual_dof": 16856,
+      "standard_error_absolute_difference": 3.382710778154774e-17,
+      "statsmodels_beta": 0.01057107516604893,
+      "statsmodels_cluster_standard_error": 0.0019999587534982664
+    },
+    "conductance_r4": {
+      "beta_absolute_difference": 6.217248937900877e-15,
+      "n_geometry_clusters": 32,
+      "n_rows": 16896,
+      "production_beta": 1.213170654457038,
+      "production_cluster_standard_error": 0.1197902716046383,
+      "residual_dof": 16856,
+      "standard_error_absolute_difference": 2.914335439641036e-16,
+      "statsmodels_beta": 1.2131706544570442,
+      "statsmodels_cluster_standard_error": 0.11979027160463859
+    }
+  },
+  "passed": true,
+  "scope": "secondary independent arithmetic verification; not new hypothesis testing"
+}

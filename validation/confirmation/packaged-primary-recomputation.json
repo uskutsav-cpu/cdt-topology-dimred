@@ -1,0 +1,23 @@
+{
+  "recomputed_from_root_aggregate_files": true,
+  "result": {
+    "n_independent_geometries": 32,
+    "pearson_r": -0.37599011132655635,
+    "slope": -0.028862656650555263,
+    "direction": "negative",
+    "permutation_p": 0.018,
+    "correlation_ci95": [
+      -0.6646335991290584,
+      -0.036715120597524055
+    ],
+    "slope_ci95": [
+      -0.058707894234000656,
+      -0.002651252097636711
+    ],
+    "permutations": 9999,
+    "bootstrap_repetitions": 4999,
+    "invalid_bootstrap_draws": 0,
+    "causal_claim": false
+  },
+  "exact_match": true
+}

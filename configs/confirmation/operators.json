@@ -1,0 +1,20 @@
+{
+  "secondary_study": true,
+  "source_kind": "constructed_non_Boltzmann",
+  "seeds": [2011,2012,2013,2014,2015,2016,2017,2018],
+  "spatial_vertices": 24,
+  "time_slices": 4,
+  "flip_counts": [0,240],
+  "root_sampling": "all",
+  "horizon": 8,
+  "moving_probability": 0.5,
+  "reference": "independent deterministic bipyramid with 24 spatial vertices, four time slices",
+  "clock_modes": [1,13],
+  "refinement_levels": 3,
+  "sparse_modes": 256,
+  "dual_times": [8,12,16,24,32],
+  "maximum_ds_tail_width": 0.05,
+  "maximum_refinement_ds_change": 0.05,
+  "primary_comparison_time": 32,
+  "note": "Finite FEM convergence screens do not prove continuum convergence; no per-geometry clock fitting"
+}

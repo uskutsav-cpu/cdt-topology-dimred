@@ -1,0 +1,27 @@
+[
+  {
+    "job": "primary-final",
+    "returncode": 0,
+    "wall_seconds": 2.9010342609999498
+  },
+  {
+    "job": "size-final",
+    "returncode": 0,
+    "wall_seconds": 1.487433805999899
+  },
+  {
+    "job": "diagnostics-final",
+    "returncode": 0,
+    "wall_seconds": 2.4770892200001526
+  },
+  {
+    "job": "physical-final",
+    "returncode": 2,
+    "wall_seconds": 0.7320265139999265
+  },
+  {
+    "job": "operators-final",
+    "returncode": 0,
+    "wall_seconds": 96.9986652980001
+  }
+]

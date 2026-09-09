@@ -1,0 +1,114 @@
+{
+  "artifacts": {
+    "summary.json": "80b9d4ffd3d75fcace5afe89f3521aaaf09369a79d3aff073cba5516b6a1556e"
+  },
+  "complete": true,
+  "identity": {
+    "config": {
+      "config": {
+        "field_roots": 16,
+        "fields": [
+          2,
+          3,
+          5
+        ],
+        "flips_per_spatial_vertex": 10,
+        "horizon": 8,
+        "interpretation": "Same seed is paired across sizes. This is synthetic finite-volume sensitivity, not continuum scaling or a coupling experiment.",
+        "max_steps": 48,
+        "moving_probability": 0.5,
+        "radii": [
+          2,
+          3,
+          4,
+          6,
+          8
+        ],
+        "roots": "all",
+        "secondary_exploratory_after_primary_analysis": true,
+        "seeds": [
+          3211,
+          3212,
+          3213,
+          3214,
+          3215,
+          3216,
+          3217,
+          3218
+        ],
+        "sigmas": [
+          8,
+          12,
+          16,
+          24,
+          32
+        ],
+        "source_kind": "constructed_non_Boltzmann",
+        "spatial_vertices": [
+          12,
+          24,
+          48
+        ],
+        "time_slices": 4
+      },
+      "stage": "finite-size sensitivity"
+    },
+    "environment": {
+      "networkx": "3.6.1",
+      "numpy": "2.3.5",
+      "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+      "python": "3.13.5",
+      "scipy": "1.17.0"
+    },
+    "inputs": {
+      "measurements/029608e848e994a7a4a1": "f61870e917276d82eb840f93831c1dec95cf5ed3a6688712c6429f6a0617d75b",
+      "measurements/0777e55c03d7cce5a130": "6790befdb85129aeec7af0fef2110a9b66f4542f95bd1b158d4e477228ca5ef7",
+      "measurements/1070c1b23578e529c52e": "fdbcc11b82cd41d54a2ed60c6aa5569679005dd10f04951a6214f2f2faec4c6d",
+      "measurements/24ab2433e8355cb3cc1d": "6408f02786494ffe2578935c478d90010728c9c743c674ac9155dd018c8e7439",
+      "measurements/2b2458a83043b8cd619c": "1a91319d47245209dd37e2ef682d27a6015cc2a97c24175a5ac297b42cfe852f",
+      "measurements/36be07fb08a84260a150": "cfb851ee424f0ad27af0fdf9ac3d3b2204be3cade1a75df2c9daffbb3297aeff",
+      "measurements/401df58ee75ad6f0ef85": "eb3fac667c5829fd8036a0d5a519d157ed2721baf2a084db79f01f5815f21d6b",
+      "measurements/5c54e225ce6ff1322f3b": "3d108cc8c1517900317fe83e0bc37d86b1f583093d03fb7c8d81a0705aa48675",
+      "measurements/889077168b10cd011780": "8736209e996f1ce7ef66bc929f508cf42c8cf3758de1aeec2334a6e5e6425594",
+      "measurements/8f3e2193dfa2a4275988": "ef393c8a6dcab9a1c50fc6189af408b259e0692640d6b4cce5a30efbb835fd2e",
+      "measurements/9ccaee6f27e124615150": "cb57c9956d183dfdbfbd2785af259c56464d202865632bbd6e977776cf7d3171",
+      "measurements/9d3421709d294c5e9b57": "7ff764a0f83afd4b2971655d8a6c360313e6d4132052c7574551aa6e18a1edfe",
+      "measurements/ab287157c161e779d921": "18d756338c7cd8853e2be4867688dee26b44f0eca7f5b28925e1e046fb14eb7a",
+      "measurements/ae1ebff010aec495ec9c": "ff84e0d4a32a2ef2871d6e51a640caad1be5f707c68b68d92181918fcf32c764",
+      "measurements/aee7558acccf2b2e5b05": "d7c3de60c47630eb85c22021a3ace6a52b40d1315eb658e177db694bcc673ad9",
+      "measurements/b52e680509c178e5e5eb": "88133c6df211ad9fa3013f7048a64d11ab258b18dcb4bf24a85e48889e7b00f4",
+      "measurements/b5498e4f6177c561a983": "9a51dc11eef60fc8e29023449b8967ae35d3c106b89faa6f1a23acabcef9a597",
+      "measurements/b73fef8c8a3bc110dce5": "8298a94a57fe410c0373d69025737de3e00ce6950fef1b1ed08f266326d5f47a",
+      "measurements/b915aab64e6178637776": "47f9919bb7c3410b5ac77385a60b5190a043080b5a09d4f891a0b02ebb0bc99c",
+      "measurements/c8a6faba8f05b998636f": "99c00b5af16de1dbfabf282511524423ef89822b3401255348a7cc17d4b0c42d",
+      "measurements/cfb5645ecf2b86583531": "5078b263d423b2e8f1940f733dd9d7bae344b0f6c25c76304a4213b3edbfbc16",
+      "measurements/cfd0dbc39dd11df2d048": "5d51b4db9994016f8826d9e395b966d416d4085426a5cbba88badf5cc5e36363",
+      "measurements/d0be59adbb4879f80401": "523dbe33571fc41cf91d86ffc59a4b2885e006abf30c2e1a4e9e466fcabd84d4",
+      "measurements/e1584e4acda235b22635": "b1781e506d35661d5014478dbed1a4975f23b0663b145d7bd3a4828dada2b7db"
+    },
+    "source": {
+      "cdt_confirmation/__init__.py": "d66c6813d96ac86e7dba9266b5b893aa1212d827c17d386491eb197ce4b2575b",
+      "cdt_confirmation/analysis.py": "fffb4aa4cf95f01531c91d96f2ce20ca17b61c91638ceb106f6457d13fa0db3a",
+      "cdt_confirmation/fields.py": "e65aa1ce9dd055007d9fc2745240bee9da7de13b859aa8e7061bf4071351e6c2",
+      "cdt_confirmation/measurement.py": "d9b3b3d0fb971230dfb1dcd2e722611c36007708755a1e26778534a4a1c5a2ae",
+      "cdt_confirmation/operators.py": "e1bd67aca8b3bd1b5399990fe26047d2ae07725ba2a4d329fafa531bd5a67128",
+      "cdt_confirmation/physical.py": "3592cbe3e53ad54b385e69ef33d28923007fa4c12aa72fe3a3a7dcab159e229a",
+      "cdt_confirmation/provenance.py": "f7fe67d16a5ae0b0627ca116ddda950e1c6bdb7974f3f2b75cbcc907501b11c5",
+      "cdt_confirmation/statistics.py": "9a2e56f3ee106b448d118e97c803f12b325685b35029fc498b7b46a99dd49f6c",
+      "cdt_confirmation/walks.py": "c51bb8bcc22942af09df9ee574f16ec639e602f1755b62d7ce21f81373b75bdc",
+      "cdt_mechanisms/__init__.py": "7f380031e1c4e2f87679fe91aa7d0b968a526bdfb4d528d78ba63fb4e89b2a7b",
+      "cdt_mechanisms/bottlenecks.py": "c9b7a869177c88c036341c1634431d3c46574a868fb95f2ab4ea06c62f591016",
+      "cdt_mechanisms/diffusion.py": "71f3536943fcd24e5f00cb24fcfe910a0f057e9128673d7f493019540f7c2163",
+      "cdt_mechanisms/evidence.py": "daab7fbc61b1932fd5909fc0e9eb4de6d7d1093cedcdbac7bf078bb01b9cd185",
+      "cdt_mechanisms/fem.py": "150db2fa90a43e9414b149735e339563695ffd1ae75cf9d52925b472a3f82b8e",
+      "cdt_mechanisms/graph.py": "08c33ad3b313f96b99ecaedc6bce19f22d8e9d570dad865f4e2464878e55607a",
+      "cdt_mechanisms/inference.py": "43c20c53de8268ce507776a6bb7512efb645f041070c9d19661b1af0bb1b8583",
+      "cdt_mechanisms/persistence.py": "a6d7383792b08c806d264a91413030470bba6c8b96c994bcbc3ef0ff7d0da3fa",
+      "cdt_mechanisms/scales.py": "0339bf5a0f5279a2d37bbfebc703ec4e178e6f2db793743a9d72e2342c9b5ec0",
+      "cdt_mechanisms/study.py": "d0cc88af96f3d95133be9821a6c817975654410e0af937a6690b3b5bc4ebe2ea",
+      "cdt_mechanisms/triangulations.py": "d31d037f7239f7bea18be70dc4ebfc386116e5e8f334636cf5fbf84eeaec39ed"
+    }
+  },
+  "production_gates_changed": false,
+  "schema": "cdt-confirmation-stage-v1"
+}

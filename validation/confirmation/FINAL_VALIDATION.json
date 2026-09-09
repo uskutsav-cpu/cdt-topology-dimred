@@ -1,0 +1,23 @@
+{
+  "new_python_files": 24,
+  "new_python_lines": 1712,
+  "selected_scientific_tests": {
+    "tests": 601,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "installer_tests_passed": 14,
+  "evidence": {
+    "stages_verified": 94,
+    "artifacts_verified": 594,
+    "artifact_bytes": 201707570,
+    "source_snapshots_match": true,
+    "physical_CDT_result": false,
+    "production_gates_changed": false
+  },
+  "physical_CDT_computed": false,
+  "production_gates_changed": false,
+  "github_pushed": false,
+  "review_branch_attempt_status": "HTTP403 Resource not accessible by integration"
+}

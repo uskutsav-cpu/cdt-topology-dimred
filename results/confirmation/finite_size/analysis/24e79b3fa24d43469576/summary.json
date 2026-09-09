@@ -1,0 +1,291 @@
+{
+  "config": {
+    "field_roots": 16,
+    "fields": [
+      2,
+      3,
+      5
+    ],
+    "flips_per_spatial_vertex": 10,
+    "horizon": 8,
+    "interpretation": "Same seed is paired across sizes. This is synthetic finite-volume sensitivity, not continuum scaling or a coupling experiment.",
+    "max_steps": 48,
+    "moving_probability": 0.5,
+    "radii": [
+      2,
+      3,
+      4,
+      6,
+      8
+    ],
+    "roots": "all",
+    "secondary_exploratory_after_primary_analysis": true,
+    "seeds": [
+      3211,
+      3212,
+      3213,
+      3214,
+      3215,
+      3216,
+      3217,
+      3218
+    ],
+    "sigmas": [
+      8,
+      12,
+      16,
+      24,
+      32
+    ],
+    "source_kind": "constructed_non_Boltzmann",
+    "spatial_vertices": [
+      12,
+      24,
+      48
+    ],
+    "time_slices": 4
+  },
+  "inference": "secondary per-size descriptive tests, not three independent confirmations; seeds paired across sizes",
+  "physical_CDT": false,
+  "records": [
+    {
+      "path": "measurements/36be07fb08a84260a150",
+      "reused": true,
+      "seed": 3211,
+      "spatial_vertices": 12
+    },
+    {
+      "path": "measurements/0777e55c03d7cce5a130",
+      "reused": true,
+      "seed": 3212,
+      "spatial_vertices": 12
+    },
+    {
+      "path": "measurements/24ab2433e8355cb3cc1d",
+      "reused": true,
+      "seed": 3213,
+      "spatial_vertices": 12
+    },
+    {
+      "path": "measurements/2b2458a83043b8cd619c",
+      "reused": true,
+      "seed": 3214,
+      "spatial_vertices": 12
+    },
+    {
+      "path": "measurements/cfb5645ecf2b86583531",
+      "reused": true,
+      "seed": 3215,
+      "spatial_vertices": 12
+    },
+    {
+      "path": "measurements/8f3e2193dfa2a4275988",
+      "reused": true,
+      "seed": 3216,
+      "spatial_vertices": 12
+    },
+    {
+      "path": "measurements/ab287157c161e779d921",
+      "reused": true,
+      "seed": 3217,
+      "spatial_vertices": 12
+    },
+    {
+      "path": "measurements/b52e680509c178e5e5eb",
+      "reused": true,
+      "seed": 3218,
+      "spatial_vertices": 12
+    },
+    {
+      "path": "measurements/ae1ebff010aec495ec9c",
+      "reused": true,
+      "seed": 3211,
+      "spatial_vertices": 24
+    },
+    {
+      "path": "measurements/1070c1b23578e529c52e",
+      "reused": true,
+      "seed": 3212,
+      "spatial_vertices": 24
+    },
+    {
+      "path": "measurements/b5498e4f6177c561a983",
+      "reused": true,
+      "seed": 3213,
+      "spatial_vertices": 24
+    },
+    {
+      "path": "measurements/029608e848e994a7a4a1",
+      "reused": true,
+      "seed": 3214,
+      "spatial_vertices": 24
+    },
+    {
+      "path": "measurements/e1584e4acda235b22635",
+      "reused": true,
+      "seed": 3215,
+      "spatial_vertices": 24
+    },
+    {
+      "path": "measurements/d0be59adbb4879f80401",
+      "reused": true,
+      "seed": 3216,
+      "spatial_vertices": 24
+    },
+    {
+      "path": "measurements/b915aab64e6178637776",
+      "reused": true,
+      "seed": 3217,
+      "spatial_vertices": 24
+    },
+    {
+      "path": "measurements/9d3421709d294c5e9b57",
+      "reused": true,
+      "seed": 3218,
+      "spatial_vertices": 24
+    },
+    {
+      "path": "measurements/401df58ee75ad6f0ef85",
+      "reused": true,
+      "seed": 3211,
+      "spatial_vertices": 48
+    },
+    {
+      "path": "measurements/889077168b10cd011780",
+      "reused": true,
+      "seed": 3212,
+      "spatial_vertices": 48
+    },
+    {
+      "path": "measurements/cfd0dbc39dd11df2d048",
+      "reused": true,
+      "seed": 3213,
+      "spatial_vertices": 48
+    },
+    {
+      "path": "measurements/b73fef8c8a3bc110dce5",
+      "reused": true,
+      "seed": 3214,
+      "spatial_vertices": 48
+    },
+    {
+      "path": "measurements/c8a6faba8f05b998636f",
+      "reused": true,
+      "seed": 3215,
+      "spatial_vertices": 48
+    },
+    {
+      "path": "measurements/5c54e225ce6ff1322f3b",
+      "reused": true,
+      "seed": 3216,
+      "spatial_vertices": 48
+    },
+    {
+      "path": "measurements/9ccaee6f27e124615150",
+      "reused": true,
+      "seed": 3217,
+      "spatial_vertices": 48
+    },
+    {
+      "path": "measurements/aee7558acccf2b2e5b05",
+      "reused": true,
+      "seed": 3218,
+      "spatial_vertices": 48
+    }
+  ],
+  "sizes": [
+    {
+      "H1_vs_Ds32": {
+        "bootstrap_repetitions": 1999,
+        "causal_claim": false,
+        "correlation_ci95": [
+          -0.584979199510956,
+          0.8072432685864486
+        ],
+        "direction": "negative",
+        "invalid_bootstrap_draws": 0,
+        "n_independent_geometries": 8,
+        "pearson_r": 0.07071530187635436,
+        "permutation_p": 0.57,
+        "permutations": 1999,
+        "slope": 0.014338015175792682,
+        "slope_ci95": [
+          -0.16555294119690694,
+          0.19451874753829004
+        ]
+      },
+      "finite_field_comparisons": 256,
+      "finite_field_disagreements": 0,
+      "mean_Ds32": 2.331206580361709,
+      "mean_H1": 2.9645833333333336,
+      "mean_fraction_whole_geometry_balls": 0.02291666666666667,
+      "minimum_pre_mix_fraction": 1.0,
+      "n_seeds": 8,
+      "spatial_vertices": 12,
+      "tetrahedra": 240
+    },
+    {
+      "H1_vs_Ds32": {
+        "bootstrap_repetitions": 1999,
+        "causal_claim": false,
+        "correlation_ci95": [
+          -0.9748310806710736,
+          0.3988432725574599
+        ],
+        "direction": "negative",
+        "invalid_bootstrap_draws": 0,
+        "n_independent_geometries": 8,
+        "pearson_r": -0.4273704248778711,
+        "permutation_p": 0.153,
+        "permutations": 1999,
+        "slope": -0.015529149905704271,
+        "slope_ci95": [
+          -0.03830135458075078,
+          0.01832200280827564
+        ]
+      },
+      "finite_field_comparisons": 256,
+      "finite_field_disagreements": 0,
+      "mean_Ds32": 2.510802588641771,
+      "mean_H1": 5.385416666666667,
+      "mean_fraction_whole_geometry_balls": 0.0,
+      "minimum_pre_mix_fraction": 1.0,
+      "n_seeds": 8,
+      "spatial_vertices": 24,
+      "tetrahedra": 528
+    },
+    {
+      "H1_vs_Ds32": {
+        "bootstrap_repetitions": 1999,
+        "causal_claim": false,
+        "correlation_ci95": [
+          -0.8013416049941348,
+          0.6909702948512729
+        ],
+        "direction": "negative",
+        "invalid_bootstrap_draws": 0,
+        "n_independent_geometries": 8,
+        "pearson_r": -0.2983518442652852,
+        "permutation_p": 0.2615,
+        "permutations": 1999,
+        "slope": -0.026439648161375444,
+        "slope_ci95": [
+          -0.09186367970964227,
+          0.20745968539297902
+        ]
+      },
+      "finite_field_comparisons": 256,
+      "finite_field_disagreements": 0,
+      "mean_Ds32": 2.587597206927288,
+      "mean_H1": 5.4646739130434785,
+      "mean_fraction_whole_geometry_balls": 0.0,
+      "minimum_pre_mix_fraction": 1.0,
+      "n_seeds": 8,
+      "spatial_vertices": 48,
+      "tetrahedra": 1104
+    }
+  ],
+  "total_roots": 14976,
+  "wall_seconds": 0.08308830700002545,
+  "workers": 3
+}

@@ -1,0 +1,8 @@
+{
+  "stages_verified": 94,
+  "artifacts_verified": 594,
+  "artifact_bytes": 201707570,
+  "source_snapshots_match": true,
+  "physical_CDT_result": false,
+  "production_gates_changed": false
+}
