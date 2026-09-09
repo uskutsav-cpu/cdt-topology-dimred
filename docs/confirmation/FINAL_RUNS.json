@@ -1,0 +1,10 @@
+{
+  "primary_root": "results/confirmation/census",
+  "primary_analysis": "results/confirmation/census/analysis/98d90bde2c199ea96603/analysis.json",
+  "finite_size_root": "results/confirmation/finite_size",
+  "finite_size_analysis": "results/confirmation/finite_size/analysis/24e79b3fa24d43469576/summary.json",
+  "operators_root": "results/confirmation/operators_final",
+  "operators_analysis": "results/confirmation/operators_final/analysis/f687d33ad6101601d9a7/summary.json",
+  "diagnostic_calibration": "results/confirmation/diagnostic_calibration/91f2ffe8e0cd078abb01/calibration.json",
+  "physical_audit": "results/confirmation/physical_audit/06e988cac6b9f00b1d32/audit.json"
+}

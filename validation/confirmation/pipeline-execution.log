@@ -1,0 +1,107 @@
+{"environment": {"numpy": "2.3.5", "scipy": "1.17.0", "networkx": "3.6.1", "pytest": "9.0.2", "sympy": "1.14.0", "arviz": "1.1.0"}, "repository": {"checkout": false, "reference_commit": "7086a739da6f3c0f56788e211c78424a0cf65c22"}, "mode": "synthetic"}
+Selected suites only: mechanism, confirmation, and optional pinned Python compatibility fixture.
+........................................................................ [ 11%]
+........................................................................ [ 23%]
+........................................................................ [ 35%]
+........................................................................ [ 47%]
+........................................................................ [ 59%]
+........................................................................ [ 71%]
+........................................................................ [ 83%]
+........................................................................ [ 95%]
+.........................                                                [100%]
+601 passed in 11.82s
+{"seed": 1001, "path": "measurements/95050d7b7cd62467d7fc", "reused": true}
+{"seed": 1002, "path": "measurements/c833288768f144d6b6d6", "reused": true}
+{"seed": 1003, "path": "measurements/f7696bc32d0ccfdae11a", "reused": true}
+{"seed": 1004, "path": "measurements/afd5ea6329bbb772c2ed", "reused": true}
+{"seed": 1005, "path": "measurements/407179d331a2e9937e1a", "reused": true}
+{"seed": 1006, "path": "measurements/8ea08bc41e5ad7a1b501", "reused": true}
+{"seed": 1007, "path": "measurements/eb59a0b896e48ddf9ce3", "reused": true}
+{"seed": 1008, "path": "measurements/9ebe1535f70dc3556cb0", "reused": true}
+{"seed": 1009, "path": "measurements/a4db6bab5709343cc45f", "reused": true}
+{"seed": 1010, "path": "measurements/303767bd6fa153da3e2a", "reused": true}
+{"seed": 1011, "path": "measurements/56145aed5881e85b8941", "reused": true}
+{"seed": 1012, "path": "measurements/5dcacd8a4220f1baafed", "reused": true}
+{"seed": 1013, "path": "measurements/589bad3dc7903cae2db7", "reused": true}
+{"seed": 1014, "path": "measurements/cbe14e9e2778c32d119f", "reused": true}
+{"seed": 1015, "path": "measurements/240479aac2b0697450dc", "reused": true}
+{"seed": 1016, "path": "measurements/3895c927a86cbb7df4cd", "reused": true}
+{"seed": 1017, "path": "measurements/c38df92eea4b33eb1f67", "reused": true}
+{"seed": 1018, "path": "measurements/8aa64e6d121784441df8", "reused": true}
+{"seed": 1019, "path": "measurements/37756d9785477ac5834a", "reused": true}
+{"seed": 1020, "path": "measurements/075c423dd53a0ed5213d", "reused": true}
+{"seed": 1021, "path": "measurements/3d514b32bb7752c4f671", "reused": true}
+{"seed": 1022, "path": "measurements/1ded1f6e616cbc42015a", "reused": true}
+{"seed": 1023, "path": "measurements/8029fdf728900666baa2", "reused": true}
+{"seed": 1024, "path": "measurements/d9b4956c53cda4eb6eb6", "reused": true}
+{"seed": 1025, "path": "measurements/04d17b141002ebb41197", "reused": true}
+{"seed": 1026, "path": "measurements/9bfc1455b36862cdcd12", "reused": true}
+{"seed": 1027, "path": "measurements/34a9c3dfc92fabdd11c2", "reused": true}
+{"seed": 1028, "path": "measurements/27ac545c035bb790e70c", "reused": true}
+{"seed": 1029, "path": "measurements/485ed71b8958747bc595", "reused": true}
+{"seed": 1030, "path": "measurements/417c5b8176f224d49401", "reused": true}
+{"seed": 1031, "path": "measurements/77dfca45fb2927ba3b8c", "reused": true}
+{"seed": 1032, "path": "measurements/3b8350b311fd422f664e", "reused": true}
+{"seed": 1033, "path": "measurements/1d5ad0c7d7fcc01b51d5", "reused": true}
+{"seed": 1034, "path": "measurements/2771a7f4c1340318d33a", "reused": true}
+{"seed": 1035, "path": "measurements/10fc67818d42bbd1c7cb", "reused": true}
+{"seed": 1036, "path": "measurements/0810638e955c1fa1ba16", "reused": true}
+{"seed": 1037, "path": "measurements/3bc4857cc65d7bb8d9b8", "reused": true}
+{"seed": 1038, "path": "measurements/b541061cabd0c1455c1d", "reused": true}
+{"seed": 1039, "path": "measurements/554f56cced1e417afd56", "reused": true}
+{"seed": 1040, "path": "measurements/c450a98e8dba5facf6f9", "reused": true}
+{"seed": 1041, "path": "measurements/db6921db7aaec4acb424", "reused": true}
+{"seed": 1042, "path": "measurements/f894565afcff0f6c0904", "reused": true}
+{"seed": 1043, "path": "measurements/5bdc54039dc5343e7b00", "reused": true}
+{"seed": 1044, "path": "measurements/c826bf0998aaae7d8dab", "reused": true}
+{"seed": 1045, "path": "measurements/fb380d9840314fa460f0", "reused": true}
+{"seed": 1046, "path": "measurements/f7c1eb4b27d005619370", "reused": true}
+{"seed": 1047, "path": "measurements/0c8fa8a2855e436003fa", "reused": true}
+{"seed": 1048, "path": "measurements/bf549e473ddc50cbada5", "reused": true}
+Verified complete stage reuse
+{"analysis_path": "/mnt/data/cdt-confirmation/work/results/confirmation/census/analysis/98d90bde2c199ea96603", "reused": true}
+{"seed": 3211, "path": "measurements/36be07fb08a84260a150", "reused": true, "spatial_vertices": 12}
+{"seed": 3212, "path": "measurements/0777e55c03d7cce5a130", "reused": true, "spatial_vertices": 12}
+{"seed": 3213, "path": "measurements/24ab2433e8355cb3cc1d", "reused": true, "spatial_vertices": 12}
+{"seed": 3214, "path": "measurements/2b2458a83043b8cd619c", "reused": true, "spatial_vertices": 12}
+{"seed": 3215, "path": "measurements/cfb5645ecf2b86583531", "reused": true, "spatial_vertices": 12}
+{"seed": 3216, "path": "measurements/8f3e2193dfa2a4275988", "reused": true, "spatial_vertices": 12}
+{"seed": 3217, "path": "measurements/ab287157c161e779d921", "reused": true, "spatial_vertices": 12}
+{"seed": 3218, "path": "measurements/b52e680509c178e5e5eb", "reused": true, "spatial_vertices": 12}
+{"seed": 3211, "path": "measurements/ae1ebff010aec495ec9c", "reused": true, "spatial_vertices": 24}
+{"seed": 3212, "path": "measurements/1070c1b23578e529c52e", "reused": true, "spatial_vertices": 24}
+{"seed": 3213, "path": "measurements/b5498e4f6177c561a983", "reused": true, "spatial_vertices": 24}
+{"seed": 3214, "path": "measurements/029608e848e994a7a4a1", "reused": true, "spatial_vertices": 24}
+{"seed": 3215, "path": "measurements/e1584e4acda235b22635", "reused": true, "spatial_vertices": 24}
+{"seed": 3216, "path": "measurements/d0be59adbb4879f80401", "reused": true, "spatial_vertices": 24}
+{"seed": 3217, "path": "measurements/b915aab64e6178637776", "reused": true, "spatial_vertices": 24}
+{"seed": 3218, "path": "measurements/9d3421709d294c5e9b57", "reused": true, "spatial_vertices": 24}
+{"seed": 3211, "path": "measurements/401df58ee75ad6f0ef85", "reused": true, "spatial_vertices": 48}
+{"seed": 3212, "path": "measurements/889077168b10cd011780", "reused": true, "spatial_vertices": 48}
+{"seed": 3213, "path": "measurements/cfd0dbc39dd11df2d048", "reused": true, "spatial_vertices": 48}
+{"seed": 3214, "path": "measurements/b73fef8c8a3bc110dce5", "reused": true, "spatial_vertices": 48}
+{"seed": 3215, "path": "measurements/c8a6faba8f05b998636f", "reused": true, "spatial_vertices": 48}
+{"seed": 3216, "path": "measurements/5c54e225ce6ff1322f3b", "reused": true, "spatial_vertices": 48}
+{"seed": 3217, "path": "measurements/9ccaee6f27e124615150", "reused": true, "spatial_vertices": 48}
+{"seed": 3218, "path": "measurements/aee7558acccf2b2e5b05", "reused": true, "spatial_vertices": 48}
+{"summary": "/mnt/data/cdt-confirmation/work/results/confirmation/finite_size/analysis/24e79b3fa24d43469576/summary.json"}
+{"seed": 2011, "flips": 0, "path": "measurements/594444444cccd0f8208b", "reused": true}
+{"seed": 2011, "flips": 240, "path": "measurements/f9442b690b15a365401c", "reused": true}
+{"seed": 2012, "flips": 0, "path": "measurements/4e7ede10cda972e30cf5", "reused": true}
+{"seed": 2012, "flips": 240, "path": "measurements/9ceb405626f4c6d1cecc", "reused": true}
+{"seed": 2013, "flips": 0, "path": "measurements/ce986f62afe195a63863", "reused": true}
+{"seed": 2013, "flips": 240, "path": "measurements/7f1260a5fb2f71224412", "reused": true}
+{"seed": 2014, "flips": 0, "path": "measurements/94884772802c7e008f75", "reused": true}
+{"seed": 2014, "flips": 240, "path": "measurements/af9b51ef260b5aa8852f", "reused": true}
+{"seed": 2015, "flips": 0, "path": "measurements/963232b35ce6731cddec", "reused": true}
+{"seed": 2015, "flips": 240, "path": "measurements/2d202f9cb86aa9c7ea80", "reused": true}
+{"seed": 2016, "flips": 0, "path": "measurements/7915f6ad7bba4507bd1f", "reused": true}
+{"seed": 2016, "flips": 240, "path": "measurements/0fd103df43782225819f", "reused": true}
+{"seed": 2017, "flips": 0, "path": "measurements/7abdfad1dfdc82bab367", "reused": true}
+{"seed": 2017, "flips": 240, "path": "measurements/60ad6bd27506474fc384", "reused": true}
+{"seed": 2018, "flips": 0, "path": "measurements/15a18c9d561f45dca26c", "reused": true}
+{"seed": 2018, "flips": 240, "path": "measurements/f92a1512f15f9a5dc611", "reused": true}
+{"summary": "/mnt/data/cdt-confirmation/work/results/confirmation/operators_final/analysis/f687d33ad6101601d9a7/summary.json"}
+{"path": "/mnt/data/cdt-confirmation/work/results/confirmation/diagnostic_calibration/91f2ffe8e0cd078abb01", "reused": true}
+{"report": "/mnt/data/cdt-confirmation/work/results/confirmation/reports/93b3069d0bc26427006e/SUMMARY.md", "reused": false}
+Selected stages finished; physical reproduction gates are unchanged.

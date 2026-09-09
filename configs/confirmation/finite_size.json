@@ -1,0 +1,17 @@
+{
+  "source_kind": "constructed_non_Boltzmann",
+  "secondary_exploratory_after_primary_analysis": true,
+  "seeds": [3211,3212,3213,3214,3215,3216,3217,3218],
+  "spatial_vertices": [12,24,48],
+  "time_slices": 4,
+  "flips_per_spatial_vertex": 10,
+  "roots": "all",
+  "field_roots": 16,
+  "fields": [2,3,5],
+  "horizon": 8,
+  "radii": [2,3,4,6,8],
+  "sigmas": [8,12,16,24,32],
+  "max_steps": 48,
+  "moving_probability": 0.5,
+  "interpretation": "Same seed is paired across sizes. This is synthetic finite-volume sensitivity, not continuum scaling or a coupling experiment."
+}

@@ -1,0 +1,14 @@
+{
+  "python": "3.13.5",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "networkx": "3.6.1",
+    "sympy": "1.14.0",
+    "pytest": "9.0.2",
+    "arviz": "1.1.0",
+    "matplotlib": "3.10.8",
+    "statsmodels": "0.14.6"
+  },
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+}

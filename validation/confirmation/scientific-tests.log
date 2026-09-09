@@ -1,0 +1,28 @@
+Selected suites only: mechanism, confirmation, and optional pinned Python compatibility fixture.
+........................................................................ [ 11%]
+........................................................................ [ 23%]
+........................................................................ [ 35%]
+........................................................................ [ 47%]
+........................................................................ [ 59%]
+........................................................................ [ 71%]
+........................................................................ [ 83%]
+........................................................................ [ 95%]
+.........................                                                [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.13.5-final-0 ________________
+
+Name                                  Stmts   Miss  Cover
+---------------------------------------------------------
+src/cdt_confirmation/__init__.py          1      0   100%
+src/cdt_confirmation/analysis.py         99     66    33%
+src/cdt_confirmation/fields.py           86      0   100%
+src/cdt_confirmation/measurement.py      97     69    29%
+src/cdt_confirmation/operators.py        47      4    91%
+src/cdt_confirmation/physical.py        124     24    81%
+src/cdt_confirmation/provenance.py       48      0   100%
+src/cdt_confirmation/statistics.py       50      1    98%
+src/cdt_confirmation/walks.py            30      0   100%
+---------------------------------------------------------
+TOTAL                                   582    164    72%
+Coverage JSON written to file validation/confirmation/coverage.json
+601 passed in 19.42s

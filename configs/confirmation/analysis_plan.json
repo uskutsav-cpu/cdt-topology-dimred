@@ -1,0 +1,21 @@
+{
+  "locked_before_reading_new_geometry_outcomes": true,
+  "primary": {
+    "subset": "confirmation_seeds only",
+    "exposure": "all-root mean H1_finite_total_persistence, horizon 8, F2",
+    "outcome": "full-root return-trace Ds at sigma 32, moving probability 0.5",
+    "direction": "negative",
+    "test": "9999 independent-geometry label permutations; 4999 geometry bootstraps",
+    "selection": "none on new data; old discovery generated this single hypothesis"
+  },
+  "secondary_within_family": ["H1_finite_total_persistence at Ds32","conductance_r4 at Ds16"],
+  "secondary_controls": ["log ball volume r4","log ball volume r8","root equilateral deficit proxy","tetra type indicators","sin time position","cos time position"],
+  "secondary_uncertainty": "configuration fixed effects, geometry clusters, Holm correction across two tests; wild cluster score diagnostic",
+  "matching": "within-geometry bottom/top persistence quartiles; strata geometry x tetra type; pooled control standardization; caliper 0.5",
+  "scale_scan": "conductance radii 2,3,4,6,8 x sigma 8,12,16,24,32; 1999 max-statistic permutations of independent geometry rows",
+  "scale_selection": "training-only radius selection; held-out directional mean correlation; fitted c on training only for measured-distance and sqrt-time comparison",
+  "branching": "neck count, mean/largest/summed separated vertex sizes and branch entropy; exploratory Holm-corrected geometry correlations at Ds32",
+  "nulls": "geometry label permutation; root-label destruction diagnostic; controlled known-coefficient calibration",
+  "finite_size": "report stationary-floor violations without dropping inconvenient geometries",
+  "classification": "No constructed result may upgrade production physics gates"
+}

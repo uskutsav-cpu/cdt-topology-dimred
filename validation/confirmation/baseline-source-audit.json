@@ -1,0 +1,128 @@
+{
+  "reference_commit": "7086a739da6f3c0f56788e211c78424a0cf65c22",
+  "files": [
+    {
+      "path": "src/geometry.py",
+      "expected": "c4205be18d7cb71b6ae722436319e966f6a117b5",
+      "actual": "c4205be18d7cb71b6ae722436319e966f6a117b5",
+      "match": true
+    },
+    {
+      "path": "src/spectral/__init__.py",
+      "expected": "4a21b2c5b2d3479edd8704b4a6700f7f41e85024",
+      "actual": "4a21b2c5b2d3479edd8704b4a6700f7f41e85024",
+      "match": true
+    },
+    {
+      "path": "src/coarsegrain/__init__.py",
+      "expected": "b57e2b7a80f0960cf740f65b833b353f03ff3739",
+      "actual": "b57e2b7a80f0960cf740f65b833b353f03ff3739",
+      "match": true
+    },
+    {
+      "path": "src/coarsegrain/dual2d.py",
+      "expected": "e23269dcdd71b7b7ca0ff7c5271dd78bc89f6ba9",
+      "actual": "e23269dcdd71b7b7ca0ff7c5271dd78bc89f6ba9",
+      "match": true
+    },
+    {
+      "path": "src/coarsegrain/dual3d.py",
+      "expected": "8d66261ee0bc510ceaffa0fe4bea9dd09f94610e",
+      "actual": "8d66261ee0bc510ceaffa0fe4bea9dd09f94610e",
+      "match": true
+    },
+    {
+      "path": "src/coarsegrain/microscopic.py",
+      "expected": "7c86f26438bd52cf2ac4d4fa0e136f576ebcb0b2",
+      "actual": "7c86f26438bd52cf2ac4d4fa0e136f576ebcb0b2",
+      "match": true
+    },
+    {
+      "path": "src/coarsegrain/voronoi.py",
+      "expected": "2a9d651abb25a91014dfffab35e1d8fe613bc152",
+      "actual": "2a9d651abb25a91014dfffab35e1d8fe613bc152",
+      "match": true
+    },
+    {
+      "path": "src/conditioned.py",
+      "expected": "5a48db5d58216fc12a4cf87e402dfe0dcfcc3fe1",
+      "actual": "5a48db5d58216fc12a4cf87e402dfe0dcfcc3fe1",
+      "match": true
+    },
+    {
+      "path": "src/conditioned_controls.py",
+      "expected": "24fa80a62ff3249c28590708cdd8b4629a6b8f5b",
+      "actual": "24fa80a62ff3249c28590708cdd8b4629a6b8f5b",
+      "match": true
+    },
+    {
+      "path": "src/conditioned_stochastic.py",
+      "expected": "253aaceb06b66b468a80a47da14d681afaf9447c",
+      "actual": "253aaceb06b66b468a80a47da14d681afaf9447c",
+      "match": true
+    },
+    {
+      "path": "src/evidence_io.py",
+      "expected": "354f8bf4852590b13905266442af757acc097e12",
+      "actual": "354f8bf4852590b13905266442af757acc097e12",
+      "match": true
+    },
+    {
+      "path": "src/hierarchical_uncertainty.py",
+      "expected": "3ebd3de399d2435db2113ac72ef357bc13e7896c",
+      "actual": "3ebd3de399d2435db2113ac72ef357bc13e7896c",
+      "match": true
+    },
+    {
+      "path": "src/research_gates.py",
+      "expected": "fcf472f0d5d74712df3840addeecccd8625c14ca",
+      "actual": "fcf472f0d5d74712df3840addeecccd8625c14ca",
+      "match": true
+    },
+    {
+      "path": "src/runtime_safety.py",
+      "expected": "29ecb67a095172eb72a646783ff6e5a64b3e9b60",
+      "actual": "29ecb67a095172eb72a646783ff6e5a64b3e9b60",
+      "match": true
+    },
+    {
+      "path": "src/saved_state.py",
+      "expected": "fd7ed66f3251fe4d9f4e3040ed9ed67566370870",
+      "actual": "fd7ed66f3251fe4d9f4e3040ed9ed67566370870",
+      "match": true
+    },
+    {
+      "path": "src/topology/__init__.py",
+      "expected": "6fef5db8a7e10f4fbd7d1ac8232afac651d64215",
+      "actual": "6fef5db8a7e10f4fbd7d1ac8232afac651d64215",
+      "match": true
+    },
+    {
+      "path": "src/topology/integral.py",
+      "expected": "1acfff2b14e8f501d3a331f10d9633f6629a78e3",
+      "actual": "1acfff2b14e8f501d3a331f10d9633f6629a78e3",
+      "match": true
+    },
+    {
+      "path": "src/topology/stratification.py",
+      "expected": "2e313c1f8677e95153d131f642256c86aad00711",
+      "actual": "2e313c1f8677e95153d131f642256c86aad00711",
+      "match": true
+    },
+    {
+      "path": "src/topology/synthetic.py",
+      "expected": "9c5fa6c796d8678b51da7b87257e4fbf786d0af7",
+      "actual": "9c5fa6c796d8678b51da7b87257e4fbf786d0af7",
+      "match": true
+    },
+    {
+      "path": "src/uncertainty.py",
+      "expected": "170ba148487bd6894ff1eea86ef5a3a936c5fb3b",
+      "actual": "170ba148487bd6894ff1eea86ef5a3a936c5fb3b",
+      "match": true
+    }
+  ],
+  "matched": 20,
+  "full_repository_checkout": false,
+  "cpp_suite_executed": false
+}
