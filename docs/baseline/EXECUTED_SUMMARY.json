@@ -1,0 +1,129 @@
+{
+  "status": "NOT_ESTABLISHED",
+  "repository_base": "6fafad81840ecb03cc858953352b227d242d5ee1",
+  "upstream_commit": "5720c0b98d809b35974d5c6fe067a828fe6b1267",
+  "selected_analysis": "ccfcb9a22d41b833943c",
+  "native_production_chains": 12,
+  "native_snapshots": 1536,
+  "total_scheduled_native_proposals": 10670500000,
+  "production_proposals_including_burn": 9920000000,
+  "saved_probability_values": 48241984,
+  "test_results": {
+    "new_baseline_tests": 139,
+    "existing_baseline_tests": 9,
+    "combined_passed": 148,
+    "installer_checks_passed": 14,
+    "failures": 0,
+    "skips": 0,
+    "warnings_in_final_run": 0,
+    "test_statement_coverage_percent": 87.98646362098138
+  },
+  "verification": {
+    "verified": true,
+    "native_jobs": 27,
+    "independent_production_chains": 12,
+    "geometries": 1536,
+    "unique_geometry_hashes": 1536,
+    "artifacts_verified": 7806,
+    "native_artifact_bytes": 2299574224,
+    "primary_estimands_recomputed": true,
+    "source_snapshots_match": true,
+    "physical_monte_carlo_executed": true,
+    "diagnostic_screens_pass": false,
+    "REPRODUCTION_PASS": false,
+    "production_gates_changed": false
+  },
+  "groups": [
+    {
+      "target_N3": 10000,
+      "mean_N3": 10004.958203125,
+      "frozen_k3": 1.175199999999982,
+      "N3_rhat": 1.0061930955626144,
+      "peak_slice_rhat": 2.0538005004314064,
+      "peak_slice_bulk_ESS": 5.346713348068804,
+      "worst_profile_rhat": 2.925631955517523,
+      "minimum_profile_bulk_ESS": 4.8500834526844265,
+      "exploratory_Ds_peak": 2.4410226016231014,
+      "exploratory_peak_sigma": 25,
+      "resolved_stalk_fits": 402,
+      "cohort_snapshots": 512,
+      "checks": {
+        "acceptance": true,
+        "native_diagnostics": false,
+        "profile_diagnostics": false,
+        "rho_sensitivity": true,
+        "spectral": false,
+        "volume_center": true
+      }
+    },
+    {
+      "target_N3": 30000,
+      "mean_N3": 30076.37857421875,
+      "frozen_k3": 1.1730600000000002,
+      "N3_rhat": 1.0008512202511504,
+      "peak_slice_rhat": 1.8011990378522598,
+      "peak_slice_bulk_ESS": 5.876279511856314,
+      "worst_profile_rhat": 2.3762395863286954,
+      "minimum_profile_bulk_ESS": 5.241381565395954,
+      "exploratory_Ds_peak": 2.795124860204556,
+      "exploratory_peak_sigma": 80,
+      "resolved_stalk_fits": 484,
+      "cohort_snapshots": 512,
+      "checks": {
+        "acceptance": true,
+        "native_diagnostics": false,
+        "profile_diagnostics": false,
+        "rho_sensitivity": true,
+        "spectral": false,
+        "volume_center": true
+      }
+    },
+    {
+      "target_N3": 60000,
+      "mean_N3": 60100.17724609375,
+      "frozen_k3": 1.1717199999999948,
+      "N3_rhat": 1.0034007404378271,
+      "peak_slice_rhat": 1.2482242533440693,
+      "peak_slice_bulk_ESS": 12.731908856550145,
+      "worst_profile_rhat": 1.623000334692667,
+      "minimum_profile_bulk_ESS": 7.29770344627806,
+      "exploratory_Ds_peak": 2.9408070912144346,
+      "exploratory_peak_sigma": 127,
+      "resolved_stalk_fits": 511,
+      "cohort_snapshots": 512,
+      "checks": {
+        "acceptance": true,
+        "native_diagnostics": false,
+        "profile_diagnostics": false,
+        "rho_sensitivity": true,
+        "spectral": true,
+        "volume_center": true
+      }
+    }
+  ],
+  "decision": {
+    "diagnostic_screens_pass": false,
+    "equilibrium_proved": false,
+    "physical_monte_carlo_executed": true,
+    "production_gates_changed": false,
+    "reasons": [
+      "V=10000,k0=1.0: native_diagnostics failed",
+      "V=10000,k0=1.0: profile_diagnostics failed",
+      "V=10000,k0=1.0: spectral failed",
+      "V=30000,k0=1.0: native_diagnostics failed",
+      "V=30000,k0=1.0: profile_diagnostics failed",
+      "V=30000,k0=1.0: spectral failed",
+      "V=60000,k0=1.0: native_diagnostics failed",
+      "V=60000,k0=1.0: profile_diagnostics failed",
+      "Finite-volume and condensate/reference agreement is not established by these screens.",
+      "No reviewed paper-level numerical reference/matched-boundary calibration has been supplied.",
+      "A clean complete Git checkout/full legacy stack must be recorded separately from the pinned-source export used here."
+    ],
+    "reproduction_pass": false,
+    "status": "NOT_ESTABLISHED"
+  },
+  "clean_full_git_clone_executed": false,
+  "complete_original_repository_suite_executed": false,
+  "pushed_to_github": false,
+  "long_production_preset_executed": false
+}

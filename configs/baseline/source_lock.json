@@ -1,0 +1,26 @@
+{
+  "repository_commit": "6fafad81840ecb03cc858953352b227d242d5ee1",
+  "upstream_repository": "JorenB/3d-cdt",
+  "upstream_commit": "5720c0b98d809b35974d5c6fe067a828fe6b1267",
+  "git_blobs": {
+    "external/3d-cdt/universe.hpp": "40a56e2348098fef240a2b8cd114731a9d6fda4a",
+    "external/3d-cdt/simulation.hpp": "fed67fc472450c7dd901e9f7f0e807b14ae0c180",
+    "external/3d-cdt/pool.hpp": "29fb8e16d6302bc1c93f73726130d5050dbafcf9",
+    "external/3d-cdt/bag.hpp": "c6c8227a546dbc23ba00d4891f2088d80d061e66",
+    "external/3d-cdt/vertex.hpp": "d06909ef37c488519463f581842f6653bb937413",
+    "external/3d-cdt/tetra.hpp": "24101f2ff356925b478186636dda9e1dfb2a84ef",
+    "external/3d-cdt/halfedge.hpp": "fdb20642a0c10960b26a33394dc65a193de7a1c0",
+    "external/3d-cdt/triangle.hpp": "398554df03609b1b1f5e76ae7f525a4824b1d026",
+    "external/3d-cdt/observable.hpp": "7237483d780db709d4e9471b2b5e426241a63b2e",
+    "external/3d-cdt/tetra.cpp": "83a15ca96d74c51aba4a5a29da0797886b087185",
+    "external/3d-cdt/triangle.cpp": "0182d02e8a602bc638923839fd410ba1be3a421b",
+    "external/3d-cdt/halfedge.cpp": "99b9c1f476cef8a8386c3afa05aeb2e9126f0286",
+    "external/3d-cdt/vertex.cpp": "40eee121c2ec24ae44ae8870987cad1192d34ed1",
+    "external/3d-cdt/observable.cpp": "ec6e4448f49cd63f3b4c77eb0b5af3303446d8fa",
+    "external/3d-cdt/universe.cpp": "c8b4ea0d19ea2d2bfbf6c8a22cba8f44f71e0afb",
+    "external/3d-cdt/simulation.cpp": "ce8f4a4fffbab7e72c6b5438170d1d801f146d87",
+    "src/cdt/runner.cpp": "c4367afec2e30e2ae6afffcb934339b783d37ca7",
+    "src/cdt/checkpoint.hpp": "d509b129da796f463e73ed3a351447fcb38ea126",
+    "workflows/build.py": "111c8a86bbd7f580f80d8d8a2b01a5ba5449e47b"
+  }
+}

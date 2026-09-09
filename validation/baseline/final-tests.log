@@ -1,0 +1,26 @@
+........................................................................ [ 48%]
+........................................................................ [ 97%]
+....                                                                     [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.13.5-final-0 ________________
+
+Name                                  Stmts   Miss  Cover
+---------------------------------------------------------
+src/cdt_baseline/__init__.py              1      0   100%
+src/cdt_baseline/analysis.py            144      5    97%
+src/cdt_baseline/chain.py               172     11    94%
+src/cdt_baseline/design.py               65      4    94%
+src/cdt_baseline/geometry.py            111     13    88%
+src/cdt_baseline/initial.py              33      3    91%
+src/cdt_baseline/io.py                   99      3    97%
+src/cdt_baseline/measure.py             176     76    57%
+src/cdt_baseline/native.py               92     10    89%
+src/cdt_baseline/operations.py           24      4    83%
+src/cdt_baseline/pipeline.py             71      7    90%
+src/cdt_baseline/statistics.py           66      2    97%
+src/cdt_baseline/summary_storage.py      40      0   100%
+src/cdt_baseline/verify.py               88      4    95%
+---------------------------------------------------------
+TOTAL                                  1182    142    88%
+Coverage JSON written to file /mnt/data/cdt-baseline-work/source/validation/baseline/coverage.json
+148 passed in 44.33s

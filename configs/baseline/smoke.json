@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "kind": "native_pilot",
+  "name": "native_smoke",
+  "time_extent": 8,
+  "volumes": [
+    300,
+    500
+  ],
+  "couplings": [
+    1.0
+  ],
+  "chains": 4,
+  "seed": 20260909,
+  "attempts_per_target": 1,
+  "tuning_sweeps": 10,
+  "dispersal_sweeps": 10,
+  "dispersal_factors": [
+    0.8,
+    0.95,
+    1.05,
+    1.2
+  ],
+  "burn_sweeps": 20,
+  "samples": 16,
+  "sample_stride": 2,
+  "rho": 0.8,
+  "rho_sensitivity": [
+    0.4
+  ],
+  "max_steps": 48,
+  "roots": 8,
+  "root_batch": 4,
+  "diagnostic_sigmas": [
+    8,
+    16,
+    32
+  ],
+  "analysis_window": [
+    8,
+    32
+  ],
+  "bootstrap_replicates": 100,
+  "bootstrap_seed": 92026,
+  "limits": {
+    "rhat": 1.01,
+    "bulk_ess": 400,
+    "tail_ess": 400,
+    "mean_mcse_sd": 0.05,
+    "volume_relative_offset": 0.03,
+    "ds_halfwidth": 0.15,
+    "drift_ds": 0.15,
+    "root_refinement_ds": 0.1,
+    "stationary_multiple": 10,
+    "minimum_blocks": 8,
+    "block_lengths": [
+      1,
+      2
+    ],
+    "reference_reviewed": false
+  },
+  "notes": [
+    "Native computational pilot at the repository volume grid, not a declared equilibrated reproduction.",
+    "One driver sweep is target N3 attempted moves here; historical configs used 100000 attempts.",
+    "No conditioning on topology; starts use declared maximal spatial-volume 31-simplex policy and uniform sensitivity.",
+    "All warmup and measurement data retained. No automatic gate promotion."
+  ]
+}

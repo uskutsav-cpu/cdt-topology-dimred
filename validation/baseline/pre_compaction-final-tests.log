@@ -1,0 +1,33 @@
+........................................................................ [ 52%]
+................................................................         [100%]
+=============================== warnings summary ===============================
+tests/baseline_native/test_pipeline.py::test_end_to_end_verified
+tests/baseline_native/test_pipeline.py::test_end_to_end_verified
+tests/baseline_native/test_pipeline.py::test_idempotent_cached_stages
+tests/baseline_native/test_pipeline.py::test_idempotent_cached_stages
+  /usr/lib/python3.13/multiprocessing/popen_fork.py:67: DeprecationWarning: This process (pid=5127) is multi-threaded, use of fork() may lead to deadlocks in the child.
+    self.pid = os.fork()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.13.5-final-0 ________________
+
+Name                             Stmts   Miss  Cover
+----------------------------------------------------
+src/cdt_baseline/__init__.py         1      0   100%
+src/cdt_baseline/analysis.py       140      5    96%
+src/cdt_baseline/chain.py          172     11    94%
+src/cdt_baseline/design.py          64      4    94%
+src/cdt_baseline/geometry.py       111     13    88%
+src/cdt_baseline/initial.py         33      3    91%
+src/cdt_baseline/io.py              99      3    97%
+src/cdt_baseline/measure.py        176     76    57%
+src/cdt_baseline/native.py          92     59    36%
+src/cdt_baseline/operations.py      24      4    83%
+src/cdt_baseline/pipeline.py        71      7    90%
+src/cdt_baseline/statistics.py      66      2    97%
+src/cdt_baseline/verify.py          88      4    95%
+----------------------------------------------------
+TOTAL                             1137    191    83%
+Coverage JSON written to file /mnt/data/cdt-baseline-work/source/validation/baseline/coverage.json
+136 passed, 4 warnings in 30.35s

@@ -1,0 +1,74 @@
+{
+  "measurement_records": 1536,
+  "curve_arrays_by_policy": {
+    "full_uniform_rho_0.8": 1536,
+    "full_peak31_rho_0.8": 1536,
+    "excised_uniform_hold_rho_0.8": 1397,
+    "excised_uniform_renormalize_rho_0.8": 1397,
+    "full_uniform_rho_0.4": 1536,
+    "full_peak31_rho_0.4": 1536,
+    "excised_uniform_hold_rho_0.4": 1397,
+    "excised_uniform_renormalize_rho_0.4": 1397
+  },
+  "root_operator_pairs_by_policy": {
+    "full_uniform_rho_0.8": 24576,
+    "full_peak31_rho_0.8": 24576,
+    "excised_uniform_hold_rho_0.8": 22352,
+    "excised_uniform_renormalize_rho_0.8": 22352,
+    "full_uniform_rho_0.4": 24576,
+    "full_peak31_rho_0.4": 24576,
+    "excised_uniform_hold_rho_0.4": 22352,
+    "excised_uniform_renormalize_rho_0.4": 22352
+  },
+  "probability_values_by_policy": {
+    "full_uniform_rho_0.8": 6316032,
+    "full_peak31_rho_0.8": 6316032,
+    "excised_uniform_hold_rho_0.8": 5744464,
+    "excised_uniform_renormalize_rho_0.8": 5744464,
+    "full_uniform_rho_0.4": 6316032,
+    "full_peak31_rho_0.4": 6316032,
+    "excised_uniform_hold_rho_0.4": 5744464,
+    "excised_uniform_renormalize_rho_0.4": 5744464
+  },
+  "total_probability_values": 48241984,
+  "native_budget": {
+    "ensembles": [
+      {
+        "volume": 10000,
+        "k0": 1.0,
+        "chains": 4,
+        "attempts_per_sweep": 10000,
+        "tuning_attempts": 15010000,
+        "dispersal_attempts": 60040000,
+        "burn_attempts": 480000000,
+        "measurement_attempts": 512000000,
+        "saved_production_geometries": 512
+      },
+      {
+        "volume": 30000,
+        "k0": 1.0,
+        "chains": 4,
+        "attempts_per_sweep": 30000,
+        "tuning_attempts": 45030000,
+        "dispersal_attempts": 180120000,
+        "burn_attempts": 1440000000,
+        "measurement_attempts": 1536000000,
+        "saved_production_geometries": 512
+      },
+      {
+        "volume": 60000,
+        "k0": 1.0,
+        "chains": 4,
+        "attempts_per_sweep": 60000,
+        "tuning_attempts": 90060000,
+        "dispersal_attempts": 360240000,
+        "burn_attempts": 2880000000,
+        "measurement_attempts": 3072000000,
+        "saved_production_geometries": 512
+      }
+    ],
+    "total_proposed_moves": 10670500000,
+    "time_estimate": null,
+    "warning": "A scheduled number of sweeps does not establish equilibration. No automatic topology-conditioned production is launched."
+  }
+}

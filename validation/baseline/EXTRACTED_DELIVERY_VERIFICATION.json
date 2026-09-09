@@ -1,0 +1,7 @@
+{
+  "zip_extraction_pass": true,
+  "all_four_part_hashes_pass": true,
+  "independent_scientific_reverification_pass": true,
+  "production_gates_changed": false,
+  "REPRODUCTION_PASS": false
+}
