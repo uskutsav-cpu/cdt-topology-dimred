@@ -1,0 +1,1159 @@
+{
+  "benchmark": {
+    "A_exact": 9.769962616701378e-16,
+    "artifact": "diffusion_benchmark.npz",
+    "counts": [
+      682,
+      342
+    ],
+    "dimension_mixture_error": 7.105427357601002e-15,
+    "estimator": {
+      "counts": [
+        682,
+        342
+      ],
+      "estimated_peak_array_bytes": 1016080,
+      "first_probe": 0,
+      "max_absolute_return_standard_error": 0.0014269538046885507,
+      "method": "half_power",
+      "names": [
+        "regular",
+        "singular"
+      ],
+      "nonpositive_mean_returns": 0,
+      "operator_applications": 8192,
+      "operator_unchanged": true,
+      "physics_validation": "NOT_ESTABLISHED",
+      "probe_count": 256,
+      "seed": 20281908,
+      "uncertainty_scope": "iid probe noise only; not ensemble uncertainty",
+      "valid_interior_dimensions": 126
+    },
+    "estimator_seconds": 0.03658919299994068,
+    "exact_operator_applications": 65536,
+    "exact_seconds": 0.12363142900005641,
+    "maximum_absolute_return_error": 0.00160818713450267,
+    "maximum_relative_return_error_in_window": 0.007778167973674243,
+    "maximum_relative_standard_error_in_window": 0.010972265511676167,
+    "maximum_standardized_return_error": 1.1270071449346382,
+    "observed_speed_ratio_exact_over_estimator": 3.3789055965311086,
+    "operator_application_reduction_factor": 8.0,
+    "probe_effect": {
+      "A": 0.0037274730748057205,
+      "CI95_probe_only": [
+        -0.003961624475583767,
+        0.010884252768631792
+      ],
+      "invalid_bootstrap_replicates": 0,
+      "replicates": 200,
+      "seed": 20281909,
+      "status": "PROBE_NOISE_INTERVAL_ONLY",
+      "uncertainty_scope": "one geometry; excludes MCMC, coarse seed and ensemble uncertainty",
+      "window": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    "scope": "SYNTHETIC_GRAPH_ONLY",
+    "sites": 1024,
+    "stochastic_operator_applications": 8192,
+    "synthetic_window": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "coarse_3d": [
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 162,
+        "singular": 0
+      },
+      "coarse_betti_F2": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 1,
+      "elapsed_seconds": 1.7234285319999572,
+      "interface_components_with_nonzero_higher_betti": 0,
+      "mapping_arrays": "carrier_T3_side3_delta1_seed20264008.npz",
+      "mapping_artifact": "carrier_T3_side3_delta1_seed20264008.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 0,
+        "minimum_seed_distance": 1,
+        "seeds": 27,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 27
+      },
+      "production_eligible": false,
+      "realization": 0,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20264008,
+      "side": 3,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 0,
+        "singular": 162
+      },
+      "coarse_betti_F2": [
+        1,
+        0,
+        3,
+        1
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 2,
+      "elapsed_seconds": 0.2253783820000308,
+      "interface_components_with_nonzero_higher_betti": 1,
+      "mapping_arrays": "carrier_T3_side3_delta2_seed20264108.npz",
+      "mapping_artifact": "carrier_T3_side3_delta2_seed20264108.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 1,
+        "minimum_seed_distance": 2,
+        "seeds": 4,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 27
+      },
+      "production_eligible": false,
+      "realization": 0,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20264108,
+      "side": 3,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 8,
+        "singular": 154
+      },
+      "coarse_betti_F2": [
+        1,
+        0,
+        3,
+        1
+      ],
+      "conditioned_measurement": {
+        "A_exact": -5.329070518200751e-16,
+        "artifact": "carrier_T3_side3_delta2_seed20264109_returns.npz",
+        "counts": [
+          8,
+          154
+        ],
+        "dimension_mixture_error": 5.717648576819556e-15,
+        "estimator": {
+          "counts": [
+            8,
+            154
+          ],
+          "estimated_peak_array_bytes": 665128,
+          "first_probe": 0,
+          "max_absolute_return_standard_error": 0.007466899042412314,
+          "method": "half_power",
+          "names": [
+            "regular",
+            "singular"
+          ],
+          "nonpositive_mean_returns": 0,
+          "operator_applications": 16384,
+          "operator_unchanged": true,
+          "physics_validation": "NOT_ESTABLISHED",
+          "probe_count": 512,
+          "seed": 20264111,
+          "uncertainty_scope": "iid probe noise only; not ensemble uncertainty",
+          "valid_interior_dimensions": 126
+        },
+        "estimator_seconds": 0.029867251000041506,
+        "exact_operator_applications": 10368,
+        "exact_seconds": 0.006354867000027298,
+        "maximum_absolute_return_error": 0.00322265625000015,
+        "maximum_relative_return_error_in_window": 0.025052584134615044,
+        "maximum_relative_standard_error_in_window": 0.04179333616903999,
+        "maximum_standardized_return_error": 1.6592201472747705,
+        "observed_speed_ratio_exact_over_estimator": 0.21277040193683933,
+        "operator_application_reduction_factor": 0.6328125,
+        "probe_effect": {
+          "A": 0.011529021934007044,
+          "CI95_probe_only": [
+            -0.061797585859513574,
+            0.09156180076084562
+          ],
+          "invalid_bootstrap_replicates": 0,
+          "replicates": 200,
+          "seed": 20264112,
+          "status": "PROBE_NOISE_INTERVAL_ONLY",
+          "uncertainty_scope": "one geometry; excludes MCMC, coarse seed and ensemble uncertainty",
+          "window": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "scope": "SYNTHETIC_GRAPH_ONLY",
+        "sites": 162,
+        "stochastic_operator_applications": 16384,
+        "synthetic_window": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "delta": 2,
+      "elapsed_seconds": 0.2393634339999835,
+      "interface_components_with_nonzero_higher_betti": 1,
+      "mapping_arrays": "carrier_T3_side3_delta2_seed20264109.npz",
+      "mapping_artifact": "carrier_T3_side3_delta2_seed20264109.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 1,
+        "minimum_seed_distance": 2,
+        "seeds": 4,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 27
+      },
+      "production_eligible": false,
+      "realization": 1,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20264109,
+      "side": 3,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 0,
+        "singular": 162
+      },
+      "coarse_betti_F2": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 2,
+      "elapsed_seconds": 0.0505859130000772,
+      "interface_components_with_nonzero_higher_betti": 3,
+      "mapping_arrays": "carrier_T3_side3_delta2_seed20264110.npz",
+      "mapping_artifact": "carrier_T3_side3_delta2_seed20264110.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 1,
+        "minimum_seed_distance": 2,
+        "seeds": 3,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 27
+      },
+      "production_eligible": false,
+      "realization": 2,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20264110,
+      "side": 3,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 0,
+        "singular": 162
+      },
+      "coarse_betti_F2": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 2,
+      "elapsed_seconds": 0.04938017000006312,
+      "interface_components_with_nonzero_higher_betti": 3,
+      "mapping_arrays": "carrier_T3_side3_delta2_seed20264111.npz",
+      "mapping_artifact": "carrier_T3_side3_delta2_seed20264111.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 1,
+        "minimum_seed_distance": 2,
+        "seeds": 3,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 27
+      },
+      "production_eligible": false,
+      "realization": 3,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20264111,
+      "side": 3,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 0,
+        "singular": 162
+      },
+      "coarse_betti_F2": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 3,
+      "elapsed_seconds": 0.028787007999994785,
+      "interface_components_with_nonzero_higher_betti": 0,
+      "mapping_arrays": "carrier_T3_side3_delta3_seed20264208.npz",
+      "mapping_artifact": "carrier_T3_side3_delta3_seed20264208.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 2,
+        "minimum_seed_distance": null,
+        "seeds": 1,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 27
+      },
+      "production_eligible": false,
+      "realization": 0,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20264208,
+      "side": 3,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 0,
+        "singular": 162
+      },
+      "coarse_betti_F2": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 3,
+      "elapsed_seconds": 0.029737104999981057,
+      "interface_components_with_nonzero_higher_betti": 0,
+      "mapping_arrays": "carrier_T3_side3_delta3_seed20264209.npz",
+      "mapping_artifact": "carrier_T3_side3_delta3_seed20264209.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 2,
+        "minimum_seed_distance": null,
+        "seeds": 1,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 27
+      },
+      "production_eligible": false,
+      "realization": 1,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20264209,
+      "side": 3,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 0,
+        "singular": 162
+      },
+      "coarse_betti_F2": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 3,
+      "elapsed_seconds": 0.02914346700003989,
+      "interface_components_with_nonzero_higher_betti": 0,
+      "mapping_arrays": "carrier_T3_side3_delta3_seed20264210.npz",
+      "mapping_artifact": "carrier_T3_side3_delta3_seed20264210.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 2,
+        "minimum_seed_distance": null,
+        "seeds": 1,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 27
+      },
+      "production_eligible": false,
+      "realization": 2,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20264210,
+      "side": 3,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 0,
+        "singular": 162
+      },
+      "coarse_betti_F2": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 3,
+      "elapsed_seconds": 0.0294882680000228,
+      "interface_components_with_nonzero_higher_betti": 0,
+      "mapping_arrays": "carrier_T3_side3_delta3_seed20264211.npz",
+      "mapping_artifact": "carrier_T3_side3_delta3_seed20264211.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 2,
+        "minimum_seed_distance": null,
+        "seeds": 1,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 27
+      },
+      "production_eligible": false,
+      "realization": 3,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20264211,
+      "side": 3,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 384,
+        "singular": 0
+      },
+      "coarse_betti_F2": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 1,
+      "elapsed_seconds": 4.02196569299997,
+      "interface_components_with_nonzero_higher_betti": 0,
+      "mapping_arrays": "carrier_T3_side4_delta1_seed20265008.npz",
+      "mapping_artifact": "carrier_T3_side4_delta1_seed20265008.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 0,
+        "minimum_seed_distance": 1,
+        "seeds": 64,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 64
+      },
+      "production_eligible": false,
+      "realization": 0,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20265008,
+      "side": 4,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 384,
+        "singular": 0
+      },
+      "coarse_betti_F2": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 2,
+      "elapsed_seconds": 0.9445469139999432,
+      "interface_components_with_nonzero_higher_betti": 0,
+      "mapping_arrays": "carrier_T3_side4_delta2_seed20265108.npz",
+      "mapping_artifact": "carrier_T3_side4_delta2_seed20265108.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 1,
+        "minimum_seed_distance": 2,
+        "seeds": 9,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 64
+      },
+      "production_eligible": false,
+      "realization": 0,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20265108,
+      "side": 4,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 384,
+        "singular": 0
+      },
+      "coarse_betti_F2": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 2,
+      "elapsed_seconds": 0.47614382300002944,
+      "interface_components_with_nonzero_higher_betti": 0,
+      "mapping_arrays": "carrier_T3_side4_delta2_seed20265109.npz",
+      "mapping_artifact": "carrier_T3_side4_delta2_seed20265109.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 1,
+        "minimum_seed_distance": 2,
+        "seeds": 6,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 64
+      },
+      "production_eligible": false,
+      "realization": 1,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20265109,
+      "side": 4,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 384,
+        "singular": 0
+      },
+      "coarse_betti_F2": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 2,
+      "elapsed_seconds": 0.6551320260000466,
+      "interface_components_with_nonzero_higher_betti": 0,
+      "mapping_arrays": "carrier_T3_side4_delta2_seed20265110.npz",
+      "mapping_artifact": "carrier_T3_side4_delta2_seed20265110.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 1,
+        "minimum_seed_distance": 2,
+        "seeds": 9,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 64
+      },
+      "production_eligible": false,
+      "realization": 2,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20265110,
+      "side": 4,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 384,
+        "singular": 0
+      },
+      "coarse_betti_F2": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 2,
+      "elapsed_seconds": 0.8332974290000266,
+      "interface_components_with_nonzero_higher_betti": 0,
+      "mapping_arrays": "carrier_T3_side4_delta2_seed20265111.npz",
+      "mapping_artifact": "carrier_T3_side4_delta2_seed20265111.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 1,
+        "minimum_seed_distance": 2,
+        "seeds": 9,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 64
+      },
+      "production_eligible": false,
+      "realization": 3,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20265111,
+      "side": 4,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 0,
+        "singular": 384
+      },
+      "coarse_betti_F2": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 3,
+      "elapsed_seconds": 0.1019017090000034,
+      "interface_components_with_nonzero_higher_betti": 1,
+      "mapping_arrays": "carrier_T3_side4_delta3_seed20265208.npz",
+      "mapping_artifact": "carrier_T3_side4_delta3_seed20265208.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 2,
+        "minimum_seed_distance": 3,
+        "seeds": 2,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 64
+      },
+      "production_eligible": false,
+      "realization": 0,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20265208,
+      "side": 4,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 0,
+        "singular": 384
+      },
+      "coarse_betti_F2": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 3,
+      "elapsed_seconds": 0.10494707299994843,
+      "interface_components_with_nonzero_higher_betti": 1,
+      "mapping_arrays": "carrier_T3_side4_delta3_seed20265209.npz",
+      "mapping_artifact": "carrier_T3_side4_delta3_seed20265209.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 2,
+        "minimum_seed_distance": 3,
+        "seeds": 2,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 64
+      },
+      "production_eligible": false,
+      "realization": 1,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20265209,
+      "side": 4,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 0,
+        "singular": 384
+      },
+      "coarse_betti_F2": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 3,
+      "elapsed_seconds": 0.10102255999993304,
+      "interface_components_with_nonzero_higher_betti": 1,
+      "mapping_arrays": "carrier_T3_side4_delta3_seed20265210.npz",
+      "mapping_artifact": "carrier_T3_side4_delta3_seed20265210.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 2,
+        "minimum_seed_distance": 3,
+        "seeds": 2,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 64
+      },
+      "production_eligible": false,
+      "realization": 2,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20265210,
+      "side": 4,
+      "status": "COMPUTED_EXPERIMENTAL"
+    },
+    {
+      "class_counts": {
+        "ambiguous": 0,
+        "regular": 0,
+        "singular": 384
+      },
+      "coarse_betti_F2": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "conditioned_measurement_status": "UNDEFINED_EMPTY_OR_AMBIGUOUS_CLASS_NOT_ZERO_EFFECT",
+      "delta": 3,
+      "elapsed_seconds": 0.12279803899991748,
+      "interface_components_with_nonzero_higher_betti": 1,
+      "mapping_arrays": "carrier_T3_side4_delta3_seed20265211.npz",
+      "mapping_artifact": "carrier_T3_side4_delta3_seed20265211.json",
+      "partition": {
+        "connected_cells": true,
+        "coverage_radius": 2,
+        "minimum_seed_distance": 3,
+        "seeds": 2,
+        "tie_rule": "layerwise_uniform_reachable_label",
+        "vertices": 64
+      },
+      "production_eligible": false,
+      "realization": 3,
+      "scope": "EXPERIMENTAL_SYNTHETIC_3D",
+      "seed": 20265211,
+      "side": 4,
+      "status": "COMPUTED_EXPERIMENTAL"
+    }
+  ],
+  "diffusion_controls": [
+    {
+      "A_exact": -7.549516567451064e-16,
+      "artifact": "diffusion_symmetry_null.npz",
+      "counts": [
+        59,
+        5
+      ],
+      "dimension_mixture_error": 3.1676050671336498e-15,
+      "estimator": {
+        "counts": [
+          59,
+          5
+        ],
+        "estimated_peak_array_bytes": 594960,
+        "first_probe": 0,
+        "max_absolute_return_standard_error": 0.009195481888105518,
+        "method": "half_power",
+        "names": [
+          "regular",
+          "singular"
+        ],
+        "nonpositive_mean_returns": 0,
+        "operator_applications": 16384,
+        "operator_unchanged": true,
+        "physics_validation": "NOT_ESTABLISHED",
+        "probe_count": 512,
+        "seed": 20280908,
+        "uncertainty_scope": "iid probe noise only; not ensemble uncertainty",
+        "valid_interior_dimensions": 126
+      },
+      "estimator_seconds": 0.025884461000032388,
+      "exact_operator_applications": 4096,
+      "exact_seconds": 0.0025929599999017228,
+      "interpretation": "origin-label null on a homogeneous synthetic periodic grid",
+      "maximum_absolute_return_error": 0.007343749999999538,
+      "maximum_relative_return_error_in_window": 0.03671875000000076,
+      "maximum_relative_standard_error_in_window": 0.04999397327616633,
+      "maximum_standardized_return_error": 1.1950216517017522,
+      "observed_speed_ratio_exact_over_estimator": 0.10017438647451374,
+      "operator_application_reduction_factor": 0.25,
+      "probe_effect": {
+        "A": 0.0018250636787187746,
+        "CI95_probe_only": [
+          -0.07224799237078615,
+          0.0729697967002772
+        ],
+        "invalid_bootstrap_replicates": 0,
+        "replicates": 200,
+        "seed": 20280909,
+        "status": "PROBE_NOISE_INTERVAL_ONLY",
+        "uncertainty_scope": "one geometry; excludes MCMC, coarse seed and ensemble uncertainty",
+        "window": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "scope": "SYNTHETIC_GRAPH_ONLY",
+      "sites": 64,
+      "stochastic_operator_applications": 16384,
+      "synthetic_window": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "A_exact": 1.2382835272878232,
+      "artifact": "diffusion_bottleneck_positive.npz",
+      "counts": [
+        144,
+        5
+      ],
+      "dimension_mixture_error": 1.176836406102666e-14,
+      "estimator": {
+        "counts": [
+          144,
+          5
+        ],
+        "estimated_peak_array_bytes": 655820,
+        "first_probe": 0,
+        "max_absolute_return_standard_error": 0.01121218835606038,
+        "method": "half_power",
+        "names": [
+          "regular",
+          "singular"
+        ],
+        "nonpositive_mean_returns": 0,
+        "operator_applications": 16384,
+        "operator_unchanged": true,
+        "physics_validation": "NOT_ESTABLISHED",
+        "probe_count": 512,
+        "seed": 20280909,
+        "uncertainty_scope": "iid probe noise only; not ensemble uncertainty",
+        "valid_interior_dimensions": 126
+      },
+      "estimator_seconds": 0.02957188400000632,
+      "exact_operator_applications": 9536,
+      "exact_seconds": 0.005641717999992579,
+      "interpretation": "artificial dense-clique/torus bottleneck; labels are NOT CDT topology labels",
+      "maximum_absolute_return_error": 0.011500000000001065,
+      "maximum_relative_return_error_in_window": 0.07512095281215853,
+      "maximum_relative_standard_error_in_window": 0.05556367853838318,
+      "maximum_standardized_return_error": 1.9792646589205036,
+      "observed_speed_ratio_exact_over_estimator": 0.19077979610603685,
+      "operator_application_reduction_factor": 0.58203125,
+      "probe_effect": {
+        "A": 1.239641860763086,
+        "CI95_probe_only": [
+          1.1902821560402241,
+          1.2851772996553683
+        ],
+        "invalid_bootstrap_replicates": 0,
+        "replicates": 200,
+        "seed": 20280910,
+        "status": "PROBE_NOISE_INTERVAL_ONLY",
+        "uncertainty_scope": "one geometry; excludes MCMC, coarse seed and ensemble uncertainty",
+        "window": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "scope": "SYNTHETIC_GRAPH_ONLY",
+      "sites": 149,
+      "stochastic_operator_applications": 16384,
+      "synthetic_window": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    }
+  ],
+  "elapsed_seconds": 15.393727381999952,
+  "environment": {
+    "logical_cpus": 5,
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+    "processor": "",
+    "thread_env": {
+      "MKL_NUM_THREADS": null,
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "hierarchical_null": {
+    "A": 0.0,
+    "CI95": [
+      0.0,
+      0.0
+    ],
+    "block_length_configurations": 4,
+    "chain_count": 2,
+    "configuration_count": 36,
+    "replicates": 100,
+    "scope": "synthetic paired noise only"
+  },
+  "physics_result": "NOT_COMPUTED",
+  "production_gates_advanced": false,
+  "random_complex_cross_checks": {
+    "count": 128,
+    "elapsed_seconds": 1.7922030710000172,
+    "mismatches": 0
+  },
+  "scope": "SYNTHETIC_SOFTWARE_AND_METHOD_STUDY_ONLY",
+  "status": "PASS_SYNTHETIC_CONTINUATION_NOT_REPRODUCTION_PASS",
+  "topology": [
+    {
+      "elapsed_seconds": 0.010280874000045515,
+      "fixture": "S1",
+      "incidence_maps_audited": 6,
+      "integral_homology": [
+        {
+          "free_rank": 1,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ],
+      "local_link_checks": 6,
+      "simplices": 6,
+      "stratum_cell_counts": {
+        "1": 6
+      }
+    },
+    {
+      "elapsed_seconds": 0.05545901200002845,
+      "fixture": "S2",
+      "incidence_maps_audited": 24,
+      "integral_homology": [
+        {
+          "free_rank": 1,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ],
+      "local_link_checks": 14,
+      "simplices": 14,
+      "stratum_cell_counts": {
+        "2": 14
+      }
+    },
+    {
+      "elapsed_seconds": 0.22807837300001665,
+      "fixture": "S3",
+      "incidence_maps_audited": 70,
+      "integral_homology": [
+        {
+          "free_rank": 1,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ],
+      "local_link_checks": 30,
+      "simplices": 30,
+      "stratum_cell_counts": {
+        "3": 30
+      }
+    },
+    {
+      "elapsed_seconds": 0.06799862000002577,
+      "fixture": "B3",
+      "incidence_maps_audited": 24,
+      "integral_homology": [
+        {
+          "free_rank": 1,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        }
+      ],
+      "local_link_checks": 15,
+      "simplices": 15,
+      "stratum_cell_counts": {
+        "2": 14,
+        "3": 1
+      }
+    },
+    {
+      "elapsed_seconds": 0.07222878999994009,
+      "fixture": "T2",
+      "incidence_maps_audited": 0,
+      "integral_homology": [
+        {
+          "free_rank": 1,
+          "torsion": []
+        },
+        {
+          "free_rank": 2,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ],
+      "local_link_checks": 54,
+      "simplices": 54,
+      "stratum_cell_counts": {
+        "2": 54
+      }
+    },
+    {
+      "elapsed_seconds": 2.4740647529999933,
+      "fixture": "T3",
+      "incidence_maps_audited": 0,
+      "integral_homology": [
+        {
+          "free_rank": 1,
+          "torsion": []
+        },
+        {
+          "free_rank": 3,
+          "torsion": []
+        },
+        {
+          "free_rank": 3,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ],
+      "local_link_checks": 702,
+      "simplices": 702,
+      "stratum_cell_counts": {
+        "3": 702
+      }
+    },
+    {
+      "elapsed_seconds": 0.38349121499993544,
+      "fixture": "pinched_S3",
+      "incidence_maps_audited": 132,
+      "integral_homology": [
+        {
+          "free_rank": 1,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 2,
+          "torsion": []
+        }
+      ],
+      "local_link_checks": 59,
+      "simplices": 59,
+      "stratum_cell_counts": {
+        "0": 1,
+        "3": 58
+      }
+    },
+    {
+      "elapsed_seconds": 0.10686533599994164,
+      "fixture": "RP2",
+      "incidence_maps_audited": 60,
+      "integral_homology": [
+        {
+          "free_rank": 1,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": [
+            2
+          ]
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        }
+      ],
+      "local_link_checks": 31,
+      "simplices": 31,
+      "stratum_cell_counts": {
+        "2": 31
+      }
+    }
+  ]
+}

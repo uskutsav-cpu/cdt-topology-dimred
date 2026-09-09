@@ -1,0 +1,461 @@
+{
+  "ambient_dimension": 2,
+  "cells": [
+    {
+      "component": 0,
+      "simplex": [
+        0
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        1
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        2
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        3
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        4
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        5
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        6
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        7
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        8
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        0,
+        1
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        0,
+        2
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        0,
+        3
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        0,
+        4
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        0,
+        6
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        0,
+        8
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        1,
+        2
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        1,
+        4
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        1,
+        5
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        1,
+        6
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        1,
+        7
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        2,
+        3
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        2,
+        5
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        2,
+        7
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        2,
+        8
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        3,
+        4
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        3,
+        5
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        3,
+        6
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        3,
+        7
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        4,
+        5
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        4,
+        7
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        4,
+        8
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        5,
+        6
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        5,
+        8
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        6,
+        7
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        6,
+        8
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        7,
+        8
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        0,
+        1,
+        4
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        0,
+        1,
+        6
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        0,
+        2,
+        3
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        0,
+        2,
+        8
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        0,
+        3,
+        4
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        0,
+        6,
+        8
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        1,
+        2,
+        5
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        1,
+        2,
+        7
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        1,
+        4,
+        5
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        1,
+        6,
+        7
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        2,
+        3,
+        5
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        2,
+        7,
+        8
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        3,
+        4,
+        7
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        3,
+        5,
+        6
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        3,
+        6,
+        7
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        4,
+        5,
+        8
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        4,
+        7,
+        8
+      ],
+      "stratum_dimension": 2
+    },
+    {
+      "component": 0,
+      "simplex": [
+        5,
+        6,
+        8
+      ],
+      "stratum_dimension": 2
+    }
+  ],
+  "incidence_certificates": [],
+  "method": "integral",
+  "physics_validation": "NOT_ESTABLISHED",
+  "schema": "cdt-integral-stratification-v1",
+  "stages": [
+    {
+      "components": 1,
+      "dimension": 2,
+      "generic_cells": 54,
+      "integral_incidence_maps_audited": 0,
+      "local_tests": 54,
+      "remaining_cells": 54,
+      "skipped_nongeneric_coface": 0
+    }
+  ]
+}

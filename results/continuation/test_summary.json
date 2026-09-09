@@ -1,0 +1,25 @@
+{
+  "base_commit": "d9ddb4ebe6f065013c2ad27ab055d4f6020f1c2e",
+  "base_tree": "0f8dcd941dc98f19352653e0f4ef51d9e71b2bd9",
+  "errors": 0,
+  "failures": 0,
+  "junit_sha256": "87d2c483e66ca2a02c6031cbb778858010bd6b312bf73796b10344073eac2f26",
+  "python": "3.13.5",
+  "remote_write": "NOT_PUSHED: GitHub create_branch rejected with HTTP 403 Resource not accessible by integration",
+  "scope": "224 explicitly scoped Python tests; legacy C++ integration excluded",
+  "skipped": 0,
+  "status": "PASS",
+  "test_sources": {
+    "tests/test_coarsegrain_foundations.py": "92379539b46900239edebfbe6a65d0a1ecbe55ca991d36375f04857d9a1a8c4b",
+    "tests/test_conditioned_analysis.py": "df35fd1e00c210cb69ad35d41f022497dbbc624c1b3bfb4bb851dbee726d36e9",
+    "tests/test_conditioned_stochastic.py": "02fff99ed2c6eff557c4a3d0889d6eee0b0e85e1c4d20fc43dd3c666a9c30950",
+    "tests/test_conditioned_workflow.py": "819f37cd46f614a510b8f73ad1eb33389e1735d5eb2801bf1b508da933013149",
+    "tests/test_controls_hierarchy.py": "3c772be3bd3fcba4874c0ff794c7b3ec41a1e4cc896218ae5988416517d46714",
+    "tests/test_fast_workflow.py": "c2341ba8b33442dad84c2d44403742f480ff6779997aed2b27ffcbaacc57178a",
+    "tests/test_integral_topology.py": "ef6cf98ba40ba1e70ace824361e310716bc7cc127330a913e3f2cf3eab519ea8",
+    "tests/test_microscopic_carriers.py": "79f4db0141c6890fa39c066bfddf8ecb75765a2c04a424f398bd64044211c0f3",
+    "tests/test_runtime_foundations.py": "1ac41d898a85fcf452ffc9bf78ddf3650474f018b05e08ee9bebdabe61ce52f4",
+    "tests/test_topology_foundations.py": "60b63856e3596acc0f2394308bd8e518694d38aa542323d519599be196fdcffd"
+  },
+  "tests": 224
+}

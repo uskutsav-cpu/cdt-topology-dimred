@@ -32,7 +32,7 @@ def run_validation(seed):
     report = {'scope': 'SYNTHETIC_METHOD_VALIDATION_ONLY',
               'primary_physics_result': 'NOT_COMPUTED',
               'production_gates_advanced': False,
-              'canonical_integral_stratification': 'NOT_IMPLEMENTED',
+              'canonical_integral_stratification': 'NOT_EVALUATED_BY_THIS_LEGACY_VALIDATOR',
               'fixtures': [], 'coarse_2d': [], 'coarse_3d_experimental': []}
     fixtures = [('S2', sphere(2), (1,0,1)), ('S3', sphere(3), (1,0,0,1)),
                 ('B3', ball(), (1,0,0,0)), ('T2', torus(2,4), (1,2,1)),

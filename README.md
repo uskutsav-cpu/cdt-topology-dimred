@@ -53,3 +53,21 @@ Source references: [simulation paper](https://arxiv.org/abs/2310.16744),
 [spectral scaling](https://arxiv.org/abs/1711.02685),
 [effective topology](https://arxiv.org/abs/2510.05695),
 [canonical stratification](https://arxiv.org/abs/1808.06568).
+
+## Integer topology and paired-diffusion continuation
+
+The new [continuation handoff](docs/CONTINUATION_DELIVERY.md) includes exact
+integer homology, recursive canonical labels with integral map audits,
+an experimental microscopic carrier relation, paired half-power return
+estimation, overlap controls, hierarchical uncertainty, and a saved synthetic
+study. These additions do **not** establish the primary CDT physics result.
+
+```sh
+python3 -m venv .venv-continuation
+.venv-continuation/bin/python -m pip install -r environment/continuation-requirements.txt
+.venv-continuation/bin/python workflows/test_continuation.py
+.venv-continuation/bin/python workflows/run_continuation_study.py
+```
+
+The test wrapper deliberately selects the continuation suite. The original
+C++/geometry integration tests still require the original simulator build.

@@ -1,0 +1,336 @@
+{
+  "ambient_dimension": 1,
+  "cells": [
+    {
+      "component": 0,
+      "simplex": [
+        0
+      ],
+      "stratum_dimension": 1
+    },
+    {
+      "component": 0,
+      "simplex": [
+        1
+      ],
+      "stratum_dimension": 1
+    },
+    {
+      "component": 0,
+      "simplex": [
+        2
+      ],
+      "stratum_dimension": 1
+    },
+    {
+      "component": 0,
+      "simplex": [
+        0,
+        1
+      ],
+      "stratum_dimension": 1
+    },
+    {
+      "component": 0,
+      "simplex": [
+        0,
+        2
+      ],
+      "stratum_dimension": 1
+    },
+    {
+      "component": 0,
+      "simplex": [
+        1,
+        2
+      ],
+      "stratum_dimension": 1
+    }
+  ],
+  "incidence_certificates": [
+    {
+      "coface": [
+        0,
+        1
+      ],
+      "cone_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        }
+      ],
+      "face": [
+        0
+      ],
+      "is_integral_homology_isomorphism": true,
+      "source_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ],
+      "stage_dimension": 1,
+      "target_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ]
+    },
+    {
+      "coface": [
+        0,
+        2
+      ],
+      "cone_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        }
+      ],
+      "face": [
+        0
+      ],
+      "is_integral_homology_isomorphism": true,
+      "source_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ],
+      "stage_dimension": 1,
+      "target_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ]
+    },
+    {
+      "coface": [
+        0,
+        1
+      ],
+      "cone_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        }
+      ],
+      "face": [
+        1
+      ],
+      "is_integral_homology_isomorphism": true,
+      "source_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ],
+      "stage_dimension": 1,
+      "target_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ]
+    },
+    {
+      "coface": [
+        1,
+        2
+      ],
+      "cone_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        }
+      ],
+      "face": [
+        1
+      ],
+      "is_integral_homology_isomorphism": true,
+      "source_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ],
+      "stage_dimension": 1,
+      "target_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ]
+    },
+    {
+      "coface": [
+        0,
+        2
+      ],
+      "cone_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        }
+      ],
+      "face": [
+        2
+      ],
+      "is_integral_homology_isomorphism": true,
+      "source_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ],
+      "stage_dimension": 1,
+      "target_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ]
+    },
+    {
+      "coface": [
+        1,
+        2
+      ],
+      "cone_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 0,
+          "torsion": []
+        }
+      ],
+      "face": [
+        2
+      ],
+      "is_integral_homology_isomorphism": true,
+      "source_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ],
+      "stage_dimension": 1,
+      "target_homology": [
+        {
+          "free_rank": 0,
+          "torsion": []
+        },
+        {
+          "free_rank": 1,
+          "torsion": []
+        }
+      ]
+    }
+  ],
+  "method": "integral",
+  "physics_validation": "NOT_ESTABLISHED",
+  "schema": "cdt-integral-stratification-v1",
+  "stages": [
+    {
+      "components": 1,
+      "dimension": 1,
+      "generic_cells": 6,
+      "integral_incidence_maps_audited": 6,
+      "local_tests": 6,
+      "remaining_cells": 6,
+      "skipped_nongeneric_coface": 0
+    }
+  ]
+}
