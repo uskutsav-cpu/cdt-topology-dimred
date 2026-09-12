@@ -1,3 +1,6 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
 // Research driver. Monte Carlo move implementations are the pinned upstream
 // source with the equation-level corrections documented in DECISIONS.md.
 #include "universe.hpp"
@@ -46,7 +49,49 @@ int main(int argc,char** argv) {
     int stride=std::stoi(argv[12]);
     if(target<=0 || tune<0 || burn<0 || samples<0 || attempts<=0 || stride<1) return 2;
     Simulation::k0=k0; Simulation::k3=k3; Simulation::targetVolume=target;
-    Simulation::target2Volume=0; Simulation::moveFreqs={1,1,1};
+    Simulation::target2Volume=0; auto sampler_weight = [](const char* key) -> int {
+        const char* raw = std::getenv(key);
+
+        if (raw == nullptr) {
+            return 1;
+        }
+
+        char* end = nullptr;
+        long value = std::strtol(raw, &end, 10);
+
+        if (
+            raw[0] == '\0' ||
+            end == nullptr ||
+            *end != '\0' ||
+            value <= 0 ||
+            value > 1000
+        ) {
+            throw std::runtime_error(
+                std::string("invalid sampler weight for ") +
+                key +
+                ": expected integer 1..1000"
+            );
+        }
+
+        return static_cast<int>(value);
+    };
+
+    const int sampler_v1 = sampler_weight("CDT_MOVE_V1");
+    const int sampler_v2 = sampler_weight("CDT_MOVE_V2");
+    const int sampler_v3 = sampler_weight("CDT_MOVE_V3");
+
+    Simulation::moveFreqs = {
+        sampler_v1,
+        sampler_v2,
+        sampler_v3
+    };
+
+    std::cerr
+        << "CDT_SAMPLER_WEIGHTS "
+        << "v1=" << sampler_v1 << " "
+        << "v2=" << sampler_v2 << " "
+        << "v3=" << sampler_v3
+        << std::endl;
     Simulation::seed_rng(seed); Universe::seed_rng(seed^0x9e3779b9U);
     int completed=0;
     std::string checkpoint=out+"/checkpoint.bin";
