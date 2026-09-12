@@ -1,0 +1,31 @@
+{
+  "arms": {
+    "adddelete_211": [
+      2,
+      1,
+      1
+    ],
+    "control_111": [
+      1,
+      1,
+      1
+    ]
+  },
+  "attempts_per_sweep": 9267,
+  "burn_sweeps": 20000,
+  "independent_from_pilot_rng": true,
+  "matched_seed_within_chain": true,
+  "matched_starting_geometries": true,
+  "measurement_sweeps": 200000,
+  "predeclared_primary_estimand": "median per-chain peak_slice tau_int",
+  "sample_stride": 5000,
+  "samples": 40,
+  "schema": "cdt-sampler-confirmation-v1",
+  "success_rule": {
+    "basic_count_diagnostics": "stable",
+    "no_obvious_systematic_target_shift": true,
+    "tau_speedup_vs_control": ">=2.0",
+    "wall_efficiency_speedup": ">1.0"
+  },
+  "volume": 9267
+}
