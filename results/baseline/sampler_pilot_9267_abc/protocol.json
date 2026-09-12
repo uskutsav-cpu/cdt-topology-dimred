@@ -1,0 +1,32 @@
+{
+  "arms": {
+    "adddelete_211": [
+      2,
+      1,
+      1
+    ],
+    "control_111": [
+      1,
+      1,
+      1
+    ],
+    "shift_112": [
+      1,
+      1,
+      2
+    ]
+  },
+  "attempts_per_sweep": 9267,
+  "binary": "build/baseline/493aa38ae6ae5a3c456d/cdt-run",
+  "binary_sha256": "2d34e9289b74c14596a1bef523b7e6a3b88c30dcca7d30527bf5d1665ebf1438",
+  "burn_sweeps": 10000,
+  "matched_seed_within_chain_across_arms": true,
+  "matched_starting_geometries": true,
+  "measurement_sweeps": 60000,
+  "purpose": "Compare slow-mode mixing under control, add/delete-heavy and shift-heavy proposal mixtures. No spectral/topology inference.",
+  "sample_stride": 5000,
+  "samples": 12,
+  "schema": "cdt-sampler-pilot-v1",
+  "starting_geometry": "geometry_127.dat",
+  "volume": 9267
+}
